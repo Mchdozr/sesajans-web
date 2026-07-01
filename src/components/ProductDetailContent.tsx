@@ -12,7 +12,7 @@ import { ProductCard } from "@/components/ProductCard";
 import { ProductVideoShowcase } from "@/components/ProductVideoShowcase";
 import { ImageLightbox } from "@/components/ImageLightbox";
 import { GalleryImage } from "@/components/GalleryImage";
-import { products } from "@/lib/products";
+import { products, getGalleryAlt } from "@/lib/products";
 import { useI18n } from "@/lib/i18n/context";
 import { getLocalizedProduct } from "@/lib/i18n/products";
 import type { ProductCategory } from "@/lib/categories";
@@ -82,7 +82,7 @@ export function ProductDetailContent({ slug }: { slug: string }) {
                     <GalleryImage
                       key={img}
                       src={img}
-                      alt={`${product.name} ${i + 1}`}
+                      alt={getGalleryAlt(product, i)}
                       sizes="200px"
                       className="aspect-square rounded-xl"
                       zoomLabel={zoomLabel}
@@ -97,7 +97,7 @@ export function ProductDetailContent({ slug }: { slug: string }) {
                     <GalleryImage
                       key={img}
                       src={img}
-                      alt={`${product.name} ${i + 1}`}
+                      alt={getGalleryAlt(product, i)}
                       sizes="120px"
                       className="aspect-square rounded-lg"
                       zoomLabel={zoomLabel}

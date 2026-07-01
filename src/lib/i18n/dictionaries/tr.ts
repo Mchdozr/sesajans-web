@@ -3,6 +3,7 @@ export const dictionary = {
   nav: {
     home: "Anasayfa",
     products: "Ürünler",
+    blog: "Blog",
     useCases: "Kullanım Alanları",
     projects: "Projeler",
     about: "Hakkımızda",
@@ -182,6 +183,10 @@ export const dictionary = {
     subject: "Konu",
     message: "Mesaj",
     selectSubject: "Konu seçin",
+    product: "İlgili ürün (opsiyonel)",
+    selectProduct: "Ürün seçin",
+    kvkkPrefix: "Kişisel verilerimin",
+    kvkkSuffix: "'ni okudum ve iletişim amacıyla işlenmesini kabul ediyorum.",
     subjects: ["Fiyat Teklifi", "Teknik Destek", "Kurulum Talebi", "Genel Bilgi", "Diğer"],
     send: "Mesaj Gönder",
     sending: "Gönderiliyor...",
@@ -192,6 +197,7 @@ export const dictionary = {
       email: "Geçerli bir e-posta girin",
       subject: "Konu seçin",
       message: "Mesaj en az 10 karakter olmalı",
+      kvkk: "KVKK onayı gereklidir",
     },
   },
   aboutPage: {
@@ -216,7 +222,7 @@ export const dictionary = {
     eyebrow: "Projeler",
     title: "Aydınlatma uygulama örnekleri",
     description:
-      "Ürün ve efekt görsellerinden seçilmiş referanslar. Gerçek proje fotoğrafları yakında eklenecektir.",
+      "Konser, festival, fuar ve kurumsal etkinliklerde tamamladığımız aydınlatma projelerinden seçilmiş referanslar.",
     stageApp: "Sahne uygulaması",
     effectView: "Efekt görünümü",
     refDesc: "ile uygulaması. Profesyonel etkinlik aydınlatma referansı.",
@@ -225,33 +231,46 @@ export const dictionary = {
     eyebrow: "Kullanım Alanları",
     title: "Her etkinlik için doğru aydınlatma",
     description: "Mekân tipinize ve prodüksiyon ölçeğinize göre ürün önerisi sunuyoruz.",
-    browseProducts: "Ürünleri incele →",
+    browseProducts: "İlgili ürünleri incele →",
     items: [
       {
         title: "Konser & Festival",
         description: "Büyük sahne beam, wash ve strobe çözümleri ile canlı performans aydınlatması.",
+        href: "/urunler/kategori/moving-head-beam",
       },
       {
         title: "Gece Kulübü & Bar",
         description: "Kompakt moving head ve efekt üniteleri ile dinamik atmosfer.",
+        href: "/urunler/kategori/moving-head-beam",
       },
       {
         title: "TV & Stüdyo",
         description: "Flicker-free, yüksek CRI wash ve kontrollü beam çözümleri.",
+        href: "/urunler/kategori/moving-head-wash",
       },
       {
         title: "Fuar & Lansman",
         description: "Linear bar ve blinder ile marka alanı ve sahne vurgusu.",
+        href: "/urunler/kategori/led-bar",
       },
       {
         title: "Tiyatro & Salon",
         description: "Sessiz çalışma, smooth dimmer ve geniş wash açıları.",
+        href: "/urunler/kategori/moving-head-wash",
       },
       {
         title: "Mimari Aydınlatma",
         description: "Dış cephe ve yapısal vurgu için IP korumalı üniteler.",
+        href: "/urunler/kategori/blinder-strobe",
       },
     ],
   },
   quote: "Teklif Al",
+  blogPage: {
+    eyebrow: "Blog",
+    title: "Aydınlatma Rehberleri",
+    description: "Sahne aydınlatma seçimi, kurulum ve ürün karşılaştırmaları hakkında uzman içerikler.",
+    readMore: "Devamını oku",
+    allPosts: "Tüm yazılar",
+  },
 } as const;

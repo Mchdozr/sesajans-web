@@ -3,6 +3,7 @@ export const dictionary = {
   nav: {
     home: "Home",
     products: "Products",
+    blog: "Blog",
     useCases: "Use Cases",
     projects: "Projects",
     about: "About",
@@ -182,6 +183,10 @@ export const dictionary = {
     subject: "Subject",
     message: "Message",
     selectSubject: "Select subject",
+    product: "Related product (optional)",
+    selectProduct: "Select product",
+    kvkkPrefix: "I have read the",
+    kvkkSuffix: " and consent to processing my personal data for contact purposes.",
     subjects: ["Price Quote", "Technical Support", "Installation Request", "General Inquiry", "Other"],
     send: "Send Message",
     sending: "Sending...",
@@ -192,6 +197,7 @@ export const dictionary = {
       email: "Enter a valid email",
       subject: "Select a subject",
       message: "Message must be at least 10 characters",
+      kvkk: "KVKK consent is required",
     },
   },
   aboutPage: {
@@ -216,7 +222,7 @@ export const dictionary = {
     eyebrow: "Projects",
     title: "Lighting application examples",
     description:
-      "Selected references from product and effect visuals. Real project photos coming soon.",
+      "Selected references from concerts, festivals, trade shows and corporate events we have lit.",
     stageApp: "Stage application",
     effectView: "Effect view",
     refDesc: "application. Professional event lighting reference.",
@@ -230,28 +236,41 @@ export const dictionary = {
       {
         title: "Concert & Festival",
         description: "Live performance lighting with large-stage beam, wash and strobe solutions.",
+        href: "/urunler/kategori/moving-head-beam",
       },
       {
         title: "Nightclub & Bar",
         description: "Dynamic atmosphere with compact moving heads and effect units.",
+        href: "/urunler/kategori/moving-head-beam",
       },
       {
         title: "TV & Studio",
         description: "Flicker-free, high-CRI wash and controlled beam solutions.",
+        href: "/urunler/kategori/moving-head-wash",
       },
       {
         title: "Trade Show & Launch",
         description: "Brand areas and stage emphasis with linear bars and blinders.",
+        href: "/urunler/kategori/led-bar",
       },
       {
         title: "Theatre & Hall",
         description: "Quiet operation, smooth dimming and wide wash angles.",
+        href: "/urunler/kategori/moving-head-wash",
       },
       {
         title: "Architectural Lighting",
         description: "IP-rated units for façade and structural accent lighting.",
+        href: "/urunler/kategori/blinder-strobe",
       },
     ],
   },
   quote: "Get a Quote",
+  blogPage: {
+    eyebrow: "Blog",
+    title: "Lighting Guides",
+    description: "Expert articles on stage lighting selection, installation and product comparisons.",
+    readMore: "Read more",
+    allPosts: "All posts",
+  },
 } as const;

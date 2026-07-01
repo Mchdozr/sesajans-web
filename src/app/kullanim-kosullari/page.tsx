@@ -10,7 +10,7 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <LegalLayout title="Kullanım Koşulları">
+    <LegalLayout title="Kullanım Koşulları" path="/kullanim-kosullari">
       <p>
         {site.url} web sitesini kullanarak aşağıdaki koşulları kabul etmiş sayılırsınız.
       </p>

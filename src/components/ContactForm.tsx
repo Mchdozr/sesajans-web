@@ -1,18 +1,24 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { cn } from "@/lib/utils";
+import { products } from "@/lib/products";
 import { useI18n } from "@/lib/i18n/context";
+import { trackEvent } from "@/components/Analytics";
 
 type FormData = {
   name: string;
   email: string;
   phone?: string;
   subject: string;
+  product?: string;
   message: string;
+  website?: string;
+  kvkkConsent: boolean;
 };
 
 export function ContactForm() {
@@ -24,7 +30,10 @@ export function ContactForm() {
     email: z.string().email(t.contactForm.errors.email),
     phone: z.string().optional(),
     subject: z.string().min(1, t.contactForm.errors.subject),
+    product: z.string().optional(),
     message: z.string().min(10, t.contactForm.errors.message),
+    website: z.string().max(0).optional(),
+    kvkkConsent: z.boolean().refine((v) => v === true, { message: t.contactForm.errors.kvkk }),
   });
 
   const {
@@ -43,6 +52,7 @@ export function ContactForm() {
         body: JSON.stringify(data),
       });
       if (!res.ok) throw new Error("fail");
+      trackEvent("contact_submit", { subject: data.subject });
       setStatus("success");
       reset();
     } catch {
@@ -55,6 +65,15 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+      <input
+        type="text"
+        tabIndex={-1}
+        autoComplete="off"
+        className="hidden"
+        aria-hidden
+        {...register("website")}
+      />
+
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label className="mb-1.5 block text-sm font-medium text-ink-muted">
@@ -101,6 +120,19 @@ export function ContactForm() {
       </div>
       <div>
         <label className="mb-1.5 block text-sm font-medium text-ink-muted">
+          {t.contactForm.product}
+        </label>
+        <select className={cn(inputClass, "appearance-none")} {...register("product")}>
+          <option value="">{t.contactForm.selectProduct}</option>
+          {products.map((p) => (
+            <option key={p.slug} value={p.name}>
+              {p.name}
+            </option>
+          ))}
+        </select>
+      </div>
+      <div>
+        <label className="mb-1.5 block text-sm font-medium text-ink-muted">
           {t.contactForm.message} *
         </label>
         <textarea rows={5} className={inputClass} {...register("message")} />
@@ -108,6 +140,24 @@ export function ContactForm() {
           <p className="mt-1 text-xs text-red-400">{errors.message.message}</p>
         )}
       </div>
+
+      <label className="flex items-start gap-3 text-sm text-ink-muted">
+        <input
+          type="checkbox"
+          className="mt-1 h-4 w-4 rounded border-theme accent-brand"
+          {...register("kvkkConsent")}
+        />
+        <span>
+          {t.contactForm.kvkkPrefix}{" "}
+          <Link href="/kvkk-aydinlatma-metni" className="font-medium text-brand hover:underline">
+            {t.footer.kvkk}
+          </Link>
+          {t.contactForm.kvkkSuffix}
+        </span>
+      </label>
+      {errors.kvkkConsent && (
+        <p className="text-xs text-red-400">{errors.kvkkConsent.message}</p>
+      )}
 
       {status === "success" && (
         <p className="text-sm text-green-500">{t.contactForm.success}</p>

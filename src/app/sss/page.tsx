@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { SssContent } from "@/components/SssContent";
-import { buildMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
+import { buildMetadata, faqJsonLd } from "@/lib/seo";
+import { getSssFaqs } from "@/lib/sss-faqs";
 
 export const metadata: Metadata = buildMetadata({
   title: "Sık Sorulan Sorular",
@@ -9,5 +11,10 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default function SssPage() {
-  return <SssContent />;
+  return (
+    <>
+      <JsonLd data={faqJsonLd(getSssFaqs())} />
+      <SssContent />
+    </>
+  );
 }

@@ -572,3 +572,24 @@ export function getProduct(slug: string) {
 export function getProductsByCategory(category: ProductCategory) {
   return products.filter((p) => p.category === category);
 }
+
+const galleryAltLabels = [
+  "sahne kurulumu",
+  "canlı performans görüntüsü",
+  "ışık efekti",
+  "truss montajı",
+  "sahne aydınlatma detayı",
+  "etkinlik aydınlatması",
+  "ürün yakın çekim",
+  "efekt gösterimi",
+  "profesyonel uygulama",
+];
+
+export function getGalleryAlt(
+  product: Pick<Product, "name" | "imageAlt">,
+  index: number,
+): string {
+  if (index === 0) return product.imageAlt;
+  const label = galleryAltLabels[index % galleryAltLabels.length];
+  return `${product.name} ${label} — SESAJANS profesyonel sahne aydınlatma`;
+}

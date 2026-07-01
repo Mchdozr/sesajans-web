@@ -1,11 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import { Phone, Mail, MapPin } from "lucide-react";
-import { site } from "@/lib/site";
+import { Phone, Mail, MapPin, Share2 } from "lucide-react";
+import { site, socialLinks } from "@/lib/site";
 import { useI18n } from "@/lib/i18n/context";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/Logo";
+
+const socialIcons = {
+  Instagram: Share2,
+  LinkedIn: Share2,
+  YouTube: Share2,
+} as const;
 
 export function Footer() {
   const { t } = useI18n();
@@ -16,6 +22,10 @@ export function Footer() {
       links: [
         { label: "Beam King 380", href: "/urunler/beam-king-380" },
         { label: "Beam King IP", href: "/urunler/beam-king-ip" },
+        { label: "Blinder 400 IP", href: "/urunler/blinder-400-ip" },
+        { label: "Blinder 800 IP", href: "/urunler/blinder-800-ip" },
+        { label: "Diamond Line 1240 Eco", href: "/urunler/diamond-line-1240-eco" },
+        { label: "LED Beam Wash 150", href: "/urunler/led-beam-wash-150" },
         { label: "Wash 3715", href: "/urunler/wash-3715" },
         { label: "Strike Pro IP", href: "/urunler/strike-pro-ip" },
         { label: "Tornado IP", href: "/urunler/tornado-ip" },
@@ -26,6 +36,7 @@ export function Footer() {
       title: t.footer.corporate,
       links: [
         { label: t.nav.about, href: "/hakkimizda" },
+        { label: t.nav.blog, href: "/blog" },
         { label: t.nav.projects, href: "/projeler" },
         { label: t.nav.useCases, href: "/kullanim-alanlari" },
         { label: t.nav.contact, href: "/iletisim" },
@@ -75,6 +86,23 @@ export function Footer() {
               <span className="flex items-center gap-2 text-ink-muted">
                 <MapPin className="h-4 w-4 text-brand" /> {site.address}
               </span>
+            </div>
+            <div className="mt-5 flex gap-3">
+              {socialLinks.map((s) => {
+                const Icon = socialIcons[s.label as keyof typeof socialIcons];
+                return (
+                  <a
+                    key={s.href}
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={s.label}
+                    className="flex h-9 w-9 items-center justify-center rounded-lg border border-theme text-ink-muted transition-colors hover:border-brand hover:text-brand"
+                  >
+                    <Icon className="h-4 w-4" />
+                  </a>
+                );
+              })}
             </div>
           </div>
 

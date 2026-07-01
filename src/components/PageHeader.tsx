@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbJsonLd } from "@/lib/seo";
 import { useI18n } from "@/lib/i18n/context";
 
 export function PageHeader({
@@ -18,8 +20,13 @@ export function PageHeader({
 }) {
   const { t } = useI18n();
 
+  const breadcrumbItems = breadcrumb
+    ? [{ name: t.common.home, path: "/" }, ...breadcrumb]
+    : null;
+
   return (
     <div className="border-b border-theme bg-surface-deep/80">
+      {breadcrumbItems && <JsonLd data={breadcrumbJsonLd(breadcrumbItems)} />}
       <Container className="py-12 sm:py-16">
         {breadcrumb && (
           <nav

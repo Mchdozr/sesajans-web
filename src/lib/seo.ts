@@ -17,11 +17,16 @@ export function buildMetadata({
   keywords = [],
 }: SeoInput): Metadata {
   const url = `${site.url}${path}`;
+  const verification = process.env.GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+    : undefined;
+
   return {
     title,
     description,
     keywords: keywords.length ? keywords : undefined,
     alternates: { canonical: url },
+    verification,
     openGraph: {
       title,
       description,
@@ -43,10 +48,15 @@ export const organizationJsonLd = {
   description: site.description,
   telephone: site.phone,
   email: site.email,
+  foundingDate: String(site.foundedYear),
+  sameAs: [site.social.instagram, site.social.linkedin, site.social.youtube],
   address: {
     "@type": "PostalAddress",
+    streetAddress: site.addressLine,
+    addressLocality: site.addressDistrict,
+    addressRegion: site.addressCity,
+    postalCode: site.postalCode,
     addressCountry: "TR",
-    addressLocality: "İstanbul",
   },
 };
 
@@ -56,7 +66,21 @@ export const websiteJsonLd = {
   name: site.brand,
   url: site.url,
   inLanguage: "tr-TR",
+  publisher: { "@type": "Organization", name: site.brand },
 };
+
+export function breadcrumbJsonLd(items: ReadonlyArray<{ name: string; path: string }>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      item: `${site.url}${item.path}`,
+    })),
+  };
+}
 
 export function faqJsonLd(faqs: ReadonlyArray<{ readonly q: string; readonly a: string }>) {
   return {
@@ -75,6 +99,7 @@ export function productJsonLd(product: {
   description: string;
   image: string;
   slug: string;
+  category?: string;
 }) {
   return {
     "@context": "https://schema.org",
@@ -83,6 +108,31 @@ export function productJsonLd(product: {
     description: product.description,
     image: `${site.url}${product.image}`,
     brand: { "@type": "Brand", name: site.brand },
+    category: product.category,
     url: `${site.url}/urunler/${product.slug}`,
+  };
+}
+
+export function articleJsonLd(article: {
+  title: string;
+  description: string;
+  slug: string;
+  date: string;
+  image?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.description,
+    datePublished: article.date,
+    author: { "@type": "Organization", name: site.brand },
+    publisher: {
+      "@type": "Organization",
+      name: site.brand,
+      logo: { "@type": "ImageObject", url: `${site.url}/brand/logo-light-horizontal.png` },
+    },
+    image: article.image ? `${site.url}${article.image}` : `${site.url}/opengraph-image`,
+    mainEntityOfPage: `${site.url}/blog/${article.slug}`,
   };
 }

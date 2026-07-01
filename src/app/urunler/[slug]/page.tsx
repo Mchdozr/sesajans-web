@@ -44,6 +44,7 @@ export default async function ProductPage({
             description: product.excerpt,
             image: product.image,
             slug: product.slug,
+            category: product.category,
           }),
           faqJsonLd(product.faqs),
         ]}

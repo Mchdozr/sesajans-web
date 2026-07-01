@@ -43,7 +43,7 @@ export function UseCasesContent() {
                     <h2 className="mt-4 font-display text-lg font-bold text-ink">{uc.title}</h2>
                     <p className="mt-2 text-sm leading-relaxed text-ink-muted">{uc.description}</p>
                     <Link
-                      href="/urunler"
+                      href={uc.href}
                       className="mt-4 inline-block text-sm font-semibold text-brand hover:underline"
                     >
                       {p.browseProducts}

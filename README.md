@@ -33,4 +33,6 @@ npm start
 
 **Önerilen:** [DEPLOY-VERCEL.md](./DEPLOY-VERCEL.md)
 
+**SEO kurulumu:** [SEO-SETUP.md](./SEO-SETUP.md)
+
 Plesk (Node 20+ gerekir): [DEPLOY-PLESK.md](./DEPLOY-PLESK.md)

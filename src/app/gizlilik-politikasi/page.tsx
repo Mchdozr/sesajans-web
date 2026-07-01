@@ -10,7 +10,7 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <LegalLayout title="Gizlilik Politikası">
+    <LegalLayout title="Gizlilik Politikası" path="/gizlilik-politikasi">
       <p>
         {site.brand} olarak kişisel verilerinizin güvenliğine önem veriyoruz. Bu politika,
         web sitemiz ve iletişim formları aracılığıyla toplanan verilerin nasıl işlendiğini
