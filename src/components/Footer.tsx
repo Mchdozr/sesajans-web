@@ -83,9 +83,14 @@ export function Footer() {
               >
                 <Mail className="h-4 w-4 text-brand" /> {site.email}
               </a>
-              <span className="flex items-center gap-2 text-ink-muted">
-                <MapPin className="h-4 w-4 text-brand" /> {site.address}
-              </span>
+              <a
+                href={site.addressUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-ink-muted hover:text-brand"
+              >
+                <MapPin className="h-4 w-4 shrink-0 text-brand" /> {site.address}
+              </a>
             </div>
             <div className="mt-5 flex gap-3">
               {socialLinks.map((s) => {

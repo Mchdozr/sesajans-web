@@ -61,14 +61,23 @@ export function ContactContent() {
             <div className="rounded-3xl border border-theme bg-surface-elevated/60 p-6 sm:p-8">
               <h2 className="font-display text-xl font-bold text-ink">{t.contactPage.officeInfo}</h2>
               <ul className="mt-4 space-y-3 text-sm text-ink-muted">
-                <li className="flex items-center gap-3">
-                  <MapPin className="h-5 w-5 text-brand" /> {site.address}
+                <li>
+                  <a
+                    href={site.addressUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 transition-colors hover:text-brand"
+                  >
+                    <MapPin className="h-5 w-5 shrink-0 text-brand" /> {site.address}
+                  </a>
                 </li>
                 <li className="flex items-center gap-3">
                   <Clock className="h-5 w-5 text-brand" /> {t.contactPage.officeHours}
                 </li>
-                <li className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 text-brand" /> {site.phoneDisplay}
+                <li>
+                  <a href={`tel:${site.phone}`} className="flex items-center gap-3 transition-colors hover:text-brand">
+                    <Phone className="h-5 w-5 shrink-0 text-brand" /> {site.phoneDisplay}
+                  </a>
                 </li>
               </ul>
             </div>

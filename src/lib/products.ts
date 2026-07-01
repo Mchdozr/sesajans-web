@@ -23,7 +23,20 @@ export type Product = {
   ipRating?: string;
 };
 
-export const products: Product[] = [
+/** Yalnızca temizlenmiş spec-sheet.png galeride; üretici PDF linklenmez. */
+function publishProduct(product: Product): Product {
+  const gallery = product.gallery.filter(
+    (src) => !src.toLowerCase().endsWith(".png") || src.endsWith("/spec-sheet.png"),
+  );
+
+  return {
+    ...product,
+    gallery: gallery.length > 0 ? gallery : [product.image],
+    pdf: undefined,
+  };
+}
+
+const catalog: Product[] = [
   {
     slug: "beam-king-380",
     name: "Beam King 380",
@@ -39,7 +52,7 @@ export const products: Product[] = [
       "/products/beam-king-380/image-05.jpg",
       "/products/beam-king-380/image-06.jpg",
       "/products/beam-king-380/image-07.jpg",
-      "/products/beam-king-380/image-08.png",
+      "/products/beam-king-380/spec-sheet.png",
     ],
     videos: [
       "/products/beam-king-380/video-01.mp4",
@@ -106,7 +119,7 @@ export const products: Product[] = [
       "/products/beam-king-ip/image-03.webp",
       "/products/beam-king-ip/image-04.webp",
       "/products/beam-king-ip/image-05.webp",
-      "/products/beam-king-ip/image-06.png",
+      "/products/beam-king-ip/spec-sheet.png",
     ],
     pdf: "/downloads/beam-king-ip/katalog.pdf",
     intro:
@@ -171,7 +184,7 @@ export const products: Product[] = [
       "/products/blinder-400-ip/image-06.jpg",
       "/products/blinder-400-ip/image-07.jpg",
       "/products/blinder-400-ip/image-08.jpg",
-      "/products/blinder-400-ip/image-09.png",
+      "/products/blinder-400-ip/spec-sheet.png",
     ],
     intro:
       "Blinder 400 IP, kompakt gövdesinde yüksek çıkışlı blinder performansı sunan IP65 sınıfı bir LED ünitesidir. İki adet 200W LED modülü ile sahne önü aydınlatma, mimari vurgu ve stadyum efektleri için idealdir. OLED ekran, DMX512/RDM kontrolü ve geniş sıcaklık aralığı ile profesyonel prodüksiyonlara uyumludur.",
@@ -228,7 +241,7 @@ export const products: Product[] = [
       "/products/blinder-800-ip/image-02.jpg",
       "/products/blinder-800-ip/image-03.jpg",
       "/products/blinder-800-ip/image-04.jpg",
-      "/products/blinder-800-ip/image-05.png",
+      "/products/blinder-800-ip/spec-sheet.png",
     ],
     intro:
       "Blinder 800 IP, dört adet 200W LED modülü ile toplam 800W çıkış gücü sunan üst segment bir blinder ünitesidir. Geniş 93° field açısı ve IP65 koruma sınıfı sayesinde stadyum, festival ve büyük açık hava prodüksiyonlarında güçlü ve homojen ışık demeti üretir.",
@@ -342,7 +355,7 @@ export const products: Product[] = [
       "/products/led-beam-wash-150/image-06.jpg",
       "/products/led-beam-wash-150/image-07.jpg",
       "/products/led-beam-wash-150/image-08.jpg",
-      "/products/led-beam-wash-150/image-09.png",
+      "/products/led-beam-wash-150/spec-sheet.png",
     ],
     pdf: "/downloads/led-beam-wash-150/katalog.pdf",
     intro:
@@ -401,7 +414,7 @@ export const products: Product[] = [
       "/products/strike-pro-ip/image-03.jpg",
       "/products/strike-pro-ip/image-04.jpg",
       "/products/strike-pro-ip/image-05.jpg",
-      "/products/strike-pro-ip/image-06.png",
+      "/products/strike-pro-ip/spec-sheet.png",
     ],
     pdf: "/downloads/strike-pro-ip/katalog.pdf",
     intro:
@@ -464,7 +477,7 @@ export const products: Product[] = [
       "/products/tornado-ip/image-06.jpg",
       "/products/tornado-ip/image-07.jpg",
       "/products/tornado-ip/image-08.jpg",
-      "/products/tornado-ip/image-09.png",
+      "/products/tornado-ip/spec-sheet.png",
     ],
     pdf: "/downloads/tornado-ip/katalog.pdf",
     intro:
@@ -522,7 +535,7 @@ export const products: Product[] = [
       "/products/wash-3715/image-02.jpg",
       "/products/wash-3715/image-03.jpg",
       "/products/wash-3715/image-04.jpg",
-      "/products/wash-3715/image-05.png",
+      "/products/wash-3715/spec-sheet.png",
     ],
     intro:
       "Wash 3715, yüksek CRI'lı 37 adet 15W RGBW LED ile homojen ve canlı renk yıkama efektleri üreten profesyonel bir wash moving head'dir. 10° ile 60° arası elektronik zoom, halka kontrolü ve zengin DMX kanal seçenekleri ile konser, tiyatro ve kurumsal etkinliklerde üstün renk performansı sunar.",
@@ -565,6 +578,8 @@ export const products: Product[] = [
   },
 ];
 
+export const products: Product[] = catalog.map(publishProduct);
+
 export function getProduct(slug: string) {
   return products.find((p) => p.slug === slug);
 }
@@ -586,9 +601,13 @@ const galleryAltLabels = [
 ];
 
 export function getGalleryAlt(
-  product: Pick<Product, "name" | "imageAlt">,
+  product: Pick<Product, "name" | "imageAlt" | "gallery">,
   index: number,
 ): string {
+  const src = product.gallery[index];
+  if (src?.endsWith("/spec-sheet.png")) {
+    return `${product.name} teknik özellik sayfası — SESAJANS`;
+  }
   if (index === 0) return product.imageAlt;
   const label = galleryAltLabels[index % galleryAltLabels.length];
   return `${product.name} ${label} — SESAJANS profesyonel sahne aydınlatma`;

@@ -1,0 +1,17 @@
+# SESAJANS Marka Güvenliği
+
+## Yasak
+
+**MEANReal** (ve varyasyonları: meanreal, Mean Real, MEAN-REAL) adı veya logosu sitede **asla** görünmemelidir.
+
+## Uygulama
+
+- Ürün galerisine yalnızca temizlenmiş `spec-sheet.png` eklenir (üçüncü taraf marka logosu olmadan)
+- Üretici katalog PDF'leri linklenmez; teknik özellikler `products.ts` specs tablosunda
+- `public/brand/` yalnızca SESAJANS logoları içermeli
+- Yeni içerik öncesi: `npm run brand:check`
+
+## İzin verilen
+
+- Ürün fotoğrafları (.jpg, .webp)
+- SESAJANS markası ve ürün model adları (Beam King, Blinder IP vb.)
