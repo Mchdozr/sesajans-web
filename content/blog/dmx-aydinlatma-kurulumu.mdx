@@ -1,34 +1,75 @@
 ---
-title: "DMX Aydınlatma Kurulumu Temel Rehberi"
-description: "DMX512 adresleme, kablo bağlantısı ve moving head devreye alma adımları. Sahne aydınlatma kurulumu için başlangıç kılavuzu."
+title: "DMX Aydınlatma Kurulumu: Adım Adım Rehber"
+description: "DMX512 aydınlatma kurulumu: adresleme, kablolama, Art-Net ve RDM. SESAJANS moving head devreye alma kontrol listesi."
 date: "2025-08-12"
 category: "Teknik"
-keywords: ["dmx kurulum", "dmx512 adresleme", "moving head kurulum"]
-image: "/products/wash-3715/image-02.jpg"
+keywords: ["dmx aydınlatma", "dmx512 kurulum", "art-net", "moving head adresleme"]
+image: "/products/beam-king-380/image-04.jpg"
 ---
 
-DMX512, sahne aydınlatmasının standart kontrol protokolüdür. Doğru adresleme ve kablo topolojisi sorunsuz show programının temelidir.
+DMX512, profesyonel sahne aydınlatmasının evrensel iletişim protokolüdür. Doğru kurulum; adres çakışması, sinyal kaybı ve saha arızalarını önler. Bu rehber, SESAJANS saha ekiplerinin uyguladığı standart süreci özetler.
 
-## Temel bileşenler
+![Beam King 380 DMX moving head](/products/beam-king-380/image-04.jpg)
 
-- **DMX konsol** veya yazılım (MA, Avolites, ChamSys vb.)
-- **DMX kablosu** (XLR 3 veya 5 pin)
-- **Fixture** (moving head, blinder, strobe)
-- Opsiyonel: **DMX splitter / opto-isolator**
+## 1. Planlama ve fixture listesi
 
-## Adresleme adımları
+Kurulum öncesi tüm üniteleri listeleyin:
 
-1. Her ünitenin kanal modunu belirleyin (ör. 17CH beam, 25CH wash)
-2. DMX adreslerini çakışmayacak şekilde atayın
-3. İlk fixture adres 001, sonraki toplam kanal kadar artar
-4. Konsolda fixture profillerini yükleyin
+| Ürün | Kanal sayısı (tipik) |
+|------|----------------------|
+| [Beam King 380](/urunler/beam-king-380) | 16–20 |
+| [Beam King IP](/urunler/beam-king-ip) | 16–20 |
+| [Wash 3715](/urunler/wash-3715) | 15–25 |
+| [Blinder 800 IP](/urunler/blinder-800-ip) | 4–8 |
+| [Strike Pro IP](/urunler/strike-pro-ip) | 6–10 |
 
-## Kablo topolojisi
+Toplam kanal sayısı konsol kapasitesini belirler. 512 kanal tek universe sınırıdır; büyük kurulumlarda Art-Net ile çoklu universe kullanın.
 
-Seri daisy-chain bağlantıda 32 üniteden sonra DMX splitter kullanın. Uzun mesafelerde opto-isolator sinyal bozulmasını önler.
+## 2. Adresleme (patching)
 
-## Devreye alma
+- Her üniteye **benzersiz başlangıç adresi** atayın
+- Üst üste binen adresler ilk hatayı oluşturur
+- RDM destekli ürünlerde uzaktan adres değişimi mümkündür
 
-Montaj sonrası pan/tilt limitleri, fan modu ve lazer kilidi (varsa) kontrol edilmelidir. SESAJANS kurulum hizmeti montaj, adresleme ve saha testini kapsar.
+**Örnek patch:**
+- Beam 1–8: adres 1, 17, 33…
+- Wash 1–6: adres 129’dan başlayarak
+- Blinder/strobe: ayrı universe veya yüksek adres bloğu
 
-[İletişim](/iletisim) sayfasından kurulum talebi oluşturabilirsiniz.
+## 3. Kablolama
+
+```
+Konsol → DMX OUT → Fixture 1 IN → OUT → Fixture 2 IN → ...
+```
+
+- **DMX terminasyon:** Son ünitede 120Ω terminatör
+- **Maksimum mesafe:** Kaliteli XLR ile ~300 m (tek yön)
+- **Splitter:** 32’den fazla ünite veya dallanma için DMX splitter şart
+
+## 4. Art-Net ve ağ kontrolü
+
+Büyük festival kurulumlarında Art-Net tercih edilir:
+
+- Ethernet üzerinden çoklu universe
+- Merkezi yedekleme ve uzaktan izleme
+- [Beam King IP](/urunler/beam-king-ip) ve diğer SESAJANS ürünleri Art-Net destekler
+
+## 5. Saha test kontrol listesi
+
+- [ ] Tüm üniteler güç ve DMX alıyor
+- [ ] Pan/tilt limitleri ayarlandı
+- [ ] Fan modu ve sıcaklık normal
+- [ ] Gobolar ve prizmalar düzgün dönüyor
+- [ ] Acil blackout senaryosu test edildi
+
+![Wash 3715 DMX wash moving head](/products/wash-3715/image-02.jpg)
+
+## SESAJANS kurulum hizmeti
+
+Truss montajı, DMX patch, konsol programlama ve operatör eğitimi tek pakette sunulur. [İletişim](/iletisim) üzerinden etkinlik detaylarınızı paylaşın.
+
+**S: DMX kablosu yerine mikrofon kablosu kullanılır mı?**  
+C: Hayır. Mikrofon kabloları DMX sinyal bütünlüğünü bozar; sadece DMX-rated XLR kullanın.
+
+**S: Wi-Fi DMX güvenilir mi?**  
+C: Kritik şovlarda kablolu DMX veya Art-Net tercih edilir; kablosuz yedek veya sabit efektler için kullanılabilir.

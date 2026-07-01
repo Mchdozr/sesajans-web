@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-07-01T14:09:50.466Z",
+  "createdBlogs": 2,
+  "results": [
+    {
+      "taskId": "grow-blog",
+      "slug": "moving-head-beam-rehberi",
+      "action": "skipped_exists"
+    },
+    {
+      "taskId": "grow-blog",
+      "slug": "sahne-aydinlatma-rehberi",
+      "action": "skipped_exists"
+    },
+    {
+      "taskId": "grow-blog",
+      "slug": "ip66-beam-rehberi",
+      "action": "created",
+      "path": "C:\\Users\\kacma\\OneDrive\\Masaüstü\\SESAJANS\\web\\content\\blog\\ip66-beam-rehberi.mdx"
+    },
+    {
+      "taskId": "grow-blog",
+      "slug": "blinder-strobe-rehberi",
+      "action": "created",
+      "path": "C:\\Users\\kacma\\OneDrive\\Masaüstü\\SESAJANS\\web\\content\\blog\\blinder-strobe-rehberi.mdx"
+    }
+  ]
+}

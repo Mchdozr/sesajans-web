@@ -1,0 +1,143 @@
+[
+  {
+    "id": "grow-blog",
+    "priority": "high",
+    "type": "blog_stub",
+    "auto": true,
+    "title": "Blog içerik hacmini artır",
+    "reason": "Sitede 7 blog yazısı var; rakipler blog/rehber URL yapısı kullanıyor.",
+    "topics": [
+      {
+        "keyword": "moving head beam",
+        "slug": "moving-head-beam-rehberi",
+        "title": "Moving head beam rehberi"
+      },
+      {
+        "keyword": "sahne aydınlatma",
+        "slug": "sahne-aydinlatma-rehberi",
+        "title": "Sahne aydınlatma rehberi"
+      },
+      {
+        "keyword": "ip66 beam",
+        "slug": "ip66-beam-rehberi",
+        "title": "Ip66 beam rehberi"
+      },
+      {
+        "keyword": "blinder strobe",
+        "slug": "blinder-strobe-rehberi",
+        "title": "Blinder strobe rehberi"
+      },
+      {
+        "keyword": "konser aydınlatma",
+        "slug": "konser-aydinlatma-rehberi",
+        "title": "Konser aydınlatma rehberi"
+      }
+    ]
+  },
+  {
+    "id": "indexable-pages",
+    "priority": "high",
+    "type": "manual",
+    "auto": false,
+    "title": "İndekslenebilir sayfa sayısını artır",
+    "reason": "Rakip sitemap ortalaması ~153 URL; iç link ve landing sayfaları ekle."
+  },
+  {
+    "id": "kw-blog-ip66-beam",
+    "priority": "low",
+    "type": "blog_stub",
+    "auto": true,
+    "title": "Long-tail blog: ip66 beam",
+    "reason": "Anahtar kelime için özel içerik yok.",
+    "topics": [
+      {
+        "keyword": "ip66 beam",
+        "slug": "ip66-beam-sesajans-rehber",
+        "title": "Ip66 beam — SESAJANS rehberi"
+      }
+    ]
+  },
+  {
+    "id": "kw-blog-blinder-strobe",
+    "priority": "low",
+    "type": "blog_stub",
+    "auto": true,
+    "title": "Long-tail blog: blinder strobe",
+    "reason": "Anahtar kelime için özel içerik yok.",
+    "topics": [
+      {
+        "keyword": "blinder strobe",
+        "slug": "blinder-strobe-sesajans-rehber",
+        "title": "Blinder strobe — SESAJANS rehberi"
+      }
+    ]
+  },
+  {
+    "id": "kw-blog-konser-aydinlatma",
+    "priority": "low",
+    "type": "blog_stub",
+    "auto": true,
+    "title": "Long-tail blog: konser aydınlatma",
+    "reason": "Anahtar kelime için özel içerik yok.",
+    "topics": [
+      {
+        "keyword": "konser aydınlatma",
+        "slug": "konser-aydinlatma-sesajans-rehber",
+        "title": "Konser aydınlatma — SESAJANS rehberi"
+      }
+    ]
+  },
+  {
+    "id": "kw-blog-led-bar-sahne",
+    "priority": "low",
+    "type": "blog_stub",
+    "auto": true,
+    "title": "Long-tail blog: led bar sahne",
+    "reason": "Anahtar kelime için özel içerik yok.",
+    "topics": [
+      {
+        "keyword": "led bar sahne",
+        "slug": "led-bar-sahne-sesajans-rehber",
+        "title": "Led bar sahne — SESAJANS rehberi"
+      }
+    ]
+  },
+  {
+    "id": "kw-blog-wash-moving-head",
+    "priority": "low",
+    "type": "blog_stub",
+    "auto": true,
+    "title": "Long-tail blog: wash moving head",
+    "reason": "Anahtar kelime için özel içerik yok.",
+    "topics": [
+      {
+        "keyword": "wash moving head",
+        "slug": "wash-moving-head-sesajans-rehber",
+        "title": "Wash moving head — SESAJANS rehberi"
+      }
+    ]
+  },
+  {
+    "id": "kw-blog-profesyonel-sahne-isigi",
+    "priority": "low",
+    "type": "blog_stub",
+    "auto": true,
+    "title": "Long-tail blog: profesyonel sahne ışığı",
+    "reason": "Anahtar kelime için özel içerik yok.",
+    "topics": [
+      {
+        "keyword": "profesyonel sahne ışığı",
+        "slug": "profesyonel-sahne-isigi-sesajans-rehber",
+        "title": "Profesyonel sahne ışığı — SESAJANS rehberi"
+      }
+    ]
+  },
+  {
+    "id": "competitor-blog-structure",
+    "priority": "low",
+    "type": "manual",
+    "auto": false,
+    "title": "Rakip blog URL yapısını incele",
+    "reason": "Örnek rakip blog yolları: /blog/"
+  }
+]

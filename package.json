@@ -11,7 +11,11 @@
     "build:plesk": "node scripts/plesk-build.mjs",
     "start": "next start",
     "start:plesk": "node .next/standalone/server.js",
-    "lint": "eslint"
+    "lint": "eslint",
+    "seo:research": "node scripts/seo-agent/research.mjs",
+    "seo:plan": "node scripts/seo-agent/plan.mjs",
+    "seo:apply": "node scripts/seo-agent/apply.mjs",
+    "seo:run": "node scripts/seo-agent/run.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.4.0",

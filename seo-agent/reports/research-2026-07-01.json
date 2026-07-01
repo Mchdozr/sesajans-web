@@ -1,0 +1,58 @@
+{
+  "generatedAt": "2026-07-01T14:09:39.956Z",
+  "date": "2026-07-01",
+  "ourSite": {
+    "url": "https://sesajans.com.tr",
+    "brand": "SESAJANS",
+    "productCount": 11,
+    "blogCount": 7,
+    "hasBlogInSitemap": true,
+    "hasCategoryInSitemap": true,
+    "pages": {
+      "blog": true,
+      "categories": true,
+      "faqSchema": true
+    }
+  },
+  "competitors": [
+    {
+      "name": "LED Aydınlatma sektörü (örnek)",
+      "url": "https://ledajans.com",
+      "ok": true,
+      "error": null,
+      "homepage": {
+        "title": "LED Ekran Satış, Kiralama ve Kurulum | LEDAJANS İstanbul",
+        "titleLength": 56,
+        "description": "LED ekran satış, kiralama ve kurulum. İç mekan, dış mekan, rental çözümler. 25 yıl tecrübe, 2 yıl garanti. Ücretsiz keşif ve teklif.",
+        "descriptionLength": 132,
+        "h1": "LED Ekran Çözümleri",
+        "ogTitle": "LED Ekran Satış, Kiralama ve Kurulum | LEDAJANS İstanbul",
+        "canonical": "https://ledajans.com/",
+        "internalLinkCount": 34,
+        "blogPathSamples": [
+          "/blog/"
+        ],
+        "productPathSamples": [],
+        "jsonLdCount": 2,
+        "hasFaqSchema": false
+      },
+      "sitemap": {
+        "found": true,
+        "path": "/sitemap.xml",
+        "urlCount": 153
+      }
+    }
+  ],
+  "seedKeywords": [
+    "moving head beam",
+    "sahne aydınlatma",
+    "ip66 beam",
+    "blinder strobe",
+    "konser aydınlatma",
+    "dmx aydınlatma",
+    "led bar sahne",
+    "festival aydınlatma",
+    "wash moving head",
+    "profesyonel sahne ışığı"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "siteUrl": "https://sesajans.com.tr",
+  "brand": "SESAJANS",
+  "locale": "tr",
+  "competitors": [
+    {
+      "name": "Sanyi Lights",
+      "url": "https://www.sanyilights.com.tr",
+      "focus": "Moving head, beam, wash, PAR — profesyonel ithalat"
+    },
+    {
+      "name": "Ses Pazarı",
+      "url": "https://www.sespazari.com",
+      "focus": "LED moving head, beam spot, wash — online perakende"
+    },
+    {
+      "name": "Meteor Müzik",
+      "url": "https://www.meteormuzik.com.tr",
+      "focus": "KAVA, Lexence beam/blinder/wash — İzmir distribütör"
+    },
+    {
+      "name": "Pulsarpro Teknoloji",
+      "url": "https://www.pulsarpromusic.com",
+      "focus": "GT ProLight beam IP65, BSW, bee-eye"
+    },
+    {
+      "name": "Mars Music Shop",
+      "url": "https://www.marsmusicshops.com",
+      "focus": "SSP Neptune beam/wash/hybrid, Vari-Lite"
+    },
+    {
+      "name": "LEDAJANS",
+      "url": "https://ledajans.com",
+      "focus": "LED aydınlatma, moving head, sahne çözümleri"
+    }
+  ],
+  "seedKeywords": [
+    "moving head beam",
+    "sahne aydınlatma",
+    "ip66 beam",
+    "blinder strobe",
+    "konser aydınlatma",
+    "dmx aydınlatma",
+    "led bar sahne",
+    "festival aydınlatma",
+    "wash moving head",
+    "profesyonel sahne ışığı"
+  ],
+  "autoApply": {
+    "blogStubs": false,
+    "maxBlogStubsPerRun": 0,
+    "requireBuildPass": true
+  }
+}

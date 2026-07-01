@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { PageHeader } from "@/components/PageHeader";
@@ -41,6 +42,23 @@ export function BlogPostContent({ post }: { post: BlogPost }) {
                 h2: ({ children }) => (
                   <h2 className="mt-8 font-display text-xl font-bold text-ink">{children}</h2>
                 ),
+                h3: ({ children }) => (
+                  <h3 className="mt-6 font-display text-lg font-semibold text-ink">{children}</h3>
+                ),
+                img: ({ src, alt }) => {
+                  if (!src || typeof src !== "string") return null;
+                  return (
+                    <span className="my-6 block overflow-hidden rounded-2xl border border-theme">
+                      <Image
+                        src={src}
+                        alt={alt ?? ""}
+                        width={1200}
+                        height={675}
+                        className="h-auto w-full object-cover"
+                      />
+                    </span>
+                  );
+                },
                 p: ({ children }) => (
                   <p className="mt-4 leading-relaxed text-ink-muted">{children}</p>
                 ),
