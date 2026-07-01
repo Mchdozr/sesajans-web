@@ -1,0 +1,257 @@
+export const dictionary = {
+  skipLink: "Skip to content",
+  nav: {
+    home: "Home",
+    products: "Products",
+    useCases: "Use Cases",
+    projects: "Projects",
+    about: "About",
+    faq: "FAQ",
+    contact: "Contact",
+    cta: "Get a Quote",
+  },
+  common: {
+    all: "All",
+    detail: "Details",
+    video: "Video",
+    watchVideo: "Watch Video",
+    downloadCatalog: "Catalog PDF",
+    home: "Home",
+    rights: "All rights reserved.",
+    productImage: "Product image",
+    zoomImage: "Zoom image",
+    close: "Close",
+  },
+  home: {
+    experience: "years of stage lighting experience",
+    heroTitle1: "Professional solutions",
+    heroTitle2: "that light up the stage",
+    heroDesc:
+      "We deliver professional lighting solutions for concerts, festivals, trade shows and corporate events with moving heads, blinders, strobes and LED bars.",
+    browseProducts: "Browse Products",
+    guaranteed: "Warranty-backed products",
+    support: "Technical support",
+    fastDelivery: "Fast delivery",
+    stats: {
+      experience: "Years of experience",
+      products: "Product lines",
+      projects: "Completed projects",
+      support: "Technical support",
+    },
+    productsEyebrow: "Products",
+    productsTitle: "Professional lighting portfolio",
+    productsDesc: "Explore our moving head, blinder, strobe and LED bar solutions.",
+    allProducts: "All Products",
+    whyEyebrow: "Why SESAJANS?",
+    whyTitle: "Your trusted partner from stage to venue",
+    projectsEyebrow: "Projects",
+    projectsTitle: "Application examples",
+    projectsDesc: "Selected references from product and effect visuals.",
+    browseProjects: "View Projects",
+    faqEyebrow: "FAQ",
+    faqTitle: "Frequently asked questions",
+    allFaqs: "View all questions",
+  },
+  whyUs: [
+    {
+      title: "Project-focused consulting",
+      description:
+        "We plan the right product combination for your venue, truss and DMX infrastructure.",
+    },
+    {
+      title: "Installation & commissioning",
+      description:
+        "Turnkey solutions including rigging, addressing, programming and on-site testing.",
+    },
+    {
+      title: "After-sales support",
+      description:
+        "Long-term partnership with spare parts, firmware updates and technical service.",
+    },
+    {
+      title: "Fast stock delivery",
+      description:
+        "Rapid logistics and rental options for urgent event and production needs.",
+    },
+  ],
+  homeFaqs: [
+    {
+      q: "What lighting products does SESAJANS offer?",
+      a: "We offer moving head beam and wash fixtures, blinders, strobes, LED bars and effect units. Browse our full portfolio on the products page.",
+    },
+    {
+      q: "Which products are suitable for outdoor events?",
+      a: "IP65/IP66 rated Beam King IP, Blinder series, Strike Pro IP and Tornado IP are designed for outdoor applications.",
+    },
+    {
+      q: "Do you provide DMX programming services?",
+      a: "Yes. We offer DMX addressing, show programming and operator training after installation.",
+    },
+    {
+      q: "What do I need to request a quote?",
+      a: "Share your event date, venue type, approximate quantity and intended use via the contact form.",
+    },
+  ],
+  productsPage: {
+    eyebrow: "Products",
+    title: "Professional Lighting Products",
+    description:
+      "Beam, wash, blinder, strobe and LED bar solutions for concerts, festivals, trade shows and corporate events.",
+  },
+  productDetail: {
+    whatIs: "Overview",
+    specs: "Technical Specifications",
+    gallery: "Gallery",
+    useCases: "Use Cases",
+    faqs: "FAQ",
+    related: "Related Products",
+    livePerformance: "Live performance",
+    stageFootage: "Stage footage",
+    videoDesc: "Watch real-world usage and effect videos of this product.",
+    videoN: "Video",
+  },
+  cta: {
+    title: "Let's choose the right lighting for your project",
+    description:
+      "Share your event details and we'll get back to you with product recommendations, installation planning and a quote.",
+    button: "Get a Free Quote",
+  },
+  footer: {
+    products: "Products",
+    corporate: "Corporate",
+    support: "Support",
+    legal: "Legal",
+    allProducts: "All Products",
+    faq: "FAQ",
+    privacy: "Privacy Policy",
+    kvkk: "KVKK Notice",
+    cookies: "Cookie Policy",
+    terms: "Terms of Use",
+    description:
+      "Professional stage and event lighting solutions. Moving heads, blinders, strobes and LED bars with installation, technical support and project consulting.",
+  },
+  categories: {
+    "moving-head-beam": {
+      label: "Moving Head Beam",
+      description: "Sharp beam effects and prism solutions",
+    },
+    "moving-head-wash": {
+      label: "Moving Head Wash",
+      description: "Wide-area wash and zoom beam solutions",
+    },
+    "blinder-strobe": {
+      label: "Blinder & Strobe",
+      description: "High-output blinder and strobe systems",
+    },
+    "led-bar": {
+      label: "LED Bar & Effects",
+      description: "Linear bars and multi-head effect units",
+    },
+  },
+  theme: {
+    light: "Light theme",
+    dark: "Dark theme",
+  },
+  locale: {
+    tr: "Türkçe",
+    en: "English",
+  },
+  site: {
+    description:
+      "Professional stage and event lighting solutions. Moving heads, blinders, strobes and LED bars with installation, technical support and project consulting.",
+    slogan: "Professional solutions that light up the stage",
+  },
+  contactPage: {
+    eyebrow: "Contact",
+    title: "Get in touch",
+    description:
+      "Fill out the form for free consulting and a quote, or call us directly.",
+    phone: "Phone",
+    whatsapp: "WhatsApp",
+    whatsappValue: "Message us for a quick reply",
+    email: "Email",
+    sendMessage: "Send a message",
+    sendMessageDesc: "Briefly describe your event date, venue and lighting needs.",
+    officeInfo: "Office details",
+    officeHours: "Weekdays 09:00 – 18:00",
+  },
+  contactForm: {
+    name: "Full name",
+    email: "Email",
+    phone: "Phone",
+    subject: "Subject",
+    message: "Message",
+    selectSubject: "Select subject",
+    subjects: ["Price Quote", "Technical Support", "Installation Request", "General Inquiry", "Other"],
+    send: "Send Message",
+    sending: "Sending...",
+    success: "Your message has been received. We will get back to you shortly.",
+    error: "Submission failed. Please try again or contact us by phone.",
+    errors: {
+      name: "Name must be at least 2 characters",
+      email: "Enter a valid email",
+      subject: "Select a subject",
+      message: "Message must be at least 10 characters",
+    },
+  },
+  aboutPage: {
+    eyebrow: "Corporate",
+    title: "About us",
+    p1: "has been delivering professional lighting solutions across Turkey for concerts, festivals, trade shows, TV production and corporate events since",
+    p2: "With our moving head beam and wash, blinder, strobe and LED bar portfolio, we provide technical consulting, installation and commissioning tailored to your event scale.",
+    p3: "We aim for long-term partnerships with after-sales support, spare parts and DMX programming assistance.",
+    values: [
+      { title: "Quality", desc: "Stage-grade, tested products." },
+      { title: "Trust", desc: "Transparent process from installation to after-sales." },
+      { title: "Expertise", desc: "DMX programming and field experience." },
+      { title: "Speed", desc: "Fast solutions for urgent production needs." },
+    ],
+  },
+  sssPage: {
+    eyebrow: "FAQ",
+    title: "Frequently asked questions",
+    description: "Common questions about products, installation and technical support.",
+  },
+  projectsPage: {
+    eyebrow: "Projects",
+    title: "Lighting application examples",
+    description:
+      "Selected references from product and effect visuals. Real project photos coming soon.",
+    stageApp: "Stage application",
+    effectView: "Effect view",
+    refDesc: "application. Professional event lighting reference.",
+  },
+  useCasesPage: {
+    eyebrow: "Use Cases",
+    title: "The right lighting for every event",
+    description: "We recommend products based on your venue type and production scale.",
+    browseProducts: "Browse products →",
+    items: [
+      {
+        title: "Concert & Festival",
+        description: "Live performance lighting with large-stage beam, wash and strobe solutions.",
+      },
+      {
+        title: "Nightclub & Bar",
+        description: "Dynamic atmosphere with compact moving heads and effect units.",
+      },
+      {
+        title: "TV & Studio",
+        description: "Flicker-free, high-CRI wash and controlled beam solutions.",
+      },
+      {
+        title: "Trade Show & Launch",
+        description: "Brand areas and stage emphasis with linear bars and blinders.",
+      },
+      {
+        title: "Theatre & Hall",
+        description: "Quiet operation, smooth dimming and wide wash angles.",
+      },
+      {
+        title: "Architectural Lighting",
+        description: "IP-rated units for façade and structural accent lighting.",
+      },
+    ],
+  },
+  quote: "Get a Quote",
+} as const;
