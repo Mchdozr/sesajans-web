@@ -5,7 +5,7 @@
     "type": "blog_stub",
     "auto": true,
     "title": "Blog içerik hacmini artır",
-    "reason": "Sitede 7 blog yazısı var; rakipler blog/rehber URL yapısı kullanıyor.",
+    "reason": "Sitede 6 blog yazısı var; rakipler blog/rehber URL yapısı kullanıyor.",
     "topics": [
       {
         "keyword": "moving head beam",
@@ -40,7 +40,15 @@
     "type": "manual",
     "auto": false,
     "title": "İndekslenebilir sayfa sayısını artır",
-    "reason": "Rakip sitemap ortalaması ~153 URL; iç link ve landing sayfaları ekle."
+    "reason": "Rakip sitemap ortalaması ~62 URL; iç link ve landing sayfaları ekle."
+  },
+  {
+    "id": "rich-schema",
+    "priority": "medium",
+    "type": "manual",
+    "auto": false,
+    "title": "Ürün ve makale schema zenginleştir",
+    "reason": "Rakip ortalama JSON-LD yoğunluğu yüksek (max 5)."
   },
   {
     "id": "kw-blog-ip66-beam",
@@ -133,11 +141,26 @@
     ]
   },
   {
+    "id": "kw-blog-istanbul-sahne-aydinlatma",
+    "priority": "low",
+    "type": "blog_stub",
+    "auto": true,
+    "title": "Long-tail blog: istanbul sahne aydınlatma",
+    "reason": "Anahtar kelime için özel içerik yok.",
+    "topics": [
+      {
+        "keyword": "istanbul sahne aydınlatma",
+        "slug": "istanbul-sahne-aydinlatma-sesajans-rehber",
+        "title": "Istanbul sahne aydınlatma — SESAJANS rehberi"
+      }
+    ]
+  },
+  {
     "id": "competitor-blog-structure",
     "priority": "low",
     "type": "manual",
     "auto": false,
     "title": "Rakip blog URL yapısını incele",
-    "reason": "Örnek rakip blog yolları: /blog/"
+    "reason": "Örnek rakip blog yolları: /blog/haber/sanyilights, /bdet/haber/6/sahne-aydinlatmasi-nedir-canli-deneyimleri-sekillendiren-sistemlere-derinlemesine-bir-bakis, /bdet/haber/5/dj-aydinlatmasina-baslangic-kilavuzu-yeni-performans-sanatcilari-isikla-atmosferi-nasil-sekillendiriyor"
   }
 ]

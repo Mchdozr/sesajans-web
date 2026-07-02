@@ -50,7 +50,6 @@ export function ProjectGallery() {
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {filtered.map((project) => {
           const categoryLabel = t.categories[project.category].label;
-          const primaryProduct = project.productSlugs[0];
 
           return (
             <article
@@ -71,19 +70,21 @@ export function ProjectGallery() {
               </div>
               <div className="p-4">
                 <p className="text-xs font-semibold text-brand">{categoryLabel}</p>
-                <h3 className="mt-1 font-display font-bold text-ink">{project.title}</h3>
+                <h3 className="mt-1 font-display font-bold text-ink">
+                  <Link href={`/projeler/${project.slug}`} className="hover:text-brand">
+                    {project.title}
+                  </Link>
+                </h3>
                 <p className="mt-1 text-xs text-ink-muted">
                   {project.venue} · {project.city}
                 </p>
                 <p className="mt-2 text-sm text-ink-muted line-clamp-3">{project.summary}</p>
-                {primaryProduct && (
-                  <Link
-                    href={`/urunler/${primaryProduct}`}
-                    className="mt-3 inline-block text-sm font-semibold text-brand hover:underline"
-                  >
-                    {t.common.detail} →
-                  </Link>
-                )}
+                <Link
+                  href={`/projeler/${project.slug}`}
+                  className="mt-3 inline-block text-sm font-semibold text-brand hover:underline"
+                >
+                  {t.common.detail} →
+                </Link>
               </div>
             </article>
           );

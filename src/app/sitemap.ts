@@ -3,6 +3,11 @@ import { site } from "@/lib/site";
 import { products } from "@/lib/products";
 import { categorySlugs } from "@/lib/categories";
 import { getAllBlogPosts } from "@/lib/blog";
+import { useCaseSlugs } from "@/lib/use-cases";
+import { projects } from "@/lib/projects";
+import { istanbulLanding } from "@/lib/local-seo";
+
+const STATIC_LAST_MODIFIED = new Date("2026-07-01");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
@@ -14,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/iletisim",
     "/sss",
     "/kullanim-alanlari",
+    istanbulLanding.path,
     "/gizlilik-politikasi",
     "/kvkk-aydinlatma-metni",
     "/cerez-politikasi",
@@ -25,25 +31,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...staticPages.map((path) => ({
       url: `${site.url}${path}`,
-      lastModified: new Date(),
+      lastModified: STATIC_LAST_MODIFIED,
       changeFrequency: "monthly" as const,
-      priority: path === "" ? 1 : 0.8,
+      priority: path === "" ? 1 : path === istanbulLanding.path ? 0.9 : 0.8,
     })),
     ...categorySlugs.map((slug) => ({
       url: `${site.url}/urunler/kategori/${slug}`,
-      lastModified: new Date(),
+      lastModified: STATIC_LAST_MODIFIED,
       changeFrequency: "monthly" as const,
       priority: 0.85,
     })),
+    ...useCaseSlugs.map((slug) => ({
+      url: `${site.url}/kullanim-alanlari/${slug}`,
+      lastModified: STATIC_LAST_MODIFIED,
+      changeFrequency: "monthly" as const,
+      priority: 0.82,
+    })),
+    ...projects.map((p) => ({
+      url: `${site.url}/projeler/${p.slug}`,
+      lastModified: STATIC_LAST_MODIFIED,
+      changeFrequency: "yearly" as const,
+      priority: 0.78,
+    })),
     ...products.map((p) => ({
       url: `${site.url}/urunler/${p.slug}`,
-      lastModified: new Date(),
+      lastModified: STATIC_LAST_MODIFIED,
       changeFrequency: "monthly" as const,
       priority: 0.9,
     })),
     ...blogPosts.map((post) => ({
       url: `${site.url}/blog/${post.slug}`,
-      lastModified: new Date(post.date),
+      lastModified: new Date(post.dateModified ?? post.date),
       changeFrequency: "weekly" as const,
       priority: 0.75,
     })),

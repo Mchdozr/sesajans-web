@@ -23,8 +23,9 @@ const display = Space_Grotesk({
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
+  applicationName: site.brand,
   title: {
-    default: `${site.brand} | Profesyonel Sahne Aydınlatma`,
+    default: `${site.brand} | ${site.titleTagline}`,
     template: `%s | ${site.brand}`,
   },
   description: site.description,
@@ -35,6 +36,25 @@ export const metadata: Metadata = {
       "tr-TR": site.url,
       "x-default": site.url,
     },
+  },
+  openGraph: {
+    siteName: site.brand,
+    locale: "tr_TR",
+    type: "website",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/brand/logo-on-brand.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: "/favicon.ico",
+  },
+  appleWebApp: {
+    capable: true,
+    title: site.brand,
+    statusBarStyle: "default",
   },
   verification: process.env.GOOGLE_SITE_VERIFICATION
     ? { google: process.env.GOOGLE_SITE_VERIFICATION }

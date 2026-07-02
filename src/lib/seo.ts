@@ -13,7 +13,7 @@ export function buildMetadata({
   title,
   description = site.description,
   path = "/",
-  image = "/products/beam-king-ip/image-01.webp",
+  image = "/opengraph-image",
   keywords = [],
 }: SeoInput): Metadata {
   const url = `${site.url}${path}`;
@@ -24,6 +24,7 @@ export function buildMetadata({
   return {
     title,
     description,
+    applicationName: site.brand,
     keywords: keywords.length ? keywords : undefined,
     alternates: {
       canonical: url,
@@ -46,15 +47,24 @@ export function buildMetadata({
   };
 }
 
-const logoUrl = `${site.url}/brand/logo-light-horizontal.png`;
+const brandLogoSquare = "/brand/logo-on-brand.png";
+const brandLogoSquareUrl = `${site.url}${brandLogoSquare}`;
+
+const brandLogoImageObject = {
+  "@type": "ImageObject" as const,
+  url: brandLogoSquareUrl,
+  width: 500,
+  height: 500,
+};
 
 export const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: site.brand,
+  alternateName: site.name,
   url: site.url,
-  logo: logoUrl,
-  image: logoUrl,
+  logo: brandLogoImageObject,
+  image: brandLogoSquareUrl,
   description: site.description,
   telephone: site.phone,
   email: site.email,
@@ -74,9 +84,10 @@ export const localBusinessJsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: site.brand,
+  alternateName: site.name,
   url: site.url,
-  image: logoUrl,
-  logo: logoUrl,
+  image: brandLogoSquareUrl,
+  logo: brandLogoImageObject,
   description: site.description,
   telephone: site.phone,
   email: site.email,
@@ -108,9 +119,14 @@ export const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: site.brand,
+  alternateName: site.name,
   url: site.url,
   inLanguage: "tr-TR",
-  publisher: { "@type": "Organization", name: site.brand },
+  publisher: {
+    "@type": "Organization",
+    name: site.brand,
+    logo: brandLogoImageObject,
+  },
 };
 
 export function breadcrumbJsonLd(items: ReadonlyArray<{ name: string; path: string }>) {
@@ -151,10 +167,38 @@ export function productJsonLd(product: {
     name: product.name,
     description: product.description,
     image: `${site.url}${product.image}`,
+    sku: product.slug,
+    mpn: product.slug,
     brand: { "@type": "Brand", name: site.brand },
     category: product.category,
     url: `${site.url}/urunler/${product.slug}`,
+    offers: {
+      "@type": "Offer",
+      url: `${site.url}/iletisim`,
+      priceCurrency: "TRY",
+      availability: "https://schema.org/InStock",
+      itemCondition: "https://schema.org/NewCondition",
+      seller: { "@type": "Organization", name: site.brand },
+    },
   };
+}
+
+export function productVideoJsonLd(product: {
+  name: string;
+  description: string;
+  image: string;
+  slug: string;
+  videos: string[];
+}) {
+  return product.videos.map((video, i) => ({
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: product.videos.length > 1 ? `${product.name} — video ${i + 1}` : product.name,
+    description: product.description,
+    contentUrl: `${site.url}${video}`,
+    embedUrl: `${site.url}/urunler/${product.slug}`,
+    thumbnailUrl: `${site.url}${product.image}`,
+  }));
 }
 
 export function articleJsonLd(article: {
@@ -162,6 +206,7 @@ export function articleJsonLd(article: {
   description: string;
   slug: string;
   date: string;
+  dateModified?: string;
   image?: string;
 }) {
   return {
@@ -170,11 +215,12 @@ export function articleJsonLd(article: {
     headline: article.title,
     description: article.description,
     datePublished: article.date,
+    ...(article.dateModified ? { dateModified: article.dateModified } : {}),
     author: { "@type": "Organization", name: site.brand },
     publisher: {
       "@type": "Organization",
       name: site.brand,
-      logo: { "@type": "ImageObject", url: `${site.url}/brand/logo-light-horizontal.png` },
+      logo: brandLogoImageObject,
     },
     image: article.image ? `${site.url}${article.image}` : `${site.url}/opengraph-image`,
     mainEntityOfPage: `${site.url}/blog/${article.slug}`,

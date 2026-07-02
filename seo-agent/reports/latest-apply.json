@@ -1,11 +1,12 @@
 {
-  "generatedAt": "2026-07-01T14:09:50.466Z",
+  "generatedAt": "2026-07-02T11:02:41.259Z",
   "createdBlogs": 2,
   "results": [
     {
       "taskId": "grow-blog",
       "slug": "moving-head-beam-rehberi",
-      "action": "skipped_exists"
+      "action": "created",
+      "path": "C:\\Users\\kacma\\OneDrive\\Masaüstü\\SESAJANS\\web\\content\\blog\\moving-head-beam-rehberi.mdx"
     },
     {
       "taskId": "grow-blog",
@@ -17,12 +18,6 @@
       "slug": "ip66-beam-rehberi",
       "action": "created",
       "path": "C:\\Users\\kacma\\OneDrive\\Masaüstü\\SESAJANS\\web\\content\\blog\\ip66-beam-rehberi.mdx"
-    },
-    {
-      "taskId": "grow-blog",
-      "slug": "blinder-strobe-rehberi",
-      "action": "created",
-      "path": "C:\\Users\\kacma\\OneDrive\\Masaüstü\\SESAJANS\\web\\content\\blog\\blinder-strobe-rehberi.mdx"
     }
   ]
 }

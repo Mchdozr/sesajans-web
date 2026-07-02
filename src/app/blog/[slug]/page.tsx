@@ -43,6 +43,7 @@ export default async function BlogPostPage({
           description: post.description,
           slug: post.slug,
           date: post.date,
+          dateModified: post.dateModified,
           image: post.image,
         })}
       />

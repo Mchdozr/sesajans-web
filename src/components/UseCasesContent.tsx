@@ -9,7 +9,6 @@ import {
   Theater,
   Building2,
 } from "lucide-react";
-import { PageHeader } from "@/components/PageHeader";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/Reveal";
 import { CTABanner } from "@/components/CTABanner";
@@ -23,12 +22,6 @@ export function UseCasesContent() {
 
   return (
     <>
-      <PageHeader
-        eyebrow={p.eyebrow}
-        title={p.title}
-        description={p.description}
-        breadcrumb={[{ name: t.nav.useCases, path: "/kullanim-alanlari" }]}
-      />
       <section className="py-16 sm:py-20">
         <Container>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

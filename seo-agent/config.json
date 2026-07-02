@@ -44,11 +44,12 @@
     "led bar sahne",
     "festival aydınlatma",
     "wash moving head",
-    "profesyonel sahne ışığı"
+    "profesyonel sahne ışığı",
+    "istanbul sahne aydınlatma"
   ],
   "autoApply": {
-    "blogStubs": false,
-    "maxBlogStubsPerRun": 0,
+    "blogStubs": true,
+    "maxBlogStubsPerRun": 2,
     "requireBuildPass": true
   }
 }

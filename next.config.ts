@@ -10,6 +10,18 @@ const nextConfig: NextConfig = {
         destination: "https://sesajans.com.tr/:path*",
         permanent: true,
       },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "sesajans.com" }],
+        destination: "https://sesajans.com.tr/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.sesajans.com" }],
+        destination: "https://sesajans.com.tr/:path*",
+        permanent: true,
+      },
     ];
   },
 };

@@ -10,6 +10,7 @@ const WHATSAPP_E164 = "905498002510";
 export const site = {
   name: "sesajans.com.tr",
   brand: "SESAJANS",
+  titleTagline: "Profesyonel Sahne ve Etkinlik Aydınlatma",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://sesajans.com.tr",
   /** Alternate domains that 301 to primary (see vercel.json). */
   alternateDomains: [
@@ -86,6 +87,7 @@ export const footerNav = {
       { label: "Blog", href: "/blog" },
       { label: "Projeler", href: "/projeler" },
       { label: "Kullanım Alanları", href: "/kullanim-alanlari" },
+      { label: "İstanbul Aydınlatma", href: "/istanbul-sahne-aydinlatma" },
       { label: "İletişim", href: "/iletisim" },
     ],
   },

@@ -9,6 +9,7 @@ export type BlogPost = {
   title: string;
   description: string;
   date: string;
+  dateModified?: string;
   category: string;
   keywords: string[];
   image?: string;
@@ -35,6 +36,7 @@ export function getBlogPost(slug: string): BlogPost | null {
     title: String(data.title ?? slug),
     description: String(data.description ?? ""),
     date: String(data.date ?? new Date().toISOString().slice(0, 10)),
+    dateModified: data.dateModified ? String(data.dateModified) : undefined,
     category: String(data.category ?? "Rehber"),
     keywords: Array.isArray(data.keywords) ? data.keywords.map(String) : [],
     image: data.image ? String(data.image) : undefined,

@@ -11,6 +11,7 @@ import { ProductCard } from "@/components/ProductCard";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { CTABanner } from "@/components/CTABanner";
 import { products } from "@/lib/products";
+import { projects } from "@/lib/projects";
 import { site } from "@/lib/site";
 import { useI18n } from "@/lib/i18n/context";
 
@@ -87,6 +88,22 @@ export function HomeContent() {
             title={t.home.projectsTitle}
             description={t.home.projectsDesc}
           />
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {projects.slice(0, 3).map((project, i) => (
+              <Reveal key={project.slug} delay={i * 0.06}>
+                <Link
+                  href={`/projeler/${project.slug}`}
+                  className="glow-border block overflow-hidden rounded-2xl border border-theme bg-surface-elevated/80 transition-colors hover:border-brand/40"
+                >
+                  <div className="p-5">
+                    <p className="text-xs font-semibold text-brand">{project.year} · {project.city}</p>
+                    <h3 className="mt-1 font-display font-bold text-ink">{project.title}</h3>
+                    <p className="mt-2 line-clamp-2 text-sm text-ink-muted">{project.summary}</p>
+                  </div>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
           <div className="mt-10 text-center">
             <ButtonLink href="/projeler">{t.home.browseProjects}</ButtonLink>
           </div>

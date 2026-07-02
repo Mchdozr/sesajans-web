@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { products } from "@/lib/products";
 import type { ProductCategory } from "@/lib/categories";
-import { PageHeader } from "@/components/PageHeader";
 import { Container } from "@/components/ui/Container";
 import { ProductCard } from "@/components/ProductCard";
 import { Reveal } from "@/components/Reveal";
@@ -21,13 +20,6 @@ export function ProductsContent() {
 
   return (
     <>
-      <PageHeader
-        eyebrow={t.productsPage.eyebrow}
-        title={t.productsPage.title}
-        description={t.productsPage.description}
-        breadcrumb={[{ name: t.nav.products, path: "/urunler" }]}
-      />
-
       <section className="border-b border-theme py-6">
         <Container>
           <div className="flex flex-wrap gap-2">

@@ -22,7 +22,7 @@ export const categories: Record<
     seoDescription:
       "Konser, festival ve kulüp sahnesi için profesyonel beam moving head ürünleri. IP20 ve IP66 dış mekân seçenekleri.",
     seoContent:
-      "Moving head beam üniteleri, dar ışık demeti ve prizma efektleriyle sahne üzerinde uzun mesafeli vurgu sağlar. SESAJANS portföyünde kapalı mekân için Beam King 380 ve dış mekân için IP66 korumalı Beam King IP modelleri bulunur. Konser truss kurulumları, gece kulübü efektleri ve mimari projeksiyon uygulamalarında tercih edilir. DMX512/RDM kontrol, yüksek çıkış gücü ve zengin gobo-prizma setleri ile prodüksiyon ekiplerine esneklik sunar.",
+      "Moving head beam üniteleri, dar ışık demeti ve prizma efektleriyle sahne üzerinde uzun mesafeli vurgu sağlar. SESAJANS portföyünde kapalı mekân için Beam King 380 ve dış mekân için IP66 korumalı Beam King IP modelleri bulunur. Konser truss kurulumları, gece kulübü efektleri ve mimari projeksiyon uygulamalarında tercih edilir. DMX512/RDM kontrol, yüksek çıkış gücü ve zengin gobo-prizma setleri ile prodüksiyon ekiplerine esneklik sunar. Beam seçiminde sahne derinliği, seyirci mesafesi ve IP koruma sınıfı kritik kriterlerdir.",
     keywords: ["moving head beam", "beam aydınlatma", "konser beam", "dmx beam"],
   },
   "moving-head-wash": {

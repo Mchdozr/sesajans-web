@@ -240,32 +240,32 @@ export const dictionary = {
       {
         title: "Konser & Festival",
         description: "Büyük sahne beam, wash ve strobe çözümleri ile canlı performans aydınlatması.",
-        href: "/urunler/kategori/moving-head-beam",
+        href: "/kullanim-alanlari/konser-festival",
       },
       {
         title: "Gece Kulübü & Bar",
         description: "Kompakt moving head ve efekt üniteleri ile dinamik atmosfer.",
-        href: "/urunler/kategori/moving-head-beam",
+        href: "/kullanim-alanlari/gece-kulubu",
       },
       {
         title: "TV & Stüdyo",
         description: "Flicker-free, yüksek CRI wash ve kontrollü beam çözümleri.",
-        href: "/urunler/kategori/moving-head-wash",
+        href: "/kullanim-alanlari/tv-studyo",
       },
       {
         title: "Fuar & Lansman",
         description: "Linear bar ve blinder ile marka alanı ve sahne vurgusu.",
-        href: "/urunler/kategori/led-bar",
+        href: "/kullanim-alanlari/fuar-lansman",
       },
       {
         title: "Tiyatro & Salon",
         description: "Sessiz çalışma, smooth dimmer ve geniş wash açıları.",
-        href: "/urunler/kategori/moving-head-wash",
+        href: "/kullanim-alanlari/tiyatro-salon",
       },
       {
         title: "Mimari Aydınlatma",
         description: "Dış cephe ve yapısal vurgu için IP korumalı üniteler.",
-        href: "/urunler/kategori/blinder-strobe",
+        href: "/kullanim-alanlari/mimari-aydinlatma",
       },
     ],
   },

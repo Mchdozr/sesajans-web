@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { ProductDetailContent } from "@/components/ProductDetailContent";
 import { JsonLd } from "@/components/JsonLd";
 import { products, getProduct } from "@/lib/products";
-import { buildMetadata, faqJsonLd, productJsonLd } from "@/lib/seo";
+import { buildMetadata, faqJsonLd, productJsonLd, productVideoJsonLd } from "@/lib/seo";
 
 export function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }));
@@ -46,6 +46,15 @@ export default async function ProductPage({
             slug: product.slug,
             category: product.category,
           }),
+          ...(product.videos?.length
+            ? productVideoJsonLd({
+                name: product.name,
+                description: product.excerpt,
+                image: product.image,
+                slug: product.slug,
+                videos: product.videos,
+              })
+            : []),
           faqJsonLd(product.faqs),
         ]}
       />
