@@ -7,6 +7,13 @@ import { isCookieConsentAccepted, subscribeCookieConsent } from "@/lib/cookie-co
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
+declare global {
+  interface Window {
+    dataLayer?: unknown[];
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 function grantAnalyticsConsent() {
   if (!GA_ID || typeof window === "undefined") return;
   window.gtag?.("consent", "update", {
@@ -52,6 +59,5 @@ export function Analytics() {
 export function trackEvent(name: string, params?: Record<string, string>) {
   if (typeof window === "undefined" || !GA_ID) return;
   if (!isCookieConsentAccepted()) return;
-  // @ts-expect-error gtag global
   window.gtag?.("event", name, params);
 }
