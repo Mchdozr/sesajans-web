@@ -24,6 +24,7 @@ type FormData = {
 export function ContactForm() {
   const { t } = useI18n();
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const schema = z.object({
     name: z.string().min(2, t.contactForm.errors.name),
@@ -45,17 +46,20 @@ export function ContactForm() {
 
   async function onSubmit(data: FormData) {
     setStatus("loading");
+    setErrorMessage(null);
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
-      if (!res.ok) throw new Error("fail");
+      const body = (await res.json().catch(() => null)) as { error?: string } | null;
+      if (!res.ok) throw new Error(body?.error ?? "fail");
       trackEvent("contact_submit", { subject: data.subject });
       setStatus("success");
       reset();
-    } catch {
+    } catch (err) {
+      setErrorMessage(err instanceof Error && err.message !== "fail" ? err.message : t.contactForm.error);
       setStatus("error");
     }
   }
@@ -163,7 +167,7 @@ export function ContactForm() {
         <p className="text-sm text-green-500">{t.contactForm.success}</p>
       )}
       {status === "error" && (
-        <p className="text-sm text-red-400">{t.contactForm.error}</p>
+        <p className="text-sm text-red-400">{errorMessage ?? t.contactForm.error}</p>
       )}
 
       <button

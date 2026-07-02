@@ -3,7 +3,9 @@ import { Resend } from "resend";
 import { site } from "@/lib/site";
 import { rateLimit } from "@/lib/rate-limit";
 
-const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
+const resend = process.env.RESEND_API_KEY?.trim()
+  ? new Resend(process.env.RESEND_API_KEY.trim())
+  : null;
 
 function getClientIp(request: Request): string {
   return (
@@ -11,6 +13,48 @@ function getClientIp(request: Request): string {
     request.headers.get("x-real-ip") ??
     "unknown"
   );
+}
+
+function contactRecipient(): string {
+  return process.env.CONTACT_TO?.trim() || process.env.CONTACT_EMAIL?.trim() || site.email;
+}
+
+function contactFrom(): string {
+  return process.env.RESEND_FROM?.trim() || `${site.brand} <onboarding@resend.dev>`;
+}
+
+function buildEmailHtml(payload: {
+  name: string;
+  email: string;
+  phone?: string;
+  subject: string;
+  message: string;
+  product?: string;
+}) {
+  const rows = [
+    ["Ad Soyad", payload.name],
+    ["E-posta", payload.email],
+    ["Telefon", payload.phone || "-"],
+    ["Konu", payload.subject],
+    ...(payload.product ? [["Ürün", payload.product] as const] : []),
+  ];
+
+  const table = rows
+    .map(
+      ([label, value]) =>
+        `<tr><td style="padding:8px 12px;border:1px solid #e5e7eb;font-weight:600;background:#f8fafc">${label}</td><td style="padding:8px 12px;border:1px solid #e5e7eb">${value}</td></tr>`,
+    )
+    .join("");
+
+  return `
+    <div style="font-family:Arial,sans-serif;color:#111827;max-width:600px">
+      <h2 style="color:#F46F2C;margin:0 0 16px">${site.brand} — Yeni iletişim formu</h2>
+      <table style="border-collapse:collapse;width:100%;font-size:14px">${table}</table>
+      <p style="margin:20px 0 8px;font-weight:600">Mesaj</p>
+      <p style="margin:0;padding:12px;background:#f8fafc;border:1px solid #e5e7eb;border-radius:8px;white-space:pre-wrap">${payload.message}</p>
+      <p style="margin:24px 0 0;font-size:12px;color:#6b7280">Yanıtlamak için bu e-postaya doğrudan cevap verebilirsiniz (Reply-To: ${payload.email}).</p>
+    </div>
+  `;
 }
 
 export async function POST(request: Request) {
@@ -40,13 +84,18 @@ export async function POST(request: Request) {
 
     if (resend) {
       const productLine = product ? `\nÜrün: ${product}` : "";
-      await resend.emails.send({
-        from: process.env.RESEND_FROM ?? `${site.brand} <onboarding@resend.dev>`,
-        to: site.email,
+      const { error } = await resend.emails.send({
+        from: contactFrom(),
+        to: contactRecipient(),
         replyTo: email,
         subject: `[${site.brand}] ${subject} — ${name}`,
         text: `Ad Soyad: ${name}\nE-posta: ${email}\nTelefon: ${phone ?? "-"}\nKonu: ${subject}${productLine}\n\nMesaj:\n${message}`,
+        html: buildEmailHtml({ name, email, phone, subject, message, product }),
       });
+      if (error) {
+        console.error("[SESAJANS Contact Resend]", error);
+        return NextResponse.json({ error: "E-posta gönderilemedi. Lütfen tekrar deneyin." }, { status: 502 });
+      }
     } else if (process.env.VERCEL === "1") {
       return NextResponse.json(
         {
