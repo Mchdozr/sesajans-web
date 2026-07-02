@@ -31,9 +31,8 @@ export function Hero() {
           </motion.span>
 
           <motion.h1
-            initial={reduce ? false : { opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.05 }}
             className="mt-6 font-display text-4xl font-bold leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-6xl"
           >
             {t.home.heroTitle1}{" "}

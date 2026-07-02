@@ -82,6 +82,7 @@ export function Footer() {
         { label: t.nav.blog, href: "/blog" },
         { label: t.nav.projects, href: "/projeler" },
         { label: t.nav.useCases, href: "/kullanim-alanlari" },
+        { label: "İstanbul Sahne Aydınlatma", href: "/istanbul-sahne-aydinlatma" },
         { label: t.nav.contact, href: "/iletisim" },
       ],
     },

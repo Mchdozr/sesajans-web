@@ -25,8 +25,8 @@ export const dictionary = {
   },
   home: {
     experience: "yıl sahne aydınlatma tecrübesi",
-    heroTitle1: "Sahneyi aydınlatan",
-    heroTitle2: "profesyonel çözümler",
+    heroTitle1: "Profesyonel sahne aydınlatma",
+    heroTitle2: "çözümleri",
     heroDesc:
       "Moving head, blinder, strobe ve LED bar ürünleriyle konser, festival, fuar ve kurumsal etkinlikleriniz için profesyonel aydınlatma çözümleri sunuyoruz.",
     browseProducts: "Ürünleri İncele",

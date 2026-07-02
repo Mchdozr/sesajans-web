@@ -7,7 +7,7 @@ import { useCaseSlugs } from "@/lib/use-cases";
 import { projects } from "@/lib/projects";
 import { istanbulLanding } from "@/lib/local-seo";
 
-const STATIC_LAST_MODIFIED = new Date("2026-07-01");
+const STATIC_LAST_MODIFIED = new Date("2026-07-02");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/sss",
     "/kullanim-alanlari",
     istanbulLanding.path,
+    "/karsilastirma/beam-king-380-vs-ip",
     "/gizlilik-politikasi",
     "/kvkk-aydinlatma-metni",
     "/cerez-politikasi",

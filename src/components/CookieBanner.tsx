@@ -1,32 +1,23 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useSyncExternalStore } from "react";
 import { X } from "lucide-react";
 import { useI18n } from "@/lib/i18n/context";
-
-const STORAGE_KEY = "sesajans-cookie-consent";
+import {
+  getCookieConsent,
+  setCookieConsent,
+  subscribeCookieConsent,
+} from "@/lib/cookie-consent";
 
 export function CookieBanner() {
   const { t } = useI18n();
   const c = t.cookieBanner;
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (!stored) setVisible(true);
-  }, []);
-
-  function accept() {
-    localStorage.setItem(STORAGE_KEY, "accepted");
-    setVisible(false);
-    window.location.reload();
-  }
-
-  function reject() {
-    localStorage.setItem(STORAGE_KEY, "rejected");
-    setVisible(false);
-  }
+  const visible = useSyncExternalStore(
+    subscribeCookieConsent,
+    () => !getCookieConsent(),
+    () => false,
+  );
 
   if (!visible) return null;
 
@@ -47,14 +38,14 @@ export function CookieBanner() {
         <div className="flex shrink-0 gap-2">
           <button
             type="button"
-            onClick={reject}
+            onClick={() => setCookieConsent("rejected")}
             className="rounded-xl border border-theme px-4 py-2 text-sm font-medium text-ink-muted hover:text-ink"
           >
             {c.reject}
           </button>
           <button
             type="button"
-            onClick={accept}
+            onClick={() => setCookieConsent("accepted")}
             className="rounded-xl bg-brand px-4 py-2 text-sm font-semibold text-white hover:bg-brand-dark"
           >
             {c.accept}
@@ -62,7 +53,7 @@ export function CookieBanner() {
         </div>
         <button
           type="button"
-          onClick={reject}
+          onClick={() => setCookieConsent("rejected")}
           className="absolute right-3 top-3 text-ink-muted hover:text-ink sm:hidden"
           aria-label={c.close}
         >

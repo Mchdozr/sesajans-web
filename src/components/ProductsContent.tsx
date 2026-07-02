@@ -36,7 +36,7 @@ export function ProductsContent() {
             {categoryKeys.map((key) => (
               <Link
                 key={key}
-                href={`/urunler?kategori=${key}`}
+                href={`/urunler/kategori/${key}`}
                 className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
                   kategori === key
                     ? "bg-brand text-white"

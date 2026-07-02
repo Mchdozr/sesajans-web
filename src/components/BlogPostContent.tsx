@@ -51,7 +51,7 @@ export function BlogPostContent({ post }: { post: BlogPost }) {
                     <span className="my-6 block overflow-hidden rounded-2xl border border-theme">
                       <Image
                         src={src}
-                        alt={alt ?? ""}
+                        alt={alt?.trim() ? alt : post.title}
                         width={1200}
                         height={675}
                         className="h-auto w-full object-cover"

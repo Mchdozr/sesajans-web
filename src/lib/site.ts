@@ -45,6 +45,18 @@ export const site = {
     projects: "500+",
     support: "7/24",
   },
+  openingHours: [
+    {
+      days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"] as const,
+      opens: "08:30",
+      closes: "18:30",
+    },
+    {
+      days: ["Saturday"] as const,
+      opens: "09:00",
+      closes: "13:30",
+    },
+  ],
 } as const;
 
 export const socialLinks = [

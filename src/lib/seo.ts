@@ -106,12 +106,12 @@ export const localBusinessJsonLd = {
     latitude: 41.0602,
     longitude: 28.9877,
   },
-  openingHoursSpecification: {
+  openingHoursSpecification: site.openingHours.map((slot) => ({
     "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    opens: "09:00",
-    closes: "18:00",
-  },
+    dayOfWeek: [...slot.days],
+    opens: slot.opens,
+    closes: slot.closes,
+  })),
   sameAs: [site.social.instagram, site.social.linkedin, site.social.youtube],
 };
 

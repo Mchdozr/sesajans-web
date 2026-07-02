@@ -1,16 +1,17 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import Script from "next/script";
+import { isCookieConsentAccepted, subscribeCookieConsent } from "@/lib/cookie-consent";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 export function Analytics() {
-  const [enabled, setEnabled] = useState(false);
-
-  useEffect(() => {
-    setEnabled(localStorage.getItem("sesajans-cookie-consent") === "accepted");
-  }, []);
+  const enabled = useSyncExternalStore(
+    subscribeCookieConsent,
+    isCookieConsentAccepted,
+    () => false,
+  );
 
   if (!GA_ID || !enabled) return null;
 
@@ -31,7 +32,7 @@ export function Analytics() {
 
 export function trackEvent(name: string, params?: Record<string, string>) {
   if (typeof window === "undefined" || !GA_ID) return;
-  if (localStorage.getItem("sesajans-cookie-consent") !== "accepted") return;
+  if (!isCookieConsentAccepted()) return;
   // @ts-expect-error gtag global
   window.gtag?.("event", name, params);
 }
