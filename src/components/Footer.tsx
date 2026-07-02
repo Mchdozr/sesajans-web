@@ -91,52 +91,28 @@ export function Footer() {
         { label: t.nav.cta, href: "/iletisim" },
       ],
     },
-    {
-      title: t.footer.legal,
-      links: [
-        { label: t.footer.privacy, href: "/gizlilik-politikasi" },
-        { label: t.footer.kvkk, href: "/kvkk-aydinlatma-metni" },
-        { label: t.footer.cookies, href: "/cerez-politikasi" },
-        { label: t.footer.terms, href: "/kullanim-kosullari" },
-      ],
-    },
   ];
+
+  const legalGroup = {
+    title: t.footer.legal,
+    links: [
+      { label: t.footer.privacy, href: "/gizlilik-politikasi" },
+      { label: t.footer.kvkk, href: "/kvkk-aydinlatma-metni" },
+      { label: t.footer.cookies, href: "/cerez-politikasi" },
+      { label: t.footer.terms, href: "/kullanim-kosullari" },
+    ],
+  };
 
   return (
     <footer className="relative mt-24 border-t border-theme bg-surface-deep">
       <div className="bg-grid absolute inset-0 opacity-30" aria-hidden />
       <Container className="relative py-14">
-        <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr]">
+        <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr_1fr]">
           <div>
             <Logo />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-muted">
               {t.footer.description}
             </p>
-            <h3 className="mt-5 text-sm font-semibold uppercase tracking-wider text-ink">
-              {t.nav.contact}
-            </h3>
-            <div className="mt-4 space-y-2 text-sm">
-              <a
-                href={`tel:${site.phone}`}
-                className="flex items-center gap-2 text-ink-muted hover:text-brand"
-              >
-                <Phone className="h-4 w-4 text-brand" /> {site.phoneDisplay}
-              </a>
-              <a
-                href={`mailto:${site.email}`}
-                className="flex items-center gap-2 text-ink-muted hover:text-brand"
-              >
-                <Mail className="h-4 w-4 text-brand" /> {site.email}
-              </a>
-              <a
-                href={site.addressUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-ink-muted hover:text-brand"
-              >
-                <MapPin className="h-4 w-4 shrink-0 text-brand" /> {site.address}
-              </a>
-            </div>
             <div className="mt-5 flex gap-3">
               {socialLinks.map((s) => {
                 const Icon = socialIcons[s.label as keyof typeof socialIcons];
@@ -175,6 +151,52 @@ export function Footer() {
               </ul>
             </div>
           ))}
+
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-ink">
+              {t.nav.contact}
+            </h3>
+            <div className="mt-4 space-y-2 text-sm">
+              <a
+                href={`tel:${site.phone}`}
+                className="flex items-center gap-2 text-ink-muted hover:text-brand"
+              >
+                <Phone className="h-4 w-4 text-brand" /> {site.phoneDisplay}
+              </a>
+              <a
+                href={`mailto:${site.email}`}
+                className="flex items-center gap-2 text-ink-muted hover:text-brand"
+              >
+                <Mail className="h-4 w-4 text-brand" /> {site.email}
+              </a>
+              <a
+                href={site.addressUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-ink-muted hover:text-brand"
+              >
+                <MapPin className="h-4 w-4 shrink-0 text-brand" /> {site.address}
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-ink">
+              {legalGroup.title}
+            </h3>
+            <ul className="mt-4 space-y-2.5">
+              {legalGroup.links.map((link) => (
+                <li key={link.href + link.label}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-ink-muted transition-colors hover:text-brand"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <div className="mt-12 border-t border-theme pt-6 text-center text-sm text-ink-muted">
