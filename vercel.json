@@ -1,4 +1,24 @@
 {
   "framework": "nextjs",
-  "regions": ["fra1"]
+  "regions": ["fra1"],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "sesajans.com" }],
+      "destination": "https://sesajans.com.tr/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.sesajans.com" }],
+      "destination": "https://sesajans.com.tr/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.sesajans.com.tr" }],
+      "destination": "https://sesajans.com.tr/:path*",
+      "permanent": true
+    }
+  ]
 }

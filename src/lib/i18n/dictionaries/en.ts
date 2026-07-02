@@ -203,9 +203,10 @@ export const dictionary = {
   aboutPage: {
     eyebrow: "Corporate",
     title: "About us",
-    p1: "has been delivering professional lighting solutions across Turkey for concerts, festivals, trade shows, TV production and corporate events since",
-    p2: "With our moving head beam and wash, blinder, strobe and LED bar portfolio, we provide technical consulting, installation and commissioning tailored to your event scale.",
-    p3: "We aim for long-term partnerships with after-sales support, spare parts and DMX programming assistance.",
+    p1: "has been delivering professional stage lighting solutions across Turkey for concerts, festivals, trade shows, TV production and corporate events since",
+    p2: "As an authorized distributor of professional moving head beam and wash, blinder, strobe and LED bar products, we offer sales, technical consulting, installation and commissioning under one roof.",
+    p3: "From our office in Şişli, Istanbul, we provide fast on-site support across Istanbul and nearby provinces, with project-based delivery and installation coordination nationwide.",
+    p4: "We aim for long-term partnerships with after-sales support, spare parts and DMX programming assistance.",
     values: [
       { title: "Quality", desc: "Stage-grade, tested products." },
       { title: "Trust", desc: "Transparent process from installation to after-sales." },
@@ -223,6 +224,8 @@ export const dictionary = {
     title: "Lighting application examples",
     description:
       "Selected references from concerts, festivals, trade shows and corporate events we have lit.",
+    disclaimer:
+      "Images on this page are product demo and promotional shots. References will be updated as real project photos become available.",
     stageApp: "Stage application",
     effectView: "Effect view",
     refDesc: "application. Professional event lighting reference.",
@@ -266,6 +269,15 @@ export const dictionary = {
     ],
   },
   quote: "Get a Quote",
+  cookieBanner: {
+    ariaLabel: "Cookie notice",
+    message: "We use cookies to improve your experience and analyze site traffic. See our",
+    policyLink: "Cookie Policy",
+    messageSuffix: " for details.",
+    reject: "Decline",
+    accept: "Accept",
+    close: "Close",
+  },
   blogPage: {
     eyebrow: "Blog",
     title: "Lighting Guides",

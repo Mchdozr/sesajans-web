@@ -25,7 +25,13 @@ export function buildMetadata({
     title,
     description,
     keywords: keywords.length ? keywords : undefined,
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      languages: {
+        "tr-TR": url,
+        "x-default": url,
+      },
+    },
     verification,
     openGraph: {
       title,
@@ -40,11 +46,15 @@ export function buildMetadata({
   };
 }
 
+const logoUrl = `${site.url}/brand/logo-light-horizontal.png`;
+
 export const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: site.brand,
   url: site.url,
+  logo: logoUrl,
+  image: logoUrl,
   description: site.description,
   telephone: site.phone,
   email: site.email,
@@ -58,6 +68,40 @@ export const organizationJsonLd = {
     postalCode: site.postalCode,
     addressCountry: "TR",
   },
+};
+
+export const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: site.brand,
+  url: site.url,
+  image: logoUrl,
+  logo: logoUrl,
+  description: site.description,
+  telephone: site.phone,
+  email: site.email,
+  foundingDate: String(site.foundedYear),
+  priceRange: "$$",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: site.addressLine,
+    addressLocality: site.addressDistrict,
+    addressRegion: site.addressCity,
+    postalCode: site.postalCode,
+    addressCountry: "TR",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 41.0602,
+    longitude: 28.9877,
+  },
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    opens: "09:00",
+    closes: "18:00",
+  },
+  sameAs: [site.social.instagram, site.social.linkedin, site.social.youtube],
 };
 
 export const websiteJsonLd = {

@@ -32,7 +32,7 @@ export function Logo({ className }: { className?: string }) {
   return (
     <Image
       src={src}
-      alt="SES AJANS"
+      alt="SESAJANS"
       width={width}
       height={height}
       className={cn(sizeClass, "shrink-0 object-contain object-left", className)}

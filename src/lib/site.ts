@@ -2,6 +2,12 @@ export const site = {
   name: "sesajans.com.tr",
   brand: "SESAJANS",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://sesajans.com.tr",
+  /** Alternate domains that 301 to primary (see vercel.json). */
+  alternateDomains: [
+    "https://sesajans.com",
+    "https://www.sesajans.com",
+    "https://www.sesajans.com.tr",
+  ] as const,
   description:
     "Profesyonel sahne ve etkinlik aydınlatma çözümleri. Moving head, blinder, strobe ve LED bar ürünleri; kurulum, teknik destek ve proje danışmanlığı.",
   slogan: "Sahneyi aydınlatan profesyonel çözümler",

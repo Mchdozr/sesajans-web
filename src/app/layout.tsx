@@ -7,7 +7,7 @@ import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
 import { Providers } from "@/components/Providers";
 import { SkipLink } from "@/components/SkipLink";
-import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
+import { organizationJsonLd, localBusinessJsonLd, websiteJsonLd } from "@/lib/seo";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -29,6 +29,13 @@ export const metadata: Metadata = {
   },
   description: site.description,
   robots: { index: true, follow: true },
+  alternates: {
+    canonical: site.url,
+    languages: {
+      "tr-TR": site.url,
+      "x-default": site.url,
+    },
+  },
   verification: process.env.GOOGLE_SITE_VERIFICATION
     ? { google: process.env.GOOGLE_SITE_VERIFICATION }
     : undefined,
@@ -48,7 +55,7 @@ export default function RootLayout({
     <html lang="tr" suppressHydrationWarning className={`${inter.variable} ${display.variable}`}>
       <body className="flex min-h-screen flex-col bg-surface text-ink">
         <Providers>
-          <JsonLd data={[organizationJsonLd, websiteJsonLd]} />
+          <JsonLd data={[organizationJsonLd, localBusinessJsonLd, websiteJsonLd]} />
           <SkipLink />
           <Header />
           <main id="main" className="flex-1">

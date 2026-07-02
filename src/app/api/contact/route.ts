@@ -47,6 +47,14 @@ export async function POST(request: Request) {
         subject: `[${site.brand}] ${subject} — ${name}`,
         text: `Ad Soyad: ${name}\nE-posta: ${email}\nTelefon: ${phone ?? "-"}\nKonu: ${subject}${productLine}\n\nMesaj:\n${message}`,
       });
+    } else if (process.env.VERCEL === "1") {
+      return NextResponse.json(
+        {
+          error:
+            "İletişim formu şu an e-posta gönderemiyor. Lütfen telefon veya WhatsApp ile ulaşın; site yöneticisi RESEND_API_KEY ortam değişkenini tanımlamalıdır.",
+        },
+        { status: 503 },
+      );
     } else {
       console.log("[SESAJANS Contact]", payload);
     }

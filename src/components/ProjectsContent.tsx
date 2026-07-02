@@ -19,6 +19,12 @@ export function ProjectsContent() {
       />
       <section className="py-16 sm:py-20">
         <Container>
+          <div
+            role="status"
+            className="mb-10 rounded-2xl border border-amber-500/30 bg-amber-500/10 px-5 py-4 text-sm leading-relaxed text-ink-muted"
+          >
+            {t.projectsPage.disclaimer}
+          </div>
           <ProjectGallery />
         </Container>
       </section>

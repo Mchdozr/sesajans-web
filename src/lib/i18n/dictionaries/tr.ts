@@ -203,9 +203,10 @@ export const dictionary = {
   aboutPage: {
     eyebrow: "Kurumsal",
     title: "Hakkımızda",
-    p1: "yılından bu yana Türkiye'de konser, festival, fuar, TV prodüksiyonu ve kurumsal etkinlikler için profesyonel aydınlatma çözümleri sunmaktadır.",
-    p2: "Moving head beam ve wash, blinder, strobe ve LED bar ürün portföyümüzle etkinliğinizin ölçeğine uygun teknik öneri, kurulum ve devreye alma hizmeti sağlıyoruz.",
-    p3: "Satış sonrası teknik destek, yedek parça ve DMX programlama desteği ile uzun vadeli iş ortaklığı hedefliyoruz.",
+    p1: "yılından bu yana Türkiye genelinde konser, festival, fuar, TV prodüksiyonu ve kurumsal etkinlikler için profesyonel sahne aydınlatma çözümleri sunmaktadır.",
+    p2: "Profesyonel moving head beam ve wash, blinder, strobe ile LED bar ürünlerinin yetkili distribütörü olarak; satış, teknik danışmanlık, kurulum ve devreye alma hizmetlerini tek çatı altında sunuyoruz.",
+    p3: "Şişli, İstanbul'daki ofisimizden İstanbul ve çevre illere hızlı saha desteği sağlıyor; Türkiye genelinde proje bazlı teslimat ve montaj koordinasyonu yapıyoruz.",
+    p4: "Satış sonrası teknik destek, yedek parça ve DMX programlama desteği ile uzun vadeli iş ortaklığı hedefliyoruz.",
     values: [
       { title: "Kalite", desc: "Sahne standartlarına uygun, test edilmiş ürünler." },
       { title: "Güven", desc: "Kurulumdan satış sonrasına kadar şeffaf süreç." },
@@ -223,6 +224,8 @@ export const dictionary = {
     title: "Aydınlatma uygulama örnekleri",
     description:
       "Konser, festival, fuar ve kurumsal etkinliklerde tamamladığımız aydınlatma projelerinden seçilmiş referanslar.",
+    disclaimer:
+      "Bu sayfadaki görseller, ürün tanıtım ve demo çekimlerinden oluşmaktadır. Gerçek proje fotoğrafları eklendikçe referanslar güncellenecektir.",
     stageApp: "Sahne uygulaması",
     effectView: "Efekt görünümü",
     refDesc: "ile uygulaması. Profesyonel etkinlik aydınlatma referansı.",
@@ -266,6 +269,15 @@ export const dictionary = {
     ],
   },
   quote: "Teklif Al",
+  cookieBanner: {
+    ariaLabel: "Çerez bildirimi",
+    message: "Deneyiminizi iyileştirmek ve site trafiğini analiz etmek için çerezler kullanıyoruz. Detaylar için",
+    policyLink: "Çerez Politikası",
+    messageSuffix: "'nı inceleyebilirsiniz.",
+    reject: "Reddet",
+    accept: "Kabul Et",
+    close: "Kapat",
+  },
   blogPage: {
     eyebrow: "Blog",
     title: "Aydınlatma Rehberleri",
