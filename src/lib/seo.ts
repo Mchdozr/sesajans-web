@@ -47,7 +47,7 @@ export function buildMetadata({
   };
 }
 
-const brandLogoSquare = "/brand/logo-on-brand.png";
+const brandLogoSquare = "/brand/favicon-512.png";
 const brandLogoSquareUrl = `${site.url}${brandLogoSquare}`;
 
 const brandLogoImageObject = {

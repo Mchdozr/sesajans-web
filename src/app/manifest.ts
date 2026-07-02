@@ -14,8 +14,13 @@ export default function manifest(): MetadataRoute.Manifest {
     icons: [
       {
         src: "/favicon.ico",
+        sizes: "32x32",
+        type: "image/png",
+      },
+      {
+        src: "/favicon-48.png",
         sizes: "48x48",
-        type: "image/x-icon",
+        type: "image/png",
       },
       {
         src: "/apple-touch-icon.png",
@@ -23,14 +28,9 @@ export default function manifest(): MetadataRoute.Manifest {
         type: "image/png",
       },
       {
-        src: "/brand/logo-on-brand.png",
+        src: "/brand/favicon-512.png",
         sizes: "512x512",
         type: "image/png",
-      },
-      {
-        src: "/icon.svg",
-        sizes: "any",
-        type: "image/svg+xml",
       },
     ],
   };
