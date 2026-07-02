@@ -224,8 +224,6 @@ export const dictionary = {
     title: "Lighting application examples",
     description:
       "Selected references from concerts, festivals, trade shows and corporate events we have lit.",
-    disclaimer:
-      "Images on this page are product demo and promotional shots. References will be updated as real project photos become available.",
     stageApp: "Stage application",
     effectView: "Effect view",
     refDesc: "application. Professional event lighting reference.",

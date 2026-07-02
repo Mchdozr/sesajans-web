@@ -15,7 +15,7 @@ export function ContactContent() {
     {
       icon: MessageCircle,
       title: t.contactPage.whatsapp,
-      value: t.contactPage.whatsappValue,
+      value: site.phoneDisplay,
       href: `https://wa.me/${site.whatsapp}`,
     },
     { icon: Mail, title: t.contactPage.email, value: site.email, href: `mailto:${site.email}` },

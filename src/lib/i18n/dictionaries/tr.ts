@@ -224,8 +224,6 @@ export const dictionary = {
     title: "Aydınlatma uygulama örnekleri",
     description:
       "Konser, festival, fuar ve kurumsal etkinliklerde tamamladığımız aydınlatma projelerinden seçilmiş referanslar.",
-    disclaimer:
-      "Bu sayfadaki görseller, ürün tanıtım ve demo çekimlerinden oluşmaktadır. Gerçek proje fotoğrafları eklendikçe referanslar güncellenecektir.",
     stageApp: "Sahne uygulaması",
     effectView: "Efekt görünümü",
     refDesc: "ile uygulaması. Profesyonel etkinlik aydınlatma referansı.",

@@ -1,3 +1,12 @@
+function envOr(value: string | undefined, fallback: string): string {
+  const trimmed = value?.trim();
+  return trimmed ? trimmed : fallback;
+}
+
+const PHONE_E164 = "+905498002510";
+const PHONE_DISPLAY = "0549 800 25 10";
+const WHATSAPP_E164 = "905498002510";
+
 export const site = {
   name: "sesajans.com.tr",
   brand: "SESAJANS",
@@ -11,10 +20,10 @@ export const site = {
   description:
     "Profesyonel sahne ve etkinlik aydınlatma çözümleri. Moving head, blinder, strobe ve LED bar ürünleri; kurulum, teknik destek ve proje danışmanlığı.",
   slogan: "Sahneyi aydınlatan profesyonel çözümler",
-  phone: process.env.NEXT_PUBLIC_PHONE ?? "+905498002510",
-  phoneDisplay: process.env.NEXT_PUBLIC_PHONE_DISPLAY ?? "0549 800 25 10",
-  email: process.env.CONTACT_EMAIL ?? "info@sesajans.com.tr",
-  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP ?? "905498002510",
+  phone: envOr(process.env.NEXT_PUBLIC_PHONE, PHONE_E164),
+  phoneDisplay: envOr(process.env.NEXT_PUBLIC_PHONE_DISPLAY, PHONE_DISPLAY),
+  email: envOr(process.env.CONTACT_EMAIL, "info@sesajans.com.tr"),
+  whatsapp: envOr(process.env.NEXT_PUBLIC_WHATSAPP, WHATSAPP_E164),
   addressLine: "Halide Edip Adıvar Mah. Gül 2 Sk. No:10",
   addressDistrict: "Şişli",
   addressCity: "İstanbul",
