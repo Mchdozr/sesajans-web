@@ -176,7 +176,8 @@ export const dictionary = {
     officeInfo: "Ofis bilgileri",
     officeInfoDesc: "Doğrudan arayın, WhatsApp'tan yazın veya e-posta gönderin.",
     openMaps: "Haritada aç",
-    officeHours: "Hafta içi 09:00 – 18:00",
+    officeHours: "Hafta içi 08:30 – 18:30",
+    officeHoursSaturday: "Cumartesi 09:00 – 13:30",
   },
   contactForm: {
     name: "Ad Soyad",

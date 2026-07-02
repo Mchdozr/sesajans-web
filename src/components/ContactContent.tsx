@@ -101,9 +101,12 @@ export function ContactContent() {
                 </div>
               </div>
 
-              <div className="mt-4 flex items-center gap-3 rounded-2xl border border-dashed border-theme px-4 py-3 text-sm text-ink-muted">
-                <Clock className="h-5 w-5 shrink-0 text-brand" />
-                <span>{t.contactPage.officeHours}</span>
+              <div className="mt-4 flex gap-3 rounded-2xl border border-dashed border-theme px-4 py-3 text-sm text-ink-muted">
+                <Clock className="mt-0.5 h-5 w-5 shrink-0 text-brand" />
+                <div className="space-y-1">
+                  <p>{t.contactPage.officeHours}</p>
+                  <p>{t.contactPage.officeHoursSaturday}</p>
+                </div>
               </div>
             </div>
           </div>

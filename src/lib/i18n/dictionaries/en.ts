@@ -176,7 +176,8 @@ export const dictionary = {
     officeInfo: "Office details",
     officeInfoDesc: "Call us, message on WhatsApp, or send an email.",
     openMaps: "Open in Maps",
-    officeHours: "Weekdays 09:00 – 18:00",
+    officeHours: "Weekdays 08:30 – 18:30",
+    officeHoursSaturday: "Saturday 09:00 – 13:30",
   },
   contactForm: {
     name: "Full name",
