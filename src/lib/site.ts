@@ -40,7 +40,7 @@ export const site = {
 export const socialLinks = [
   { label: "Instagram", href: site.social.instagram },
   { label: "LinkedIn", href: site.social.linkedin },
-  { label: "YouTube", href: site.social.youtube },
+  { label: "WhatsApp", href: `https://wa.me/${site.whatsapp}` },
 ] as const;
 
 export const mainNav = [
