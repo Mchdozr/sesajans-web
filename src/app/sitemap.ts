@@ -5,7 +5,9 @@ import { categorySlugs } from "@/lib/categories";
 import { getAllBlogPosts } from "@/lib/blog";
 import { useCaseSlugs } from "@/lib/use-cases";
 import { projects } from "@/lib/projects";
-import { istanbulLanding } from "@/lib/local-seo";
+import { cityLandings } from "@/lib/local-seo";
+import { comparisons } from "@/lib/comparisons";
+import { glossaryTerms } from "@/lib/glossary";
 
 const STATIC_LAST_MODIFIED = new Date("2026-07-02");
 
@@ -19,12 +21,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/iletisim",
     "/sss",
     "/kullanim-alanlari",
-    istanbulLanding.path,
-    "/karsilastirma/beam-king-380-vs-ip",
+    "/karsilastirma",
+    "/sozluk",
     "/gizlilik-politikasi",
     "/kvkk-aydinlatma-metni",
     "/cerez-politikasi",
     "/kullanim-kosullari",
+    ...cityLandings.map((c) => c.path),
   ];
 
   const blogPosts = getAllBlogPosts();
@@ -34,7 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${site.url}${path}`,
       lastModified: STATIC_LAST_MODIFIED,
       changeFrequency: "monthly" as const,
-      priority: path === "" ? 1 : path === istanbulLanding.path ? 0.9 : 0.8,
+      priority: path === "" ? 1 : path.includes("sahne-aydinlatma") ? 0.9 : 0.8,
     })),
     ...categorySlugs.map((slug) => ({
       url: `${site.url}/urunler/kategori/${slug}`,
@@ -47,6 +50,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: STATIC_LAST_MODIFIED,
       changeFrequency: "monthly" as const,
       priority: 0.82,
+    })),
+    ...comparisons.map((c) => ({
+      url: `${site.url}${c.path}`,
+      lastModified: STATIC_LAST_MODIFIED,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
+    ...glossaryTerms.map((t) => ({
+      url: `${site.url}/sozluk/${t.slug}`,
+      lastModified: STATIC_LAST_MODIFIED,
+      changeFrequency: "monthly" as const,
+      priority: 0.78,
     })),
     ...projects.map((p) => ({
       url: `${site.url}/projeler/${p.slug}`,

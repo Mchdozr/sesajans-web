@@ -1,24 +1,21 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Container, SectionHeading } from "@/components/ui/Container";
 import { PageHeaderStatic } from "@/components/PageHeaderStatic";
 import { ProductCard } from "@/components/ProductCard";
 import { CTABanner } from "@/components/CTABanner";
 import { JsonLd } from "@/components/JsonLd";
 import { faqJsonLd } from "@/lib/seo";
-import { istanbulLanding } from "@/lib/local-seo";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { site } from "@/lib/site";
 import { ButtonLink } from "@/components/ui/Button";
+import type { CityLanding } from "@/lib/local-seo";
 
-export function IstanbulLandingContent() {
-  const data = istanbulLanding;
-
+export function CityLandingContent({ data }: { data: CityLanding }) {
   return (
     <>
       <JsonLd data={faqJsonLd(data.faqs)} />
       <PageHeaderStatic
-        eyebrow="İstanbul"
+        eyebrow={data.city}
         title={data.title}
         description={data.intro}
         breadcrumb={[{ name: data.title, path: data.path }]}
@@ -39,7 +36,7 @@ export function IstanbulLandingContent() {
               <h2 className="font-display text-lg font-bold text-ink">İletişim & Konum</h2>
               <ul className="mt-4 space-y-3 text-sm text-ink-muted">
                 <li>
-                  <strong className="text-ink">Adres:</strong> {site.address}
+                  <strong className="text-ink">Merkez:</strong> {site.address}
                 </li>
                 <li>
                   <strong className="text-ink">Telefon:</strong>{" "}
@@ -69,23 +66,23 @@ export function IstanbulLandingContent() {
         <Container>
           <SectionHeading
             eyebrow="Popüler çözümler"
-            title="İstanbul etkinlikleri için ürünler"
-            description="Konser, düğün ve kurumsal etkinliklerde en çok tercih edilen modeller."
+            title={`${data.city} etkinlikleri için ürünler`}
+            description="Bölgede en çok tercih edilen modeller."
           />
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <ProductCard slug="beam-king-ip" />
-            <ProductCard slug="wash-3715" />
-            <ProductCard slug="blinder-800-ip" />
+            {data.productSlugs.map((slug) => (
+              <ProductCard key={slug} slug={slug} />
+            ))}
           </div>
           <div className="mt-10 flex flex-wrap justify-center gap-4 text-sm font-semibold">
-            <Link href="/kullanim-alanlari/konser-festival" className="text-brand hover:underline">
-              Konser aydınlatması →
+            <Link href="/urunler" className="text-brand hover:underline">
+              Tüm ürünler →
             </Link>
-            <Link href="/kullanim-alanlari/dugun-etkinlik" className="text-brand hover:underline">
-              Düğün aydınlatması →
+            <Link href="/kullanim-alanlari" className="text-brand hover:underline">
+              Kullanım alanları →
             </Link>
-            <Link href="/projeler" className="text-brand hover:underline">
-              Referans projeler →
+            <Link href="/blog" className="text-brand hover:underline">
+              Blog rehberleri →
             </Link>
           </div>
         </Container>
@@ -93,7 +90,7 @@ export function IstanbulLandingContent() {
 
       <section className="py-16">
         <Container>
-          <SectionHeading eyebrow="SSS" title="İstanbul sahne aydınlatma SSS" />
+          <SectionHeading title="Sık sorulan sorular" />
           <div className="mx-auto mt-8 max-w-3xl">
             <FAQAccordion items={data.faqs} />
           </div>

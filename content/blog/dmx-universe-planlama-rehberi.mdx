@@ -1,0 +1,45 @@
+---
+title: "DMX Universe Planlama Rehberi: Adresleme ve Patch Listesi"
+description: "Sahne aydınlatma DMX universe planlaması. Kanal adresleme, çakışma önleme ve büyük kurulum ipuçları."
+date: "2026-07-02"
+category: "Teknik"
+keywords: ["dmx universe", "dmx adresleme", "patch listesi", "dmx512 planlama", "sahne dmx"]
+image: "/products/wash-3715/image-01.jpg"
+---
+
+**DMX universe planlaması**, sahne aydınlatma kurulumunun temelidir. Yanlış adresleme fixture çakışmasına, kontrol kaybına ve programlama gecikmesine yol açar.
+
+## Universe temelleri
+
+Bir DMX universe **512 kanal** içerir. [DMX512 nedir?](/sozluk/dmx512-nedir) Moving head başına 17–37 kanal kullanıldığında tek universe'e 13–30 fixture sığabilir.
+
+## Adresleme adımları
+
+1. Fixture listesini çıkar (model, adet, kanal modu)
+2. Her cihaza benzersiz başlangıç adresi ata
+3. Patch listesi oluştur (Excel veya konsol yazılımı)
+4. Sahada test ve doğrulama yap
+
+## Örnek patch tablosu
+
+| # | Fixture | Model | Adres | Kanal |
+|---|---------|-------|-------|-------|
+| 1 | Beam 01 | Beam King 380 | 001 | 17 |
+| 2 | Beam 02 | Beam King 380 | 018 | 17 |
+| 3 | Wash 01 | Wash 3715 | 035 | 25 |
+
+## Çoklu universe
+
+30+ fixture kurulumlarında ikinci universe gerekir. Art-Net node ile konsol bilgisayarından çoklu universe yönetilir. [Art-Net rehberi](/sozluk/art-net-nedir)
+
+## Yaygın hatalar
+
+- **Adres çakışması** — İki fixture aynı kanalı dinler
+- **Universe taşması** — 512 kanalı aşan patch
+- **Yanlış mod** — 17CH fixture 37CH modda adreslenmiş
+
+## SESAJANS desteği
+
+Kurulum projelerimizde patch listesi, konsol dosyası ve operatör eğitimi dahil anahtar teslim DMX altyapısı sunuyoruz.
+
+[DMX kurulum rehberi](/blog/dmx-aydinlatma-kurulumu) · [Ürünler](/urunler) · [İletişim](/iletisim)

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IstanbulLandingContent } from "@/components/IstanbulLandingContent";
+import { CityLandingContent } from "@/components/CityLandingContent";
 import { istanbulLanding } from "@/lib/local-seo";
 import { buildMetadata } from "@/lib/seo";
 
@@ -11,5 +11,5 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default function IstanbulPage() {
-  return <IstanbulLandingContent />;
+  return <CityLandingContent data={istanbulLanding} />;
 }

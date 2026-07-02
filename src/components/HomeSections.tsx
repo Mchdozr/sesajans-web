@@ -95,6 +95,9 @@ export function HomeUseCasesPreview() {
           >
             İstanbul sahne aydınlatma →
           </Link>
+          <Link href="/karsilastirma" className="font-semibold text-brand hover:underline">
+            Ürün karşılaştırmaları →
+          </Link>
         </div>
       </Container>
     </section>

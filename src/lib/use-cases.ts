@@ -152,6 +152,51 @@ export const useCases: UseCase[] = [
     ],
     keywords: ["mimari aydınlatma", "dış cephe ışık", "ip66 mimari"],
   },
+  {
+    slug: "stadyum-arena",
+    title: "Stadyum ve Arena Aydınlatması",
+    seoTitle: "Stadyum ve Arena Sahne Aydınlatması",
+    seoDescription:
+      "Büyük kapasiteli stadyum ve arena konserleri için yüksek güç beam, blinder ve wash çözümleri.",
+    eyebrow: "Stadyum & Arena",
+    intro:
+      "10.000+ seyircili açık ve kapalı arena prodüksiyonlarında uzun mesafe beam, yüksek çıkış blinder ve geniş wash katmanları zorunludur.",
+    body: "Ana truss'ta **Beam King IP** uzun atış mesafesiyle sahne merkezini vurgular; ön hatta **Blinder 800 IP** seyirci alanına güçlü patlama efekti sağlar. **Wash 3715** tribün ve sahne genel aydınlatmasında homojen renk yıkaması üretir. Art-Net ağ altyapısı, yedek universe ve hızlı servis planı arena operasyonlarında kritiktir.",
+    highlights: [
+      "Uzun mesafe IP66 beam portföyü",
+      "Yüksek güç blinder ön hat",
+      "Art-Net çoklu universe planı",
+      "Arena referans deneyimi",
+    ],
+    recommendedProductSlugs: ["beam-king-ip", "blinder-800-ip", "wash-3715", "strike-pro-ip"],
+    categorySlug: "moving-head-beam",
+    relatedBlogSlugs: ["arena-stadyum-aydinlatma-rehberi", "konser-aydinlatma-rehberi", "festival-aydinlatma-butce-planlama"],
+    faqs: [
+      { q: "Stadyum kurulumu kaç gün sürer?", a: "Sahne ölçeğine göre 3–7 gün montaj ve programlama planlanır." },
+      { q: "Yağmurda çalışır mı?", a: "IP66 modeller yağmur ve toz koşullarında güvenle çalışır." },
+    ],
+    keywords: ["stadyum aydınlatma", "arena konser ışığı", "büyük sahne beam"],
+  },
+  {
+    slug: "aydinlatma-kiralama",
+    title: "Aydınlatma Kiralama Hizmeti",
+    seoTitle: "Sahne Aydınlatma Kiralama — Etkinlik Paketleri",
+    seoDescription:
+      "Konser, düğün ve kurumsal etkinlik için moving head kiralama. Operatörlü ve operatörsüz paketler.",
+    eyebrow: "Kiralama",
+    intro:
+      "Tek seferlik etkinlikler için satın alma yerine kiralama ekonomik ve pratik bir seçenektir.",
+    body: "SESAJANS stoktan beam, wash, blinder, strobe ve LED bar kiralama paketleri sunar. Paket içeriği etkinlik türüne göre özelleştirilir; DMX programlama, operatör ve lojistik dahil anahtar teslim çözümler mevcuttur. Kurulum-söküm süreleri düğün ve fuar takvimlerine göre planlanır.",
+    highlights: ["Günlük / haftalık kiralama", "Operatörlü paket seçenekleri", "Hızlı kurulum-söküm", "Stoktan anında rezervasyon"],
+    recommendedProductSlugs: ["beam-king-380", "wash-3715", "led-beam-wash-150", "diamond-line-1240-eco"],
+    categorySlug: "moving-head-wash",
+    relatedBlogSlugs: ["festival-aydinlatma-butce-planlama", "sahne-aydinlatma-rehberi"],
+    faqs: [
+      { q: "Minimum kiralama süresi?", a: "Çoğu etkinlik için 1 gün kiralama yeterlidir; festival paketleri çok günlük planlanır." },
+      { q: "Operatör dahil mi?", a: "İsteğe bağlı operatörlü paketler sunuyoruz." },
+    ],
+    keywords: ["aydınlatma kiralama", "moving head kiralama", "etkinlik ışık kiralama"],
+  },
 ];
 
 export const useCaseSlugs = useCases.map((u) => u.slug);
