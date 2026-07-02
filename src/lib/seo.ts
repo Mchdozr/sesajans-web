@@ -17,6 +17,7 @@ export function buildMetadata({
   keywords = [],
 }: SeoInput): Metadata {
   const url = `${site.url}${path}`;
+  const ogImage = image?.trim() ? image : "/opengraph-image";
   const verification = process.env.GOOGLE_SITE_VERIFICATION
     ? { google: process.env.GOOGLE_SITE_VERIFICATION }
     : undefined;
@@ -41,9 +42,9 @@ export function buildMetadata({
       siteName: site.brand,
       locale: "tr_TR",
       type: "website",
-      images: [{ url: image, width: 1200, height: 630, alt: title }],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
     },
-    twitter: { card: "summary_large_image", title, description, images: [image] },
+    twitter: { card: "summary_large_image", title, description, images: [ogImage] },
   };
 }
 

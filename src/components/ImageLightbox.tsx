@@ -24,8 +24,9 @@ export function ImageLightbox({
   onIndexChange,
 }: ImageLightboxProps) {
   const reduceMotion = useReducedMotion();
-  const open = index !== null;
+  const open = index !== null && Boolean(images[index ?? 0]?.trim());
   const current = index ?? 0;
+  const activeSrc = open ? images[current] : null;
   const hasNav = images.length > 1;
 
   useEffect(() => {
@@ -117,16 +118,18 @@ export function ImageLightbox({
             )}
 
             <div className="relative max-h-[85vh] w-full overflow-hidden rounded-2xl border border-white/10 bg-black/40 shadow-2xl">
-              <Image
-                key={images[current]}
-                src={images[current]}
-                alt={`${alt} ${current + 1}`}
-                width={1400}
-                height={1050}
-                className="mx-auto max-h-[85vh] w-auto object-contain"
-                unoptimized
-                priority
-              />
+              {activeSrc ? (
+                <Image
+                  key={activeSrc}
+                  src={activeSrc}
+                  alt={`${alt} ${current + 1}`}
+                  width={1400}
+                  height={1050}
+                  className="mx-auto max-h-[85vh] w-auto object-contain"
+                  unoptimized
+                  priority
+                />
+              ) : null}
             </div>
 
             {hasNav && (

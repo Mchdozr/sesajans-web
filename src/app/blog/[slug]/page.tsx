@@ -21,7 +21,7 @@ export async function generateMetadata({
     title: post.title,
     description: post.description,
     path: `/blog/${post.slug}`,
-    image: post.image,
+    image: post.image?.trim() ? post.image : undefined,
     keywords: post.keywords,
   });
 }
@@ -44,7 +44,7 @@ export default async function BlogPostPage({
           slug: post.slug,
           date: post.date,
           dateModified: post.dateModified,
-          image: post.image,
+          image: post.image?.trim() ? post.image : undefined,
         })}
       />
       <BlogPostContent post={post} />
