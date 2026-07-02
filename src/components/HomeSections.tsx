@@ -57,7 +57,7 @@ export function HomeBlogPreview() {
 }
 
 export function HomeUseCasesPreview() {
-  const items = useCases.slice(0, 6);
+  const items = useCases;
 
   return (
     <section className="py-20 sm:py-24">
@@ -94,6 +94,18 @@ export function HomeUseCasesPreview() {
             className="font-semibold text-brand hover:underline"
           >
             İstanbul sahne aydınlatma →
+          </Link>
+          <Link
+            href="/antalya-sahne-aydinlatma"
+            className="font-semibold text-brand hover:underline"
+          >
+            Antalya sahne aydınlatma →
+          </Link>
+          <Link
+            href="/bursa-sahne-aydinlatma"
+            className="font-semibold text-brand hover:underline"
+          >
+            Bursa sahne aydınlatma →
           </Link>
           <Link href="/karsilastirma" className="font-semibold text-brand hover:underline">
             Ürün karşılaştırmaları →

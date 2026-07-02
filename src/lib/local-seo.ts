@@ -143,7 +143,91 @@ export const izmirLanding: CityLanding = {
   productSlugs: ["beam-king-ip", "strike-pro-ip", "blinder-800-ip"],
 };
 
-export const cityLandings = [istanbulLanding, ankaraLanding, izmirLanding];
+export const antalyaLanding: CityLanding = {
+  slug: "antalya-sahne-aydinlatma",
+  path: "/antalya-sahne-aydinlatma",
+  city: "Antalya",
+  title: "Antalya Sahne Aydınlatma",
+  seoTitle: "Antalya Sahne Aydınlatma — SESAJANS",
+  seoDescription:
+    "Antalya festival, konser, düğün ve otel etkinlik sahne aydınlatması. IP66 dış mekân beam, blinder ve efekt çözümleri.",
+  intro:
+    "SESAJANS, Antalya ve Akdeniz bölgesinde yaz festivali, açık hava konser, otel etkinliği ve düğün prodüksiyonları için profesyonel sahne aydınlatma ekipmanı ve kurulum hizmeti sunar. Konyaaltı festival referansımızla sahilde ve açık alanda IP korumalı çözümler sağlıyoruz.",
+  sections: [
+    {
+      title: "Antalya'da hizmet alanları",
+      body: "Muratpaşa, Konyaaltı, Lara, Kepez ve tüm Antalya genelinde; sahil etkinlik alanları, otel amfileri, düğün salonları ve açık hava festivallerine yönelik kurulum ve satış desteği veriyoruz.",
+    },
+    {
+      title: "Popüler çözümler",
+      body: "Yaz festivali ve sahil konserlerinde Beam King IP uzun mesafe vurgu; Tornado IP çok başlı efekt; Blinder 400 IP ön hat patlama efekti yoğun talep görür. Otel düğünlerinde Wash 3715 ve Diamond Line 1240 Eco kombinasyonu tercih edilir.",
+    },
+    {
+      title: "Referans projeler",
+      body: "Antalya Yaz Festivali ana sahne projemizde üç günlük festival boyunca IP65+ ürünlerle kesintisiz teknik destek sağlandı. Detayları projeler sayfamızda inceleyebilirsiniz.",
+    },
+  ],
+  faqs: [
+    {
+      q: "Antalya sahil festivali için hangi ürünler?",
+      a: "Tuzlu hava ve kumsal zemin için IP66 Beam King IP, Tornado IP ve Blinder 400 IP önerilir.",
+    },
+    {
+      q: "Antalya'ya teslimat süresi?",
+      a: "Stoktan ürünler için 2–4 iş günü lojistik planlanır; festival sezonunda erken rezervasyon önerilir.",
+    },
+    {
+      q: "Otel etkinliği için keşif yapılıyor mu?",
+      a: "Evet, otel ve açık alan projelerinde sahada veya online keşif ile fixture planı hazırlanır.",
+    },
+  ],
+  keywords: ["antalya sahne aydınlatma", "antalya festival ışığı", "antalya moving head", "akdeniz aydınlatma"],
+  productSlugs: ["beam-king-ip", "tornado-ip", "blinder-400-ip"],
+};
+
+export const bursaLanding: CityLanding = {
+  slug: "bursa-sahne-aydinlatma",
+  path: "/bursa-sahne-aydinlatma",
+  city: "Bursa",
+  title: "Bursa Sahne Aydınlatma",
+  seoTitle: "Bursa Sahne Aydınlatma — SESAJANS",
+  seoDescription:
+    "Bursa tiyatro, konser, düğün ve kurumsal etkinlik sahne aydınlatması. Wash moving head, beam ve LED bar çözümleri.",
+  intro:
+    "SESAJANS, Bursa ve Marmara bölgesinde tiyatro salonu, kültür merkezi, düğün ve kurumsal etkinlikler için profesyonel sahne aydınlatma çözümleri sunar. Bursa Tiyatro Salonu wash sistemi referansımızla sessiz ve homojen salon aydınlatması konusunda deneyimliyiz.",
+  sections: [
+    {
+      title: "Bursa'da hizmet alanları",
+      body: "Osmangazi, Nilüfer, Yıldırım ve tüm Bursa genelinde; kültür merkezleri, konferans salonları, otel balo salonları ve açık hava etkinlik alanlarına kurulum ve satış desteği sağlıyoruz.",
+    },
+    {
+      title: "Popüler çözümler",
+      body: "Tiyatro ve konferans salonlarında Wash 3715 RGBW zoom wash ile homojen sahne yıkaması; düğün salonlarında LED Beam Wash 150 ve Diamond Line 1240 Eco; açık hava etkinliklerde Beam King IP ve Blinder 800 IP kombinasyonu tercih edilir.",
+    },
+    {
+      title: "Referans projeler",
+      body: "Kent Meydanı Kültür Merkezi tiyatro salonu projemizde 400 kişilik salonda sessiz wash moving head sistemi kuruldu. Operatör eğitimi ve preset sahne görünümleri dahil teslim edildi.",
+    },
+  ],
+  faqs: [
+    {
+      q: "Bursa tiyatro salonu için hangi ürünler?",
+      a: "Wash 3715 geniş zoom açısı ve sessiz fan profili ile 400–800 kişilik salonlar için idealdir.",
+    },
+    {
+      q: "Bursa'ya kurulum yapılıyor mu?",
+      a: "Evet, proje kapsamına göre sahada montaj, adresleme ve devreye alma ekibimiz görevlendirilir.",
+    },
+    {
+      q: "Kiralama seçeneği var mı?",
+      a: "Evet, düğün ve kurumsal etkinlikler için kısa süreli kiralama paketleri sunulur.",
+    },
+  ],
+  keywords: ["bursa sahne aydınlatma", "bursa tiyatro ışığı", "bursa moving head", "bursa etkinlik aydınlatma"],
+  productSlugs: ["wash-3715", "led-beam-wash-150", "beam-king-ip"],
+};
+
+export const cityLandings = [istanbulLanding, ankaraLanding, izmirLanding, antalyaLanding, bursaLanding];
 
 export function getCityLanding(slug: string): CityLanding | undefined {
   return cityLandings.find((c) => c.slug === slug);

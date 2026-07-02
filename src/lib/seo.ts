@@ -171,6 +171,7 @@ export function productJsonLd(product: {
     sku: product.slug,
     mpn: product.slug,
     brand: { "@type": "Brand", name: site.brand },
+    manufacturer: { "@type": "Organization", name: site.brand },
     category: product.category,
     url: `${site.url}/urunler/${product.slug}`,
     offers: {
@@ -209,14 +210,18 @@ export function articleJsonLd(article: {
   date: string;
   dateModified?: string;
   image?: string;
+  wordCount?: number;
+  articleSection?: string;
 }) {
   return {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: article.title,
     description: article.description,
     datePublished: article.date,
     ...(article.dateModified ? { dateModified: article.dateModified } : {}),
+    ...(article.wordCount ? { wordCount: article.wordCount } : {}),
+    ...(article.articleSection ? { articleSection: article.articleSection } : {}),
     author: { "@type": "Organization", name: site.brand },
     publisher: {
       "@type": "Organization",
@@ -225,5 +230,64 @@ export function articleJsonLd(article: {
     },
     image: article.image ? `${site.url}${article.image}` : `${site.url}/opengraph-image`,
     mainEntityOfPage: `${site.url}/blog/${article.slug}`,
+  };
+}
+
+export function definedTermJsonLd(term: {
+  name: string;
+  description: string;
+  slug: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "DefinedTerm",
+    name: term.name,
+    description: term.description,
+    url: `${site.url}/sozluk/${term.slug}`,
+    inDefinedTermSet: {
+      "@type": "DefinedTermSet",
+      name: "Aydınlatma Sözlüğü",
+      url: `${site.url}/sozluk`,
+    },
+  };
+}
+
+export function projectJsonLd(project: {
+  title: string;
+  description: string;
+  slug: string;
+  image: string;
+  location: string;
+  dateCreated?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: project.title,
+    description: project.description,
+    image: `${site.url}${project.image}`,
+    url: `${site.url}/projeler/${project.slug}`,
+    locationCreated: project.location,
+    creator: { "@type": "Organization", name: site.brand },
+    ...(project.dateCreated ? { dateCreated: project.dateCreated } : {}),
+  };
+}
+
+export function comparisonJsonLd(comparison: {
+  title: string;
+  description: string;
+  path: string;
+  productNames: string[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: comparison.title,
+    description: comparison.description,
+    url: `${site.url}${comparison.path}`,
+    about: comparison.productNames.map((name) => ({
+      "@type": "Product",
+      name,
+    })),
   };
 }

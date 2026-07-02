@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ProjectDetailContent } from "@/components/ProjectDetailContent";
+import { JsonLd } from "@/components/JsonLd";
 import { projects } from "@/lib/projects";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, projectJsonLd } from "@/lib/seo";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -32,5 +33,19 @@ export default async function ProjectPage({
   const { slug } = await params;
   const project = projects.find((p) => p.slug === slug);
   if (!project) notFound();
-  return <ProjectDetailContent project={project} />;
+  return (
+    <>
+      <JsonLd
+        data={projectJsonLd({
+          title: project.title,
+          description: project.summary,
+          slug: project.slug,
+          image: project.images[0],
+          location: `${project.venue}, ${project.city}`,
+          dateCreated: `${project.year}-01-01`,
+        })}
+      />
+      <ProjectDetailContent project={project} />
+    </>
+  );
 }

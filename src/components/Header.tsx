@@ -22,6 +22,8 @@ export function Header() {
     { label: t.nav.home, href: "/" },
     { label: t.nav.products, href: "/urunler" },
     { label: t.nav.blog, href: "/blog" },
+    { label: t.nav.comparison, href: "/karsilastirma" },
+    { label: t.nav.glossary, href: "/sozluk" },
     { label: t.nav.useCases, href: "/kullanim-alanlari" },
     { label: t.nav.projects, href: "/projeler" },
     { label: t.nav.about, href: "/hakkimizda" },

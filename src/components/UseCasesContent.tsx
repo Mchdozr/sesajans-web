@@ -8,13 +8,16 @@ import {
   Presentation,
   Theater,
   Building2,
+  Heart,
+  Landmark,
+  Package,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/Reveal";
 import { CTABanner } from "@/components/CTABanner";
 import { useI18n } from "@/lib/i18n/context";
 
-const icons = [Music, Sparkles, Tv, Presentation, Theater, Building2];
+const icons = [Music, Sparkles, Tv, Presentation, Theater, Building2, Heart, Landmark, Package];
 
 export function UseCasesContent() {
   const { t } = useI18n();

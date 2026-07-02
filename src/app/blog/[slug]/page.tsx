@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { BlogPostContent } from "@/components/BlogPostContent";
 import { JsonLd } from "@/components/JsonLd";
-import { buildMetadata, articleJsonLd } from "@/lib/seo";
-import { getBlogPost, getBlogSlugs } from "@/lib/blog";
+import { buildMetadata, articleJsonLd, faqJsonLd } from "@/lib/seo";
+import { countWords, extractBlogFaqs, getBlogPost, getBlogSlugs } from "@/lib/blog";
 
 export function generateStaticParams() {
   return getBlogSlugs().map((slug) => ({ slug }));
@@ -35,18 +35,24 @@ export default async function BlogPostPage({
   const post = getBlogPost(slug);
   if (!post) notFound();
 
+  const faqs = extractBlogFaqs(post.content);
+  const jsonLdData = [
+    articleJsonLd({
+      title: post.title,
+      description: post.description,
+      slug: post.slug,
+      date: post.date,
+      dateModified: post.dateModified,
+      image: post.image?.trim() ? post.image : undefined,
+      wordCount: countWords(post.content),
+      articleSection: post.category,
+    }),
+    ...(faqs.length > 0 ? [faqJsonLd(faqs)] : []),
+  ];
+
   return (
     <>
-      <JsonLd
-        data={articleJsonLd({
-          title: post.title,
-          description: post.description,
-          slug: post.slug,
-          date: post.date,
-          dateModified: post.dateModified,
-          image: post.image?.trim() ? post.image : undefined,
-        })}
-      />
+      <JsonLd data={jsonLdData} />
       <BlogPostContent post={post} />
     </>
   );

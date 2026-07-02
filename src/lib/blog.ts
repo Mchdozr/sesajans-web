@@ -50,3 +50,27 @@ export function getAllBlogPosts(): BlogPost[] {
     .filter((p): p is BlogPost => p !== null)
     .sort((a, b) => (a.date < b.date ? 1 : -1));
 }
+
+function stripMarkdownLinks(text: string): string {
+  return text.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
+}
+
+export function extractBlogFaqs(content: string): { q: string; a: string }[] {
+  const faqs: { q: string; a: string }[] = [];
+  const regex = /\*\*S:\s*(.+?)\*\*\s*\n\s*C:\s*([\s\S]+?)(?=\n\n|\n\*\*S:|$)/g;
+  let match: RegExpExecArray | null;
+  while ((match = regex.exec(content)) !== null) {
+    faqs.push({
+      q: match[1].trim(),
+      a: stripMarkdownLinks(match[2].trim()),
+    });
+  }
+  return faqs;
+}
+
+export function countWords(content: string): number {
+  return content
+    .replace(/[#*_\[\]()>`~-]/g, " ")
+    .split(/\s+/)
+    .filter(Boolean).length;
+}

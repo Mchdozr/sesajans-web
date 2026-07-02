@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { GlossaryTermContent } from "@/components/GlossaryTermContent";
-import { buildMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
+import { buildMetadata, definedTermJsonLd } from "@/lib/seo";
 import { getGlossaryTerm, glossarySlugs } from "@/lib/glossary";
 
 export function generateStaticParams() {
@@ -32,5 +33,16 @@ export default async function GlossaryTermPage({
   const { slug } = await params;
   const term = getGlossaryTerm(slug);
   if (!term) notFound();
-  return <GlossaryTermContent term={term} />;
+  return (
+    <>
+      <JsonLd
+        data={definedTermJsonLd({
+          name: term.title,
+          description: term.definition,
+          slug: term.slug,
+        })}
+      />
+      <GlossaryTermContent term={term} />
+    </>
+  );
 }
