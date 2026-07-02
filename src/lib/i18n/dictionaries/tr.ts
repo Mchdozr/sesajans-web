@@ -174,6 +174,8 @@ export const dictionary = {
     sendMessage: "Mesaj gönderin",
     sendMessageDesc: "Etkinlik tarihi, mekân ve ürün ihtiyacınızı kısaca belirtin.",
     officeInfo: "Ofis bilgileri",
+    officeInfoDesc: "Doğrudan arayın, WhatsApp'tan yazın veya e-posta gönderin.",
+    openMaps: "Haritada aç",
     officeHours: "Hafta içi 09:00 – 18:00",
   },
   contactForm: {

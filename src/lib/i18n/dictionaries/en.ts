@@ -174,6 +174,8 @@ export const dictionary = {
     sendMessage: "Send a message",
     sendMessageDesc: "Briefly describe your event date, venue and lighting needs.",
     officeInfo: "Office details",
+    officeInfoDesc: "Call us, message on WhatsApp, or send an email.",
+    openMaps: "Open in Maps",
     officeHours: "Weekdays 09:00 – 18:00",
   },
   contactForm: {
