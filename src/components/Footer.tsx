@@ -70,7 +70,10 @@ export function Footer() {
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-muted">
               {t.footer.description}
             </p>
-            <div className="mt-5 space-y-2 text-sm">
+            <h3 className="mt-5 text-sm font-semibold uppercase tracking-wider text-ink">
+              {t.nav.contact}
+            </h3>
+            <div className="mt-4 space-y-2 text-sm">
               <a
                 href={`tel:${site.phone}`}
                 className="flex items-center gap-2 text-ink-muted hover:text-brand"
