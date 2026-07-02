@@ -1,19 +1,31 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useEffect } from "react";
 import Script from "next/script";
+import { useSyncExternalStore } from "react";
 import { isCookieConsentAccepted, subscribeCookieConsent } from "@/lib/cookie-consent";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
+function grantAnalyticsConsent() {
+  if (!GA_ID || typeof window === "undefined") return;
+  window.gtag?.("consent", "update", {
+    analytics_storage: "granted",
+  });
+}
+
 export function Analytics() {
-  const enabled = useSyncExternalStore(
+  const accepted = useSyncExternalStore(
     subscribeCookieConsent,
     isCookieConsentAccepted,
     () => false,
   );
 
-  if (!GA_ID || !enabled) return null;
+  useEffect(() => {
+    if (accepted) grantAnalyticsConsent();
+  }, [accepted]);
+
+  if (!GA_ID) return null;
 
   return (
     <>
@@ -23,6 +35,13 @@ export function Analytics() {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
+          gtag('consent', 'default', {
+            analytics_storage: 'denied',
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied',
+            wait_for_update: 500
+          });
           gtag('config', '${GA_ID}');
         `}
       </Script>
