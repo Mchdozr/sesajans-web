@@ -56,6 +56,15 @@ const socialIcons = {
   WhatsApp: WhatsAppIcon,
 } as const;
 
+const socialBrandStyles: Record<keyof typeof socialIcons, string> = {
+  Instagram:
+    "border-transparent bg-gradient-to-br from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white hover:opacity-90",
+  LinkedIn:
+    "border-[#0A66C2]/25 bg-[#0A66C2]/10 text-[#0A66C2] hover:border-[#0A66C2] hover:bg-[#0A66C2] hover:text-white",
+  WhatsApp:
+    "border-[#25D366]/25 bg-[#25D366]/10 text-[#25D366] hover:border-[#25D366] hover:bg-[#25D366] hover:text-white",
+};
+
 export function Footer() {
   const { t } = useI18n();
 
@@ -121,7 +130,8 @@ export function Footer() {
             </p>
             <div className="mt-5 flex gap-3">
               {socialLinks.map((s) => {
-                const Icon = socialIcons[s.label as keyof typeof socialIcons];
+                const label = s.label as keyof typeof socialIcons;
+                const Icon = socialIcons[label];
                 return (
                   <a
                     key={s.href}
@@ -129,7 +139,7 @@ export function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={s.label}
-                    className="flex h-9 w-9 items-center justify-center rounded-lg border border-theme text-ink-muted transition-colors hover:border-brand hover:text-brand"
+                    className={`flex h-9 w-9 items-center justify-center rounded-lg border transition-colors ${socialBrandStyles[label]}`}
                   >
                     <Icon className="h-4 w-4" />
                   </a>
