@@ -16,8 +16,15 @@ function getClientIp(request: Request): string {
   );
 }
 
-function contactRecipient(): string {
-  return process.env.CONTACT_TO?.trim() || process.env.CONTACT_EMAIL?.trim() || site.email;
+function contactRecipient(): string[] {
+  const raw =
+    process.env.CONTACT_TO?.trim() ||
+    process.env.CONTACT_EMAIL?.trim() ||
+    site.email;
+  return raw
+    .split(",")
+    .map((entry) => entry.trim())
+    .filter(Boolean);
 }
 
 function contactFrom(): string {
@@ -86,9 +93,10 @@ export async function POST(request: Request) {
 
     if (resend) {
       const productLine = product ? `\nÜrün: ${product}` : "";
-      const { error } = await resend.emails.send({
+      const to = contactRecipient();
+      const { data, error } = await resend.emails.send({
         from: contactFrom(),
-        to: contactRecipient(),
+        to,
         replyTo: email,
         subject: `[${site.brand}] ${subject} — ${name}`,
         text: `Ad Soyad: ${name}\nE-posta: ${email}\nTelefon: ${phone ?? "-"}\nKonu: ${subject}${productLine}\n\nMesaj:\n${message}`,
@@ -102,6 +110,7 @@ export async function POST(request: Request) {
           { status: 502 },
         );
       }
+      console.info("[SESAJANS Contact Sent]", { id: data?.id, to });
     } else if (process.env.VERCEL === "1") {
       return NextResponse.json(
         {
