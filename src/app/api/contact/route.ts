@@ -3,9 +3,10 @@ import { Resend } from "resend";
 import { site } from "@/lib/site";
 import { rateLimit } from "@/lib/rate-limit";
 
-const resend = process.env.RESEND_API_KEY?.trim()
-  ? new Resend(process.env.RESEND_API_KEY.trim())
-  : null;
+function getResendClient(): Resend | null {
+  const key = process.env["RESEND_API_KEY"]?.trim();
+  return key ? new Resend(key) : null;
+}
 
 function getClientIp(request: Request): string {
   return (
@@ -81,6 +82,7 @@ export async function POST(request: Request) {
     }
 
     const payload = { name, email, phone, subject, message, product, ip };
+    const resend = getResendClient();
 
     if (resend) {
       const productLine = product ? `\nÜrün: ${product}` : "";
