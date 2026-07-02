@@ -4,6 +4,8 @@ import { PageHeaderStatic } from "@/components/PageHeaderStatic";
 import { ProductCard } from "@/components/ProductCard";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { CTABanner } from "@/components/CTABanner";
+import { RelatedContent } from "@/components/RelatedContent";
+import { getUseCaseRelatedGroups } from "@/lib/internal-links";
 import { JsonLd } from "@/components/JsonLd";
 import { faqJsonLd } from "@/lib/seo";
 import type { UseCase } from "@/lib/use-cases";
@@ -11,6 +13,7 @@ import { categories } from "@/lib/categories";
 
 export function UseCaseLanding({ useCase }: { useCase: UseCase }) {
   const cat = categories[useCase.categorySlug];
+  const relatedGroups = getUseCaseRelatedGroups(useCase.slug);
 
   return (
     <>
@@ -94,6 +97,12 @@ export function UseCaseLanding({ useCase }: { useCase: UseCase }) {
           </div>
         </Container>
       </section>
+
+      <RelatedContent
+        groups={relatedGroups}
+        title="İlgili kaynaklar"
+        description="Projeler, karşılaştırmalar ve bölgesel hizmet sayfaları."
+      />
 
       <CTABanner />
     </>

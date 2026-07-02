@@ -7,11 +7,14 @@ import remarkGfm from "remark-gfm";
 import { PageHeader } from "@/components/PageHeader";
 import { Container } from "@/components/ui/Container";
 import { CTABanner } from "@/components/CTABanner";
+import { RelatedContent } from "@/components/RelatedContent";
 import { useI18n } from "@/lib/i18n/context";
+import { getBlogRelatedGroups } from "@/lib/internal-links";
 import type { BlogPost } from "@/lib/blog";
 
 export function BlogPostContent({ post }: { post: BlogPost }) {
   const { t } = useI18n();
+  const relatedGroups = getBlogRelatedGroups(post.slug);
 
   return (
     <>
@@ -100,6 +103,7 @@ export function BlogPostContent({ post }: { post: BlogPost }) {
           </div>
         </Container>
       </article>
+      <RelatedContent groups={relatedGroups} />
       <CTABanner />
     </>
   );

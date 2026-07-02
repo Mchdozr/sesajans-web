@@ -4,11 +4,14 @@ import { Container, SectionHeading } from "@/components/ui/Container";
 import { PageHeaderStatic } from "@/components/PageHeaderStatic";
 import { ProductCard } from "@/components/ProductCard";
 import { CTABanner } from "@/components/CTABanner";
+import { RelatedContent } from "@/components/RelatedContent";
 import type { Project } from "@/lib/projects";
+import { getProjectRelatedGroups } from "@/lib/internal-links";
 import { categories } from "@/lib/categories";
 
 export function ProjectDetailContent({ project }: { project: Project }) {
   const cat = categories[project.category];
+  const relatedGroups = getProjectRelatedGroups(project.slug);
 
   return (
     <>
@@ -89,6 +92,8 @@ export function ProjectDetailContent({ project }: { project: Project }) {
           </p>
         </Container>
       </section>
+
+      <RelatedContent groups={relatedGroups} />
 
       <CTABanner />
     </>

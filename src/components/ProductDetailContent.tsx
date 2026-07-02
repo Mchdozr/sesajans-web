@@ -8,6 +8,8 @@ import { ButtonLink } from "@/components/ui/Button";
 import { Reveal } from "@/components/Reveal";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { CTABanner } from "@/components/CTABanner";
+import { RelatedContent } from "@/components/RelatedContent";
+import { getProductRelatedGroups } from "@/lib/internal-links";
 import { ProductCard } from "@/components/ProductCard";
 import { ProductVideoShowcase } from "@/components/ProductVideoShowcase";
 import { ImageLightbox } from "@/components/ImageLightbox";
@@ -25,6 +27,7 @@ export function ProductDetailContent({ slug }: { slug: string }) {
   if (!product) return null;
 
   const others = products.filter((p) => p.slug !== slug).slice(0, 3);
+  const relatedGroups = getProductRelatedGroups(slug);
   const hasVideos = Boolean(product.videos?.length);
   const category = t.categories[product.category as ProductCategory];
   const galleryImages =
@@ -224,6 +227,8 @@ export function ProductDetailContent({ slug }: { slug: string }) {
           </div>
         </Container>
       </section>
+
+      <RelatedContent groups={relatedGroups} />
 
       <CTABanner />
     </>

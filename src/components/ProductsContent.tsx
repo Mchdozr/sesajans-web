@@ -8,6 +8,8 @@ import { Container } from "@/components/ui/Container";
 import { ProductCard } from "@/components/ProductCard";
 import { Reveal } from "@/components/Reveal";
 import { CTABanner } from "@/components/CTABanner";
+import { RelatedContent } from "@/components/RelatedContent";
+import { productsHubLinks } from "@/lib/internal-links";
 import { useI18n } from "@/lib/i18n/context";
 
 export function ProductsContent() {
@@ -61,6 +63,7 @@ export function ProductsContent() {
           </div>
         </Container>
       </section>
+      <RelatedContent groups={productsHubLinks} />
       <CTABanner />
     </>
   );

@@ -4,12 +4,21 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { PageHeader } from "@/components/PageHeader";
 import { CTABanner } from "@/components/CTABanner";
+import { RelatedContent } from "@/components/RelatedContent";
 import { products } from "@/lib/products";
 import type { Comparison } from "@/lib/comparisons";
+import { getComparisonRelatedGroups, getOtherComparisons } from "@/lib/internal-links";
 
 export function ComparisonPageContent({ comparison }: { comparison: Comparison }) {
   const productA = products.find((p) => p.slug === comparison.productASlug)!;
   const productB = products.find((p) => p.slug === comparison.productBSlug)!;
+  const relatedGroups = [
+    ...getComparisonRelatedGroups(comparison.slug),
+    {
+      title: "Diğer karşılaştırmalar",
+      links: getOtherComparisons(comparison.slug),
+    },
+  ];
 
   return (
     <>
@@ -60,6 +69,7 @@ export function ComparisonPageContent({ comparison }: { comparison: Comparison }
           </p>
         </Container>
       </section>
+      <RelatedContent groups={relatedGroups} />
       <CTABanner />
     </>
   );

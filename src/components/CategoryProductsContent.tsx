@@ -4,6 +4,8 @@ import { PageHeader } from "@/components/PageHeader";
 import { Container } from "@/components/ui/Container";
 import { ProductCard } from "@/components/ProductCard";
 import { CTABanner } from "@/components/CTABanner";
+import { RelatedContent } from "@/components/RelatedContent";
+import { getCategoryRelatedGroups } from "@/lib/internal-links";
 import { Reveal } from "@/components/Reveal";
 import { categories, type ProductCategory } from "@/lib/categories";
 import { getProductsByCategory } from "@/lib/products";
@@ -13,6 +15,7 @@ export function CategoryProductsContent({ slug }: { slug: ProductCategory }) {
   const { t } = useI18n();
   const cat = categories[slug];
   const items = getProductsByCategory(slug);
+  const relatedGroups = getCategoryRelatedGroups(slug);
 
   return (
     <>
@@ -39,6 +42,7 @@ export function CategoryProductsContent({ slug }: { slug: ProductCategory }) {
           </div>
         </Container>
       </section>
+      <RelatedContent groups={relatedGroups} />
       <CTABanner />
     </>
   );

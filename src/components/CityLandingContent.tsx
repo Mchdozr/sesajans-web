@@ -3,6 +3,8 @@ import { Container, SectionHeading } from "@/components/ui/Container";
 import { PageHeaderStatic } from "@/components/PageHeaderStatic";
 import { ProductCard } from "@/components/ProductCard";
 import { CTABanner } from "@/components/CTABanner";
+import { RelatedContent } from "@/components/RelatedContent";
+import { getCityRelatedGroups } from "@/lib/internal-links";
 import { JsonLd } from "@/components/JsonLd";
 import { faqJsonLd } from "@/lib/seo";
 import { FAQAccordion } from "@/components/FAQAccordion";
@@ -11,6 +13,8 @@ import { ButtonLink } from "@/components/ui/Button";
 import type { CityLanding } from "@/lib/local-seo";
 
 export function CityLandingContent({ data }: { data: CityLanding }) {
+  const relatedGroups = getCityRelatedGroups(data.slug);
+
   return (
     <>
       <JsonLd data={faqJsonLd(data.faqs)} />
@@ -96,6 +100,8 @@ export function CityLandingContent({ data }: { data: CityLanding }) {
           </div>
         </Container>
       </section>
+
+      <RelatedContent groups={relatedGroups} />
 
       <CTABanner />
     </>

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { GlossaryIndexContent } from "@/components/GlossaryTermContent";
+import { RelatedContent } from "@/components/RelatedContent";
 import { buildMetadata } from "@/lib/seo";
 import { glossaryTerms } from "@/lib/glossary";
+import { seoHubLinks } from "@/lib/internal-links";
 
 export const metadata: Metadata = buildMetadata({
   title: "Aydınlatma Sözlüğü",
@@ -13,12 +15,15 @@ export const metadata: Metadata = buildMetadata({
 
 export default function GlossaryIndexPage() {
   return (
-    <GlossaryIndexContent
-      terms={glossaryTerms.map((t) => ({
-        slug: t.slug,
-        title: t.title,
-        definition: t.definition,
-      }))}
-    />
+    <>
+      <GlossaryIndexContent
+        terms={glossaryTerms.map((t) => ({
+          slug: t.slug,
+          title: t.title,
+          definition: t.definition,
+        }))}
+      />
+      <RelatedContent groups={seoHubLinks} title="Diğer rehberler" />
+    </>
   );
 }

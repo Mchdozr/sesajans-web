@@ -98,6 +98,9 @@ export function HomeUseCasesPreview() {
           <Link href="/karsilastirma" className="font-semibold text-brand hover:underline">
             Ürün karşılaştırmaları →
           </Link>
+          <Link href="/sozluk" className="font-semibold text-brand hover:underline">
+            Aydınlatma sözlüğü →
+          </Link>
         </div>
       </Container>
     </section>

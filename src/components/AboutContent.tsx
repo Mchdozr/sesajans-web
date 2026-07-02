@@ -4,6 +4,8 @@ import { PageHeader } from "@/components/PageHeader";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/Reveal";
 import { CTABanner } from "@/components/CTABanner";
+import { RelatedContent } from "@/components/RelatedContent";
+import { aboutPageLinks } from "@/lib/internal-links";
 import { VerticalBrandLogo } from "@/components/VerticalBrandLogo";
 import { site } from "@/lib/site";
 import { useI18n } from "@/lib/i18n/context";
@@ -60,6 +62,7 @@ export function AboutContent() {
           </div>
         </Container>
       </section>
+      <RelatedContent groups={aboutPageLinks} title="Keşfet" />
       <CTABanner />
     </>
   );

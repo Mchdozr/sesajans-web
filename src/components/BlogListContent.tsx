@@ -6,6 +6,8 @@ import { PageHeader } from "@/components/PageHeader";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/Reveal";
 import { CTABanner } from "@/components/CTABanner";
+import { RelatedContent } from "@/components/RelatedContent";
+import { seoHubLinks } from "@/lib/internal-links";
 import { useI18n } from "@/lib/i18n/context";
 import type { BlogPost } from "@/lib/blog";
 
@@ -67,6 +69,7 @@ export function BlogListContent({ posts }: { posts: BlogPost[] }) {
           </div>
         </Container>
       </section>
+      <RelatedContent groups={seoHubLinks} title="SEO rehber merkezleri" />
       <CTABanner />
     </>
   );

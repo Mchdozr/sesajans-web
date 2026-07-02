@@ -4,6 +4,8 @@ import { PageHeader } from "@/components/PageHeader";
 import { Container } from "@/components/ui/Container";
 import { ProjectGallery } from "@/components/ProjectGallery";
 import { CTABanner } from "@/components/CTABanner";
+import { RelatedContent } from "@/components/RelatedContent";
+import { projectsHubLinks } from "@/lib/internal-links";
 import { useI18n } from "@/lib/i18n/context";
 
 export function ProjectsContent() {
@@ -22,6 +24,7 @@ export function ProjectsContent() {
           <ProjectGallery />
         </Container>
       </section>
+      <RelatedContent groups={projectsHubLinks} />
       <CTABanner />
     </>
   );
