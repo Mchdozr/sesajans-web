@@ -96,7 +96,11 @@ export async function POST(request: Request) {
       });
       if (error) {
         console.error("[SESAJANS Contact Resend]", error);
-        return NextResponse.json({ error: "E-posta gönderilemedi. Lütfen tekrar deneyin." }, { status: 502 });
+        const detail = typeof error.message === "string" ? error.message : "Bilinmeyen hata";
+        return NextResponse.json(
+          { error: `E-posta gönderilemedi: ${detail}` },
+          { status: 502 },
+        );
       }
     } else if (process.env.VERCEL === "1") {
       return NextResponse.json(
