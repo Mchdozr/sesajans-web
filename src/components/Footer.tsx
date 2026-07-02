@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import { site, socialLinks } from "@/lib/site";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { useI18n } from "@/lib/i18n/context";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/Logo";
@@ -52,7 +53,7 @@ function LinkedinIcon({ className }: SocialIconProps) {
 const socialIcons = {
   Instagram: InstagramIcon,
   LinkedIn: LinkedinIcon,
-  WhatsApp: MessageCircle,
+  WhatsApp: WhatsAppIcon,
 } as const;
 
 export function Footer() {

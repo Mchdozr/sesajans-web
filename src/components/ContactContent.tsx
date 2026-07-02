@@ -1,10 +1,11 @@
 "use client";
 
-import { Phone, Mail, MapPin, MessageCircle, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { Container } from "@/components/ui/Container";
 import { ContactForm } from "@/components/ContactForm";
 import { site } from "@/lib/site";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { useI18n } from "@/lib/i18n/context";
 
 export function ContactContent() {
@@ -13,7 +14,7 @@ export function ContactContent() {
   const cards = [
     { icon: Phone, title: t.contactPage.phone, value: site.phoneDisplay, href: `tel:${site.phone}` },
     {
-      icon: MessageCircle,
+      icon: WhatsAppIcon,
       title: t.contactPage.whatsapp,
       value: site.phoneDisplay,
       href: `https://wa.me/${site.whatsapp}`,
