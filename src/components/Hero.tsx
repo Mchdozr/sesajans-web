@@ -4,6 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, ShieldCheck, Headphones, Zap } from "lucide-react";
 import { ButtonLink } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { StageBeamBackground } from "@/components/StageBeamBackground";
 import { site } from "@/lib/site";
 import { useI18n } from "@/lib/i18n/context";
 
@@ -13,14 +14,14 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-surface-deep" aria-hidden />
-      <div className="bg-radial-glow absolute inset-0" aria-hidden />
+      <StageBeamBackground variant="adaptive" />
+      <div className="bg-radial-glow absolute inset-0 hidden opacity-30 dark:block dark:opacity-55" aria-hidden />
       <div
-        className="absolute -top-32 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-brand/20 blur-[120px]"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-20 bg-gradient-to-t from-surface to-transparent dark:h-28 dark:from-surface dark:via-surface/80"
         aria-hidden
       />
 
-      <Container className="relative py-20 sm:py-28 lg:py-32">
+      <Container className="relative z-[2] py-20 sm:py-28 lg:py-32">
         <div className="mx-auto max-w-4xl text-center">
           <motion.span
             initial={reduce ? false : { opacity: 0, y: 12 }}

@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import { Play, Film } from "lucide-react";
+import { StageBeamBackground } from "@/components/StageBeamBackground";
 import { cn } from "@/lib/utils";
 import { useI18n } from "@/lib/i18n/context";
 
@@ -60,7 +61,8 @@ export function ProductVideoShowcase({
         </div>
 
         <div className="glow-border relative overflow-hidden rounded-3xl border border-brand/25 bg-black shadow-[0_0_80px_-20px_rgba(244,111,44,0.45)]">
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-surface-deep/40 via-transparent to-transparent" />
+          <StageBeamBackground variant="cinema" subtle />
+          <div className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-t from-surface-deep/40 via-transparent to-transparent" />
           <video
             ref={videoRef}
             key={activeSrc}
@@ -69,7 +71,7 @@ export function ProductVideoShowcase({
             playsInline
             preload="metadata"
             poster={poster}
-            className="aspect-video w-full bg-black object-contain lg:max-h-[min(70vh,720px)]"
+            className="relative z-[2] aspect-video w-full bg-transparent object-contain lg:max-h-[min(70vh,720px)]"
             aria-label={`${productName} ${t.productDetail.videoN} ${active + 1}`}
           />
         </div>

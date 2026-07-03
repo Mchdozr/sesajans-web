@@ -77,8 +77,233 @@ body {
 
 html.light .bg-radial-glow {
   background:
-    radial-gradient(900px 500px at 70% -10%, rgba(244, 111, 44, 0.1), transparent 60%),
-    radial-gradient(700px 400px at 10% 10%, rgba(244, 111, 44, 0.06), transparent 55%);
+    radial-gradient(800px 420px at 50% 20%, rgba(244, 111, 44, 0.08), transparent 60%);
+}
+
+/* ——— Açık tema: prism horizon (soyut spektrum + cyclorama) ——— */
+@keyframes prism-spectrum-flow {
+  0%,
+  100% {
+    transform: translateX(-8%) skewY(-2deg);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translateX(8%) skewY(2deg);
+    opacity: 0.9;
+  }
+}
+
+@keyframes prism-cyclo-breathe {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scaleY(0.94);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scaleY(1.06);
+  }
+}
+
+@keyframes prism-ray-fade {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+@keyframes prism-reflection-shimmer {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scaleX(0.96);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scaleX(1.04);
+  }
+}
+
+@keyframes prism-bokeh-rise {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.7;
+  }
+  85% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-48px);
+    opacity: 0;
+  }
+}
+
+.light-prism-scene__canvas {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #f6f8fb 0%, #fafbfc 55%, #ffffff 100%);
+}
+
+.light-prism-scene__spectrum {
+  position: absolute;
+  top: 8%;
+  left: -10%;
+  width: 120%;
+  height: 28%;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    rgba(120, 160, 220, 0.06) 18%,
+    rgba(244, 111, 44, 0.14) 42%,
+    rgba(255, 190, 120, 0.1) 58%,
+    rgba(244, 111, 44, 0.12) 72%,
+    rgba(120, 160, 220, 0.05) 88%,
+    transparent 100%
+  );
+  filter: blur(28px);
+  transform-origin: center;
+}
+
+.light-prism-scene__spectrum--animate {
+  animation: prism-spectrum-flow 20s ease-in-out infinite;
+}
+
+.light-prism-scene__cyclo {
+  position: absolute;
+  top: 0;
+  bottom: 28%;
+  width: 22%;
+  transform-origin: bottom center;
+  filter: blur(32px);
+}
+
+.light-prism-scene__cyclo--left {
+  left: 8%;
+  background: linear-gradient(
+    to bottom,
+    rgba(120, 160, 220, 0.1) 0%,
+    rgba(120, 160, 220, 0.04) 50%,
+    transparent 85%
+  );
+}
+
+.light-prism-scene__cyclo--center {
+  left: 50%;
+  width: 28%;
+  margin-left: -14%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(244, 111, 44, 0.12) 35%,
+    rgba(244, 111, 44, 0.04) 60%,
+    transparent 88%
+  );
+}
+
+.light-prism-scene__cyclo--right {
+  right: 8%;
+  background: linear-gradient(
+    to bottom,
+    rgba(244, 111, 44, 0.1) 0%,
+    rgba(244, 111, 44, 0.04) 50%,
+    transparent 85%
+  );
+}
+
+.light-prism-scene__cyclo--animate {
+  animation: prism-cyclo-breathe 14s ease-in-out infinite;
+}
+
+.light-prism-scene__rays {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+}
+
+.light-prism-scene__ray {
+  opacity: 0.5;
+}
+
+.light-prism-scene__ray--animate {
+  animation: prism-ray-fade 12s ease-in-out infinite;
+}
+
+.light-prism-scene__horizon {
+  position: absolute;
+  bottom: 26%;
+  left: 50%;
+  width: min(85%, 36rem);
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(244, 111, 44, 0.25) 20%,
+    rgba(244, 111, 44, 0.45) 50%,
+    rgba(244, 111, 44, 0.25) 80%,
+    transparent
+  );
+  box-shadow: 0 0 20px rgba(244, 111, 44, 0.15);
+}
+
+.light-prism-scene__reflection {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  width: min(70%, 28rem);
+  height: 18%;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    ellipse at top,
+    rgba(244, 111, 44, 0.1) 0%,
+    rgba(244, 111, 44, 0.03) 50%,
+    transparent 75%
+  );
+  filter: blur(8px);
+}
+
+.light-prism-scene__reflection--animate {
+  animation: prism-reflection-shimmer 10s ease-in-out infinite;
+}
+
+.light-prism-scene__bokeh {
+  position: absolute;
+  border-radius: 999px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(244, 111, 44, 0.35) 45%,
+    transparent 70%
+  );
+  box-shadow: 0 0 12px rgba(244, 111, 44, 0.2);
+  opacity: 0;
+}
+
+.light-prism-scene__bokeh--animate {
+  animation: prism-bokeh-rise 9s ease-in-out infinite;
+  animation-delay: var(--bokeh-delay, 0s);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .light-prism-scene__spectrum--animate,
+  .light-prism-scene__cyclo--animate,
+  .light-prism-scene__ray--animate,
+  .light-prism-scene__reflection--animate,
+  .light-prism-scene__bokeh--animate {
+    animation: none !important;
+  }
+
+  .light-prism-scene__bokeh {
+    opacity: 0.45;
+  }
 }
 
 .glow-border {
@@ -97,5 +322,272 @@ html.light .bg-radial-glow {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+}
+
+@keyframes beam-pan {
+  0%,
+  100% {
+    transform: translateX(-50%) rotate(-12deg);
+  }
+  33% {
+    transform: translateX(-50%) rotate(4deg);
+  }
+  66% {
+    transform: translateX(-50%) rotate(12deg);
+  }
+}
+
+@keyframes beam-sway {
+  0%,
+  100% {
+    opacity: 0.78;
+    filter: brightness(0.92);
+  }
+  50% {
+    opacity: 1;
+    filter: brightness(1.12);
+  }
+}
+
+@keyframes beam-haze-drift {
+  0%,
+  100% {
+    transform: translateX(-4%) scale(1);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translateX(4%) scale(1.05);
+    opacity: 0.85;
+  }
+}
+
+@keyframes beam-source-pulse {
+  0%,
+  100% {
+    opacity: 0.75;
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.06);
+  }
+}
+
+/* ——— Stage beam scene (dark default) ——— */
+.stage-beam-scene {
+  --beam-sky-top: #06060c;
+  --beam-sky-mid: #0a0a12;
+  --beam-sky-bottom: #030305;
+  --beam-horizon: rgba(120, 150, 210, 0.08);
+  --beam-core-0: rgba(255, 255, 255, 0.98);
+  --beam-core-1: rgba(225, 238, 255, 0.55);
+  --beam-core-2: rgba(170, 200, 255, 0.12);
+  --beam-glow-color: rgba(190, 215, 255, 0.45);
+  --beam-ray-opacity: 0.62;
+  --beam-ray-soft-opacity: 0.38;
+  --beam-source: rgba(255, 255, 255, 0.55);
+  --beam-floor: rgba(160, 190, 255, 0.16);
+  --beam-haze: rgba(140, 175, 230, 0.1);
+  --beam-blend: screen;
+}
+
+/* Açık temada koyu beam gizle, stüdyo wash göster */
+.stage-beam-scene--adaptive .light-prism-scene {
+  display: none;
+}
+
+html.light .stage-beam-scene--adaptive .stage-beam-scene__dark {
+  display: none;
+}
+
+html.light .stage-beam-scene--adaptive .light-prism-scene {
+  display: block;
+}
+
+.stage-beam-scene--adaptive {
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 68%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 68%, transparent 100%);
+}
+
+.stage-beam-scene--adaptive .stage-beam-scene__horizon {
+  bottom: 8%;
+  height: 28%;
+  opacity: 0.65;
+}
+
+.stage-beam-scene--adaptive .stage-beam-scene__source {
+  bottom: -14%;
+  height: 5rem;
+  opacity: 0.55;
+}
+
+.stage-beam-scene--adaptive .stage-beam-scene__floor-glow {
+  height: 48%;
+  opacity: 0.45;
+}
+
+.stage-beam-scene--adaptive .stage-beam-rig {
+  bottom: -10%;
+}
+
+.stage-beam-scene--cinema {
+  --beam-sky-top: #040408;
+  --beam-sky-mid: #07070e;
+  --beam-sky-bottom: #000000;
+}
+
+.stage-beam-scene--subtle {
+  --beam-ray-opacity: 0.42;
+  --beam-ray-soft-opacity: 0.24;
+}
+
+.stage-beam-scene__sky {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    var(--beam-sky-top) 0%,
+    var(--beam-sky-mid) 42%,
+    var(--beam-sky-bottom) 100%
+  );
+}
+
+.stage-beam-scene__horizon {
+  position: absolute;
+  bottom: 18%;
+  left: 0;
+  right: 0;
+  height: 35%;
+  background: linear-gradient(to top, var(--beam-horizon), transparent);
+}
+
+.stage-beam-rig {
+  position: absolute;
+  bottom: -4%;
+  left: 50%;
+  height: 118%;
+  width: min(100%, 56rem);
+  transform: translateX(-50%);
+}
+
+.stage-beam-rig--animate {
+  animation: beam-pan 18s ease-in-out infinite;
+}
+
+.stage-beam-rig--far {
+  filter: blur(1px);
+}
+
+.stage-beam-ray {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 100%;
+  width: var(--beam-width, 64px);
+  margin-left: calc(var(--beam-width, 64px) / -2);
+  transform-origin: bottom center;
+  transform: rotate(var(--beam-angle, 0deg));
+  mix-blend-mode: var(--beam-blend);
+}
+
+.stage-beam-ray--animate {
+  animation: beam-sway var(--beam-duration, 4s) ease-in-out infinite;
+  animation-delay: var(--beam-delay, 0s);
+}
+
+.stage-beam-ray--soft {
+  --beam-ray-opacity: var(--beam-ray-soft-opacity);
+}
+
+.stage-beam-ray--subtle {
+  opacity: 0.85;
+}
+
+.stage-beam-ray__core {
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(46% 100%, 54% 100%, 68% 0%, 32% 0%);
+  background: linear-gradient(
+    to top,
+    var(--beam-core-0) 0%,
+    var(--beam-core-1) 22%,
+    var(--beam-core-2) 50%,
+    transparent 78%
+  );
+  opacity: var(--beam-ray-opacity);
+}
+
+.stage-beam-ray__glow {
+  position: absolute;
+  inset: -8% -20%;
+  clip-path: polygon(46% 100%, 54% 100%, 72% 0%, 28% 0%);
+  background: linear-gradient(to top, var(--beam-glow-color), transparent 70%);
+  filter: blur(14px);
+  opacity: 0.7;
+}
+
+.stage-beam-scene__source {
+  position: absolute;
+  bottom: -2%;
+  left: 50%;
+  height: 7rem;
+  width: 11rem;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse, var(--beam-source), transparent 68%);
+  filter: blur(10px);
+  animation: beam-source-pulse 5s ease-in-out infinite;
+}
+
+.stage-beam-scene__floor-glow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 72%;
+  width: min(100%, 52rem);
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse at bottom, var(--beam-floor), transparent 68%);
+}
+
+.stage-beam-scene__haze {
+  position: absolute;
+  bottom: 8%;
+  height: 55%;
+  width: 42%;
+  background: radial-gradient(ellipse, var(--beam-haze), transparent 70%);
+  filter: blur(28px);
+  animation: beam-haze-drift 12s ease-in-out infinite;
+}
+
+.stage-beam-scene__haze--left {
+  left: 8%;
+}
+
+.stage-beam-scene__haze--right {
+  right: 8%;
+  animation-delay: -6s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stage-beam-rig--animate,
+  .stage-beam-ray--animate,
+  .stage-beam-scene__haze,
+  .stage-beam-scene__source {
+    animation: none !important;
+  }
+}
+
+.animate-beam-pan {
+  animation: beam-pan 14s ease-in-out infinite;
+}
+
+.animate-beam-pulse {
+  animation: beam-sway 3.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-beam-pan,
+  .animate-beam-pulse {
+    animation: none;
   }
 }
