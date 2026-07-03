@@ -6,6 +6,7 @@ export const dictionary = {
     blog: "Blog",
     comparison: "Comparison",
     glossary: "Glossary",
+    guides: "Guides",
     useCases: "Use Cases",
     projects: "Projects",
     about: "About",
