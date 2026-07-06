@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect, useMemo, type ReactNode } from "react";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, Search } from "lucide-react";
 import { site } from "@/lib/site";
 import { products } from "@/lib/products";
 import { categorySlugs, type ProductCategory } from "@/lib/categories";
@@ -334,6 +334,18 @@ export function Header() {
           </nav>
 
           <div className="hidden shrink-0 items-center gap-2 lg:flex">
+            <Link
+              href="/ara"
+              aria-label={t.search.label}
+              className={cn(
+                "rounded-lg p-2 transition-colors",
+                isActive(pathname, "/ara")
+                  ? "text-brand"
+                  : "text-ink-muted hover:text-ink",
+              )}
+            >
+              <Search className="h-[18px] w-[18px]" />
+            </Link>
             <LocaleToggle />
             <ThemeToggle />
             <a
@@ -349,6 +361,14 @@ export function Header() {
           </div>
 
           <div className="flex items-center gap-2 lg:hidden">
+            <Link
+              href="/ara"
+              aria-label={t.search.label}
+              className="rounded-lg p-2 text-ink-muted hover:text-ink"
+              onClick={closeMenu}
+            >
+              <Search className="h-5 w-5" />
+            </Link>
             <LocaleToggle />
             <ThemeToggle />
             <button

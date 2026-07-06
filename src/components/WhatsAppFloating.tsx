@@ -1,12 +1,23 @@
 "use client";
 
+import { useSyncExternalStore } from "react";
 import { site } from "@/lib/site";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
+import { getCookieConsent, subscribeCookieConsent } from "@/lib/cookie-consent";
 
 export function WhatsAppFloating() {
   const href = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(
     "Merhaba, SESAJANS web sitesinden yazıyorum. Aydınlatma teklifi almak istiyorum.",
   )}`;
+
+  // Çerez banner'ı açıkken buton bannerla çakışmasın diye gizlenir.
+  const consentPending = useSyncExternalStore(
+    subscribeCookieConsent,
+    () => !getCookieConsent(),
+    () => true,
+  );
+
+  if (consentPending) return null;
 
   return (
     <a
