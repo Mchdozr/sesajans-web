@@ -227,7 +227,142 @@ export const bursaLanding: CityLanding = {
   productSlugs: ["wash-3715", "led-beam-wash-150", "beam-king-ip"],
 };
 
-export const cityLandings = [istanbulLanding, ankaraLanding, izmirLanding, antalyaLanding, bursaLanding];
+export const adanaLanding: CityLanding = {
+  slug: "adana-sahne-aydinlatma",
+  path: "/adana-sahne-aydinlatma",
+  city: "Adana",
+  title: "Adana Sahne Aydınlatma",
+  seoTitle: "Adana Sahne Aydınlatma — SESAJANS",
+  seoDescription:
+    "Adana konser, festival, düğün ve kurumsal etkinlik sahne aydınlatması. Moving head, blinder ve IP65 dış mekân çözümleri.",
+  intro:
+    "SESAJANS, Adana ve Çukurova bölgesinde açık hava konseri, festival, düğün ve kurumsal etkinlikler için profesyonel sahne aydınlatma ekipmanı ve kurulum hizmeti sunar. Sıcak iklim koşullarına uygun soğutma profilli üniteler ve IP korumalı dış mekân çözümleriyle bölge projelerine destek veriyoruz.",
+  sections: [
+    {
+      title: "Adana'da hizmet alanları",
+      body: "Seyhan, Çukurova, Yüreğir, Sarıçam ve tüm Adana genelinde; Merkez Park etkinlik alanları, kongre merkezleri, otel balo salonları ve açık hava festival sahnelerine kurulum ve satış desteği sağlıyoruz. Mersin ve Osmaniye projelerine de aynı lojistik hatla ulaşıyoruz.",
+    },
+    {
+      title: "Popüler çözümler",
+      body: "Açık hava festival ve portakal çiçeği dönemi etkinliklerinde Beam King IP ve Blinder 800 IP; düğün ve balo salonlarında LED Beam Wash 150 ile Wash 3715; sahne dekorunda Diamond Line 1240 Eco tercih edilir. Yüksek yaz sıcaklıklarında fixture soğutma ve güç planlaması projeye dahil edilir.",
+    },
+    {
+      title: "Teknik destek",
+      body: "DMX adresleme, konsol programlama, operatör eğitimi ve satış sonrası garanti hizmetleri Adana projelerinde uzaktan ve sahada desteklenir. Festival sezonu için erken rezervasyon önerilir.",
+    },
+  ],
+  faqs: [
+    {
+      q: "Adana açık hava konseri için hangi ürünler uygun?",
+      a: "Ana truss için Beam King IP, ön hat için Blinder 800 IP, genel yıkama için Wash 3715 önerilir. Yaz etkinliklerinde IP65+ koruma standarttır.",
+    },
+    {
+      q: "Adana'ya teslimat süresi ne kadar?",
+      a: "Stoktan ürünler için 2–4 iş günü lojistik planlanır; büyük projelerde önceden rezervasyon önerilir.",
+    },
+    {
+      q: "Sahada kurulum yapıyor musunuz?",
+      a: "Evet. Proje kapsamına göre montaj, adresleme ve devreye alma ekibimiz Adana'da görevlendirilir.",
+    },
+  ],
+  keywords: ["adana sahne aydınlatma", "adana konser ışığı", "adana moving head", "çukurova etkinlik aydınlatma"],
+  productSlugs: ["beam-king-ip", "blinder-800-ip", "wash-3715"],
+};
+
+export const gaziantepLanding: CityLanding = {
+  slug: "gaziantep-sahne-aydinlatma",
+  path: "/gaziantep-sahne-aydinlatma",
+  city: "Gaziantep",
+  title: "Gaziantep Sahne Aydınlatma",
+  seoTitle: "Gaziantep Sahne Aydınlatma — SESAJANS",
+  seoDescription:
+    "Gaziantep düğün, konser, fuar ve kurumsal etkinlik sahne aydınlatması. Moving head, LED bar ve blinder çözümleri.",
+  intro:
+    "SESAJANS, Gaziantep ve Güneydoğu Anadolu bölgesinde düğün salonu, fuar, konser ve kurumsal etkinlik prodüksiyonları için profesyonel sahne aydınlatma çözümleri sunar. Bölgenin güçlü düğün ve fuar ekonomisine uygun kompakt ve yüksek etkili fixture paketleriyle hizmet veriyoruz.",
+  sections: [
+    {
+      title: "Gaziantep'te hizmet alanları",
+      body: "Şahinbey, Şehitkamil ve tüm Gaziantep genelinde; düğün salonları, Ortadoğu Fuar Merkezi etkinlikleri, otel baloları ve açık hava konser alanlarına kurulum ve satış desteği sağlıyoruz. Şanlıurfa ve Kahramanmaraş projelerine de aynı hatla ulaşıyoruz.",
+    },
+    {
+      title: "Popüler çözümler",
+      body: "Düğün salonlarında LED Beam Wash 150 ve Diamond Line 1240 Eco kombinasyonu ekonomik ve etkili bir paket sunar. Fuar standlarında Blinder 400 IP vurgu aydınlatması; açık hava konserlerde Beam King IP ve Strike Pro IP tercih edilir.",
+    },
+    {
+      title: "Teknik destek",
+      body: "Fixture seçimi, DMX programlama ve operatör eğitimi uzaktan danışmanlıkla; kurulum ve devreye alma sahada ekiplerimizle yürütülür. Düğün sezonu öncesi paket teklifleri için erken iletişim önerilir.",
+    },
+  ],
+  faqs: [
+    {
+      q: "Düğün salonu için ekonomik paket var mı?",
+      a: "LED Beam Wash 150 + Diamond Line 1240 Eco kombinasyonu çoğu düğün salonu için yeterli ve bütçe dostudur. Salon ölçünüze göre adet planı çıkarıyoruz.",
+    },
+    {
+      q: "Gaziantep'e teslimat süresi ne kadar?",
+      a: "Stoktan ürünler için 2–4 iş günü lojistik planlanır.",
+    },
+    {
+      q: "Fuar standı aydınlatması yapıyor musunuz?",
+      a: "Evet. Stand ölçüsüne göre blinder, LED bar ve vurgu aydınlatma planı hazırlanır; kurulum dahil teslim edilir.",
+    },
+  ],
+  keywords: ["gaziantep sahne aydınlatma", "gaziantep düğün ışığı", "gaziantep moving head", "gaziantep fuar aydınlatma"],
+  productSlugs: ["led-beam-wash-150", "diamond-line-1240-eco", "blinder-400-ip"],
+};
+
+export const kocaeliLanding: CityLanding = {
+  slug: "kocaeli-sahne-aydinlatma",
+  path: "/kocaeli-sahne-aydinlatma",
+  city: "Kocaeli",
+  title: "Kocaeli Sahne Aydınlatma",
+  seoTitle: "Kocaeli Sahne Aydınlatma — SESAJANS",
+  seoDescription:
+    "Kocaeli ve İzmit konser, kurumsal etkinlik, fuar ve düğün sahne aydınlatması. Moving head, wash ve blinder çözümleri.",
+  intro:
+    "SESAJANS, Kocaeli, İzmit ve Doğu Marmara bölgesinde kurumsal etkinlik, fabrika lansmanı, konser ve düğün prodüksiyonları için profesyonel sahne aydınlatma çözümleri sunar. İstanbul merkez ofisimize yakınlık sayesinde Kocaeli projelerine aynı gün keşif ve hızlı teslimat sağlıyoruz.",
+  sections: [
+    {
+      title: "Kocaeli'de hizmet alanları",
+      body: "İzmit, Gebze, Darıca, Körfez, Gölcük ve tüm Kocaeli genelinde; kongre merkezleri, sanayi tesisleri, otel balo salonları, Seka Park etkinlik alanları ve açık hava sahnelerine kurulum ve satış desteği veriyoruz. Sakarya ve Yalova projelerine de aynı hatla ulaşıyoruz.",
+    },
+    {
+      title: "Popüler çözümler",
+      body: "Sanayi bölgesi kurumsal lansmanlarında Wash 3715 yüksek CRI yüz ışığı ve Diamond Line 1240 Eco dekor çizgisi; açık hava konser ve festival etkinliklerinde Beam King IP, Tornado IP ve Blinder 800 IP kombinasyonu tercih edilir.",
+    },
+    {
+      title: "Hızlı lojistik avantajı",
+      body: "İstanbul Şişli merkezli stok yapımız sayesinde Kocaeli projelerine 1 iş günü içinde teslimat ve aynı hafta kurulum planlanabilir. Acil etkinlikler için kiralama destekli çözümler sunulur.",
+    },
+  ],
+  faqs: [
+    {
+      q: "Kocaeli'ye keşif geliyor musunuz?",
+      a: "Evet. İstanbul'a yakınlık sayesinde çoğu Kocaeli projesinde ücretsiz sahada keşif yapılır.",
+    },
+    {
+      q: "Kurumsal lansman için hangi ürünler uygun?",
+      a: "Wash 3715 sahne ve konuşmacı aydınlatması, Diamond Line 1240 Eco dekor vurgusu, LED Beam Wash 150 efekt katmanı için önerilir.",
+    },
+    {
+      q: "Teslimat süresi ne kadar?",
+      a: "Stoktan ürünler için 1 iş günü içinde teslimat planlanabilir; kurulumlu projelerde tarih rezervasyonu önerilir.",
+    },
+  ],
+  keywords: ["kocaeli sahne aydınlatma", "izmit etkinlik ışığı", "gebze aydınlatma", "kocaeli moving head"],
+  productSlugs: ["wash-3715", "diamond-line-1240-eco", "beam-king-ip"],
+};
+
+export const cityLandings = [
+  istanbulLanding,
+  ankaraLanding,
+  izmirLanding,
+  antalyaLanding,
+  bursaLanding,
+  adanaLanding,
+  gaziantepLanding,
+  kocaeliLanding,
+];
 
 export function getCityLanding(slug: string): CityLanding | undefined {
   return cityLandings.find((c) => c.slug === slug);

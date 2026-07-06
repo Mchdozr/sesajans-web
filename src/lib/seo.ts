@@ -33,6 +33,9 @@ export function buildMetadata({
         "tr-TR": url,
         "x-default": url,
       },
+      types: {
+        "application/rss+xml": `${site.url}/feed.xml`,
+      },
     },
     verification,
     openGraph: {
