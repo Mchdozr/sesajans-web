@@ -31,6 +31,14 @@ function contactFrom(): string {
   return process.env.RESEND_FROM?.trim() || `${site.brand} <onboarding@resend.dev>`;
 }
 
+function isProductionResendMisconfigured(): boolean {
+  return (
+    process.env.VERCEL === "1" &&
+    !process.env.RESEND_FROM?.trim() &&
+    Boolean(process.env.RESEND_API_KEY?.trim())
+  );
+}
+
 function buildEmailHtml(payload: {
   name: string;
   email: string;
@@ -73,9 +81,11 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json();
-    const { name, email, phone, subject, message, product, website, kvkkConsent } = body;
+    const { name, email, phone, subject, message, product, kvkkConsent } = body;
+    const honeypot = body._gotcha ?? body.website;
 
-    if (website) {
+    if (honeypot) {
+      console.info("[SESAJANS Contact Honeypot]", { ip });
       return NextResponse.json({ ok: true });
     }
 
@@ -90,6 +100,10 @@ export async function POST(request: Request) {
 
     const payload = { name, email, phone, subject, message, product, ip };
     const resend = getResendClient();
+
+    if (isProductionResendMisconfigured()) {
+      console.error("[SESAJANS Contact] RESEND_FROM tanımlı değil — doğrulanmış domain gerekli");
+    }
 
     if (resend) {
       const productLine = product ? `\nÜrün: ${product}` : "";
@@ -111,6 +125,7 @@ export async function POST(request: Request) {
         );
       }
       console.info("[SESAJANS Contact Sent]", { id: data?.id, to });
+      return NextResponse.json({ ok: true, sent: true });
     } else if (process.env.VERCEL === "1") {
       return NextResponse.json(
         {
@@ -121,9 +136,8 @@ export async function POST(request: Request) {
       );
     } else {
       console.log("[SESAJANS Contact]", payload);
+      return NextResponse.json({ ok: true, sent: true });
     }
-
-    return NextResponse.json({ ok: true });
   } catch (error) {
     console.error("[SESAJANS Contact Error]", error);
     return NextResponse.json({ error: "Sunucu hatası" }, { status: 500 });

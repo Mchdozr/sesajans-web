@@ -18,7 +18,7 @@ type FormData = {
   subject: string;
   product?: string;
   message: string;
-  website?: string;
+  _gotcha?: string;
   kvkkConsent: boolean;
 };
 
@@ -38,7 +38,7 @@ export function ContactForm() {
     subject: z.string().min(1, t.contactForm.errors.subject),
     product: z.string().optional(),
     message: z.string().min(10, t.contactForm.errors.message),
-    website: z.string().max(0).optional(),
+    _gotcha: z.string().max(0).optional(),
     kvkkConsent: z.boolean().refine((v) => v === true, { message: t.contactForm.errors.kvkk }),
   });
 
@@ -63,9 +63,14 @@ export function ContactForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
-      const body = (await res.json().catch(() => null)) as { error?: string } | null;
+      const body = (await res.json().catch(() => null)) as { error?: string; sent?: boolean } | null;
       if (!res.ok) throw new Error(body?.error ?? "fail");
-      trackEvent("contact_submit", { subject: data.subject });
+      if (!body?.sent) throw new Error("fail");
+      try {
+        trackEvent("contact_submit", { subject: data.subject });
+      } catch {
+        /* GA engellenirse yönlendirme yine çalışsın */
+      }
       reset();
       router.push("/tesekkur");
     } catch (err) {
@@ -83,9 +88,9 @@ export function ContactForm() {
         type="text"
         tabIndex={-1}
         autoComplete="off"
-        className="hidden"
-        aria-hidden
-        {...register("website")}
+        aria-hidden="true"
+        className="absolute -left-[9999px] h-0 w-0 opacity-0"
+        {...register("_gotcha")}
       />
 
       <div className="grid gap-4 sm:grid-cols-2">
