@@ -2,11 +2,12 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { cn } from "@/lib/utils";
-import { products } from "@/lib/products";
+import { products, getProduct } from "@/lib/products";
 import { useI18n } from "@/lib/i18n/context";
 import { trackEvent } from "@/components/Analytics";
 
@@ -23,8 +24,12 @@ type FormData = {
 
 export function ContactForm() {
   const { t } = useI18n();
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  const prefilledProduct = getProduct(searchParams.get("urun") ?? "");
 
   const schema = z.object({
     name: z.string().min(2, t.contactForm.errors.name),
@@ -42,7 +47,12 @@ export function ContactForm() {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm<FormData>({ resolver: zodResolver(schema) });
+  } = useForm<FormData>({
+    resolver: zodResolver(schema),
+    defaultValues: prefilledProduct
+      ? { product: prefilledProduct.name, subject: t.contactForm.subjects[0] }
+      : undefined,
+  });
 
   async function onSubmit(data: FormData) {
     setStatus("loading");
@@ -56,8 +66,8 @@ export function ContactForm() {
       const body = (await res.json().catch(() => null)) as { error?: string } | null;
       if (!res.ok) throw new Error(body?.error ?? "fail");
       trackEvent("contact_submit", { subject: data.subject });
-      setStatus("success");
       reset();
+      router.push("/tesekkur");
     } catch (err) {
       setErrorMessage(err instanceof Error && err.message !== "fail" ? err.message : t.contactForm.error);
       setStatus("error");
@@ -163,9 +173,6 @@ export function ContactForm() {
         <p className="text-xs text-red-400">{errors.kvkkConsent.message}</p>
       )}
 
-      {status === "success" && (
-        <p className="text-sm text-green-500">{t.contactForm.success}</p>
-      )}
       {status === "error" && (
         <p className="text-sm text-red-400">{errorMessage ?? t.contactForm.error}</p>
       )}

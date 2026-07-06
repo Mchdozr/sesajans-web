@@ -131,7 +131,10 @@ export function ProductDetailContent({ slug }: { slug: string }) {
                     <Film className="h-4 w-4" /> {t.common.watchVideo}
                   </a>
                 )}
-                <ButtonLink href="/iletisim" variant={hasVideos ? "outline" : "primary"}>
+                <ButtonLink
+                  href={`/iletisim?urun=${product.slug}`}
+                  variant={hasVideos ? "outline" : "primary"}
+                >
                   {t.quote} <ArrowRight className="h-4 w-4" />
                 </ButtonLink>
                 {product.pdf && (

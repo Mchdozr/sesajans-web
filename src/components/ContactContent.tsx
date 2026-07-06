@@ -1,6 +1,6 @@
 "use client";
 
-import type { ComponentType } from "react";
+import { Suspense, type ComponentType } from "react";
 import { Phone, Mail, MapPin, Clock, ArrowUpRight } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { Container } from "@/components/ui/Container";
@@ -48,7 +48,9 @@ export function ContactContent() {
               <h2 className="font-display text-xl font-bold text-ink">{t.contactPage.sendMessage}</h2>
               <p className="mt-2 text-sm text-ink-muted">{t.contactPage.sendMessageDesc}</p>
               <div className="mt-6">
-                <ContactForm />
+                <Suspense fallback={null}>
+                  <ContactForm />
+                </Suspense>
               </div>
             </div>
 

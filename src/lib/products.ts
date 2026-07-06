@@ -23,7 +23,13 @@ export type Product = {
   ipRating?: string;
 };
 
-/** Yalnızca temizlenmiş spec-sheet.png galeride; üretici PDF linklenmez. */
+/**
+ * PDF katalog yayın listesi: public/downloads/<slug>/katalog.pdf dosyası
+ * eklendikten sonra slug'ı buraya yaz — ürün sayfasında indirme butonu açılır.
+ */
+const PUBLISHED_PDF_SLUGS = new Set<string>([]);
+
+/** Yalnızca temizlenmiş spec-sheet.png galeride; üretici PDF'i yayın listesindeyse linklenir. */
 function publishProduct(product: Product): Product {
   const gallery = product.gallery.filter(
     (src) => !src.toLowerCase().endsWith(".png") || src.endsWith("/spec-sheet.png"),
@@ -32,7 +38,7 @@ function publishProduct(product: Product): Product {
   return {
     ...product,
     gallery: gallery.length > 0 ? gallery : [product.image],
-    pdf: undefined,
+    pdf: PUBLISHED_PDF_SLUGS.has(product.slug) ? product.pdf : undefined,
   };
 }
 
