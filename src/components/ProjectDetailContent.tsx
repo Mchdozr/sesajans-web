@@ -67,9 +67,15 @@ export function ProjectDetailContent({ project }: { project: Project }) {
 
           {project.images.length > 1 && (
             <div className="mt-10 grid gap-4 sm:grid-cols-3">
-              {project.images.slice(1).map((src) => (
+              {project.images.slice(1).map((src, i) => (
                 <div key={src} className="relative aspect-video overflow-hidden rounded-xl border border-theme">
-                  <Image src={src} alt={project.title} fill className="object-cover" sizes="33vw" />
+                  <Image
+                    src={src}
+                    alt={`${project.title} — ${project.venue} sahne aydınlatma görseli ${i + 2}`}
+                    fill
+                    className="object-cover"
+                    sizes="33vw"
+                  />
                 </div>
               ))}
             </div>
