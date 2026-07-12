@@ -1,0 +1,58 @@
+{
+  "homepage": [
+    {
+      "q": "LED ekran fiyatları neye göre belirlenir?",
+      "a": "LED ekran fiyatları; piksel aralığı (P değeri küçüldükçe fiyat artar), ekranın toplam m² boyutu, LED çip kalitesi (Nationstar, Kinglight vb.), kontrol sistemi (Novastar, Huidu, Colorlight) ve kurulum zorluğuna göre belirlenir. Kesin fiyat için ücretsiz keşif ve yazılı teklif alın."
+    },
+    {
+      "q": "İç mekan ve dış mekan LED ekran arasındaki fark nedir?",
+      "a": "İç mekan LED ekranlar 600–1.500 nits parlaklıkta, ince pitch (P1.25–P4) ve IP30–IP43 korumayla kapalı alanlar için üretilir. Dış mekan LED ekranlar 5.000+ nits parlaklık, IP65 koruma ve geniş pitch (P4–P10) ile güneş ışığında net görüntü sunar."
+    },
+    {
+      "q": "LED ekran kurulum süresi ne kadar?",
+      "a": "Standart iç veya dış mekan LED ekran kurulumu 1–3 gün sürer. Büyük cephe, stadyum veya özel konstrüksiyonlu projeler 1–2 hafta sürebilir. Rental LED ekran kurulumu etkinlik ölçeğine göre 2–4 saat içinde tamamlanabilir."
+    },
+    {
+      "q": "Rental LED ekran kiralama nasıl çalışır?",
+      "a": "Rental LED ekran kiralama; m² × gün + nakliye + kur-sök formülüyle hesaplanır. Konser, fuar ve kurumsal etkinlikler için hafif die-cast kabinli modüller, flight case taşıma ve operatör desteği ile anahtar teslim kiralama sunuyoruz."
+    },
+    {
+      "q": "Hangi P değerini seçmeliyim?",
+      "a": "Yakın izleme (2–5 m): P1.8, P2, P2.5. Orta mesafe (5–10 m): P3, P4, P5. Uzak mesafe (10 m+): P6, P8, P10. İzleme mesafesi kısaldıkça P değeri düşmelidir."
+    },
+    {
+      "q": "LED ekran garanti süresi nedir?",
+      "a": "Tüm LED ekran projelerimizde 2 yıl tam parça garantisi sunuyoruz. Garanti kapsamında yedek parça stoğu, uzaktan arıza tespiti ve yerinde teknik servis hizmeti verilir."
+    },
+    {
+      "q": "LED ekran bakımı gerekir mi?",
+      "a": "Evet. Periyodik temizlik, kablo ve bağlantı kontrolü, yazılım güncellemesi ve parlaklık kalibrasyonu LED ekran ömrünü uzatır. LEDAJANS bakım ve onarım paketleri ile 7/24 teknik destek sağlar."
+    },
+    {
+      "q": "Türkiye'nin hangi şehirlerine kurulum yapıyorsunuz?",
+      "a": "İstanbul merkezli olarak Türkiye genelinde LED ekran kurulumu yapıyoruz. İstanbul, Ankara, İzmir, Bursa, Antalya, Kocaeli, Gaziantep, Adana ve diğer tüm illerde keşif, kurulum ve satış sonrası destek sunuyoruz."
+    }
+  ],
+  "hub": [
+    {
+      "q": "LED ekran m² fiyatları neye göre değişir?",
+      "a": "LED ekran m² fiyatları; piksel aralığı, ekran boyutu, LED çip sınıfı, kontrol kartı markası, kasa tipi ve kurulum koşullarına göre değişir. Tek bir m² rakamı karşılaştırma için yeterli değildir; proje bazlı yazılı teklif alın."
+    },
+    {
+      "q": "Piksel (P) değeri nedir, hangisini seçmeliyim?",
+      "a": "P değeri iki LED arasındaki milimetre cinsinden mesafedir. Mağaza vitrinleri için P1.25–P2.5, AVM ve mağaza için P2–P3, dış cephe ve totem için P4–P6, bina çatısı ve stadyum için P8–P10 tercih edilir."
+    },
+    {
+      "q": "Garanti ve teknik servis süreciniz nasıl?",
+      "a": "2 yıl tam parça garantisi, İstanbul merkezli teknik servis ekibi, uzaktan bağlantı ile arıza tespiti ve yedek parça stoğu ile satış sonrası destek sunuyoruz."
+    },
+    {
+      "q": "İç mekan LED ekran mı dış mekan LED ekran mı almalıyım?",
+      "a": "Kapalı alan, mağaza, stüdyo ve toplantı salonu için iç mekan LED ekran; açık hava reklam panosu, cephe, totem ve stadyum için dış mekan LED ekran seçilmelidir. Ortam koşulları yanlış ürün seçiminde görüntü kalitesini düşürür."
+    },
+    {
+      "q": "Rental LED ekran mı satın alma mı daha ekonomik?",
+      "a": "Yılda 1–3 etkinlik için rental LED ekran kiralama genelde daha ekonomiktir. Sürekli fuar takvimi veya sabit reklam panosu için satın alma amortismanı düşer. Hibrit model de mümkündür."
+    }
+  ]
+}

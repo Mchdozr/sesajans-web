@@ -1,0 +1,21 @@
+# BEGIN LEDAJANS SEO Redirects
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# www to non-www
+RewriteCond %{HTTP_HOST} ^www\.ledajans\.com [NC]
+RewriteRule ^(.*)$ https://ledajans.com/$1 [L,R=301]
+
+# Keyword cannibalization 301 redirects
+Redirect 301 /blog/led-ekran-fiyatlari-2026/ https://ledajans.com/led-ekran/
+Redirect 301 /blog/led-ekran-fiyatlari-2026-2/ https://ledajans.com/led-ekran/
+Redirect 301 /blog/led-ekran-fiyatlari-2026-mayis/ https://ledajans.com/led-ekran/
+Redirect 301 /blog/led-ekran-4/ https://ledajans.com/led-ekran/
+Redirect 301 /blog/led-ekran-5/ https://ledajans.com/led-ekran/
+Redirect 301 /blog/led-ekran-6/ https://ledajans.com/led-ekran/
+Redirect 301 /blog/led-ekran-7/ https://ledajans.com/led-ekran/
+Redirect 301 /blog/led-ekran-10/ https://ledajans.com/led-ekran/
+Redirect 301 /de/blog/led-ekran-10/ https://ledajans.com/led-ekran/
+</IfModule>
+# END LEDAJANS SEO Redirects

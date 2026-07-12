@@ -1,0 +1,72 @@
+[
+  {
+    "date": "2026-07-12",
+    "targets": {
+      "keyword": "led ekran",
+      "rank": {
+        "current": 5,
+        "day30": 3,
+        "day90": 1
+      },
+      "ctr": {
+        "day30": "+20%",
+        "day90": "+40%"
+      },
+      "organicClicks": {
+        "day30": "+30%",
+        "day90": "+80%"
+      },
+      "lcp": {
+        "current": ">4s",
+        "day30": "<3s",
+        "day90": "<2.5s"
+      },
+      "indexedPages": {
+        "current": 210,
+        "day30": 190,
+        "day90": 200
+      }
+    },
+    "queries": [
+      "led ekran",
+      "led ekran fiyatları",
+      "led ekran kiralama",
+      "iç mekan led ekran",
+      "dış mekan led ekran",
+      "rental led ekran",
+      "led ekran kurulum",
+      "led ekran istanbul"
+    ],
+    "routine": [
+      {
+        "day": "Pazartesi",
+        "task": "GSC performans raporu — 'led ekran' sorgusu pozisyon ve CTR"
+      },
+      {
+        "day": "Çarşamba",
+        "task": "1 içerik güncelleme veya yeni blog yayını"
+      },
+      {
+        "day": "Cuma",
+        "task": "PageSpeed Insights — Core Web Vitals kontrol"
+      },
+      {
+        "day": "Ay sonu",
+        "task": "Rakip SERP snapshot + backlink raporu"
+      }
+    ],
+    "notes": "GSC verisi manuel girilmeli — search.google.com/search-console",
+    "gsc": {
+      "clicks": null,
+      "impressions": null,
+      "ctr": null,
+      "position": null
+    },
+    "pagespeed": {
+      "lcp": null,
+      "inp": null,
+      "cls": null,
+      "htmlSizeKb": null
+    }
+  }
+]

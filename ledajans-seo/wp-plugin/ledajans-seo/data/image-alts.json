@@ -1,0 +1,111 @@
+{
+  "products": [
+    {
+      "slug": "ic-mekan-led-ekran",
+      "name": "İç Mekan LED Ekran",
+      "alt": "İç mekan P2.5 LED ekran panel — LEDAJANS"
+    },
+    {
+      "slug": "dis-mekan-led-ekran",
+      "name": "Dış Mekan LED Ekran",
+      "alt": "Dış mekan IP65 P4 LED ekran — LEDAJANS"
+    },
+    {
+      "slug": "rental-ekran",
+      "name": "Rental LED Ekran",
+      "alt": "Rental P3.91 sahne LED ekran kiralama — LEDAJANS"
+    },
+    {
+      "slug": "cob-smart-screen",
+      "name": "COB Smart Screen",
+      "alt": "COB Smart Screen premium iç mekan LED ekran — LEDAJANS"
+    },
+    {
+      "slug": "ic-mekan-rgb-panel",
+      "name": "İç Mekan RGB Panel",
+      "alt": "İç mekan RGB LED panel modül — LEDAJANS"
+    },
+    {
+      "slug": "dis-mekan-rgb-panel",
+      "name": "Dış Mekan RGB Panel",
+      "alt": "Dış mekan RGB LED panel IP65 — LEDAJANS"
+    },
+    {
+      "slug": "kontrol-kartlari",
+      "name": "Kontrol Kartları",
+      "alt": "LED ekran Colorlight Huidu kontrol kartı — LEDAJANS"
+    },
+    {
+      "slug": "power-supply",
+      "name": "Power Supply",
+      "alt": "LED ekran güç kaynağı power supply — LEDAJANS"
+    }
+  ],
+  "projects": [
+    {
+      "slug": "dis-mekan-led-ekran",
+      "title": "Dış Mekan LED Ekran",
+      "venue": "Açık hava reklam",
+      "pitch": "P4",
+      "alt": "Açık hava reklam P4 dış mekan LED ekran kurulumu — LEDAJANS referans"
+    },
+    {
+      "slug": "ic-mekan-led-ekran",
+      "title": "İç Mekan LED Ekran",
+      "venue": "Showroom",
+      "pitch": "P2.5",
+      "alt": "Showroom P2.5 iç mekan LED ekran kurulumu — LEDAJANS referans"
+    },
+    {
+      "slug": "rental-led-ekran-colorlight",
+      "title": "Rental LED Ekran",
+      "venue": "Etkinlik sahnesi",
+      "pitch": "P3.91",
+      "alt": "Etkinlik sahnesi P3.91 rental LED ekran kurulumu — LEDAJANS referans"
+    },
+    {
+      "slug": "magaza-led-bilgilendirme",
+      "title": "Mağaza LED Bilgilendirme Ekranı",
+      "venue": "Mağaza vitrini",
+      "pitch": "P2.5",
+      "alt": "Mağaza vitrini P2.5 iç mekan LED ekran kurulumu — İstanbul LEDAJANS referans"
+    },
+    {
+      "slug": "dis-mekan-led-colorlight",
+      "title": "Dış Mekan LED Ekran Colorlight",
+      "venue": "Dış cephe",
+      "pitch": "P5",
+      "alt": "Dış cephe P5 Colorlight LED ekran kurulumu — LEDAJANS referans"
+    },
+    {
+      "slug": "cob-smart-screen-projesi",
+      "title": "COB Smart Screen Projesi",
+      "venue": "Kurumsal lobi",
+      "pitch": "P1.8",
+      "alt": "Kurumsal lobi P1.8 COB Smart Screen LED ekran — LEDAJANS referans"
+    },
+    {
+      "slug": "ic-mekan-indoor-p4",
+      "title": "İç Mekan Indoor P4",
+      "venue": "Toplantı salonu",
+      "pitch": "P4",
+      "alt": "Toplantı salonu P4 iç mekan LED ekran kurulumu — LEDAJANS referans"
+    },
+    {
+      "slug": "magaza-ic-mekan-led",
+      "title": "Mağaza İç Mekan LED",
+      "venue": "Mağaza",
+      "pitch": "P2.5",
+      "alt": "Mağaza P2.5 iç mekan LED ekran kurulumu — LEDAJANS referans"
+    }
+  ],
+  "blog_image_pattern": "{title} — LED ekran rehberi görseli",
+  "hero_alt": "LEDAJANS LED ekran satış kiralama ve kurulum — İstanbul",
+  "webp_rules": {
+    "hero_max_width": 1200,
+    "hero_max_kb": 100,
+    "content_max_width": 800,
+    "quality": 82,
+    "exclude_from_lazyload": ["hero", "logo", "lcp"]
+  }
+}

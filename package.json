@@ -16,7 +16,10 @@
     "seo:plan": "node scripts/seo-agent/plan.mjs",
     "seo:apply": "node scripts/seo-agent/apply.mjs",
     "seo:run": "node scripts/seo-agent/run.mjs",
-    "brand:check": "node scripts/check-no-meanreal.mjs"
+    "brand:check": "node scripts/check-no-meanreal.mjs",
+    "ledajans:audit": "node ledajans-seo/scripts/audit-site.mjs",
+    "ledajans:kpi": "node ledajans-seo/scripts/monitor-kpi.mjs",
+    "ledajans:cities": "node ledajans-seo/scripts/generate-city-landings.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.4.0",

@@ -1,0 +1,38 @@
+{
+  "url": "https://ledajans.com",
+  "brand": "LEDAJANS",
+  "legalName": "TAHA LED DIŞ TİCARET ANONİM ŞİRKETİ",
+  "alternateName": "LED Ajans",
+  "description": "LED ekran satış, kiralama ve profesyonel kurulum. İç mekan, dış mekan ve rental çözümler. 25 yıl tecrübe, 2 yıl garanti.",
+  "phone": "+902122204004",
+  "phoneDisplay": "+90 212 220 40 04",
+  "mobile": ["+905304056768", "+905438795108"],
+  "email": "info@ledajans.com",
+  "address": {
+    "streetAddress": "İstanbul",
+    "addressLocality": "İstanbul",
+    "addressRegion": "İstanbul",
+    "addressCountry": "TR"
+  },
+  "geo": {
+    "latitude": 41.0082,
+    "longitude": 28.9784
+  },
+  "foundedYear": 2001,
+  "experienceYears": 25,
+  "warrantyYears": 2,
+  "priceRange": "$$",
+  "openingHours": [
+    { "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "18:00" },
+    { "days": ["Saturday"], "opens": "09:00", "closes": "15:00" }
+  ],
+  "social": {
+    "instagram": "https://www.instagram.com/ledajans",
+    "linkedin": "https://www.linkedin.com/company/ledajans",
+    "youtube": "https://www.youtube.com/@ledajans"
+  },
+  "logo": "https://ledajans.com/wp-content/uploads/logo.png",
+  "primaryKeyword": "led ekran",
+  "hubPath": "/led-ekran/",
+  "cornerstonePath": "/led-ekran-nedir/"
+}

@@ -1,0 +1,67 @@
+{
+  "301": [
+    {
+      "from": "/blog/led-ekran-fiyatlari-2026/",
+      "to": "/led-ekran/",
+      "reason": "Duplicate fiyat rehberi — canonical hub"
+    },
+    {
+      "from": "/blog/led-ekran-fiyatlari-2026-2/",
+      "to": "/led-ekran/",
+      "reason": "Duplicate fiyat rehberi — canonical hub"
+    },
+    {
+      "from": "/blog/led-ekran-fiyatlari-2026-mayis/",
+      "to": "/led-ekran/",
+      "reason": "Duplicate fiyat rehberi — canonical hub"
+    },
+    {
+      "from": "/blog/led-ekran-4/",
+      "to": "/led-ekran/",
+      "reason": "Thin content — hub consolidation"
+    },
+    {
+      "from": "/blog/led-ekran-5/",
+      "to": "/led-ekran/",
+      "reason": "Thin content — hub consolidation"
+    },
+    {
+      "from": "/blog/led-ekran-6/",
+      "to": "/led-ekran/",
+      "reason": "Thin content — hub consolidation"
+    },
+    {
+      "from": "/blog/led-ekran-7/",
+      "to": "/led-ekran/",
+      "reason": "Thin content — hub consolidation"
+    },
+    {
+      "from": "/blog/led-ekran-10/",
+      "to": "/led-ekran/",
+      "reason": "Thin content — hub consolidation"
+    },
+    {
+      "from": "/de/blog/led-ekran-10/",
+      "to": "/led-ekran/",
+      "reason": "hreflang eksik DE içerik — hub yönlendirme"
+    }
+  ],
+  "canonical_overrides": [
+    {
+      "path": "/blog/led-ekran-fiyatlari-2026/",
+      "canonical": "https://ledajans.com/led-ekran/"
+    },
+    {
+      "path": "/blog/dis-mekan-led-ekran-fiyatlari-2026/",
+      "canonical": "https://ledajans.com/dis-mekan-led-ekran/"
+    },
+    {
+      "path": "/blog/ic-mekan-led-ekran-fiyatlari-2026/",
+      "canonical": "https://ledajans.com/ic-mekan-led-ekran/"
+    },
+    {
+      "path": "/blog/rental-led-ekran-kiralama-fiyatlari-2026/",
+      "canonical": "https://ledajans.com/rental-ekran/"
+    }
+  ]
+}
