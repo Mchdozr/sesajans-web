@@ -1,16 +1,10 @@
 import Link from "next/link";
-import { Container } from "@/components/ui/Container";
+import { Container, SectionHeading } from "@/components/ui/Container";
 import { PageHeaderStatic } from "@/components/PageHeaderStatic";
 import { CTABanner } from "@/components/CTABanner";
-import { FAQAccordion } from "@/components/FAQAccordion";
-import { RelatedContent } from "@/components/RelatedContent";
-import { getGlossaryFaqs, type GlossaryTerm } from "@/lib/glossary";
-import { getGlossaryRelatedGroups } from "@/lib/internal-links";
+import type { GlossaryTerm } from "@/lib/glossary";
 
 export function GlossaryTermContent({ term }: { term: GlossaryTerm }) {
-  const faqs = getGlossaryFaqs(term);
-  const relatedGroups = getGlossaryRelatedGroups(term.slug);
-
   return (
     <>
       <PageHeaderStatic
@@ -31,12 +25,6 @@ export function GlossaryTermContent({ term }: { term: GlossaryTerm }) {
                 <p className="mt-3 leading-relaxed text-ink-muted">{section.body}</p>
               </div>
             ))}
-            <div>
-              <h2 className="font-display text-xl font-bold text-ink">Sık sorulan sorular</h2>
-              <div className="mt-6">
-                <FAQAccordion items={faqs} />
-              </div>
-            </div>
             <div className="rounded-2xl border border-theme bg-surface-elevated/60 p-6">
               <h2 className="font-display text-lg font-bold text-ink">İlgili içerikler</h2>
               <ul className="mt-4 space-y-2 text-sm">
@@ -52,7 +40,6 @@ export function GlossaryTermContent({ term }: { term: GlossaryTerm }) {
           </div>
         </Container>
       </section>
-      <RelatedContent groups={relatedGroups} />
       <CTABanner />
     </>
   );
@@ -78,7 +65,7 @@ export function GlossaryIndexContent({
               <Link
                 key={term.slug}
                 href={`/sozluk/${term.slug}`}
-                className="rounded-2xl border border-theme bg-surface-elevated/80 p-5 transition-colors hover:border-brand/40"
+                className="glow-border rounded-2xl border border-theme bg-surface-elevated/80 p-5 transition-colors hover:border-brand/40"
               >
                 <h2 className="font-display font-bold text-ink">{term.title}</h2>
                 <p className="mt-2 line-clamp-3 text-sm text-ink-muted">{term.definition}</p>
@@ -102,7 +89,7 @@ export function ComparisonIndexContent({
       <PageHeaderStatic
         eyebrow="Rehber"
         title="Ürün Karşılaştırmaları"
-        description="SESAJANS moving head, wash ve blinder modelleri arasında doğru seçimi yapın. Ücretsiz fiyat teklifi için iletişime geçin."
+        description="SESAJANS moving head, wash ve blinder modelleri arasında doğru seçimi yapın."
         breadcrumb={[{ name: "Karşılaştırma", path: "/karsilastirma" }]}
       />
       <section className="py-12 sm:py-16">
@@ -112,7 +99,7 @@ export function ComparisonIndexContent({
               <Link
                 key={item.slug}
                 href={item.path}
-                className="rounded-2xl border border-theme bg-surface-elevated/80 p-5 transition-colors hover:border-brand/40"
+                className="glow-border rounded-2xl border border-theme bg-surface-elevated/80 p-5 transition-colors hover:border-brand/40"
               >
                 <h2 className="font-display font-bold text-ink">{item.title}</h2>
                 <p className="mt-2 text-sm text-ink-muted">{item.description}</p>

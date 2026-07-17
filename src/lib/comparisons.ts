@@ -17,7 +17,7 @@ export const comparisons: Comparison[] = [
   {
     slug: "beam-king-380-vs-ip",
     path: "/karsilastirma/beam-king-380-vs-ip",
-    seoTitle: "Beam King 380 vs Beam King IP — Hangisini Almalısınız? | Ücretsiz Teklif",
+    seoTitle: "Beam King 380 vs Beam King IP — Karşılaştırma",
     seoDescription:
       "Kapalı mekân Beam King 380 ile IP66 Beam King IP farkları. Konser, festival ve kulüp için doğru beam moving head seçimi.",
     title: "Beam King 380 vs Beam King IP",
@@ -48,7 +48,7 @@ export const comparisons: Comparison[] = [
   {
     slug: "wash-3715-vs-led-beam-wash-150",
     path: "/karsilastirma/wash-3715-vs-led-beam-wash-150",
-    seoTitle: "Wash 3715 vs LED Beam Wash 150 — Hangisini Almalısınız? | Ücretsiz Teklif",
+    seoTitle: "Wash 3715 vs LED Beam Wash 150 — Karşılaştırma",
     seoDescription:
       "Profesyonel Wash 3715 ile kompakt LED Beam Wash 150 farkları. Salon, konser ve kulüp için doğru wash moving head seçimi.",
     title: "Wash 3715 vs LED Beam Wash 150",
@@ -79,7 +79,7 @@ export const comparisons: Comparison[] = [
   {
     slug: "blinder-400-ip-vs-800-ip",
     path: "/karsilastirma/blinder-400-ip-vs-800-ip",
-    seoTitle: "Blinder 400 IP vs Blinder 800 IP — Hangisini Almalısınız? | Ücretsiz Teklif",
+    seoTitle: "Blinder 400 IP vs Blinder 800 IP — Karşılaştırma",
     seoDescription:
       "Kompakt Blinder 400 IP ile güçlü Blinder 800 IP farkları. Fuar, konser ve mimari aydınlatma için blinder seçimi.",
     title: "Blinder 400 IP vs Blinder 800 IP",
@@ -110,7 +110,7 @@ export const comparisons: Comparison[] = [
   {
     slug: "beam-king-ip-vs-tornado-ip",
     path: "/karsilastirma/beam-king-ip-vs-tornado-ip",
-    seoTitle: "Beam King IP vs Tornado IP — Hangisini Almalısınız? | Ücretsiz Teklif",
+    seoTitle: "Beam King IP vs Tornado IP — Karşılaştırma",
     seoDescription:
       "Tek başlı beam ile çok başlı efekt ünitesi karşılaştırması. Festival ve kulüp için Beam King IP mi Tornado IP mi?",
     title: "Beam King IP vs Tornado IP",
@@ -141,7 +141,7 @@ export const comparisons: Comparison[] = [
   {
     slug: "strike-pro-ip-vs-blinder-800-ip",
     path: "/karsilastirma/strike-pro-ip-vs-blinder-800-ip",
-    seoTitle: "Strike Pro IP vs Blinder 800 IP — Hangisini Almalısınız? | Ücretsiz Teklif",
+    seoTitle: "Strike Pro IP vs Blinder 800 IP — Karşılaştırma",
     seoDescription:
       "Strobe/wash hibrit Strike Pro IP ile yüksek güç Blinder 800 IP farkları. Festival ve stadyum ön hat seçimi.",
     title: "Strike Pro IP vs Blinder 800 IP",
@@ -174,7 +174,7 @@ export const comparisons: Comparison[] = [
   {
     slug: "diamond-line-1240-eco-vs-tornado-ip",
     path: "/karsilastirma/diamond-line-1240-eco-vs-tornado-ip",
-    seoTitle: "Diamond Line 1240 Eco vs Tornado IP — Hangisini Almalısınız? | Ücretsiz Teklif",
+    seoTitle: "Diamond Line 1240 Eco vs Tornado IP — Karşılaştırma",
     seoDescription:
       "Sabit modüler LED bar ile 5 başlı moving LED bar farkları. Dekor, fuar ve festival için LED bar seçimi.",
     title: "Diamond Line 1240 Eco vs Tornado IP",
@@ -207,7 +207,7 @@ export const comparisons: Comparison[] = [
   {
     slug: "wash-3715-vs-beam-king-380",
     path: "/karsilastirma/wash-3715-vs-beam-king-380",
-    seoTitle: "Wash 3715 vs Beam King 380 — Hangisini Almalısınız? | Ücretsiz Teklif",
+    seoTitle: "Wash 3715 vs Beam King 380 — Karşılaştırma",
     seoDescription:
       "Wash moving head ile beam moving head hangi görevde? Salon ve konser kurulumunda katman seçimi.",
     title: "Wash 3715 vs Beam King 380",
@@ -240,7 +240,7 @@ export const comparisons: Comparison[] = [
   {
     slug: "beam-king-380-vs-led-beam-wash-150",
     path: "/karsilastirma/beam-king-380-vs-led-beam-wash-150",
-    seoTitle: "Beam King 380 vs LED Beam Wash 150 — Hangisini Almalısınız? | Ücretsiz Teklif",
+    seoTitle: "Beam King 380 vs LED Beam Wash 150 — Karşılaştırma",
     seoDescription:
       "Discharge beam ile kompakt LED beam/wash farkları. Kulüp ve küçük sahne için doğru moving head.",
     title: "Beam King 380 vs LED Beam Wash 150",
@@ -273,7 +273,7 @@ export const comparisons: Comparison[] = [
   {
     slug: "strike-pro-ip-vs-tornado-ip",
     path: "/karsilastirma/strike-pro-ip-vs-tornado-ip",
-    seoTitle: "Strike Pro IP vs Tornado IP — Hangisini Almalısınız? | Ücretsiz Teklif",
+    seoTitle: "Strike Pro IP vs Tornado IP — Karşılaştırma",
     seoDescription:
       "Açık hava efekt katmanında strobe/wash hibrit mi, çok başlı moving bar mı? Festival efekt seçimi.",
     title: "Strike Pro IP vs Tornado IP",
@@ -306,7 +306,7 @@ export const comparisons: Comparison[] = [
   {
     slug: "blinder-400-ip-vs-strike-pro-ip",
     path: "/karsilastirma/blinder-400-ip-vs-strike-pro-ip",
-    seoTitle: "Blinder 400 IP vs Strike Pro IP — Hangisini Almalısınız? | Ücretsiz Teklif",
+    seoTitle: "Blinder 400 IP vs Strike Pro IP — Karşılaştırma",
     seoDescription:
       "Kompakt blinder ile yüksek çıkışlı strobe/wash hibrit farkları. Orta ölçek sahne ön hat seçimi.",
     title: "Blinder 400 IP vs Strike Pro IP",

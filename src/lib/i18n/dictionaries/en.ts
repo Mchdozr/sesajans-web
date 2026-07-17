@@ -48,10 +48,10 @@ export const dictionary = {
   },
   home: {
     experience: "years of stage lighting experience",
-    heroTitle1: "Stage lighting",
-    heroTitle2: "sales and install",
+    heroTitle1: "Professional solutions",
+    heroTitle2: "that light up the stage",
     heroDesc:
-      "Beam, wash, blinder and LED bar — stock sales, rental and technical install. Request a free quote.",
+      "We deliver professional lighting solutions for concerts, festivals, trade shows and corporate events with moving heads, blinders, strobes and LED bars.",
     browseProducts: "Browse Products",
     guaranteed: "Warranty-backed products",
     support: "Technical support",

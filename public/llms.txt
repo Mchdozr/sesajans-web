@@ -1,41 +1,41 @@
 # SESAJANS — Profesyonel Sahne Aydınlatma
 
-> SESAJANS (sesajans.com.tr), İstanbul Şişli merkezli profesyonel sahne ve etkinlik aydınlatma distribütörüdür. Liste fiyatı yayınlanmaz; proje bazlı ücretsiz fiyat teklifi verilir.
+> SESAJANS (sesajans.com.tr), İstanbul Şişli merkezli profesyonel sahne ve etkinlik aydınlatma tedarikçisidir.
 
 ## Ana Sayfalar
 
 - https://sesajans.com.tr/
 - https://sesajans.com.tr/urunler
-- https://sesajans.com.tr/bayi
 - https://sesajans.com.tr/blog
 - https://sesajans.com.tr/kullanim-alanlari
-- https://sesajans.com.tr/karsilastirma
-- https://sesajans.com.tr/sozluk
 - https://sesajans.com.tr/projeler
-- https://sesajans.com.tr/ara
+- https://sesajans.com.tr/istanbul-sahne-aydinlatma
 - https://sesajans.com.tr/iletisim
 - https://sesajans.com.tr/sitemap.xml
-- https://sesajans.com.tr/feed.xml
 
-## Ticari / satın alma
+## Kullanım Alanları
 
-- https://sesajans.com.tr/bayi — Distribütör ve bayi hub
-- https://sesajans.com.tr/blog/moving-head-fiyat-rehberi
-- https://sesajans.com.tr/blog/sahne-isigi-satin-alma-kontrol-listesi
-- Ürün sayfalarında `#fiyat-teklifi` bölümü ve `/iletisim?urun={slug}` teklif deep-link
+- https://sesajans.com.tr/kullanim-alanlari/konser-festival
+- https://sesajans.com.tr/kullanim-alanlari/gece-kulubu
+- https://sesajans.com.tr/kullanim-alanlari/dugun-etkinlik
+- https://sesajans.com.tr/kullanim-alanlari/tv-studyo
+- https://sesajans.com.tr/kullanim-alanlari/fuar-lansman
+- https://sesajans.com.tr/kullanim-alanlari/tiyatro-salon
+- https://sesajans.com.tr/kullanim-alanlari/mimari-aydinlatma
 
-## Şehirler
+## Blog (14 yazı)
 
-- https://sesajans.com.tr/istanbul-sahne-aydinlatma
-- https://sesajans.com.tr/ankara-sahne-aydinlatma
-- https://sesajans.com.tr/izmir-sahne-aydinlatma
-- https://sesajans.com.tr/antalya-sahne-aydinlatma
-- https://sesajans.com.tr/bursa-sahne-aydinlatma
-- https://sesajans.com.tr/adana-sahne-aydinlatma
-- https://sesajans.com.tr/gaziantep-sahne-aydinlatma
-- https://sesajans.com.tr/kocaeli-sahne-aydinlatma
+- https://sesajans.com.tr/blog/sahne-aydinlatma-rehberi
+- https://sesajans.com.tr/blog/moving-head-beam-rehberi
+- https://sesajans.com.tr/blog/ip66-beam-rehberi
+- https://sesajans.com.tr/blog/konser-aydinlatma-rehberi
+- https://sesajans.com.tr/blog/istanbul-sahne-aydinlatma-rehberi
+- https://sesajans.com.tr/blog/wash-moving-head-rehberi
+- https://sesajans.com.tr/blog/led-bar-sahne-rehberi
+- https://sesajans.com.tr/blog/blinder-strobe-rehberi
+- https://sesajans.com.tr/blog/profesyonel-sahne-isigi-rehberi
 
 ## İletişim
 
 - info@sesajans.com.tr | +90 549 800 25 10
-- Halide Edip Adıvar Mah. Gül 2 Sk. No:10, 34382 Şişli/İstanbul
+- Şişli, İstanbul

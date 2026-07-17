@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CategoryProductsContent } from "@/components/CategoryProductsContent";
-import { JsonLd } from "@/components/JsonLd";
 import { categories, categorySlugs, type ProductCategory } from "@/lib/categories";
-import { buildMetadata, faqJsonLd } from "@/lib/seo";
+import { buildMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
   return categorySlugs.map((slug) => ({ slug }));
@@ -32,11 +31,5 @@ export default async function CategoryPage({
 }) {
   const { slug } = await params;
   if (!categorySlugs.includes(slug as ProductCategory)) notFound();
-  const cat = categories[slug as ProductCategory];
-  return (
-    <>
-      <JsonLd data={faqJsonLd(cat.faqs)} />
-      <CategoryProductsContent slug={slug as ProductCategory} />
-    </>
-  );
+  return <CategoryProductsContent slug={slug as ProductCategory} />;
 }

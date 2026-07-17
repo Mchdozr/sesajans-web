@@ -17,7 +17,7 @@ export const istanbulLanding: CityLanding = {
   path: "/istanbul-sahne-aydinlatma",
   city: "İstanbul",
   title: "İstanbul Sahne Aydınlatma",
-  seoTitle: "İstanbul Sahne Aydınlatma Distribütörü | Teklif",
+  seoTitle: "İstanbul Sahne Aydınlatma — SESAJANS Şişli",
   seoDescription:
     "İstanbul konser, festival, düğün ve kurumsal etkinlik sahne aydınlatması. Şişli merkezli distribütör, kurulum ve teknik destek.",
   intro:
@@ -64,7 +64,7 @@ export const ankaraLanding: CityLanding = {
   path: "/ankara-sahne-aydinlatma",
   city: "Ankara",
   title: "Ankara Sahne Aydınlatma",
-  seoTitle: "Ankara Sahne Aydınlatma Distribütörü | Teklif",
+  seoTitle: "Ankara Sahne Aydınlatma — SESAJANS",
   seoDescription:
     "Ankara konser, kongre, düğün ve kurumsal etkinlik sahne aydınlatması. Moving head, wash, blinder ve LED bar çözümleri.",
   intro:
@@ -106,7 +106,7 @@ export const izmirLanding: CityLanding = {
   path: "/izmir-sahne-aydinlatma",
   city: "İzmir",
   title: "İzmir Sahne Aydınlatma",
-  seoTitle: "İzmir Sahne Aydınlatma Distribütörü | Teklif",
+  seoTitle: "İzmir Sahne Aydınlatma — SESAJANS",
   seoDescription:
     "İzmir festival, konser, düğün ve fuar sahne aydınlatması. IP66 dış mekân ve moving head çözümleri.",
   intro:
@@ -148,7 +148,7 @@ export const antalyaLanding: CityLanding = {
   path: "/antalya-sahne-aydinlatma",
   city: "Antalya",
   title: "Antalya Sahne Aydınlatma",
-  seoTitle: "Antalya Sahne Aydınlatma Distribütörü | Teklif",
+  seoTitle: "Antalya Sahne Aydınlatma — SESAJANS",
   seoDescription:
     "Antalya festival, konser, düğün ve otel etkinlik sahne aydınlatması. IP66 dış mekân beam, blinder ve efekt çözümleri.",
   intro:
@@ -190,7 +190,7 @@ export const bursaLanding: CityLanding = {
   path: "/bursa-sahne-aydinlatma",
   city: "Bursa",
   title: "Bursa Sahne Aydınlatma",
-  seoTitle: "Bursa Sahne Aydınlatma Distribütörü | Teklif",
+  seoTitle: "Bursa Sahne Aydınlatma — SESAJANS",
   seoDescription:
     "Bursa tiyatro, konser, düğün ve kurumsal etkinlik sahne aydınlatması. Wash moving head, beam ve LED bar çözümleri.",
   intro:
@@ -232,7 +232,7 @@ export const adanaLanding: CityLanding = {
   path: "/adana-sahne-aydinlatma",
   city: "Adana",
   title: "Adana Sahne Aydınlatma",
-  seoTitle: "Adana Sahne Aydınlatma Distribütörü | Teklif",
+  seoTitle: "Adana Sahne Aydınlatma — SESAJANS",
   seoDescription:
     "Adana konser, festival, düğün ve kurumsal etkinlik sahne aydınlatması. Moving head, blinder ve IP65 dış mekân çözümleri.",
   intro:
@@ -274,7 +274,7 @@ export const gaziantepLanding: CityLanding = {
   path: "/gaziantep-sahne-aydinlatma",
   city: "Gaziantep",
   title: "Gaziantep Sahne Aydınlatma",
-  seoTitle: "Gaziantep Sahne Aydınlatma Distribütörü | Teklif",
+  seoTitle: "Gaziantep Sahne Aydınlatma — SESAJANS",
   seoDescription:
     "Gaziantep düğün, konser, fuar ve kurumsal etkinlik sahne aydınlatması. Moving head, LED bar ve blinder çözümleri.",
   intro:
@@ -316,7 +316,7 @@ export const kocaeliLanding: CityLanding = {
   path: "/kocaeli-sahne-aydinlatma",
   city: "Kocaeli",
   title: "Kocaeli Sahne Aydınlatma",
-  seoTitle: "Kocaeli Sahne Aydınlatma Distribütörü | Teklif",
+  seoTitle: "Kocaeli Sahne Aydınlatma — SESAJANS",
   seoDescription:
     "Kocaeli ve İzmit konser, kurumsal etkinlik, fuar ve düğün sahne aydınlatması. Moving head, wash ve blinder çözümleri.",
   intro:

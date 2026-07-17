@@ -29,40 +29,16 @@ export type Product = {
  */
 const PUBLISHED_PDF_SLUGS = new Set<string>([]);
 
-const commercialFaqs = (name: string): Product["faqs"] => [
-  {
-    q: `${name} fiyatı nasıl alınır?`,
-    a: `Liste fiyatı proje kapsamına göre değişir. Adet, kurulum ve opsiyonlara göre ücretsiz fiyat teklifi için iletişim formundan veya WhatsApp üzerinden bize ulaşın. SESAJANS Türkiye distribütörü olarak stok ve teslimat planını birlikte netleştiririz.`,
-  },
-  {
-    q: `${name} satılık mı, kiralama da var mı?`,
-    a: `Evet. Satış ve etkinlik bazlı kiralama seçenekleri sunuyoruz. Kısa süreli etkinliklerde kiralama, kalıcı kurulumlarda satış tercih edilir. Hangisinin size uygun olduğunu birlikte değerlendiririz.`,
-  },
-];
-
 /** Yalnızca temizlenmiş spec-sheet.png galeride; üretici PDF'i yayın listesindeyse linklenir. */
 function publishProduct(product: Product): Product {
   const gallery = product.gallery.filter(
     (src) => !src.toLowerCase().endsWith(".png") || src.endsWith("/spec-sheet.png"),
   );
 
-  const keywords = Array.from(
-    new Set([
-      product.name.toLocaleLowerCase("tr"),
-      `${product.name.toLocaleLowerCase("tr")} fiyat`,
-      `${product.name.toLocaleLowerCase("tr")} satın al`,
-      `${product.name.toLocaleLowerCase("tr")} teklif`,
-      ...product.keywords,
-    ]),
-  );
-
   return {
     ...product,
     gallery: gallery.length > 0 ? gallery : [product.image],
     pdf: PUBLISHED_PDF_SLUGS.has(product.slug) ? product.pdf : undefined,
-    keywords,
-    faqs: [...product.faqs, ...commercialFaqs(product.name)],
-    excerpt: `${product.excerpt} Türkiye distribütörü SESAJANS'tan ücretsiz fiyat teklifi alın.`,
   };
 }
 

@@ -18,8 +18,8 @@ export async function generateMetadata({
   const product = getProduct(slug);
   if (!product) return {};
   return buildMetadata({
-    title: `${product.name} Fiyat Teklifi & Teknik Özellikler`,
-    description: `${product.name}: ${product.tagline}. Stoktan satış ve kurulum desteği. Ücretsiz fiyat teklifi için SESAJANS'a ulaşın — Türkiye sahne aydınlatma distribütörü.`,
+    title: `${product.name} — Teknik Özellikler`,
+    description: product.excerpt,
     path: `/urunler/${product.slug}`,
     image: product.image,
     keywords: product.keywords,

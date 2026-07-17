@@ -7,26 +7,7 @@ export type GlossaryTerm = {
   sections: { title: string; body: string }[];
   relatedLinks: { label: string; href: string }[];
   keywords: string[];
-  faqs?: { q: string; a: string }[];
 };
-
-export function getGlossaryFaqs(term: GlossaryTerm): { q: string; a: string }[] {
-  if (term.faqs?.length) return term.faqs;
-  return [
-    {
-      q: `${term.title.replace(/\?$/, "")} ne anlama gelir?`,
-      a: term.definition,
-    },
-    {
-      q: "Bu terim hangi SESAJANS ürünleriyle ilgili?",
-      a: "İlgili ürün ve rehber linklerini sayfanın altındaki bağlantılardan inceleyebilirsiniz. Proje seçimi için ücretsiz fiyat teklifi alın.",
-    },
-    {
-      q: "Teknik danışmanlık ve teklif nasıl alınır?",
-      a: "İletişim formundan veya /bayi sayfasından SESAJANS'a ulaşın. Kurulum ve ürün seçimi için proje bazlı teklif hazırlanır.",
-    },
-  ];
-}
 
 export const glossaryTerms: GlossaryTerm[] = [
   {
