@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { DM_Sans, Syne } from "next/font/google";
 import "./globals.css";
 import { site } from "@/lib/site";
 import { Header } from "@/components/Header";
@@ -9,13 +9,13 @@ import { Providers } from "@/components/Providers";
 import { SkipLink } from "@/components/SkipLink";
 import { organizationJsonLd, localBusinessJsonLd, websiteJsonLd } from "@/lib/seo";
 
-const inter = Inter({
+const sans = DM_Sans({
   variable: "--font-inter",
   subsets: ["latin", "latin-ext"],
   display: "swap",
 });
 
-const display = Space_Grotesk({
+const display = Syne({
   variable: "--font-display",
   subsets: ["latin", "latin-ext"],
   display: "swap",
@@ -63,7 +63,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="tr" suppressHydrationWarning className={`${inter.variable} ${display.variable}`}>
+    <html lang="tr" suppressHydrationWarning className={`${sans.variable} ${display.variable}`}>
       <body className="flex min-h-screen flex-col bg-surface text-ink">
         <Providers>
           <JsonLd data={[organizationJsonLd, localBusinessJsonLd, websiteJsonLd]} />

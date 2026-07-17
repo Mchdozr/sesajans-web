@@ -39,8 +39,9 @@ export const useCases: UseCase[] = [
     faqs: [
       { q: "Açık hava konserinde kaç beam gerekir?", a: "Sahne genişliği ve seyirci mesafesine göre değişir; tipik ana sahne için 8–24 beam aralığı planlanır. Ücretsiz keşif için iletişime geçin." },
       { q: "Festival kurulum süresi ne kadar?", a: "Sahne büyüklüğüne göre 1–3 gün montaj ve programlama öngörülür." },
+      { q: "Konser aydınlatma fiyat teklifi nasıl alınır?", a: "Sahne çizimi ve tarihini paylaşın; Beam King IP, Blinder 800 IP ve Wash 3715 için satış veya kiralama teklifi hazırlanır." },
     ],
-    keywords: ["konser aydınlatma", "festival sahne ışığı", "açık hava beam"],
+    keywords: ["konser aydınlatma", "festival sahne ışığı", "açık hava beam", "konser ışık teklifi"],
   },
   {
     slug: "gece-kulubu",
@@ -58,8 +59,10 @@ export const useCases: UseCase[] = [
     relatedBlogSlugs: ["moving-head-beam-rehberi", "dmx-aydinlatma-kurulumu"],
     faqs: [
       { q: "Küçük kulüp için minimum ekipman?", a: "4–8 moving head (beam + wash karışımı) çoğu 200 m² altı mekân için yeterlidir." },
+      { q: "Kulüp aydınlatma fiyat teklifi nasıl alınır?", a: "Mekân ölçüsü ve tavan yüksekliğini paylaşın; stoktan satış veya kiralama için ücretsiz teklif hazırlanır." },
+      { q: "Hangi ürünlerle başlamalıyım?", a: "LED Beam Wash 150 ve Beam King 380 çoğu kulüp için dengeli bir başlangıç paketidir. Ürün sayfalarından teklif formuna geçebilirsiniz." },
     ],
-    keywords: ["gece kulübü aydınlatma", "kulüp moving head", "bar sahne ışığı"],
+    keywords: ["gece kulübü aydınlatma", "kulüp moving head", "bar sahne ışığı", "kulüp ışık satın al"],
   },
   {
     slug: "dugun-etkinlik",
@@ -77,8 +80,10 @@ export const useCases: UseCase[] = [
     relatedBlogSlugs: ["sahne-aydinlatma-rehberi"],
     faqs: [
       { q: "Düğün salonu için kiralama mümkün mü?", a: "Evet, etkinlik tarihine göre kiralama ve operatörlü paket sunuyoruz." },
+      { q: "Düğün aydınlatma fiyatı nasıl hesaplanır?", a: "Salon büyüklüğü, süre ve operatör ihtiyacına göre teklif hazırlanır. Liste fiyatı yoktur; ücretsiz fiyat teklifi alın." },
+      { q: "Satın alma mı kiralama mı?", a: "Tek seferlik düğün için kiralama; salon işletmesi için satış daha ekonomiktir. İkisini de planlayabiliriz." },
     ],
-    keywords: ["düğün aydınlatma", "etkinlik wash", "salon sahne ışığı"],
+    keywords: ["düğün aydınlatma", "etkinlik wash", "salon sahne ışığı", "düğün ışık kiralama"],
   },
   {
     slug: "tv-studyo",
@@ -95,8 +100,10 @@ export const useCases: UseCase[] = [
     relatedBlogSlugs: ["sahne-aydinlatma-rehberi", "dmx-aydinlatma-kurulumu"],
     faqs: [
       { q: "TV yayını için flicker testi yapılıyor mu?", a: "Evet, kurulum sonrası kamera testi ile titreme kontrolü yapılır." },
+      { q: "Stüdyo wash satın alma teklifi nasıl alınır?", a: "Kamera sayısı ve tavan yüküne göre Wash 3715 veya LED Beam Wash 150 önerilir; ücretsiz fiyat teklifi için iletişime geçin." },
+      { q: "Kurulum ve eğitim dahil mi?", a: "Evet, DMX programlama ve operatör eğitimi teklife eklenebilir." },
     ],
-    keywords: ["stüdyo aydınlatma", "tv wash", "flicker free moving head"],
+    keywords: ["stüdyo aydınlatma", "tv wash", "flicker free moving head", "stüdyo ışık satın al"],
   },
   {
     slug: "fuar-lansman",
@@ -113,8 +120,10 @@ export const useCases: UseCase[] = [
     relatedBlogSlugs: ["led-bar-sahne-rehberi", "sahne-aydinlatma-rehberi"],
     faqs: [
       { q: "Fuar standı için minimum süre?", a: "Stand alanına göre 4–8 saat kurulum yeterlidir; önceden programlama ile süre kısalır." },
+      { q: "Fuar LED bar fiyat teklifi nasıl alınır?", a: "Stand metrekaresi ve marka renklerini paylaşın; Diamond Line ve blinder için proje bazlı teklif hazırlanır." },
+      { q: "Kiralama mümkün mü?", a: "Evet. Kısa fuar takvimlerinde kiralama, sık katılan markalar için satış önerilir." },
     ],
-    keywords: ["fuar aydınlatma", "lansman led bar", "stand aydınlatması"],
+    keywords: ["fuar aydınlatma", "lansman led bar", "stand aydınlatması", "fuar led bar fiyat"],
   },
   {
     slug: "tiyatro-salon",
@@ -131,8 +140,10 @@ export const useCases: UseCase[] = [
     relatedBlogSlugs: ["wash-moving-head-rehberi", "sahne-aydinlatma-rehberi"],
     faqs: [
       { q: "Salon tavan yüksekliği yeterli değilse?", a: "Kompakt **LED Beam Wash 150** alternatif olarak değerlendirilir." },
+      { q: "Tiyatro wash fiyat teklifi nasıl alınır?", a: "Salon kapasitesi ve sahne derinliğini yazın; Wash 3715 için ücretsiz fiyat teklifi hazırlanır." },
+      { q: "Satış sonrası servis var mı?", a: "Evet. Garanti, bakım ve firmware desteği SESAJANS üzerinden sağlanır." },
     ],
-    keywords: ["tiyatro aydınlatma", "salon wash", "sahne yıkama ışığı"],
+    keywords: ["tiyatro aydınlatma", "salon wash", "sahne yıkama ışığı", "tiyatro ışık satın al"],
   },
   {
     slug: "mimari-aydinlatma",
@@ -149,8 +160,10 @@ export const useCases: UseCase[] = [
     relatedBlogSlugs: ["ip66-beam-rehberi", "ip66-dis-mekan-beam-secimi"],
     faqs: [
       { q: "Kalıcı mimari kurulum yapılıyor mu?", a: "Evet, statik montaj, kablolama ve bakım planı dahil projeler üretiyoruz." },
+      { q: "Mimari aydınlatma fiyatı nasıl hesaplanır?", a: "Cephe ölçüsü, fixture adedi ve montaj tipi teklifi belirler. Ücretsiz keşif sonrası fiyat teklifi verilir." },
+      { q: "Hangi ürünleri önerirsiniz?", a: "Uzun mesafe için Beam King IP; geniş alan vurgusu için Blinder 800 IP. Ürün sayfalarından teklif formuna geçebilirsiniz." },
     ],
-    keywords: ["mimari aydınlatma", "dış cephe ışık", "ip66 mimari"],
+    keywords: ["mimari aydınlatma", "dış cephe ışık", "ip66 mimari", "mimari ışık teklifi"],
   },
   {
     slug: "stadyum-arena",
@@ -174,19 +187,20 @@ export const useCases: UseCase[] = [
     faqs: [
       { q: "Stadyum kurulumu kaç gün sürer?", a: "Sahne ölçeğine göre 3–7 gün montaj ve programlama planlanır." },
       { q: "Yağmurda çalışır mı?", a: "IP66 modeller yağmur ve toz koşullarında güvenle çalışır." },
+      { q: "Arena paket fiyat teklifi nasıl alınır?", a: "Sahne çizimi ve seyirci kapasitesini paylaşın; Beam King IP ve Blinder 800 IP için proje teklifi hazırlanır." },
     ],
-    keywords: ["stadyum aydınlatma", "arena konser ışığı", "büyük sahne beam"],
+    keywords: ["stadyum aydınlatma", "arena konser ışığı", "büyük sahne beam", "arena ışık teklifi"],
   },
   {
     slug: "aydinlatma-kiralama",
     title: "Aydınlatma Kiralama Hizmeti",
     seoTitle: "Sahne Aydınlatma Kiralama — Etkinlik Paketleri",
     seoDescription:
-      "Konser, düğün ve kurumsal etkinlik için moving head kiralama. Operatörlü ve operatörsüz paketler.",
+      "Konser, düğün ve kurumsal etkinlik için moving head kiralama. Operatörlü ve operatörsüz paketler. Ücretsiz teklif.",
     eyebrow: "Kiralama",
     intro:
       "Tek seferlik etkinlikler için satın alma yerine kiralama ekonomik ve pratik bir seçenektir.",
-    body: "SESAJANS stoktan beam, wash, blinder, strobe ve LED bar kiralama paketleri sunar. Paket içeriği etkinlik türüne göre özelleştirilir; DMX programlama, operatör ve lojistik dahil anahtar teslim çözümler mevcuttur. Kurulum-söküm süreleri düğün ve fuar takvimlerine göre planlanır.",
+    body: "SESAJANS stoktan beam, wash, blinder, strobe ve LED bar kiralama paketleri sunar. Popüler modeller: **Beam King 380**, **Wash 3715**, **LED Beam Wash 150** ve **Diamond Line 1240 Eco** — her ürün sayfasından `/iletisim?urun=` ile doğrudan kiralama/satış teklifi isteyebilirsiniz. Paket içeriği etkinlik türüne göre özelleştirilir; DMX programlama, operatör ve lojistik dahil anahtar teslim çözümler mevcuttur.",
     highlights: ["Günlük / haftalık kiralama", "Operatörlü paket seçenekleri", "Hızlı kurulum-söküm", "Stoktan anında rezervasyon"],
     recommendedProductSlugs: ["beam-king-380", "wash-3715", "led-beam-wash-150", "diamond-line-1240-eco"],
     categorySlug: "moving-head-wash",
@@ -194,8 +208,9 @@ export const useCases: UseCase[] = [
     faqs: [
       { q: "Minimum kiralama süresi?", a: "Çoğu etkinlik için 1 gün kiralama yeterlidir; festival paketleri çok günlük planlanır." },
       { q: "Operatör dahil mi?", a: "İsteğe bağlı operatörlü paketler sunuyoruz." },
+      { q: "Kiralama fiyat teklifi nasıl alınır?", a: "Etkinlik tarihi, mekân ve ürün listesini iletin; ücretsiz kiralama teklifi hazırlanır. Satın alma alternatifi de aynı teklifte sunulabilir." },
     ],
-    keywords: ["aydınlatma kiralama", "moving head kiralama", "etkinlik ışık kiralama"],
+    keywords: ["aydınlatma kiralama", "moving head kiralama", "etkinlik ışık kiralama", "sahne ışığı kiralama fiyat"],
   },
 ];
 

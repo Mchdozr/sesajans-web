@@ -158,6 +158,7 @@ export function Header() {
       { label: t.nav.comparison, href: "/karsilastirma" },
       { label: t.nav.glossary, href: "/sozluk" },
       { label: t.nav.useCases, href: "/kullanim-alanlari" },
+      { label: "Bayi", href: "/bayi" },
       { label: t.nav.faq, href: "/sss" },
     ],
     [t],

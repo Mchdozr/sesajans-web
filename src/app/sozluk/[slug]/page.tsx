@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { GlossaryTermContent } from "@/components/GlossaryTermContent";
 import { JsonLd } from "@/components/JsonLd";
-import { buildMetadata, definedTermJsonLd } from "@/lib/seo";
-import { getGlossaryTerm, glossarySlugs } from "@/lib/glossary";
+import { buildMetadata, definedTermJsonLd, faqJsonLd } from "@/lib/seo";
+import { getGlossaryFaqs, getGlossaryTerm, glossarySlugs } from "@/lib/glossary";
 
 export function generateStaticParams() {
   return glossarySlugs.map((slug) => ({ slug }));
@@ -36,11 +36,14 @@ export default async function GlossaryTermPage({
   return (
     <>
       <JsonLd
-        data={definedTermJsonLd({
-          name: term.title,
-          description: term.definition,
-          slug: term.slug,
-        })}
+        data={[
+          definedTermJsonLd({
+            name: term.title,
+            description: term.definition,
+            slug: term.slug,
+          }),
+          faqJsonLd(getGlossaryFaqs(term)),
+        ]}
       />
       <GlossaryTermContent term={term} />
     </>

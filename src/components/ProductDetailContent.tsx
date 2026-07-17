@@ -211,7 +211,35 @@ export function ProductDetailContent({ slug }: { slug: string }) {
         </Container>
       </section>
 
-      <section className="border-t border-theme bg-surface-deep/40 py-16">
+      <section id="fiyat-teklifi" className="border-t border-theme bg-surface-deep/40 py-16 scroll-mt-24">
+        <Container>
+          <SectionHeading
+            title={`${product.name} Fiyat & Teklif`}
+            description="Liste fiyatı proje kapsamına göre değişir. Teknik keşif sonrası ücretsiz fiyat teklifi hazırlarız."
+          />
+          <div className="mx-auto mt-8 max-w-2xl space-y-4 text-center text-sm leading-relaxed text-ink-muted">
+            <p>
+              {product.name} için satış ve kiralama seçenekleri sunuyoruz. Fiyatı etkileyen
+              başlıca unsurlar: adet, IP koruma ihtiyacı, kurulum/DMX programlama, kiralama
+              süresi ve lojistik.
+            </p>
+            <p>
+              Sitede sabit TL fiyat yayınlanmaz. Stok durumu ve teslimat planı ile birlikte
+              size özel teklif oluşturulur.
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+              <ButtonLink href={`/iletisim?urun=${product.slug}`}>
+                {t.quote} <ArrowRight className="h-4 w-4" />
+              </ButtonLink>
+              <ButtonLink href="/bayi" variant="outline">
+                Distribütör bilgisi
+              </ButtonLink>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-t border-theme py-16">
         <Container>
           <SectionHeading title={t.productDetail.faqs} />
           <div className="mx-auto mt-10 max-w-3xl">

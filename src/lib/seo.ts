@@ -131,6 +131,14 @@ export const websiteJsonLd = {
     name: site.brand,
     logo: brandLogoImageObject,
   },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${site.url}/ara?q={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
+  },
 };
 
 export function breadcrumbJsonLd(items: ReadonlyArray<{ name: string; path: string }>) {
@@ -179,10 +187,11 @@ export function productJsonLd(product: {
     url: `${site.url}/urunler/${product.slug}`,
     offers: {
       "@type": "Offer",
-      url: `${site.url}/iletisim`,
+      url: `${site.url}/iletisim?urun=${product.slug}`,
       priceCurrency: "TRY",
       availability: "https://schema.org/InStock",
       itemCondition: "https://schema.org/NewCondition",
+      description: "Proje bazlı ücretsiz fiyat teklifi — liste fiyatı yayınlanmaz.",
       seller: { "@type": "Organization", name: site.brand },
     },
   };

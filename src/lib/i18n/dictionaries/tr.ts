@@ -48,10 +48,10 @@ export const dictionary = {
   },
   home: {
     experience: "yıl sahne aydınlatma tecrübesi",
-    heroTitle1: "Profesyonel sahne aydınlatma",
-    heroTitle2: "çözümleri",
+    heroTitle1: "Sahne aydınlatma",
+    heroTitle2: "satış ve kurulum",
     heroDesc:
-      "Moving head, blinder, strobe ve LED bar ürünleriyle konser, festival, fuar ve kurumsal etkinlikleriniz için profesyonel aydınlatma çözümleri sunuyoruz.",
+      "Beam, wash, blinder ve LED bar — stoktan satış, kiralama ve teknik kurulum. Ücretsiz fiyat teklifi için bize ulaşın.",
     browseProducts: "Ürünleri İncele",
     guaranteed: "Garantili ürünler",
     support: "Teknik destek",

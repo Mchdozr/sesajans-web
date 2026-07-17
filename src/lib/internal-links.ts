@@ -26,6 +26,11 @@ const blogTitles: Record<string, string> = {
   "sahne-aydinlatma-rehberi": "Sahne Aydınlatma Rehberi",
   "truss-planlama-sahne-isigi": "Truss Planlama Rehberi",
   "wash-moving-head-rehberi": "Wash Moving Head Rehberi",
+  "moving-head-fiyat-rehberi": "Moving Head Fiyat Rehberi",
+  "sahne-isigi-satin-alma-kontrol-listesi": "Sahne Işığı Satın Alma Kontrol Listesi",
+  "beam-king-380-nedir": "Beam King 380 Nedir?",
+  "wash-3715-nedir": "Wash 3715 Nedir?",
+  "beam-king-ip-nedir": "Beam King IP Nedir?",
 };
 
 export type ResolvedLink = { label: string; href: string };
@@ -227,6 +232,36 @@ const blogRelations: Record<string, Refs> = {
     glossary: ["moving-head-nedir"],
     projects: ["bursa-tiyatro-salonu-2024"],
   },
+  "moving-head-fiyat-rehberi": {
+    products: ["beam-king-380", "wash-3715", "beam-king-ip"],
+    useCases: ["aydinlatma-kiralama"],
+    blogs: ["sahne-isigi-satin-alma-kontrol-listesi", "festival-aydinlatma-butce-planlama"],
+    paths: [
+      { label: "Bayi / Distribütör", href: "/bayi" },
+      { label: "Fiyat teklifi", href: "/iletisim" },
+    ],
+  },
+  "sahne-isigi-satin-alma-kontrol-listesi": {
+    products: ["beam-king-380", "beam-king-ip", "wash-3715"],
+    blogs: ["moving-head-fiyat-rehberi", "beam-king-380-nedir"],
+    useCases: ["aydinlatma-kiralama"],
+    paths: [{ label: "Bayi / Distribütör", href: "/bayi" }],
+  },
+  "beam-king-380-nedir": {
+    products: ["beam-king-380", "beam-king-ip"],
+    comparisons: ["beam-king-380-vs-ip"],
+    blogs: ["moving-head-beam-rehberi", "moving-head-fiyat-rehberi"],
+  },
+  "wash-3715-nedir": {
+    products: ["wash-3715", "led-beam-wash-150"],
+    comparisons: ["wash-3715-vs-led-beam-wash-150"],
+    blogs: ["wash-moving-head-rehberi", "moving-head-fiyat-rehberi"],
+  },
+  "beam-king-ip-nedir": {
+    products: ["beam-king-ip", "beam-king-380"],
+    comparisons: ["beam-king-380-vs-ip"],
+    blogs: ["ip66-beam-rehberi", "moving-head-fiyat-rehberi"],
+  },
 };
 
 const productRelations: Record<string, Refs> = {
@@ -399,13 +434,14 @@ const categoryRelations: Record<ProductCategory, Refs> = {
 
 const comparisonRelations: Record<string, Refs> = {
   "beam-king-380-vs-ip": {
-    blogs: ["ip66-beam-rehberi", "ip66-dis-mekan-beam-secimi"],
+    blogs: ["ip66-beam-rehberi", "beam-king-380-nedir", "beam-king-ip-nedir"],
     useCases: ["konser-festival", "gece-kulubu"],
     glossary: ["ip-koruma-sinifi-nedir"],
+    paths: [{ label: "Fiyat teklifi", href: "/iletisim" }],
   },
   "wash-3715-vs-led-beam-wash-150": {
     useCases: ["tiyatro-salon", "gece-kulubu"],
-    blogs: ["wash-moving-head-rehberi"],
+    blogs: ["wash-moving-head-rehberi", "wash-3715-nedir"],
     projects: ["bursa-tiyatro-salonu-2024", "ankara-kulup-kurulum-2023"],
   },
   "blinder-400-ip-vs-800-ip": {
@@ -418,6 +454,37 @@ const comparisonRelations: Record<string, Refs> = {
     blogs: ["moving-head-beam-rehberi", "konser-aydinlatma-rehberi"],
     projects: ["antalya-festival-sahne-2023"],
   },
+  "strike-pro-ip-vs-blinder-800-ip": {
+    products: ["strike-pro-ip", "blinder-800-ip"],
+    useCases: ["konser-festival", "stadyum-arena"],
+    blogs: ["blinder-vs-strobe-farki", "blinder-strobe-rehberi"],
+    glossary: ["blinder-strobe-nedir"],
+  },
+  "diamond-line-1240-eco-vs-tornado-ip": {
+    products: ["diamond-line-1240-eco", "tornado-ip"],
+    useCases: ["fuar-lansman", "konser-festival"],
+    blogs: ["led-bar-sahne-rehberi"],
+  },
+  "wash-3715-vs-beam-king-380": {
+    products: ["wash-3715", "beam-king-380"],
+    useCases: ["konser-festival", "tiyatro-salon"],
+    blogs: ["wash-3715-nedir", "beam-king-380-nedir"],
+  },
+  "beam-king-380-vs-led-beam-wash-150": {
+    products: ["beam-king-380", "led-beam-wash-150"],
+    useCases: ["gece-kulubu"],
+    blogs: ["moving-head-beam-rehberi", "moving-head-fiyat-rehberi"],
+  },
+  "strike-pro-ip-vs-tornado-ip": {
+    products: ["strike-pro-ip", "tornado-ip"],
+    useCases: ["konser-festival"],
+    blogs: ["blinder-strobe-rehberi", "led-bar-sahne-rehberi"],
+  },
+  "blinder-400-ip-vs-strike-pro-ip": {
+    products: ["blinder-400-ip", "strike-pro-ip"],
+    useCases: ["fuar-lansman", "konser-festival"],
+    blogs: ["blinder-vs-strobe-farki"],
+  },
 };
 
 const cityExtras: Record<string, Refs> = {
@@ -425,17 +492,54 @@ const cityExtras: Record<string, Refs> = {
     useCases: ["konser-festival", "fuar-lansman"],
     projects: ["istanbul-acikhava-konser-2024", "istanbul-kurumsal-lansman-2025"],
     blogs: ["istanbul-sahne-aydinlatma-rehberi", "konser-aydinlatma-rehberi"],
-    paths: [{ label: "Ürün karşılaştırmaları", href: "/karsilastirma" }],
+    paths: [
+      { label: "Ürün karşılaştırmaları", href: "/karsilastirma" },
+      { label: "Bayi / Distribütör", href: "/bayi" },
+    ],
   },
   "ankara-sahne-aydinlatma": {
     useCases: ["gece-kulubu", "tiyatro-salon"],
     projects: ["ankara-kulup-kurulum-2023"],
-    blogs: ["moving-head-beam-rehberi"],
+    blogs: ["moving-head-beam-rehberi", "moving-head-fiyat-rehberi"],
+    paths: [{ label: "Bayi / Distribütör", href: "/bayi" }],
   },
   "izmir-sahne-aydinlatma": {
     useCases: ["dugun-etkinlik", "fuar-lansman"],
     projects: ["izmir-fuar-standi-2024", "izmir-dugun-salonu-2024"],
     blogs: ["led-bar-sahne-rehberi", "konser-aydinlatma-rehberi"],
+    paths: [{ label: "Bayi / Distribütör", href: "/bayi" }],
+  },
+  "antalya-sahne-aydinlatma": {
+    useCases: ["konser-festival", "aydinlatma-kiralama"],
+    projects: ["antalya-festival-sahne-2023"],
+    blogs: ["festival-aydinlatma-butce-planlama", "ip66-beam-rehberi"],
+    products: ["beam-king-ip", "tornado-ip"],
+    paths: [{ label: "Bayi / Distribütör", href: "/bayi" }],
+  },
+  "bursa-sahne-aydinlatma": {
+    useCases: ["tiyatro-salon", "dugun-etkinlik"],
+    projects: ["bursa-tiyatro-salonu-2024"],
+    blogs: ["wash-moving-head-rehberi", "wash-3715-nedir"],
+    paths: [{ label: "Bayi / Distribütör", href: "/bayi" }],
+  },
+  "adana-sahne-aydinlatma": {
+    useCases: ["konser-festival", "dugun-etkinlik"],
+    blogs: ["konser-aydinlatma-rehberi", "moving-head-fiyat-rehberi"],
+    products: ["beam-king-ip", "blinder-800-ip", "wash-3715"],
+    paths: [{ label: "Bayi / Distribütör", href: "/bayi" }],
+  },
+  "gaziantep-sahne-aydinlatma": {
+    useCases: ["dugun-etkinlik", "fuar-lansman"],
+    blogs: ["sahne-isigi-satin-alma-kontrol-listesi", "led-bar-sahne-rehberi"],
+    products: ["led-beam-wash-150", "diamond-line-1240-eco"],
+    paths: [{ label: "Bayi / Distribütör", href: "/bayi" }],
+  },
+  "kocaeli-sahne-aydinlatma": {
+    useCases: ["fuar-lansman", "konser-festival"],
+    blogs: ["kurumsal-lansman-aydinlatma-rehberi", "moving-head-fiyat-rehberi"],
+    products: ["wash-3715", "beam-king-ip"],
+    cities: ["istanbul-sahne-aydinlatma"],
+    paths: [{ label: "Bayi / Distribütör", href: "/bayi" }],
   },
 };
 
@@ -447,6 +551,7 @@ export const seoHubLinks: RelatedLinkGroup[] = [
       { label: "Sözlük", href: "/sozluk" },
       { label: "Karşılaştırmalar", href: "/karsilastirma" },
       { label: "Kullanım alanları", href: "/kullanim-alanlari" },
+      { label: "Bayi / Distribütör", href: "/bayi" },
     ],
   },
   {
@@ -460,6 +565,7 @@ export const aboutPageLinks: RelatedLinkGroup[] = [
     title: "Hizmetlerimiz",
     links: [
       { label: "Ürünler", href: "/urunler" },
+      { label: "Bayi / Distribütör", href: "/bayi" },
       { label: "Projeler", href: "/projeler" },
       { label: "Kullanım alanları", href: "/kullanim-alanlari" },
       { label: "İstanbul sahne aydınlatma", href: "/istanbul-sahne-aydinlatma" },
@@ -469,7 +575,7 @@ export const aboutPageLinks: RelatedLinkGroup[] = [
     title: "Rehberler",
     links: [
       { label: "Sahne aydınlatma rehberi", href: "/blog/sahne-aydinlatma-rehberi" },
-      { label: "DMX kurulum rehberi", href: "/blog/dmx-aydinlatma-kurulumu" },
+      { label: "Moving head fiyat rehberi", href: "/blog/moving-head-fiyat-rehberi" },
       { label: "Aydınlatma sözlüğü", href: "/sozluk" },
     ],
   },
@@ -571,4 +677,46 @@ export function getOtherComparisons(currentSlug: string): ResolvedLink[] {
     .filter((c) => c.slug !== currentSlug)
     .slice(0, 3)
     .map((c) => ({ label: c.title, href: c.path }));
+}
+
+const glossaryRelations: Record<string, Refs> = {
+  "dmx512-nedir": {
+    blogs: ["dmx-aydinlatma-kurulumu", "dmx-universe-planlama-rehberi"],
+    glossary: ["art-net-nedir", "rdm-nedir", "dmx-adresleme-nedir"],
+    paths: [{ label: "Bayi / Distribütör", href: "/bayi" }],
+  },
+  "moving-head-nedir": {
+    products: ["beam-king-380", "wash-3715"],
+    blogs: ["moving-head-beam-rehberi", "moving-head-fiyat-rehberi"],
+    glossary: ["beam-nedir", "wash-nedir"],
+  },
+  "ip-koruma-sinifi-nedir": {
+    products: ["beam-king-ip"],
+    blogs: ["ip66-beam-rehberi"],
+    comparisons: ["beam-king-380-vs-ip"],
+  },
+  "beam-nedir": {
+    products: ["beam-king-380", "beam-king-ip"],
+    blogs: ["beam-king-380-nedir", "moving-head-beam-rehberi"],
+  },
+  "wash-nedir": {
+    products: ["wash-3715", "led-beam-wash-150"],
+    blogs: ["wash-3715-nedir", "wash-moving-head-rehberi"],
+  },
+};
+
+export function getGlossaryRelatedGroups(slug: string): RelatedLinkGroup[] {
+  const term = getGlossaryTerm(slug);
+  const base = glossaryRelations[slug] ?? {};
+  const fromTerm: ResolvedLink[] = (term?.relatedLinks ?? []).map((l) => ({
+    label: l.label,
+    href: l.href,
+  }));
+  return resolveRefs({
+    ...base,
+    paths: [...(base.paths ?? []), ...fromTerm, { label: "Fiyat teklifi", href: "/iletisim" }].slice(
+      0,
+      6,
+    ),
+  });
 }

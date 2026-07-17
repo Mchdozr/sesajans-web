@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Lightbulb, Wrench, Award, Users } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Hero } from "@/components/Hero";
 import { Container, SectionHeading } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/Button";
@@ -15,8 +15,6 @@ import { projects } from "@/lib/projects";
 import { site } from "@/lib/site";
 import { useI18n } from "@/lib/i18n/context";
 
-const whyIcons = [Lightbulb, Wrench, Award, Users];
-
 export function HomeContent() {
   const { t } = useI18n();
 
@@ -24,7 +22,7 @@ export function HomeContent() {
     <>
       <Hero />
 
-      <section className="border-y border-theme bg-surface-deep/60 py-12">
+      <section className="border-y border-theme py-10">
         <Container>
           <StatsCounter
             stats={[
@@ -61,22 +59,28 @@ export function HomeContent() {
 
       <section className="border-y border-theme bg-surface-deep/40 py-20">
         <Container>
-          <SectionHeading eyebrow={t.home.whyEyebrow} title={t.home.whyTitle} />
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {t.whyUs.map((item, i) => {
-              const Icon = whyIcons[i];
-              return (
-                <Reveal key={item.title} delay={i * 0.08}>
-                  <div className="glow-border h-full rounded-2xl border border-theme bg-surface-elevated/80 p-6">
-                    <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand/15 text-brand">
-                      <Icon className="h-6 w-6" />
-                    </span>
-                    <h3 className="mt-4 font-display font-bold text-ink">{item.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-ink-muted">{item.description}</p>
-                  </div>
-                </Reveal>
-              );
-            })}
+          <div className="grid items-start gap-12 lg:grid-cols-2">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-wider text-brand">
+                {t.home.whyEyebrow}
+              </p>
+              <h2 className="mt-2 font-display text-3xl font-bold text-ink">{t.home.whyTitle}</h2>
+              <p className="mt-4 max-w-md text-sm leading-relaxed text-ink-muted">
+                Şişli merkezli stok, saha kurulumu ve proje bazlı fiyat teklifi ile
+                Türkiye geneline hizmet veriyoruz.{" "}
+                <Link href="/bayi" className="font-medium text-brand hover:underline">
+                  Distribütör bilgisi
+                </Link>
+              </p>
+            </div>
+            <ul className="space-y-6 border-l border-theme pl-6">
+              {t.whyUs.map((item) => (
+                <li key={item.title}>
+                  <h3 className="font-display font-bold text-ink">{item.title}</h3>
+                  <p className="mt-1 text-sm leading-relaxed text-ink-muted">{item.description}</p>
+                </li>
+              ))}
+            </ul>
           </div>
         </Container>
       </section>
@@ -93,13 +97,13 @@ export function HomeContent() {
               <Reveal key={project.slug} delay={i * 0.06}>
                 <Link
                   href={`/projeler/${project.slug}`}
-                  className="glow-border block overflow-hidden rounded-2xl border border-theme bg-surface-elevated/80 transition-colors hover:border-brand/40"
+                  className="block border-b border-theme pb-5 transition-colors hover:border-brand/50"
                 >
-                  <div className="p-5">
-                    <p className="text-xs font-semibold text-brand">{project.year} · {project.city}</p>
-                    <h3 className="mt-1 font-display font-bold text-ink">{project.title}</h3>
-                    <p className="mt-2 line-clamp-2 text-sm text-ink-muted">{project.summary}</p>
-                  </div>
+                  <p className="text-xs font-semibold text-brand">
+                    {project.year} · {project.city}
+                  </p>
+                  <h3 className="mt-1 font-display font-bold text-ink">{project.title}</h3>
+                  <p className="mt-2 line-clamp-2 text-sm text-ink-muted">{project.summary}</p>
                 </Link>
               </Reveal>
             ))}
