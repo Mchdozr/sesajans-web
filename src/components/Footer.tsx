@@ -94,8 +94,6 @@ export function Footer() {
         { label: "İstanbul Sahne Aydınlatma", href: "/istanbul-sahne-aydinlatma" },
         { label: "Ankara Sahne Aydınlatma", href: "/ankara-sahne-aydinlatma" },
         { label: "İzmir Sahne Aydınlatma", href: "/izmir-sahne-aydinlatma" },
-        { label: "Antalya Sahne Aydınlatma", href: "/antalya-sahne-aydinlatma" },
-        { label: "Bursa Sahne Aydınlatma", href: "/bursa-sahne-aydinlatma" },
         { label: "Karşılaştırma", href: "/karsilastirma" },
         { label: "Sözlük", href: "/sozluk" },
         { label: t.nav.contact, href: "/iletisim" },
