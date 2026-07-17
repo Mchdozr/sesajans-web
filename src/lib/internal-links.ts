@@ -450,6 +450,15 @@ export const seoHubLinks: RelatedLinkGroup[] = [
     ],
   },
   {
+    title: "Ürünler & hizmetler",
+    links: [
+      { label: "Tüm ürünler", href: "/urunler" },
+      { label: "Projeler", href: "/projeler" },
+      { label: "Hakkımızda", href: "/hakkimizda" },
+      { label: "İletişim / Teklif", href: "/iletisim" },
+    ],
+  },
+  {
     title: "Bölgesel",
     links: cityLandings.map((c) => ({ label: c.title, href: c.path })),
   },

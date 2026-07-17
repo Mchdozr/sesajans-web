@@ -11,7 +11,15 @@ import { seoHubLinks } from "@/lib/internal-links";
 import { useI18n } from "@/lib/i18n/context";
 import type { BlogPost } from "@/lib/blog";
 
-export function BlogListContent({ posts }: { posts: BlogPost[] }) {
+export function BlogListContent({
+  posts,
+  currentPage,
+  totalPages,
+}: {
+  posts: BlogPost[];
+  currentPage: number;
+  totalPages: number;
+}) {
   const { t } = useI18n();
 
   return (
@@ -67,6 +75,32 @@ export function BlogListContent({ posts }: { posts: BlogPost[] }) {
               </Reveal>
             ))}
           </div>
+
+          {totalPages > 1 && (
+            <nav
+              className="mt-12 flex flex-wrap items-center justify-center gap-2"
+              aria-label="Blog sayfalama"
+            >
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => {
+                const href = page === 1 ? "/blog" : `/blog?page=${page}`;
+                const isActive = page === currentPage;
+                return (
+                  <Link
+                    key={page}
+                    href={href}
+                    aria-current={isActive ? "page" : undefined}
+                    className={
+                      isActive
+                        ? "inline-flex h-10 min-w-10 items-center justify-center rounded-xl bg-brand px-3 text-sm font-semibold text-white"
+                        : "inline-flex h-10 min-w-10 items-center justify-center rounded-xl border border-theme bg-surface-elevated/80 px-3 text-sm font-semibold text-ink transition-colors hover:border-brand/60 hover:text-brand"
+                    }
+                  >
+                    {page}
+                  </Link>
+                );
+              })}
+            </nav>
+          )}
         </Container>
       </section>
       <RelatedContent groups={seoHubLinks} title="SEO rehber merkezleri" />
