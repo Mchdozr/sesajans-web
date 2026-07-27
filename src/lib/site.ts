@@ -19,7 +19,7 @@ export const site = {
     "https://www.sesajans.com.tr",
   ] as const,
   description:
-    "Profesyonel sahne ve etkinlik aydınlatma çözümleri. Moving head, blinder, strobe ve LED bar ürünleri; kurulum, teknik destek ve proje danışmanlığı.",
+    "Profesyonel sahne ışığı ve robot ışık (moving head) çözümleri. Beam, wash, blinder, strobe ve LED bar; kurulum, teklif ve teknik destek — SESAJANS.",
   slogan: "Sahneyi aydınlatan profesyonel çözümler",
   phone: envOr(process.env.NEXT_PUBLIC_PHONE, PHONE_E164),
   phoneDisplay: envOr(process.env.NEXT_PUBLIC_PHONE_DISPLAY, PHONE_DISPLAY),
@@ -68,6 +68,8 @@ export const socialLinks = [
 export const mainNav = [
   { label: "Anasayfa", href: "/" },
   { label: "Ürünler", href: "/urunler" },
+  { label: "Robot Işık", href: "/robot-isik" },
+  { label: "Fiyat / Teklif", href: "/robot-isik-fiyat" },
   { label: "Blog", href: "/blog" },
   { label: "Kullanım Alanları", href: "/kullanim-alanlari" },
   { label: "Projeler", href: "/projeler" },
@@ -106,6 +108,11 @@ export const footerNav = {
   destek: {
     title: "Destek",
     links: [
+      { label: "Robot Işık", href: "/robot-isik" },
+      { label: "Fiyat / Teklif", href: "/robot-isik-fiyat" },
+      { label: "Sahne Işığı", href: "/sahne-isigi" },
+      { label: "Molfez / Blinder", href: "/molfez" },
+      { label: "DJ Aydınlatma", href: "/dj-aydinlatma" },
       { label: "Sık Sorulan Sorular", href: "/sss" },
       { label: "Teklif Al", href: "/iletisim" },
     ],

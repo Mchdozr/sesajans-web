@@ -8,8 +8,9 @@ import { projects } from "@/lib/projects";
 import { cityLandings } from "@/lib/local-seo";
 import { comparisons } from "@/lib/comparisons";
 import { glossaryTerms } from "@/lib/glossary";
+import { keywordHubPaths } from "@/lib/seo-keywords";
 
-const STATIC_LAST_MODIFIED = new Date("2026-07-02");
+const STATIC_LAST_MODIFIED = new Date("2026-07-27");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
@@ -23,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/kullanim-alanlari",
     "/karsilastirma",
     "/sozluk",
+    ...keywordHubPaths,
     "/gizlilik-politikasi",
     "/kvkk-aydinlatma-metni",
     "/cerez-politikasi",
@@ -37,7 +39,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${site.url}${path}`,
       lastModified: STATIC_LAST_MODIFIED,
       changeFrequency: "monthly" as const,
-      priority: path === "" ? 1 : path.includes("sahne-aydinlatma") ? 0.9 : 0.8,
+      priority:
+        path === ""
+          ? 1
+          : path.includes("sahne-aydinlatma") ||
+              path === "/robot-isik" ||
+              path === "/robot-isik-fiyat" ||
+              path === "/sahne-isigi" ||
+              path === "/molfez" ||
+              path === "/dj-aydinlatma"
+            ? 0.9
+            : 0.8,
     })),
     ...categorySlugs.map((slug) => ({
       url: `${site.url}/urunler/kategori/${slug}`,

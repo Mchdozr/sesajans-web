@@ -166,6 +166,8 @@ export function Header() {
   const primaryLinks = useMemo(
     (): NavLink[] => [
       { label: t.nav.home, href: "/" },
+      { label: t.nav.robotLight, href: "/robot-isik" },
+      { label: t.nav.priceQuote, href: "/robot-isik-fiyat" },
       { label: t.nav.projects, href: "/projeler" },
       { label: t.nav.about, href: "/hakkimizda" },
       { label: t.nav.contact, href: "/iletisim" },

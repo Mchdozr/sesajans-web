@@ -8,11 +8,16 @@ import { getUseCase, useCases } from "./use-cases";
 
 const blogTitles: Record<string, string> = {
   "arena-stadyum-aydinlatma-rehberi": "Arena ve Stadyum Aydınlatma Rehberi",
+  "aydinlatma-kiralama-vs-satinalma": "Kiralama vs Satın Alma",
+  "beam-vs-wash-satinalma": "Beam vs Wash Satın Alma",
+  "blinder-molfez-rehberi": "Blinder / Molfez Rehberi",
   "blinder-strobe-rehberi": "Blinder ve Strobe Rehberi",
   "blinder-vs-strobe-farki": "Blinder vs Strobe Farkı",
+  "dj-kulup-isik-sistemi": "DJ / Kulüp Işık Sistemi",
   "dmx-aydinlatma-kurulumu": "DMX Aydınlatma Kurulumu",
   "dmx-universe-planlama-rehberi": "DMX Universe Planlama Rehberi",
   "festival-aydinlatma-butce-planlama": "Festival Aydınlatma Bütçe Planlama",
+  "ip65-ip66-dis-mekan-fiyat": "IP65/IP66 Dış Mekân Maliyet Rehberi",
   "ip66-beam-rehberi": "IP66 Beam Rehberi",
   "ip66-dis-mekan-beam-secimi": "IP66 Dış Mekân Beam Seçimi",
   "istanbul-sahne-aydinlatma-rehberi": "İstanbul Sahne Aydınlatma Rehberi",
@@ -21,8 +26,11 @@ const blogTitles: Record<string, string> = {
   "led-bar-sahne-rehberi": "LED Bar Sahne Rehberi",
   "moving-head-beam-rehberi": "Moving Head Beam Rehberi",
   "moving-head-bakim-rehberi": "Moving Head Bakım Rehberi",
+  "moving-head-fiyat-rehberi": "Moving Head Fiyat Rehberi",
   "moving-head-konser-kurulumu": "Moving Head Konser Kurulumu",
   "profesyonel-sahne-isigi-rehberi": "Profesyonel Sahne Işığı Rehberi",
+  "robot-isik-nasil-secilir": "Robot Işık Nasıl Seçilir",
+  "sahne-aydinlatma-butce-2026": "Sahne Aydınlatma Bütçe 2026",
   "sahne-aydinlatma-rehberi": "Sahne Aydınlatma Rehberi",
   "truss-planlama-sahne-isigi": "Truss Planlama Rehberi",
   "wash-moving-head-rehberi": "Wash Moving Head Rehberi",
@@ -124,7 +132,8 @@ const blogRelations: Record<string, Refs> = {
     useCases: ["konser-festival", "mimari-aydinlatma"],
     comparisons: ["blinder-400-ip-vs-800-ip"],
     glossary: ["blinder-strobe-nedir"],
-    blogs: ["blinder-vs-strobe-farki"],
+    blogs: ["blinder-vs-strobe-farki", "blinder-molfez-rehberi"],
+    paths: [{ label: "Molfez hub", href: "/molfez" }],
   },
   "blinder-vs-strobe-farki": {
     products: ["blinder-800-ip", "strike-pro-ip"],
@@ -189,6 +198,11 @@ const blogRelations: Record<string, Refs> = {
     products: ["beam-king-380", "beam-king-ip"],
     comparisons: ["beam-king-380-vs-ip", "beam-king-ip-vs-tornado-ip"],
     useCases: ["gece-kulubu", "konser-festival"],
+    blogs: ["robot-isik-nasil-secilir", "beam-vs-wash-satinalma"],
+    paths: [
+      { label: "Robot ışık", href: "/robot-isik" },
+      { label: "Fiyat / teklif", href: "/robot-isik-fiyat" },
+    ],
   },
   "moving-head-bakim-rehberi": {
     blogs: ["moving-head-beam-rehberi", "wash-moving-head-rehberi"],
@@ -208,9 +222,10 @@ const blogRelations: Record<string, Refs> = {
     paths: [{ label: "Aydınlatma sözlüğü", href: "/sozluk" }],
   },
   "sahne-aydinlatma-rehberi": {
-    blogs: ["profesyonel-sahne-isigi-rehberi", "dmx-aydinlatma-kurulumu"],
+    blogs: ["profesyonel-sahne-isigi-rehberi", "dmx-aydinlatma-kurulumu", "sahne-aydinlatma-butce-2026"],
     useCases: ["konser-festival", "dugun-etkinlik", "tiyatro-salon"],
     paths: [
+      { label: "Sahne ışığı hub", href: "/sahne-isigi" },
       { label: "Ürün karşılaştırmaları", href: "/karsilastirma" },
       { label: "Tüm kullanım alanları", href: "/kullanim-alanlari" },
     ],
@@ -226,6 +241,62 @@ const blogRelations: Record<string, Refs> = {
     useCases: ["tiyatro-salon", "tv-studyo"],
     glossary: ["moving-head-nedir"],
     projects: ["bursa-tiyatro-salonu-2024"],
+    paths: [{ label: "Robot Işık", href: "/robot-isik" }],
+  },
+  "moving-head-fiyat-rehberi": {
+    products: ["beam-king-380", "beam-king-ip", "wash-3715"],
+    blogs: ["robot-isik-nasil-secilir", "aydinlatma-kiralama-vs-satinalma", "sahne-aydinlatma-butce-2026"],
+    paths: [
+      { label: "Robot ışık fiyat", href: "/robot-isik-fiyat" },
+      { label: "Robot ışık hub", href: "/robot-isik" },
+    ],
+  },
+  "robot-isik-nasil-secilir": {
+    products: ["beam-king-380", "wash-3715", "led-beam-wash-150"],
+    blogs: ["beam-vs-wash-satinalma", "moving-head-fiyat-rehberi", "moving-head-beam-rehberi"],
+    paths: [
+      { label: "Robot ışık", href: "/robot-isik" },
+      { label: "Beam kategorisi", href: "/urunler/kategori/moving-head-beam" },
+      { label: "Wash kategorisi", href: "/urunler/kategori/moving-head-wash" },
+    ],
+  },
+  "beam-vs-wash-satinalma": {
+    products: ["beam-king-380", "wash-3715", "led-beam-wash-150"],
+    comparisons: ["wash-3715-vs-led-beam-wash-150", "beam-king-380-vs-ip"],
+    blogs: ["robot-isik-nasil-secilir", "moving-head-beam-rehberi", "wash-moving-head-rehberi"],
+    paths: [{ label: "Karşılaştırmalar", href: "/karsilastirma" }],
+  },
+  "blinder-molfez-rehberi": {
+    products: ["blinder-400-ip", "blinder-800-ip", "strike-pro-ip"],
+    blogs: ["blinder-strobe-rehberi", "blinder-vs-strobe-farki"],
+    comparisons: ["blinder-400-ip-vs-800-ip"],
+    paths: [{ label: "Molfez hub", href: "/molfez" }],
+  },
+  "ip65-ip66-dis-mekan-fiyat": {
+    products: ["beam-king-ip", "blinder-800-ip"],
+    blogs: ["ip66-dis-mekan-beam-secimi", "ip66-beam-rehberi", "moving-head-fiyat-rehberi"],
+    paths: [{ label: "Fiyat / teklif", href: "/robot-isik-fiyat" }],
+  },
+  "sahne-aydinlatma-butce-2026": {
+    blogs: ["festival-aydinlatma-butce-planlama", "aydinlatma-kiralama-vs-satinalma", "moving-head-fiyat-rehberi"],
+    paths: [
+      { label: "Sahne ışığı", href: "/sahne-isigi" },
+      { label: "Fiyat hub", href: "/robot-isik-fiyat" },
+    ],
+  },
+  "dj-kulup-isik-sistemi": {
+    products: ["led-beam-wash-150", "beam-king-380", "diamond-line-1240-eco"],
+    useCases: ["gece-kulubu"],
+    blogs: ["wash-moving-head-rehberi", "robot-isik-nasil-secilir"],
+    paths: [{ label: "DJ aydınlatma", href: "/dj-aydinlatma" }],
+  },
+  "aydinlatma-kiralama-vs-satinalma": {
+    useCases: ["aydinlatma-kiralama"],
+    blogs: ["moving-head-fiyat-rehberi", "sahne-aydinlatma-butce-2026"],
+    paths: [
+      { label: "Kiralama", href: "/kullanim-alanlari/aydinlatma-kiralama" },
+      { label: "Fiyat / teklif", href: "/robot-isik-fiyat" },
+    ],
   },
 };
 
@@ -450,6 +521,16 @@ export const seoHubLinks: RelatedLinkGroup[] = [
     ],
   },
   {
+    title: "Ticari hub’lar",
+    links: [
+      { label: "Robot Işık", href: "/robot-isik" },
+      { label: "Robot Işık Fiyat", href: "/robot-isik-fiyat" },
+      { label: "Sahne Işığı", href: "/sahne-isigi" },
+      { label: "Molfez / Blinder", href: "/molfez" },
+      { label: "DJ Aydınlatma", href: "/dj-aydinlatma" },
+    ],
+  },
+  {
     title: "Ürünler & hizmetler",
     links: [
       { label: "Tüm ürünler", href: "/urunler" },
@@ -516,6 +597,8 @@ export const productsHubLinks: RelatedLinkGroup[] = [
   {
     title: "Karar destek",
     links: [
+      { label: "Robot Işık hub", href: "/robot-isik" },
+      { label: "Fiyat / Teklif", href: "/robot-isik-fiyat" },
       { label: "Beam King 380 vs IP", href: "/karsilastirma/beam-king-380-vs-ip" },
       { label: "Wash 3715 vs Beam Wash 150", href: "/karsilastirma/wash-3715-vs-led-beam-wash-150" },
       { label: "Moving head nedir?", href: "/sozluk/moving-head-nedir" },
