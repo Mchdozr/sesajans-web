@@ -60,9 +60,9 @@ export function ProductVideoShowcase({
           )}
         </div>
 
-        <div className="glow-border relative overflow-hidden rounded-3xl border border-brand/25 bg-black shadow-[0_0_80px_-20px_rgba(244,111,44,0.45)]">
-          <StageBeamBackground variant="cinema" subtle />
-          <div className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-t from-surface-deep/40 via-transparent to-transparent" />
+        <div className="glow-border relative overflow-hidden rounded-3xl border border-brand/25 bg-surface-deep shadow-[0_0_80px_-24px_rgba(244,111,44,0.35)] dark:bg-black dark:shadow-[0_0_80px_-20px_rgba(244,111,44,0.45)]">
+          <StageBeamBackground variant="adaptive" subtle />
+          <div className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-t from-surface-deep/30 via-transparent to-transparent dark:from-surface-deep/40" />
           <video
             ref={videoRef}
             key={activeSrc}
