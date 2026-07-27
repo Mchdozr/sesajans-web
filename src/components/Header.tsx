@@ -156,8 +156,6 @@ export function Header() {
   const guideLinks = useMemo(
     (): NavLink[] => [
       { label: t.nav.blog, href: "/blog" },
-      { label: t.nav.robotLight, href: "/robot-isik" },
-      { label: t.nav.priceQuote, href: "/robot-isik-fiyat" },
       { label: t.nav.comparison, href: "/karsilastirma" },
       { label: t.nav.glossary, href: "/sozluk" },
       { label: t.nav.useCases, href: "/kullanim-alanlari" },
