@@ -68,8 +68,6 @@ export const socialLinks = [
 export const mainNav = [
   { label: "Anasayfa", href: "/" },
   { label: "Ürünler", href: "/urunler" },
-  { label: "Robot Işık", href: "/robot-isik" },
-  { label: "Fiyat / Teklif", href: "/robot-isik-fiyat" },
   { label: "Blog", href: "/blog" },
   { label: "Kullanım Alanları", href: "/kullanim-alanlari" },
   { label: "Projeler", href: "/projeler" },

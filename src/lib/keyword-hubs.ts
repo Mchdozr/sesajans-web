@@ -9,7 +9,9 @@ export type KeywordHub = {
   eyebrow: string;
   h1: string;
   intro: string;
-  sections: { title: string; body: string }[];
+  heroImage: string;
+  heroImageAlt: string;
+  sections: { title: string; body: string; image?: string; imageAlt?: string }[];
   faqs: { q: string; a: string }[];
   keywords: string[];
   productSlugs: string[];
@@ -30,18 +32,26 @@ export const keywordHubs: KeywordHub[] = [
     h1: "Robot Işık (Moving Head) Sistemleri",
     intro:
       "Robot ışık, sektörde moving head veya hareketli kafa olarak da bilinen profesyonel sahne aydınlatma fixture’ıdır. Pan/tilt motorları, renk, gobo ve zoom ile sahne üzerinde dinamik ışık demetleri üretir. SESAJANS; konser, festival, kulüp, düğün ve TV projeleri için beam, wash ve hibrit robot ışık portföyü sunar.",
+    heroImage: "/products/beam-king-380/image-04.jpg",
+    heroImageAlt: "SESAJANS robot ışık — Beam King 380 moving head",
     sections: [
       {
         title: "Robot ışık nedir?",
         body: "Robot ışık (hareketli kafa), sabit spot’un aksine motorlu pan ve tilt ile ışığı sahne üzerinde yönlendirebilen DMX kontrollü bir ünitedir. Beam modelleri dar ve keskin demet; wash modelleri geniş renk yıkaması; hibrit modeller her iki ihtiyacı bir arada karşılar. Spot moving head arayan kullanıcılar genelde beam veya zoom’lu wash segmentine yönlendirilir.",
+        image: "/products/beam-king-ip/image-01.webp",
+        imageAlt: "Beam King IP dış mekân robot ışık",
       },
       {
         title: "Hangi robot ışık size uygun?",
         body: "Kapalı kulüp ve küçük sahne için kompakt LED Beam Wash 150; tiyatro ve TV için yüksek CRI Wash 3715; konser ve festival ana truss için Beam King 380 veya IP66 Beam King IP tercih edilir. Dış mekân projelerinde IP65/IP66 koruma zorunludur. Adet ve güç planı için ücretsiz keşif ve teklif sunuyoruz.",
+        image: "/products/wash-3715/image-01.jpg",
+        imageAlt: "Wash 3715 robot boyama ışık",
       },
       {
         title: "Kurulum ve DMX desteği",
         body: "SESAJANS yalnızca ürün satmaz: truss montajı, DMX adresleme, Art-Net universe planı, konsol programlama ve operatör eğitimi dahil anahtar teslim çözümler sağlar. İstanbul Şişli merkezli stok ile hızlı teslimat ve yerel teknik servis sunulur.",
+        image: "/products/led-beam-wash-150/image-01.jpg",
+        imageAlt: "LED Beam Wash 150 kompakt moving head",
       },
     ],
     faqs: [
@@ -102,18 +112,26 @@ export const keywordHubs: KeywordHub[] = [
     h1: "Robot Işık Fiyatı ve Moving Head Teklifi",
     intro:
       "Robot ışık (moving head) fiyatı; güç, optik özellikler, IP koruma ve sipariş adedine göre değişir. SESAJANS sabit online fiyat yayınlamaz: projenize özel güncel fiyat teklifi hazırlarız. Bu sayfa maliyet kalemlerini şeffafça açıklar ve teklif sürecini hızlandırır.",
+    heroImage: "/products/beam-king-ip/image-01.webp",
+    heroImageAlt: "IP66 beam — robot ışık fiyat teklifi",
     sections: [
       {
         title: "Fiyatı belirleyen başlıca faktörler",
         body: "Işık kaynağı (LED vs discharge), watt çıkışı, beam/wash/hibrit tip, zoom-gobo-prizma seti, IP20/IP65/IP66 koruma, pan infinity ve ağ protokolleri (Art-Net, CRMX) fiyatı etkiler. Dış mekân IP66 üniteler kapalı mekân modellerine göre daha yüksek yatırım gerektirir.",
+        image: "/products/beam-king-380/image-05.jpg",
+        imageAlt: "Beam King 380 — fiyatı etkileyen optik özellikler",
       },
       {
         title: "Paket örnekleri (yönlendirme)",
         body: "Kulüp paketi: 4–8 kompakt wash/beam. Orta konser: 12–20 beam + wash katmanı + ön hat blinder. Festival: IP65+ beam/blinder/strobe + yedek ünite. Kesin kalem ve adet keşif sonrası netleşir; kiralama seçeneği de sunulur.",
+        image: "/products/blinder-800-ip/image-01.jpg",
+        imageAlt: "Blinder 800 IP festival paket örneği",
       },
       {
         title: "Teklif nasıl alınır?",
         body: "Mekân tipi, tarih, açık/kapalı alan, tahmini adet ve bütçe bandını paylaşın. 1 iş günü içinde ürün önerisi ve fiyat teklifi ile dönüş yaparız. İstanbul içi keşif çoğu projede ücretsizdir.",
+        image: "/products/wash-3715/image-01.jpg",
+        imageAlt: "Wash 3715 — teklif sürecinde önerilen ürün",
       },
     ],
     faqs: [
@@ -172,18 +190,26 @@ export const keywordHubs: KeywordHub[] = [
     h1: "Sahne Işığı ve Profesyonel Aydınlatma",
     intro:
       "Sahne ışığı; konser, tiyatro, düğün, fuar ve TV stüdyolarında atmosfer, vurgu ve görünürlük sağlayan profesyonel aydınlatma sistemidir. SESAJANS, beam/wash moving head, blinder-strobe ve LED bar ile uçtan uca sahne aydınlatma çözümleri sunar.",
+    heroImage: "/products/strike-pro-ip/image-01.jpg",
+    heroImageAlt: "Strike Pro IP ile profesyonel sahne ışığı",
     sections: [
       {
         title: "Sahne ışığı katmanları",
         body: "Profesyonel sahne genelde üç katman kullanır: wash (genel yıkama), beam (vurgu ve efekt), blinder/strobe (ön hat patlama). LED bar ise dekor ve çizgi aydınlatmada tamamlayıcıdır. Doğru denge, seyirci deneyimini ve kamera görüntüsünü belirler.",
+        image: "/products/beam-king-380/image-04.jpg",
+        imageAlt: "Beam katmanı — sahne vurgu ışığı",
       },
       {
         title: "Kullanım alanları",
         body: "Konser ve festival, gece kulübü, düğün, TV/stüdyo, fuar/lansman, tiyatro, mimari ve stadyum uygulamalarında farklı fixture setleri gerekir. Kullanım alanları sayfalarımızda senaryo bazlı öneriler bulabilirsiniz.",
+        image: "/products/diamond-line-1240-eco/image-01.jpg",
+        imageAlt: "LED bar — sahne dekor ve çizgi aydınlatma",
       },
       {
         title: "Neden SESAJANS?",
         body: "12+ yıl tecrübe, 500+ proje, Şişli stok, DMX programlama ve satış sonrası destek. Ürün seçiminden sahaya devreye almaya kadar tek muhatap.",
+        image: "/products/blinder-400-ip/image-03.jpg",
+        imageAlt: "Blinder 400 IP — SESAJANS sahne çözümü",
       },
     ],
     faqs: [
@@ -244,18 +270,26 @@ export const keywordHubs: KeywordHub[] = [
     h1: "Molfez (Blinder) ve Strobe Aydınlatma",
     intro:
       "Molfez, Türkiye sahne sektöründe blinder (seyirci/ön hat kör edici ışık) için yaygın kullanılan jargondur. Yüksek çıkışlı LED blinder ve strobe üniteleri konser, festival ve TV’de ritim vurgusu ve seyirci etkileşimi yaratır. SESAJANS IP65 korumalı Blinder 400/800 IP ve Strike Pro IP çözümleri sunar.",
+    heroImage: "/products/blinder-800-ip/image-01.jpg",
+    heroImageAlt: "Blinder 800 IP molfez aydınlatma",
     sections: [
       {
         title: "Molfez ile strobe farkı",
         body: "Molfez/blinder genelde geniş field açılı, sıcak veya RGBW güçlü yıkama/patlama efekti verir. Strobe ise yüksek frekanslı flaş ve pixel segment kontrolü ile ritim odaklıdır. Strike Pro IP her iki ihtiyacı tek gövdede birleştirir.",
+        image: "/products/strike-pro-ip/image-01.jpg",
+        imageAlt: "Strike Pro IP strobe ve wash",
       },
       {
         title: "Kaç adet molfez gerekir?",
         body: "Sahne genişliği ve izleme mesafesine göre 2–4 ünite küçük sahne; 6–12+ ünite büyük festival ön hattı için tipiktir. Blinder 400 kompakt, Blinder 800 büyük mesafe için tercih edilir.",
+        image: "/products/blinder-400-ip/image-03.jpg",
+        imageAlt: "Blinder 400 IP kompakt molfez",
       },
       {
         title: "Dış mekân kullanımı",
         body: "Açık hava konser ve stadyumda IP65 zorunludur. SESAJANS blinder/strobe portföyünün tamamı dış mekân uyumludur.",
+        image: "/products/blinder-800-ip/image-02.jpg",
+        imageAlt: "IP65 blinder dış mekân kullanımı",
       },
     ],
     faqs: [
@@ -305,18 +339,26 @@ export const keywordHubs: KeywordHub[] = [
     h1: "DJ Işık ve Kulüp Aydınlatma",
     intro:
       "DJ ışık sistemleri; bar, gece kulübü ve özel etkinliklerde müzikle senkron atmosfer yaratır. Kompakt robot ışık, zoom wash ve LED bar kombinasyonları düşük tavanlı mekânlarda yüksek etki sağlar. SESAJANS kulüp ve DJ setup’ları için seçim, kurulum ve DMX desteği sunar.",
+    heroImage: "/products/led-beam-wash-150/image-01.jpg",
+    heroImageAlt: "LED Beam Wash 150 — DJ ve kulüp ışığı",
     sections: [
       {
         title: "DJ / kulüp için doğru fixture",
         body: "LED Beam Wash 150 hafif gövde ve 7°–45° zoom ile kulüp tavınına uygundur. Beam King 380 orta-büyük DJ sahnesinde keskin beam sağlar. Diamond Line LED bar booth ve dekor çizgisi için idealdir.",
+        image: "/products/beam-king-380/image-06.jpg",
+        imageAlt: "Beam King 380 kulüp beam",
       },
       {
         title: "Ses aktif ve DMX",
         body: "Küçük mekânlarda ses tetiklemeli modlar hızlı kurulum sağlar; profesyonel kulüplerde DMX/konsol kontrolü önerilir. SESAJANS her iki senaryoyu da destekler.",
+        image: "/products/led-beam-wash-150/image-02.jpg",
+        imageAlt: "LED Beam Wash 150 DMX kontrol",
       },
       {
         title: "Paket ve teklif",
         body: "Booth + dans alanı + bar hattı için adetli paket önerisi hazırlarız. Satın alma veya kısa süreli kiralama seçenekleri mevcuttur.",
+        image: "/products/diamond-line-1240-eco/image-01.jpg",
+        imageAlt: "Diamond Line LED bar DJ booth dekor",
       },
     ],
     faqs: [

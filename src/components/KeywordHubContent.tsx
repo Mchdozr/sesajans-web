@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Container, SectionHeading } from "@/components/ui/Container";
 import { PageHeaderStatic } from "@/components/PageHeaderStatic";
@@ -68,13 +69,48 @@ export function KeywordHubContent({ data }: { data: KeywordHub }) {
         breadcrumb={[{ name: data.title, path: data.path }]}
       />
 
+      <section className="border-b border-theme bg-surface-deep/30">
+        <Container className="py-8 sm:py-10">
+          <div className="relative aspect-[21/9] overflow-hidden rounded-2xl border border-theme sm:aspect-[2.4/1]">
+            <Image
+              src={data.heroImage}
+              alt={data.heroImageAlt}
+              fill
+              priority
+              className="object-cover"
+              sizes="(max-width:1024px) 100vw, 1120px"
+            />
+          </div>
+        </Container>
+      </section>
+
       <section className="py-12 sm:py-16">
         <Container>
-          <div className="mx-auto max-w-3xl space-y-10">
-            {data.sections.map((section) => (
-              <div key={section.title}>
-                <h2 className="font-display text-xl font-bold text-ink">{section.title}</h2>
-                <p className="mt-3 leading-relaxed text-ink-muted">{section.body}</p>
+          <div className="mx-auto max-w-5xl space-y-14">
+            {data.sections.map((section, index) => (
+              <div
+                key={section.title}
+                className={`grid items-center gap-8 lg:grid-cols-2 ${
+                  index % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""
+                }`}
+              >
+                <div>
+                  <h2 className="font-display text-xl font-bold text-ink sm:text-2xl">
+                    {section.title}
+                  </h2>
+                  <p className="mt-3 leading-relaxed text-ink-muted">{section.body}</p>
+                </div>
+                {section.image ? (
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-theme">
+                    <Image
+                      src={section.image}
+                      alt={section.imageAlt ?? section.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width:1024px) 100vw, 520px"
+                    />
+                  </div>
+                ) : null}
               </div>
             ))}
           </div>
