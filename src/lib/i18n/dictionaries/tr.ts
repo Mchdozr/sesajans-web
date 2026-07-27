@@ -4,6 +4,8 @@ export const dictionary = {
     home: "Anasayfa",
     products: "Ürünler",
     blog: "Blog",
+    robotLight: "Robot Işık",
+    priceQuote: "Fiyat / Teklif",
     comparison: "Karşılaştırma",
     glossary: "Sözlük",
     guides: "Rehber",

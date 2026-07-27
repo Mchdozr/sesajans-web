@@ -1,12 +1,16 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { site, socialLinks } from "@/lib/site";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { useI18n } from "@/lib/i18n/context";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/Logo";
+import { products } from "@/lib/products";
+
+const galleryProducts = products.slice(0, 6);
 
 type SocialIconProps = { className?: string };
 
@@ -89,6 +93,11 @@ export function Footer() {
       links: [
         { label: t.nav.about, href: "/hakkimizda" },
         { label: t.nav.blog, href: "/blog" },
+        { label: t.nav.robotLight, href: "/robot-isik" },
+        { label: t.nav.priceQuote, href: "/robot-isik-fiyat" },
+        { label: "Sahne Işığı", href: "/sahne-isigi" },
+        { label: "Molfez / Blinder", href: "/molfez" },
+        { label: "DJ Aydınlatma", href: "/dj-aydinlatma" },
         { label: t.nav.projects, href: "/projeler" },
         { label: t.nav.useCases, href: "/kullanim-alanlari" },
         { label: "İstanbul Sahne Aydınlatma", href: "/istanbul-sahne-aydinlatma" },
@@ -97,13 +106,6 @@ export function Footer() {
         { label: "Karşılaştırma", href: "/karsilastirma" },
         { label: "Sözlük", href: "/sozluk" },
         { label: t.nav.contact, href: "/iletisim" },
-      ],
-    },
-    {
-      title: t.footer.support,
-      links: [
-        { label: t.footer.faq, href: "/sss" },
-        { label: t.nav.cta, href: "/iletisim" },
       ],
     },
   ];
@@ -121,8 +123,8 @@ export function Footer() {
   return (
     <footer className="relative mt-24 border-t border-theme bg-surface-deep">
       <div className="bg-grid absolute inset-0 opacity-30" aria-hidden />
-      <Container className="relative py-14">
-        <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr_1fr]">
+      <Container className="relative max-w-screen-2xl py-14">
+        <div className="grid gap-10 lg:grid-cols-[1.3fr_1fr_1fr_1.45fr_1.1fr_0.95fr]">
           <div>
             <Logo />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-muted">
@@ -170,28 +172,53 @@ export function Footer() {
 
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-ink">
+              Galeri
+            </h3>
+            <div className="mt-4 grid grid-cols-2 gap-2.5">
+              {galleryProducts.map((product) => (
+                <Link
+                  key={product.slug}
+                  href={`/urunler/${product.slug}`}
+                  className="relative aspect-square overflow-hidden rounded-lg border border-theme bg-surface-elevated transition-opacity hover:opacity-85"
+                  aria-label={product.name}
+                >
+                  <Image
+                    src={product.image}
+                    alt={product.imageAlt || product.name}
+                    fill
+                    className="object-cover"
+                    sizes="140px"
+                  />
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-ink">
               {t.nav.contact}
             </h3>
-            <div className="mt-4 space-y-2 text-sm">
+            <div className="mt-4 space-y-4 text-sm">
               <a
                 href={`tel:${site.phone}`}
                 className="flex items-center gap-2 text-ink-muted hover:text-brand"
               >
-                <Phone className="h-4 w-4 text-brand" /> {site.phoneDisplay}
+                <Phone className="h-4 w-4 shrink-0 text-brand" /> {site.phoneDisplay}
               </a>
               <a
                 href={`mailto:${site.email}`}
                 className="flex items-center gap-2 text-ink-muted hover:text-brand"
               >
-                <Mail className="h-4 w-4 text-brand" /> {site.email}
+                <Mail className="h-4 w-4 shrink-0 text-brand" /> {site.email}
               </a>
               <a
                 href={site.addressUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-ink-muted hover:text-brand"
+                className="flex items-start gap-2 text-ink-muted hover:text-brand"
               >
-                <MapPin className="h-4 w-4 shrink-0 text-brand" /> {site.address}
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
+                <span className="leading-relaxed">{site.address}</span>
               </a>
             </div>
           </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect, useMemo, type ReactNode } from "react";
 import { usePathname } from "next/navigation";
 import { Menu, X, Phone, ChevronDown, Search } from "lucide-react";
@@ -155,6 +156,8 @@ export function Header() {
   const guideLinks = useMemo(
     (): NavLink[] => [
       { label: t.nav.blog, href: "/blog" },
+      { label: t.nav.robotLight, href: "/robot-isik" },
+      { label: t.nav.priceQuote, href: "/robot-isik-fiyat" },
       { label: t.nav.comparison, href: "/karsilastirma" },
       { label: t.nav.glossary, href: "/sozluk" },
       { label: t.nav.useCases, href: "/kullanim-alanlari" },
@@ -169,6 +172,26 @@ export function Header() {
       { label: t.nav.projects, href: "/projeler" },
       { label: t.nav.about, href: "/hakkimizda" },
       { label: t.nav.contact, href: "/iletisim" },
+    ],
+    [t],
+  );
+
+  const productHubCards = useMemo(
+    () => [
+      {
+        href: "/robot-isik",
+        label: t.nav.robotLight,
+        hint: "Moving head / hareketli kafa",
+        image: "/products/beam-king-380/image-04.jpg",
+        alt: "Beam moving head robot ışık",
+      },
+      {
+        href: "/robot-isik-fiyat",
+        label: t.nav.priceQuote,
+        hint: "Güncel teklif alın",
+        image: "/products/beam-king-ip/image-01.webp",
+        alt: "Profesyonel sahne aydınlatma teklif",
+      },
     ],
     [t],
   );
@@ -189,7 +212,10 @@ export function Header() {
   );
 
   const productsActive =
-    pathname.startsWith("/urunler") || isGroupActive(pathname, [{ label: "", href: "/urunler" }]);
+    pathname.startsWith("/urunler") ||
+    pathname === "/robot-isik" ||
+    pathname === "/robot-isik-fiyat" ||
+    isGroupActive(pathname, [{ label: "", href: "/urunler" }]);
   const guidesActive = isGroupActive(pathname, guideLinks);
 
   useEffect(() => {
@@ -268,12 +294,37 @@ export function Header() {
               open={desktopDropdown === "products"}
               onOpen={() => setDesktopDropdown("products")}
               onClose={closeDesktopDropdown}
-              panelClassName="w-[40rem]"
+              panelClassName="w-[42rem]"
             >
+              <div className="grid grid-cols-2 gap-3">
+                {productHubCards.map((card) => (
+                  <Link
+                    key={card.href}
+                    href={card.href}
+                    onClick={closeDesktopDropdown}
+                    className="group relative overflow-hidden rounded-xl border border-theme bg-surface-elevated transition-colors hover:border-brand/50"
+                  >
+                    <div className="relative aspect-[16/9]">
+                      <Image
+                        src={card.image}
+                        alt={card.alt}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        sizes="200px"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
+                      <div className="absolute inset-x-0 bottom-0 p-3">
+                        <p className="text-sm font-semibold text-white">{card.label}</p>
+                        <p className="text-[11px] text-white/75">{card.hint}</p>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
               <Link
                 href="/urunler"
                 onClick={closeDesktopDropdown}
-                className={cn(dropdownLinkClass, "font-semibold text-brand")}
+                className={cn(dropdownLinkClass, "mt-3 font-semibold text-brand")}
               >
                 {t.footer.allProducts} →
               </Link>
@@ -447,6 +498,30 @@ export function Header() {
                 setMobileSection((current) => (current === "products" ? null : "products"))
               }
             >
+              <div className="mb-2 grid grid-cols-2 gap-2 px-1">
+                {productHubCards.map((card) => (
+                  <Link
+                    key={card.href}
+                    href={card.href}
+                    onClick={closeMenu}
+                    className="relative overflow-hidden rounded-lg border border-theme"
+                  >
+                    <div className="relative aspect-[16/10]">
+                      <Image
+                        src={card.image}
+                        alt={card.alt}
+                        fill
+                        className="object-cover"
+                        sizes="140px"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                      <p className="absolute inset-x-0 bottom-0 p-2 text-xs font-semibold text-white">
+                        {card.label}
+                      </p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
               <Link
                 href="/urunler"
                 onClick={closeMenu}

@@ -21,7 +21,7 @@ export const istanbulLanding: CityLanding = {
   seoDescription:
     "İstanbul konser, festival, düğün ve kurumsal etkinlik sahne aydınlatması. Şişli merkezli distribütör, kurulum ve teknik destek.",
   intro:
-    "SESAJANS, İstanbul ve Marmara bölgesinde profesyonel sahne aydınlatma distribütörü olarak moving head, blinder, strobe ve LED bar çözümleri sunar. Şişli merkez ofisimizden keşif, teklif, kurulum ve satış sonrası destek sağlıyoruz.",
+    "SESAJANS, İstanbul ve Marmara bölgesinde profesyonel sahne aydınlatma distribütörü olarak moving head (robot ışık), blinder, strobe ve LED bar çözümleri sunar. Şişli merkez ofisimizden keşif, fiyat teklifi, kurulum ve satış sonrası destek sağlıyoruz.",
   sections: [
     {
       title: "Hizmet verdiğimiz İstanbul ilçeleri",
@@ -34,6 +34,10 @@ export const istanbulLanding: CityLanding = {
     {
       title: "Neden SESAJANS?",
       body: "12+ yıl sektör tecrübesi, 500+ tamamlanan proje, stoktan hızlı teslimat, garanti ve yerel teknik servis. Harbiye, Kültür Merkezi ve fuar alanı referanslarımızı projeler sayfamızda inceleyebilirsiniz.",
+    },
+    {
+      title: "İstanbul fiyat teklifi",
+      body: "İstanbul robot ışık ve sahne aydınlatma fiyatları proje kapsamına göre hazırlanır. Ücretsiz keşif sonrası güncel teklif için iletişime geçin.",
     },
   ],
   faqs: [
@@ -55,6 +59,9 @@ export const istanbulLanding: CityLanding = {
     "şişli aydınlatma",
     "istanbul moving head",
     "konser ışığı istanbul",
+    "istanbul robot ışık",
+    "şişli sahne aydınlatma",
+    "istanbul sahne aydınlatma fiyat",
   ],
   productSlugs: ["beam-king-ip", "wash-3715", "blinder-800-ip"],
 };
@@ -68,7 +75,7 @@ export const ankaraLanding: CityLanding = {
   seoDescription:
     "Ankara konser, kongre, düğün ve kurumsal etkinlik sahne aydınlatması. Moving head, wash, blinder ve LED bar çözümleri.",
   intro:
-    "SESAJANS, Ankara ve çevre illerde konser salonu, kongre merkezi, otel balo salonu ve açık hava etkinlikleri için profesyonel sahne aydınlatma ekipmanı ve kurulum hizmeti sunar. İstanbul merkezli stok ve lojistik ağımızla Ankara projelerine hızlı teslimat sağlıyoruz.",
+    "SESAJANS, Ankara ve çevre illerde konser salonu, kongre merkezi, otel balo salonu ve açık hava etkinlikleri için profesyonel sahne aydınlatma ekipmanı ve kurulum hizmeti sunar. İstanbul merkezli stok ve lojistik ağımızla Ankara projelerine hızlı teslimat sağlıyoruz. Ankara robot ışık ve sahne ışığı fiyat teklifi için iletişime geçin.",
   sections: [
     {
       title: "Ankara'da hizmet alanları",
@@ -97,7 +104,14 @@ export const ankaraLanding: CityLanding = {
       a: "Wash 3715 ve LED Beam Wash 150 kombinasyonu çoğu kongre ve balo salonu için yeterlidir.",
     },
   ],
-  keywords: ["ankara sahne aydınlatma", "ankara moving head", "ankara konser ışığı", "ankara etkinlik aydınlatma"],
+  keywords: [
+    "ankara sahne aydınlatma",
+    "ankara moving head",
+    "ankara konser ışığı",
+    "ankara etkinlik aydınlatma",
+    "ankara robot ışık",
+    "ankara sahne ışığı",
+  ],
   productSlugs: ["wash-3715", "beam-king-ip", "diamond-line-1240-eco"],
 };
 
@@ -110,7 +124,7 @@ export const izmirLanding: CityLanding = {
   seoDescription:
     "İzmir festival, konser, düğün ve fuar sahne aydınlatması. IP66 dış mekân ve moving head çözümleri.",
   intro:
-    "SESAJANS, İzmir ve Ege bölgesinde festival, açık hava konser, düğün ve fuar etkinlikleri için beam, wash, blinder ve LED bar portföyü sunar. Kordon, Alsancak, Bornova ve fuar alanı projelerinde deneyimli ekibimizle hizmet veriyoruz.",
+    "SESAJANS, İzmir ve Ege bölgesinde festival, açık hava konser, düğün ve fuar etkinlikleri için beam, wash, blinder ve LED bar portföyü sunar. Kordon, Alsancak, Bornova ve fuar alanı projelerinde deneyimli ekibimizle hizmet veriyoruz. İzmir robot ışık fiyat teklifi ücretsizdir.",
   sections: [
     {
       title: "İzmir etkinlik profili",
@@ -139,7 +153,14 @@ export const izmirLanding: CityLanding = {
       a: "Evet, etkinlik tarihine göre kiralama ve operatörlü paketler sunulur.",
     },
   ],
-  keywords: ["izmir sahne aydınlatma", "izmir festival ışığı", "izmir moving head", "ege aydınlatma"],
+  keywords: [
+    "izmir sahne aydınlatma",
+    "izmir festival ışığı",
+    "izmir moving head",
+    "ege aydınlatma",
+    "izmir robot ışık",
+    "izmir sahne ışığı",
+  ],
   productSlugs: ["beam-king-ip", "strike-pro-ip", "blinder-800-ip"],
 };
 
@@ -152,7 +173,7 @@ export const antalyaLanding: CityLanding = {
   seoDescription:
     "Antalya festival, konser, düğün ve otel etkinlik sahne aydınlatması. IP66 dış mekân beam, blinder ve efekt çözümleri.",
   intro:
-    "SESAJANS, Antalya ve Akdeniz bölgesinde yaz festivali, açık hava konser, otel etkinliği ve düğün prodüksiyonları için profesyonel sahne aydınlatma ekipmanı ve kurulum hizmeti sunar. Konyaaltı festival referansımızla sahilde ve açık alanda IP korumalı çözümler sağlıyoruz.",
+    "SESAJANS, Antalya ve Akdeniz bölgesinde yaz festivali, açık hava konser, otel etkinliği ve düğün prodüksiyonları için profesyonel sahne aydınlatma ekipmanı ve kurulum hizmeti sunar. Konyaaltı festival referansımızla sahilde ve açık alanda IP korumalı çözümler sağlıyoruz. Antalya sahne ışığı fiyat teklifi için yazın.",
   sections: [
     {
       title: "Antalya'da hizmet alanları",
@@ -181,7 +202,14 @@ export const antalyaLanding: CityLanding = {
       a: "Evet, otel ve açık alan projelerinde sahada veya online keşif ile fixture planı hazırlanır.",
     },
   ],
-  keywords: ["antalya sahne aydınlatma", "antalya festival ışığı", "antalya moving head", "akdeniz aydınlatma"],
+  keywords: [
+    "antalya sahne aydınlatma",
+    "antalya festival ışığı",
+    "antalya moving head",
+    "akdeniz aydınlatma",
+    "antalya robot ışık",
+    "antalya sahne ışığı",
+  ],
   productSlugs: ["beam-king-ip", "tornado-ip", "blinder-400-ip"],
 };
 
@@ -194,7 +222,7 @@ export const bursaLanding: CityLanding = {
   seoDescription:
     "Bursa tiyatro, konser, düğün ve kurumsal etkinlik sahne aydınlatması. Wash moving head, beam ve LED bar çözümleri.",
   intro:
-    "SESAJANS, Bursa ve Marmara bölgesinde tiyatro salonu, kültür merkezi, düğün ve kurumsal etkinlikler için profesyonel sahne aydınlatma çözümleri sunar. Bursa Tiyatro Salonu wash sistemi referansımızla sessiz ve homojen salon aydınlatması konusunda deneyimliyiz.",
+    "SESAJANS, Bursa ve Marmara bölgesinde tiyatro salonu, kültür merkezi, düğün ve kurumsal etkinlikler için profesyonel sahne aydınlatma çözümleri sunar. Bursa Tiyatro Salonu wash sistemi referansımızla sessiz ve homojen salon aydınlatması konusunda deneyimliyiz. Bursa robot ışık teklifi için iletişime geçin.",
   sections: [
     {
       title: "Bursa'da hizmet alanları",
@@ -223,7 +251,14 @@ export const bursaLanding: CityLanding = {
       a: "Evet, düğün ve kurumsal etkinlikler için kısa süreli kiralama paketleri sunulur.",
     },
   ],
-  keywords: ["bursa sahne aydınlatma", "bursa tiyatro ışığı", "bursa moving head", "bursa etkinlik aydınlatma"],
+  keywords: [
+    "bursa sahne aydınlatma",
+    "bursa tiyatro ışığı",
+    "bursa moving head",
+    "bursa etkinlik aydınlatma",
+    "bursa robot ışık",
+    "bursa sahne ışığı",
+  ],
   productSlugs: ["wash-3715", "led-beam-wash-150", "beam-king-ip"],
 };
 
@@ -236,7 +271,7 @@ export const adanaLanding: CityLanding = {
   seoDescription:
     "Adana konser, festival, düğün ve kurumsal etkinlik sahne aydınlatması. Moving head, blinder ve IP65 dış mekân çözümleri.",
   intro:
-    "SESAJANS, Adana ve Çukurova bölgesinde açık hava konseri, festival, düğün ve kurumsal etkinlikler için profesyonel sahne aydınlatma ekipmanı ve kurulum hizmeti sunar. Sıcak iklim koşullarına uygun soğutma profilli üniteler ve IP korumalı dış mekân çözümleriyle bölge projelerine destek veriyoruz.",
+    "SESAJANS, Adana ve Çukurova bölgesinde açık hava konseri, festival, düğün ve kurumsal etkinlikler için profesyonel sahne aydınlatma ekipmanı ve kurulum hizmeti sunar. Sıcak iklim koşullarına uygun soğutma profilli üniteler ve IP korumalı dış mekân çözümleriyle bölge projelerine destek veriyoruz. Adana sahne aydınlatma fiyat teklifi ücretsizdir.",
   sections: [
     {
       title: "Adana'da hizmet alanları",
@@ -265,7 +300,14 @@ export const adanaLanding: CityLanding = {
       a: "Evet. Proje kapsamına göre montaj, adresleme ve devreye alma ekibimiz Adana'da görevlendirilir.",
     },
   ],
-  keywords: ["adana sahne aydınlatma", "adana konser ışığı", "adana moving head", "çukurova etkinlik aydınlatma"],
+  keywords: [
+    "adana sahne aydınlatma",
+    "adana konser ışığı",
+    "adana moving head",
+    "çukurova etkinlik aydınlatma",
+    "adana robot ışık",
+    "adana sahne ışığı",
+  ],
   productSlugs: ["beam-king-ip", "blinder-800-ip", "wash-3715"],
 };
 
@@ -278,7 +320,7 @@ export const gaziantepLanding: CityLanding = {
   seoDescription:
     "Gaziantep düğün, konser, fuar ve kurumsal etkinlik sahne aydınlatması. Moving head, LED bar ve blinder çözümleri.",
   intro:
-    "SESAJANS, Gaziantep ve Güneydoğu Anadolu bölgesinde düğün salonu, fuar, konser ve kurumsal etkinlik prodüksiyonları için profesyonel sahne aydınlatma çözümleri sunar. Bölgenin güçlü düğün ve fuar ekonomisine uygun kompakt ve yüksek etkili fixture paketleriyle hizmet veriyoruz.",
+    "SESAJANS, Gaziantep ve Güneydoğu Anadolu bölgesinde düğün salonu, fuar, konser ve kurumsal etkinlik prodüksiyonları için profesyonel sahne aydınlatma çözümleri sunar. Bölgenin güçlü düğün ve fuar ekonomisine uygun kompakt ve yüksek etkili fixture paketleriyle hizmet veriyoruz. Gaziantep robot ışık ve LED bar fiyat teklifi için yazın.",
   sections: [
     {
       title: "Gaziantep'te hizmet alanları",
@@ -307,7 +349,14 @@ export const gaziantepLanding: CityLanding = {
       a: "Evet. Stand ölçüsüne göre blinder, LED bar ve vurgu aydınlatma planı hazırlanır; kurulum dahil teslim edilir.",
     },
   ],
-  keywords: ["gaziantep sahne aydınlatma", "gaziantep düğün ışığı", "gaziantep moving head", "gaziantep fuar aydınlatma"],
+  keywords: [
+    "gaziantep sahne aydınlatma",
+    "gaziantep düğün ışığı",
+    "gaziantep moving head",
+    "gaziantep fuar aydınlatma",
+    "gaziantep robot ışık",
+    "gaziantep sahne ışığı",
+  ],
   productSlugs: ["led-beam-wash-150", "diamond-line-1240-eco", "blinder-400-ip"],
 };
 
@@ -320,7 +369,7 @@ export const kocaeliLanding: CityLanding = {
   seoDescription:
     "Kocaeli ve İzmit konser, kurumsal etkinlik, fuar ve düğün sahne aydınlatması. Moving head, wash ve blinder çözümleri.",
   intro:
-    "SESAJANS, Kocaeli, İzmit ve Doğu Marmara bölgesinde kurumsal etkinlik, fabrika lansmanı, konser ve düğün prodüksiyonları için profesyonel sahne aydınlatma çözümleri sunar. İstanbul merkez ofisimize yakınlık sayesinde Kocaeli projelerine aynı gün keşif ve hızlı teslimat sağlıyoruz.",
+    "SESAJANS, Kocaeli, İzmit ve Doğu Marmara bölgesinde kurumsal etkinlik, fabrika lansmanı, konser ve düğün prodüksiyonları için profesyonel sahne aydınlatma çözümleri sunar. İstanbul merkez ofisimize yakınlık sayesinde Kocaeli projelerine aynı gün keşif ve hızlı teslimat sağlıyoruz. Kocaeli / İzmit robot ışık teklifi için iletişime geçin.",
   sections: [
     {
       title: "Kocaeli'de hizmet alanları",
@@ -349,7 +398,14 @@ export const kocaeliLanding: CityLanding = {
       a: "Stoktan ürünler için 1 iş günü içinde teslimat planlanabilir; kurulumlu projelerde tarih rezervasyonu önerilir.",
     },
   ],
-  keywords: ["kocaeli sahne aydınlatma", "izmit etkinlik ışığı", "gebze aydınlatma", "kocaeli moving head"],
+  keywords: [
+    "kocaeli sahne aydınlatma",
+    "izmit etkinlik ışığı",
+    "gebze aydınlatma",
+    "kocaeli moving head",
+    "kocaeli robot ışık",
+    "izmit robot ışık",
+  ],
   productSlugs: ["wash-3715", "diamond-line-1240-eco", "beam-king-ip"],
 };
 

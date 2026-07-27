@@ -4,6 +4,8 @@ export const dictionary = {
     home: "Home",
     products: "Products",
     blog: "Blog",
+    robotLight: "Moving Heads",
+    priceQuote: "Pricing / Quote",
     comparison: "Comparison",
     glossary: "Glossary",
     guides: "Guides",
