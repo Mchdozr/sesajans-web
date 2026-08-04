@@ -13,11 +13,12 @@ export function buildMetadata({
   title,
   description = site.description,
   path = "/",
-  image = "/opengraph-image",
+  image = "/brand/logo-on-brand.png",
   keywords = [],
 }: SeoInput): Metadata {
   const url = `${site.url}${path}`;
-  const ogImage = image?.trim() ? image : "/opengraph-image";
+  const ogImage = image?.trim() ? image : "/brand/logo-on-brand.png";
+  const isBrandLogo = ogImage.includes("logo-on-brand") || ogImage.includes("favicon-512");
   const verification = process.env.GOOGLE_SITE_VERIFICATION
     ? { google: process.env.GOOGLE_SITE_VERIFICATION }
     : undefined;
@@ -45,13 +46,25 @@ export function buildMetadata({
       siteName: site.brand,
       locale: "tr_TR",
       type: "website",
-      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
+      images: [
+        {
+          url: ogImage,
+          width: isBrandLogo ? 500 : 1200,
+          height: isBrandLogo ? 500 : 630,
+          alt: `${site.brand} Logo`,
+        },
+      ],
     },
-    twitter: { card: "summary_large_image", title, description, images: [ogImage] },
+    twitter: {
+      card: isBrandLogo ? "summary" : "summary_large_image",
+      title,
+      description,
+      images: [ogImage],
+    },
   };
 }
 
-const brandLogoSquare = "/brand/favicon-512.png";
+const brandLogoSquare = "/brand/logo-on-brand.png";
 const brandLogoSquareUrl = `${site.url}${brandLogoSquare}`;
 
 const brandLogoImageObject = {
@@ -59,6 +72,8 @@ const brandLogoImageObject = {
   url: brandLogoSquareUrl,
   width: 500,
   height: 500,
+  contentUrl: brandLogoSquareUrl,
+  caption: `${site.brand} Logo`,
 };
 
 export const organizationJsonLd = {
@@ -231,7 +246,7 @@ export function articleJsonLd(article: {
       name: site.brand,
       logo: brandLogoImageObject,
     },
-    image: article.image ? `${site.url}${article.image}` : `${site.url}/opengraph-image`,
+    image: article.image ? `${site.url}${article.image}` : brandLogoSquareUrl,
     mainEntityOfPage: `${site.url}/blog/${article.slug}`,
   };
 }

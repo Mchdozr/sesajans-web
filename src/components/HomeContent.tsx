@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Lightbulb, Wrench, Award, Users } from "lucide-react";
 import { Hero } from "@/components/Hero";
 import { Container, SectionHeading } from "@/components/ui/Container";
@@ -93,8 +94,17 @@ export function HomeContent() {
               <Reveal key={project.slug} delay={i * 0.06}>
                 <Link
                   href={`/projeler/${project.slug}`}
-                  className="glow-border block overflow-hidden rounded-2xl border border-theme bg-surface-elevated/80 transition-colors hover:border-brand/40"
+                  className="glow-border group block overflow-hidden rounded-2xl border border-theme bg-surface-elevated/80 transition-colors hover:border-brand/40"
                 >
+                  <div className="relative aspect-[16/10] overflow-hidden">
+                    <Image
+                      src={project.images[0]}
+                      alt={`${project.title} — ${project.city}`}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width:768px) 100vw, 33vw"
+                    />
+                  </div>
                   <div className="p-5">
                     <p className="text-xs font-semibold text-brand">{project.year} · {project.city}</p>
                     <h3 className="mt-1 font-display font-bold text-ink">{project.title}</h3>
