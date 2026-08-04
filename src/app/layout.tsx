@@ -37,10 +37,30 @@ export const metadata: Metadata = {
       "x-default": site.url,
     },
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-48.png", sizes: "48x48", type: "image/png" },
+      { url: "/brand/favicon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   openGraph: {
     siteName: site.brand,
     locale: "tr_TR",
     type: "website",
+    images: [
+      {
+        url: "/brand/logo-on-brand.png",
+        width: 500,
+        height: 500,
+        alt: `${site.brand} Logo`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    images: ["/brand/logo-on-brand.png"],
   },
   appleWebApp: {
     capable: true,
