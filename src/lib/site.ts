@@ -3,9 +3,9 @@ function envOr(value: string | undefined, fallback: string): string {
   return trimmed ? trimmed : fallback;
 }
 
-const PHONE_E164 = "+905498002510";
-const PHONE_DISPLAY = "0549 800 25 10";
-const WHATSAPP_E164 = "905498002510";
+const PHONE_E164 = "+905304056768";
+const PHONE_DISPLAY = "+90 530 405 67 68";
+const WHATSAPP_E164 = "905304056768";
 
 export const site = {
   name: "sesajans.com.tr",
