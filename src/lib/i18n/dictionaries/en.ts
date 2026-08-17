@@ -117,6 +117,14 @@ export const dictionary = {
       q: "What do I need to request a quote?",
       a: "Share your event date, venue type, approximate quantity and intended use via the contact form.",
     },
+    {
+      q: "How do I purchase products from SESAJANS?",
+      a: "Share your project details via the contact form, phone or WhatsApp. You will receive product recommendations and a price quote within 1 business day. See the Purchase page for the full process.",
+    },
+    {
+      q: "What is SESAJANS's mission?",
+      a: "To provide professional stage lighting solutions for concerts, festivals, trade shows and corporate events across Turkey — combining sales, technical consulting, installation and after-sales support under one roof.",
+    },
   ],
   productsPage: {
     eyebrow: "Products",

@@ -7,7 +7,7 @@ import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
 import { Providers } from "@/components/Providers";
 import { SkipLink } from "@/components/SkipLink";
-import { organizationJsonLd, localBusinessJsonLd, websiteJsonLd } from "@/lib/seo";
+import { organizationJsonLd, localBusinessJsonLd, websiteJsonLd, storeJsonLd } from "@/lib/seo";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -35,6 +35,9 @@ export const metadata: Metadata = {
     languages: {
       "tr-TR": site.url,
       "x-default": site.url,
+    },
+    types: {
+      "application/rss+xml": `${site.url}/feed.xml`,
     },
   },
   icons: {
@@ -86,7 +89,7 @@ export default function RootLayout({
     <html lang="tr" suppressHydrationWarning className={`${inter.variable} ${display.variable}`}>
       <body className="flex min-h-screen flex-col bg-surface text-ink">
         <Providers>
-          <JsonLd data={[organizationJsonLd, localBusinessJsonLd, websiteJsonLd]} />
+          <JsonLd data={[organizationJsonLd, localBusinessJsonLd, websiteJsonLd, storeJsonLd]} />
           <SkipLink />
           <Header />
           <main id="main" className="flex-1">

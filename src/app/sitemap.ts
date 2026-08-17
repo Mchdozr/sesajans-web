@@ -47,7 +47,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
               path === "/robot-isik-fiyat" ||
               path === "/sahne-isigi" ||
               path === "/molfez" ||
-              path === "/dj-aydinlatma"
+              path === "/dj-aydinlatma" ||
+              path === "/satin-al"
             ? 0.9
             : 0.8,
     })),

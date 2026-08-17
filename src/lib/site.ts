@@ -108,6 +108,7 @@ export const footerNav = {
     links: [
       { label: "Robot Işık", href: "/robot-isik" },
       { label: "Fiyat / Teklif", href: "/robot-isik-fiyat" },
+      { label: "Satın Al", href: "/satin-al" },
       { label: "Sahne Işığı", href: "/sahne-isigi" },
       { label: "Molfez / Blinder", href: "/molfez" },
       { label: "DJ Aydınlatma", href: "/dj-aydinlatma" },

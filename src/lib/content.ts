@@ -34,6 +34,14 @@ export const homeFaqs = [
     q: "Teklif almak için ne gerekiyor?",
     a: "Etkinlik tarihi, mekân tipi, yaklaşık ürün adedi ve kullanım amacınızı iletişim formu üzerinden paylaşmanız yeterlidir.",
   },
+  {
+    q: "SESAJANS'tan ürün nasıl satın alınır?",
+    a: "İletişim formu, telefon veya WhatsApp ile proje detaylarınızı paylaşın. 1 iş günü içinde ürün önerisi ve fiyat teklifi alırsınız. Detaylı süreç için /satin-al sayfasını inceleyin.",
+  },
+  {
+    q: "SESAJANS'ın misyonu nedir?",
+    a: "Türkiye'de konser, festival, fuar ve kurumsal etkinlikler için profesyonel sahne aydınlatma çözümleri sunmak; satış, teknik danışmanlık, kurulum ve satış sonrası desteği tek çatı altında birleştirmektir.",
+  },
 ];
 
 export const useCases = [

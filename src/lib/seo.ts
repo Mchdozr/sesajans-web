@@ -141,12 +141,80 @@ export const websiteJsonLd = {
   alternateName: site.name,
   url: site.url,
   inLanguage: "tr-TR",
+  description: site.description,
   publisher: {
     "@type": "Organization",
     name: site.brand,
     logo: brandLogoImageObject,
   },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${site.url}/ara?q={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
+  },
 };
+
+export const storeJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  name: site.brand,
+  url: site.url,
+  image: brandLogoSquareUrl,
+  description: site.description,
+  telephone: site.phone,
+  email: site.email,
+  priceRange: "$$",
+  currenciesAccepted: "TRY",
+  paymentAccepted: "Bank Transfer, Credit Card",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: site.addressLine,
+    addressLocality: site.addressDistrict,
+    addressRegion: site.addressCity,
+    postalCode: site.postalCode,
+    addressCountry: "TR",
+  },
+  openingHoursSpecification: site.openingHours.map((slot) => ({
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: [...slot.days],
+    opens: slot.opens,
+    closes: slot.closes,
+  })),
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Profesyonel Sahne Aydınlatma Ürünleri",
+    url: `${site.url}/urunler`,
+  },
+};
+
+export function missionJsonLd(mission: {
+  mission: string;
+  values: readonly string[];
+  services: readonly string[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: `${site.brand} — Hakkımızda`,
+    url: `${site.url}/hakkimizda`,
+    description: mission.mission,
+    mainEntity: {
+      "@type": "Organization",
+      name: site.brand,
+      slogan: site.slogan,
+      foundingDate: String(site.foundedYear),
+      description: mission.mission,
+      knowsAbout: mission.services,
+      areaServed: {
+        "@type": "Country",
+        name: "Türkiye",
+      },
+    },
+  };
+}
 
 export function breadcrumbJsonLd(items: ReadonlyArray<{ name: string; path: string }>) {
   return {
@@ -194,11 +262,16 @@ export function productJsonLd(product: {
     url: `${site.url}/urunler/${product.slug}`,
     offers: {
       "@type": "Offer",
-      url: `${site.url}/iletisim`,
+      url: `${site.url}/satin-al`,
       priceCurrency: "TRY",
       availability: "https://schema.org/InStock",
       itemCondition: "https://schema.org/NewCondition",
       seller: { "@type": "Organization", name: site.brand },
+      businessFunction: "http://purl.org/goodrelations/v1#Sell",
+      eligibleRegion: {
+        "@type": "Country",
+        name: "Türkiye",
+      },
     },
   };
 }
