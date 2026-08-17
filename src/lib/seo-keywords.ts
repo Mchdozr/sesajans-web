@@ -18,6 +18,7 @@ export const keywordHubPaths = [
   "/sahne-isigi",
   "/molfez",
   "/dj-aydinlatma",
+  "/satin-al",
 ] as const;
 
 export type KeywordHubPath = (typeof keywordHubPaths)[number];

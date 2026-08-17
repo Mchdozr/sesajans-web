@@ -400,6 +400,98 @@ export const keywordHubs: KeywordHub[] = [
       { label: "Teklif al", href: "/iletisim" },
     ],
   },
+  {
+    path: "/satin-al",
+    slug: "satin-al",
+    title: "Sahne Aydınlatma Satın Al",
+    seoTitle: "Sahne Aydınlatma Satın Al — Moving Head & Robot Işık | SESAJANS",
+    seoDescription:
+      "Profesyonel sahne aydınlatma ürünlerini satın alın: moving head, beam, wash, blinder, strobe, LED bar. Proje bazlı teklif, stoktan teslimat, kurulum ve DMX desteği — SESAJANS.",
+    eyebrow: "Satın Alma",
+    h1: "Profesyonel Sahne Aydınlatma Satın Alın",
+    intro:
+      "SESAJANS olarak moving head (robot ışık), beam, wash, blinder, strobe ve LED bar ürünlerini doğrudan satış modeliyle sunuyoruz. Konser, festival, gece kulübü, fuar ve kurumsal etkinlik projeleriniz için doğru ürünü seçmenize yardımcı olur; stoktan hızlı teslimat, kurulum ve DMX programlama desteği sağlarız. Sabit online fiyat yerine projenize özel güncel teklif hazırlarız.",
+    heroImage: "/products/beam-king-380/image-04.jpg",
+    heroImageAlt: "SESAJANS profesyonel sahne aydınlatma satın alma",
+    sections: [
+      {
+        title: "Neden SESAJANS'dan satın almalısınız?",
+        body: "2012'den bu yana Türkiye genelinde konser, festival, TV prodüksiyonu ve kurumsal etkinlikler için profesyonel sahne aydınlatma çözümleri sunuyoruz. Yalnızca ürün satmıyoruz: mekânınıza göre ürün seçimi, truss montajı, DMX adresleme, konsol programlama ve operatör eğitimi dahil anahtar teslim paketler sunuyoruz. İstanbul Şişli merkezli stok ile hızlı teslimat ve yerel teknik servis avantajı sağlıyoruz.",
+        image: "/products/wash-3715/image-01.jpg",
+        imageAlt: "Wash 3715 — profesyonel sahne aydınlatma",
+      },
+      {
+        title: "Satın alma süreci",
+        body: "1) İletişim formu, telefon veya WhatsApp ile proje detaylarınızı paylaşın. 2) Mekân tipi, adet ve bütçe bandına göre ürün önerisi alın. 3) 1 iş günü içinde proje bazlı fiyat teklifi. 4) Onay sonrası stoktan teslimat veya kurulum planlaması. 5) İsteğe bağlı montaj, DMX programlama ve saha testi. İstanbul içi keşif çoğu projede ücretsizdir.",
+        image: "/products/beam-king-ip/image-01.webp",
+        imageAlt: "Beam King IP — satın alma süreci",
+      },
+      {
+        title: "Hangi ürünleri satıyoruz?",
+        body: "Beam moving head (Beam King 380, Beam King IP), wash moving head (Wash 3715, LED Beam Wash 150), blinder/strobe (Blinder 400 IP, Blinder 800 IP, Strike Pro IP), LED bar (Diamond Line 1240 Eco, Tornado IP) ve efekt üniteleri. İç mekân ve dış mekân (IP65/IP66) seçenekleri mevcuttur. Tek seferlik etkinlikler için kiralama alternatifi de sunulur.",
+        image: "/products/blinder-800-ip/image-01.jpg",
+        imageAlt: "Blinder 800 IP — blinder satın alma",
+      },
+    ],
+    faqs: [
+      {
+        q: "SESAJANS'tan nasıl ürün satın alabilirim?",
+        a: "İletişim formu, telefon (+90 530 405 67 68) veya WhatsApp üzerinden proje detaylarınızı paylaşın. 1 iş günü içinde ürün önerisi ve fiyat teklifi ile dönüş yaparız.",
+      },
+      {
+        q: "Sitede neden fiyat göremiyorum?",
+        a: "Döviz, stok ve proje konfigürasyonu nedeniyle sabit liste fiyatı yanıltıcı olabilir. Her teklif projenize özel hazırlanır.",
+      },
+      {
+        q: "Kurulum dahil satın alabilir miyim?",
+        a: "Evet. Ürün satışı, truss montajı, DMX programlama ve operatör eğitimi paket olarak sunulabilir.",
+      },
+      {
+        q: "Hangi şehirlere teslimat yapıyorsunuz?",
+        a: "Türkiye genelinde proje bazlı teslimat ve montaj koordinasyonu yapıyoruz. İstanbul ve çevre illere hızlı saha desteği sağlıyoruz.",
+      },
+      {
+        q: "Satın alma mı kiralama mı daha uygun?",
+        a: "Tek seferlik etkinliklerde kiralama; sürekli kullanılan mekânlarda satın alma genelde daha ekonomiktir. Projenize göre danışmanlık sunuyoruz.",
+      },
+      {
+        q: "Garanti ve satış sonrası destek var mı?",
+        a: "Evet. Yedek parça, firmware güncelleme ve teknik servis ile uzun vadeli iş ortaklığı hedefliyoruz.",
+      },
+    ],
+    keywords: [
+      "sahne aydınlatma satın al",
+      "moving head satın al",
+      "robot ışık satın al",
+      "profesyonel sahne ışığı satın al",
+      "beam moving head satın al",
+      "sahne aydınlatma teklif",
+      "sesajans satın al",
+    ],
+    productSlugs: [
+      "beam-king-380",
+      "beam-king-ip",
+      "wash-3715",
+      "led-beam-wash-150",
+      "blinder-400-ip",
+      "blinder-800-ip",
+      "diamond-line-1240-eco",
+      "strike-pro-ip",
+      "tornado-ip",
+    ],
+    relatedBlogSlugs: [
+      "moving-head-fiyat-rehberi",
+      "aydinlatma-kiralama-vs-satinalma",
+      "beam-vs-wash-satinalma",
+      "robot-isik-nasil-secilir",
+    ],
+    relatedPaths: [
+      { label: "Tüm ürünler", href: "/urunler" },
+      { label: "Robot ışık fiyat", href: "/robot-isik-fiyat" },
+      { label: "İletişim / teklif", href: "/iletisim" },
+      { label: "Hakkımızda", href: "/hakkimizda" },
+    ],
+  },
 ];
 
 export function getKeywordHub(slug: string): KeywordHub | undefined {
