@@ -10,7 +10,7 @@ import { comparisons } from "@/lib/comparisons";
 import { glossaryTerms } from "@/lib/glossary";
 import { keywordHubPaths } from "@/lib/seo-keywords";
 
-const STATIC_LAST_MODIFIED = new Date("2026-07-27");
+const STATIC_LAST_MODIFIED = new Date("2026-08-24");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [

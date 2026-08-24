@@ -18,11 +18,11 @@ export async function generateMetadata({
   const product = getProduct(slug);
   if (!product) return {};
   return buildMetadata({
-    title: `${product.name} — Teknik Özellikler`,
-    description: product.excerpt,
+    title: `${product.name} — Satın Al | Fiyat Teklifi`,
+    description: `${product.excerpt} SESAJANS'tan ücretsiz fiyat teklifi ve kurulum desteği.`,
     path: `/urunler/${product.slug}`,
     image: product.image,
-    keywords: product.keywords,
+    keywords: [...product.keywords, "satın al", "fiyat teklifi"],
   });
 }
 
@@ -45,6 +45,8 @@ export default async function ProductPage({
             image: product.image,
             slug: product.slug,
             category: product.category,
+            specs: product.specs,
+            ipRating: product.ipRating,
           }),
           ...(product.videos?.length
             ? productVideoJsonLd({

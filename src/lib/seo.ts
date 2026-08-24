@@ -76,6 +76,25 @@ const brandLogoImageObject = {
   caption: `${site.brand} Logo`,
 };
 
+const organizationKnowsAbout = [
+  "Sahne aydınlatma",
+  "Profesyonel sahne ışığı",
+  "Moving head",
+  "Robot ışık",
+  "Hareketli kafa",
+  "Beam moving head",
+  "Wash moving head",
+  "Blinder",
+  "Molfez",
+  "Strobe",
+  "LED bar",
+  "DMX aydınlatma",
+  "Konser aydınlatma",
+  "Festival aydınlatma",
+  "DJ aydınlatma",
+  "Etkinlik aydınlatma",
+] as const;
+
 export const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -85,9 +104,11 @@ export const organizationJsonLd = {
   logo: brandLogoImageObject,
   image: brandLogoSquareUrl,
   description: site.description,
+  slogan: site.slogan,
   telephone: site.phone,
   email: site.email,
   foundingDate: String(site.foundedYear),
+  knowsAbout: [...organizationKnowsAbout],
   sameAs: [site.social.instagram, site.social.linkedin, site.social.youtube],
   address: {
     "@type": "PostalAddress",
@@ -141,10 +162,19 @@ export const websiteJsonLd = {
   alternateName: site.name,
   url: site.url,
   inLanguage: "tr-TR",
+  description: site.description,
   publisher: {
     "@type": "Organization",
     name: site.brand,
     logo: brandLogoImageObject,
+  },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${site.url}/ara?q={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
   },
 };
 
@@ -179,7 +209,20 @@ export function productJsonLd(product: {
   image: string;
   slug: string;
   category?: string;
+  specs?: ReadonlyArray<{ label: string; value: string }>;
+  ipRating?: string;
 }) {
+  const additionalProperty = [
+    ...(product.specs?.map((spec) => ({
+      "@type": "PropertyValue" as const,
+      name: spec.label,
+      value: spec.value,
+    })) ?? []),
+    ...(product.ipRating
+      ? [{ "@type": "PropertyValue" as const, name: "IP koruma", value: product.ipRating }]
+      : []),
+  ];
+
   return {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -192,14 +235,48 @@ export function productJsonLd(product: {
     manufacturer: { "@type": "Organization", name: site.brand },
     category: product.category,
     url: `${site.url}/urunler/${product.slug}`,
+    ...(additionalProperty.length > 0 ? { additionalProperty } : {}),
     offers: {
       "@type": "Offer",
-      url: `${site.url}/iletisim`,
+      url: `${site.url}/iletisim?urun=${product.slug}`,
       priceCurrency: "TRY",
       availability: "https://schema.org/InStock",
       itemCondition: "https://schema.org/NewCondition",
+      businessFunction: "http://purl.org/goodrelations/v1#Sell",
       seller: { "@type": "Organization", name: site.brand },
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        priceCurrency: "TRY",
+        description: "Proje bazlı fiyat teklifi — iletişim formu veya WhatsApp",
+      },
     },
+  };
+}
+
+export function itemListJsonLd(items: ReadonlyArray<{
+  name: string;
+  url: string;
+  description?: string;
+  image?: string;
+}>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "SESAJANS Profesyonel Sahne Aydınlatma Ürünleri",
+    description:
+      "Moving head beam ve wash, blinder, strobe ve LED bar — satın alma ve fiyat teklifi",
+    numberOfItems: items.length,
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "Product",
+        name: item.name,
+        url: item.url,
+        ...(item.description ? { description: item.description } : {}),
+        ...(item.image ? { image: item.image } : {}),
+      },
+    })),
   };
 }
 
