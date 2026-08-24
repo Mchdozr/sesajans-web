@@ -41,6 +41,8 @@ const blogTitles: Record<string, string> = {
   "sahne-aydinlatma-rehberi": "Sahne Aydınlatma Rehberi",
   "truss-planlama-sahne-isigi": "Truss Planlama Rehberi",
   "wash-moving-head-rehberi": "Wash Moving Head Rehberi",
+  "hareketli-kafa-sesajans-rehber": "Hareketli Kafa Rehberi",
+  "robot-isik-fiyat-sesajans-rehber": "Robot Işık Fiyat Rehberi",
 };
 
 export function KeywordHubContent({ data }: { data: KeywordHub }) {
