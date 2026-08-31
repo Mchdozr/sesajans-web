@@ -34,5 +34,17 @@
     "taskId": "grow-blog",
     "type": "blog_stub",
     "slug": "ip66-beam-rehberi"
+  },
+  {
+    "at": "2026-08-31T09:02:08.132Z",
+    "taskId": "kw-blog-hareketli-kafa",
+    "type": "blog_stub",
+    "slug": "hareketli-kafa-sesajans-rehber"
+  },
+  {
+    "at": "2026-08-31T09:02:08.132Z",
+    "taskId": "kw-blog-robot-isik-fiyat",
+    "type": "blog_stub",
+    "slug": "robot-isik-fiyat-sesajans-rehber"
   }
 ]
