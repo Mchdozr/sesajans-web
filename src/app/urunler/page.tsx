@@ -2,8 +2,10 @@ import { Suspense } from "react";
 import type { Metadata } from "next";
 import { ProductsContent } from "@/components/ProductsContent";
 import { PageHeaderStatic } from "@/components/PageHeaderStatic";
-import { buildMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
+import { buildMetadata, itemListJsonLd } from "@/lib/seo";
 import { dictionary as tr } from "@/lib/i18n/dictionaries/tr";
+import { products } from "@/lib/products";
 
 export const metadata: Metadata = buildMetadata({
   title: "Profesyonel Sahne Aydınlatma Ürünleri",
@@ -16,8 +18,14 @@ export const metadata: Metadata = buildMetadata({
 export default function UrunlerPage() {
   const { productsPage } = tr;
 
+  const productListSchema = itemListJsonLd(
+    "SESAJANS Profesyonel Sahne Aydınlatma Ürünleri",
+    products.map((p) => ({ name: p.name, path: `/urunler/${p.slug}` })),
+  );
+
   return (
     <>
+      <JsonLd data={productListSchema} />
       <PageHeaderStatic
         eyebrow={productsPage.eyebrow}
         title={productsPage.title}

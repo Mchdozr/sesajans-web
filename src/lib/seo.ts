@@ -141,10 +141,19 @@ export const websiteJsonLd = {
   alternateName: site.name,
   url: site.url,
   inLanguage: "tr-TR",
+  description: site.description,
   publisher: {
     "@type": "Organization",
     name: site.brand,
     logo: brandLogoImageObject,
+  },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${site.url}/ara?q={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
   },
 };
 
@@ -199,6 +208,14 @@ export function productJsonLd(product: {
       availability: "https://schema.org/InStock",
       itemCondition: "https://schema.org/NewCondition",
       seller: { "@type": "Organization", name: site.brand },
+      areaServed: { "@type": "Country", name: "Türkiye" },
+      eligibleCustomerType: "https://schema.org/Business",
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        priceCurrency: "TRY",
+        valueAddedTaxIncluded: true,
+        description: "Proje bazlı fiyat teklifi — iletişim formu veya telefon ile talep edin.",
+      },
     },
   };
 }
@@ -230,6 +247,7 @@ export function articleJsonLd(article: {
   image?: string;
   wordCount?: number;
   articleSection?: string;
+  keywords?: string[];
 }) {
   return {
     "@context": "https://schema.org",
@@ -237,17 +255,45 @@ export function articleJsonLd(article: {
     headline: article.title,
     description: article.description,
     datePublished: article.date,
+    inLanguage: "tr-TR",
     ...(article.dateModified ? { dateModified: article.dateModified } : {}),
     ...(article.wordCount ? { wordCount: article.wordCount } : {}),
     ...(article.articleSection ? { articleSection: article.articleSection } : {}),
-    author: { "@type": "Organization", name: site.brand },
+    ...(article.keywords?.length ? { keywords: article.keywords.join(", ") } : {}),
+    author: { "@type": "Organization", name: site.brand, url: site.url },
     publisher: {
       "@type": "Organization",
       name: site.brand,
       logo: brandLogoImageObject,
     },
     image: article.image ? `${site.url}${article.image}` : brandLogoSquareUrl,
-    mainEntityOfPage: `${site.url}/blog/${article.slug}`,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${site.url}/blog/${article.slug}`,
+    },
+    isPartOf: {
+      "@type": "Blog",
+      name: `${site.brand} Blog`,
+      url: `${site.url}/blog`,
+    },
+  };
+}
+
+export function itemListJsonLd(
+  listName: string,
+  items: ReadonlyArray<{ name: string; path: string }>,
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: listName,
+    numberOfItems: items.length,
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      url: `${site.url}${item.path}`,
+    })),
   };
 }
 

@@ -1,30 +1,49 @@
 # SESAJANS — Profesyonel Sahne Aydınlatma
 
-> SESAJANS (sesajans.com.tr), İstanbul Şişli merkezli profesyonel sahne ve etkinlik aydınlatma tedarikçisidir. Robot ışık (moving head), blinder/molfez, strobe ve LED bar satışı, kurulum ve fiyat teklifi.
+> SESAJANS (sesajans.com.tr), İstanbul Şişli merkezli profesyonel sahne ve etkinlik aydınlatma tedarikçisidir. Robot ışık (moving head / hareketli kafa), blinder/molfez, strobe ve LED bar satışı, kurulum ve proje bazlı fiyat teklifi sunar.
+
+## Satın Alma ve Teklif
+
+- https://sesajans.com.tr/urunler — Tüm ürün kataloğu (beam, wash, blinder, strobe, LED bar)
+- https://sesajans.com.tr/robot-isik-fiyat — Robot ışık / moving head fiyat teklifi
+- https://sesajans.com.tr/iletisim — Ücretsiz teklif formu
+- Telefon: +90 530 405 67 68 | E-posta: info@sesajans.com.tr
+- Adres: Halide Edip Adıvar Mah., Şişli, İstanbul
 
 ## Ana Sayfalar
 
 - https://sesajans.com.tr/
-- https://sesajans.com.tr/urunler
 - https://sesajans.com.tr/robot-isik
-- https://sesajans.com.tr/robot-isik-fiyat
 - https://sesajans.com.tr/sahne-isigi
 - https://sesajans.com.tr/molfez
 - https://sesajans.com.tr/dj-aydinlatma
 - https://sesajans.com.tr/blog
 - https://sesajans.com.tr/kullanim-alanlari
 - https://sesajans.com.tr/projeler
-- https://sesajans.com.tr/istanbul-sahne-aydinlatma
-- https://sesajans.com.tr/iletisim
+- https://sesajans.com.tr/karsilastirma
+- https://sesajans.com.tr/sozluk
+- https://sesajans.com.tr/sss
 - https://sesajans.com.tr/sitemap.xml
 
-## Ticari Hub’lar
+## Ticari Hub'lar (satın alma niyeti)
 
-- https://sesajans.com.tr/robot-isik — Robot ışık / moving head / hareketli kafa
-- https://sesajans.com.tr/robot-isik-fiyat — Robot ışık fiyatı ve teklif
-- https://sesajans.com.tr/sahne-isigi — Sahne ışığı ve profesyonel aydınlatma
-- https://sesajans.com.tr/molfez — Molfez (blinder) ve strobe
+- https://sesajans.com.tr/robot-isik — Robot ışık / moving head / hareketli kafa satın alma
+- https://sesajans.com.tr/robot-isik-fiyat — Robot ışık fiyatı ve teklif süreci
+- https://sesajans.com.tr/sahne-isigi — Profesyonel sahne ışığı çözümleri
+- https://sesajans.com.tr/molfez — Molfez (blinder) ve strobe satın alma
 - https://sesajans.com.tr/dj-aydinlatma — DJ ışık ve kulüp aydınlatma
+
+## Ürünler (satışa sunulan modeller)
+
+- https://sesajans.com.tr/urunler/beam-king-380 — 380W beam moving head
+- https://sesajans.com.tr/urunler/beam-king-ip — 420W IP66 dış mekân beam
+- https://sesajans.com.tr/urunler/wash-3715 — Wash moving head
+- https://sesajans.com.tr/urunler/led-beam-wash-150 — LED beam-wash hybrid
+- https://sesajans.com.tr/urunler/blinder-400-ip — IP blinder/molfez
+- https://sesajans.com.tr/urunler/blinder-800-ip — Yüksek çıkış blinder
+- https://sesajans.com.tr/urunler/strike-pro-ip — IP strobe
+- https://sesajans.com.tr/urunler/tornado-ip — Dönen beam efekt
+- https://sesajans.com.tr/urunler/diamond-line-1240-eco — LED bar
 
 ## Kullanım Alanları
 
@@ -37,21 +56,32 @@
 - https://sesajans.com.tr/kullanim-alanlari/mimari-aydinlatma
 - https://sesajans.com.tr/kullanim-alanlari/aydinlatma-kiralama
 
-## Blog (ticari + rehber)
+## Şehir Landing Sayfaları
+
+- https://sesajans.com.tr/istanbul-sahne-aydinlatma
+- https://sesajans.com.tr/ankara-sahne-aydinlatma
+- https://sesajans.com.tr/izmir-sahne-aydinlatma
+- https://sesajans.com.tr/antalya-sahne-aydinlatma
+- https://sesajans.com.tr/bursa-sahne-aydinlatma
+- https://sesajans.com.tr/adana-sahne-aydinlatma
+- https://sesajans.com.tr/gaziantep-sahne-aydinlatma
+- https://sesajans.com.tr/kocaeli-sahne-aydinlatma
+
+## Blog — Satın Alma Rehberleri
 
 - https://sesajans.com.tr/blog/moving-head-fiyat-rehberi
+- https://sesajans.com.tr/blog/robot-isik-fiyat-sesajans-rehber
+- https://sesajans.com.tr/blog/hareketli-kafa-sesajans-rehber
 - https://sesajans.com.tr/blog/robot-isik-nasil-secilir
 - https://sesajans.com.tr/blog/beam-vs-wash-satinalma
-- https://sesajans.com.tr/blog/blinder-molfez-rehberi
-- https://sesajans.com.tr/blog/ip65-ip66-dis-mekan-fiyat
-- https://sesajans.com.tr/blog/sahne-aydinlatma-butce-2026
-- https://sesajans.com.tr/blog/dj-kulup-isik-sistemi
 - https://sesajans.com.tr/blog/aydinlatma-kiralama-vs-satinalma
-- https://sesajans.com.tr/blog/sahne-aydinlatma-rehberi
-- https://sesajans.com.tr/blog/moving-head-beam-rehberi
+- https://sesajans.com.tr/blog/sahne-aydinlatma-butce-2026
+- https://sesajans.com.tr/blog/ip65-ip66-dis-mekan-fiyat
+- https://sesajans.com.tr/blog/blinder-molfez-rehberi
+- https://sesajans.com.tr/blog/dj-kulup-isik-sistemi
 - https://sesajans.com.tr/blog/konser-aydinlatma-rehberi
+- https://sesajans.com.tr/blog/sahne-aydinlatma-rehberi
 
-## İletişim
+## Hakkında
 
-- info@sesajans.com.tr | +90 530 405 67 68
-- Şişli, İstanbul
+SESAJANS, 2012'den beri profesyonel sahne aydınlatma üretimi ve tedariki yapan İstanbul merkezli bir firmadır. Moving head (robot ışık / hareketli kafa), blinder, strobe ve LED bar ürünlerinin satışı, kurulumu ve teknik desteği sunulmaktadır. Fiyatlar proje bazlı teklif ile belirlenir; sabit liste fiyatı uygulanmaz.
