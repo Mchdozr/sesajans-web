@@ -141,10 +141,19 @@ export const websiteJsonLd = {
   alternateName: site.name,
   url: site.url,
   inLanguage: "tr-TR",
+  description: site.description,
   publisher: {
     "@type": "Organization",
     name: site.brand,
     logo: brandLogoImageObject,
+  },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${site.url}/ara?q={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
   },
 };
 
@@ -192,6 +201,7 @@ export function productJsonLd(product: {
     manufacturer: { "@type": "Organization", name: site.brand },
     category: product.category,
     url: `${site.url}/urunler/${product.slug}`,
+    inLanguage: "tr-TR",
     offers: {
       "@type": "Offer",
       url: `${site.url}/iletisim`,
@@ -199,6 +209,12 @@ export function productJsonLd(product: {
       availability: "https://schema.org/InStock",
       itemCondition: "https://schema.org/NewCondition",
       seller: { "@type": "Organization", name: site.brand },
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        priceCurrency: "TRY",
+        valueAddedTaxIncluded: true,
+        description: "Proje bazlı fiyat teklifi — iletişim formu veya WhatsApp ile talep edin.",
+      },
     },
   };
 }
@@ -230,6 +246,7 @@ export function articleJsonLd(article: {
   image?: string;
   wordCount?: number;
   articleSection?: string;
+  keywords?: string[];
 }) {
   return {
     "@context": "https://schema.org",
@@ -237,9 +254,11 @@ export function articleJsonLd(article: {
     headline: article.title,
     description: article.description,
     datePublished: article.date,
+    inLanguage: "tr-TR",
     ...(article.dateModified ? { dateModified: article.dateModified } : {}),
     ...(article.wordCount ? { wordCount: article.wordCount } : {}),
     ...(article.articleSection ? { articleSection: article.articleSection } : {}),
+    ...(article.keywords?.length ? { keywords: article.keywords.join(", ") } : {}),
     author: { "@type": "Organization", name: site.brand },
     publisher: {
       "@type": "Organization",
@@ -248,6 +267,22 @@ export function articleJsonLd(article: {
     },
     image: article.image ? `${site.url}${article.image}` : brandLogoSquareUrl,
     mainEntityOfPage: `${site.url}/blog/${article.slug}`,
+  };
+}
+
+export function itemListJsonLd(items: ReadonlyArray<{ name: string; url: string; image?: string }>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "SESAJANS Profesyonel Sahne Aydınlatma Ürünleri",
+    numberOfItems: items.length,
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      url: item.url,
+      ...(item.image ? { image: item.image } : {}),
+    })),
   };
 }
 

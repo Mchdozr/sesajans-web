@@ -1,23 +1,18 @@
 {
-  "generatedAt": "2026-07-02T11:02:41.259Z",
+  "generatedAt": "2026-09-07T09:04:45.017Z",
   "createdBlogs": 2,
   "results": [
     {
-      "taskId": "grow-blog",
-      "slug": "moving-head-beam-rehberi",
+      "taskId": "kw-blog-hareketli-kafa",
+      "slug": "hareketli-kafa-sesajans-rehber",
       "action": "created",
-      "path": "C:\\Users\\kacma\\OneDrive\\Masaüstü\\SESAJANS\\web\\content\\blog\\moving-head-beam-rehberi.mdx"
+      "path": "/workspace/content/blog/hareketli-kafa-sesajans-rehber.mdx"
     },
     {
-      "taskId": "grow-blog",
-      "slug": "sahne-aydinlatma-rehberi",
-      "action": "skipped_exists"
-    },
-    {
-      "taskId": "grow-blog",
-      "slug": "ip66-beam-rehberi",
+      "taskId": "kw-blog-robot-isik-fiyat",
+      "slug": "robot-isik-fiyat-sesajans-rehber",
       "action": "created",
-      "path": "C:\\Users\\kacma\\OneDrive\\Masaüstü\\SESAJANS\\web\\content\\blog\\ip66-beam-rehberi.mdx"
+      "path": "/workspace/content/blog/robot-isik-fiyat-sesajans-rehber.mdx"
     }
   ]
 }

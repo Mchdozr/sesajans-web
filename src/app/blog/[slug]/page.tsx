@@ -46,6 +46,7 @@ export default async function BlogPostPage({
       image: post.image?.trim() ? post.image : undefined,
       wordCount: countWords(post.content),
       articleSection: post.category,
+      keywords: post.keywords,
     }),
     ...(faqs.length > 0 ? [faqJsonLd(faqs)] : []),
   ];
