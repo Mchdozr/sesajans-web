@@ -2,7 +2,9 @@ import { Suspense } from "react";
 import type { Metadata } from "next";
 import { ProductsContent } from "@/components/ProductsContent";
 import { PageHeaderStatic } from "@/components/PageHeaderStatic";
-import { buildMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
+import { products } from "@/lib/products";
+import { buildMetadata, productItemListJsonLd } from "@/lib/seo";
 import { dictionary as tr } from "@/lib/i18n/dictionaries/tr";
 
 export const metadata: Metadata = buildMetadata({
@@ -18,6 +20,11 @@ export default function UrunlerPage() {
 
   return (
     <>
+      <JsonLd
+        data={productItemListJsonLd(
+          products.map((p) => ({ name: p.name, slug: p.slug })),
+        )}
+      />
       <PageHeaderStatic
         eyebrow={productsPage.eyebrow}
         title={productsPage.title}

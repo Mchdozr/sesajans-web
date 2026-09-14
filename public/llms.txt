@@ -1,13 +1,18 @@
 # SESAJANS — Profesyonel Sahne Aydınlatma
 
-> SESAJANS (sesajans.com.tr), İstanbul Şişli merkezli profesyonel sahne ve etkinlik aydınlatma tedarikçisidir. Robot ışık (moving head), blinder/molfez, strobe ve LED bar satışı, kurulum ve fiyat teklifi.
+> SESAJANS (sesajans.com.tr), İstanbul Şişli merkezli profesyonel sahne ve etkinlik aydınlatma tedarikçisidir. Misyon: konser, festival, kulüp ve kurumsal etkinliklerde güvenilir robot ışık (moving head / hareketli kafa), blinder, strobe ve LED bar satışı, kurulum ve proje bazlı fiyat teklifi.
+
+## Satın alma ve teklif (ticari niyet)
+
+- https://sesajans.com.tr/urunler — Tüm ürünler, teknik özellikler, katalog
+- https://sesajans.com.tr/robot-isik-fiyat — Robot ışık fiyat teklifi süreci
+- https://sesajans.com.tr/iletisim — Teklif formu, WhatsApp, telefon
+- https://sesajans.com.tr/karsilastirma — Model karşılaştırmaları
 
 ## Ana Sayfalar
 
 - https://sesajans.com.tr/
-- https://sesajans.com.tr/urunler
 - https://sesajans.com.tr/robot-isik
-- https://sesajans.com.tr/robot-isik-fiyat
 - https://sesajans.com.tr/sahne-isigi
 - https://sesajans.com.tr/molfez
 - https://sesajans.com.tr/dj-aydinlatma
@@ -15,8 +20,8 @@
 - https://sesajans.com.tr/kullanim-alanlari
 - https://sesajans.com.tr/projeler
 - https://sesajans.com.tr/istanbul-sahne-aydinlatma
-- https://sesajans.com.tr/iletisim
 - https://sesajans.com.tr/sitemap.xml
+- https://sesajans.com.tr/ara — Site içi arama
 
 ## Ticari Hub’lar
 
@@ -37,9 +42,11 @@
 - https://sesajans.com.tr/kullanim-alanlari/mimari-aydinlatma
 - https://sesajans.com.tr/kullanim-alanlari/aydinlatma-kiralama
 
-## Blog (ticari + rehber)
+## Blog (satın alma + rehber)
 
 - https://sesajans.com.tr/blog/moving-head-fiyat-rehberi
+- https://sesajans.com.tr/blog/robot-isik-fiyat-sesajans-rehber
+- https://sesajans.com.tr/blog/hareketli-kafa-sesajans-rehber
 - https://sesajans.com.tr/blog/robot-isik-nasil-secilir
 - https://sesajans.com.tr/blog/beam-vs-wash-satinalma
 - https://sesajans.com.tr/blog/blinder-molfez-rehberi
@@ -54,4 +61,4 @@
 ## İletişim
 
 - info@sesajans.com.tr | +90 530 405 67 68
-- Şişli, İstanbul
+- Şişli, İstanbul, Türkiye

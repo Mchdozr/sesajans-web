@@ -89,6 +89,15 @@ export const organizationJsonLd = {
   email: site.email,
   foundingDate: String(site.foundedYear),
   sameAs: [site.social.instagram, site.social.linkedin, site.social.youtube],
+  knowsAbout: [
+    "Profesyonel sahne aydınlatma",
+    "Moving head robot ışık",
+    "Hareketli kafa beam ve wash",
+    "Blinder molfez ve strobe",
+    "LED bar sahne aydınlatması",
+    "Konser ve festival aydınlatma",
+    "DMX512 aydınlatma sistemleri",
+  ],
   address: {
     "@type": "PostalAddress",
     streetAddress: site.addressLine,
@@ -146,6 +155,14 @@ export const websiteJsonLd = {
     name: site.brand,
     logo: brandLogoImageObject,
   },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${site.url}/ara?q={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
+  },
 };
 
 export function breadcrumbJsonLd(items: ReadonlyArray<{ name: string; path: string }>) {
@@ -199,7 +216,31 @@ export function productJsonLd(product: {
       availability: "https://schema.org/InStock",
       itemCondition: "https://schema.org/NewCondition",
       seller: { "@type": "Organization", name: site.brand },
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        priceCurrency: "TRY",
+        valueAddedTaxIncluded: true,
+        description:
+          "Proje ve adet bazlı satın alma teklifi. Güncel fiyat için iletişim formu veya WhatsApp.",
+      },
     },
+  };
+}
+
+export function productItemListJsonLd(
+  items: ReadonlyArray<{ name: string; slug: string }>,
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `${site.brand} profesyonel sahne aydınlatma ürünleri`,
+    numberOfItems: items.length,
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      url: `${site.url}/urunler/${item.slug}`,
+    })),
   };
 }
 
@@ -230,16 +271,21 @@ export function articleJsonLd(article: {
   image?: string;
   wordCount?: number;
   articleSection?: string;
+  keywords?: string[];
 }) {
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: article.title,
     description: article.description,
+    inLanguage: "tr-TR",
     datePublished: article.date,
     ...(article.dateModified ? { dateModified: article.dateModified } : {}),
     ...(article.wordCount ? { wordCount: article.wordCount } : {}),
     ...(article.articleSection ? { articleSection: article.articleSection } : {}),
+    ...(article.keywords?.length
+      ? { keywords: article.keywords.join(", ") }
+      : {}),
     author: { "@type": "Organization", name: site.brand },
     publisher: {
       "@type": "Organization",
