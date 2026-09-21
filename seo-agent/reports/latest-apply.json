@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-09-14T09:03:49.753Z",
+  "generatedAt": "2026-09-21T09:03:50.472Z",
   "createdBlogs": 2,
   "results": [
     {
-      "taskId": "kw-blog-hareketli-kafa",
-      "slug": "hareketli-kafa-sesajans-rehber",
+      "taskId": "kw-blog-beam-robot-isik",
+      "slug": "beam-robot-isik-sesajans-rehber",
       "action": "created",
-      "path": "/workspace/content/blog/hareketli-kafa-sesajans-rehber.mdx"
+      "path": "/workspace/content/blog/beam-robot-isik-sesajans-rehber.mdx"
     },
     {
-      "taskId": "kw-blog-robot-isik-fiyat",
-      "slug": "robot-isik-fiyat-sesajans-rehber",
+      "taskId": "kw-blog-robot-boyama-isik",
+      "slug": "robot-boyama-isik-sesajans-rehber",
       "action": "created",
-      "path": "/workspace/content/blog/robot-isik-fiyat-sesajans-rehber.mdx"
+      "path": "/workspace/content/blog/robot-boyama-isik-sesajans-rehber.mdx"
     }
   ]
 }

@@ -46,5 +46,17 @@
     "taskId": "kw-blog-robot-isik-fiyat",
     "type": "blog_stub",
     "slug": "robot-isik-fiyat-sesajans-rehber"
+  },
+  {
+    "at": "2026-09-21T09:03:39.308Z",
+    "taskId": "kw-blog-beam-robot-isik",
+    "type": "blog_stub",
+    "slug": "beam-robot-isik-sesajans-rehber"
+  },
+  {
+    "at": "2026-09-21T09:03:39.308Z",
+    "taskId": "kw-blog-robot-boyama-isik",
+    "type": "blog_stub",
+    "slug": "robot-boyama-isik-sesajans-rehber"
   }
 ]

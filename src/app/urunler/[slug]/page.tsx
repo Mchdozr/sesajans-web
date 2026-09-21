@@ -45,6 +45,7 @@ export default async function ProductPage({
             image: product.image,
             slug: product.slug,
             category: product.category,
+            keywords: product.keywords,
           }),
           ...(product.videos?.length
             ? productVideoJsonLd({

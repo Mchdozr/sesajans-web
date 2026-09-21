@@ -91,13 +91,22 @@ export const organizationJsonLd = {
   sameAs: [site.social.instagram, site.social.linkedin, site.social.youtube],
   knowsAbout: [
     "Profesyonel sahne aydınlatma",
-    "Moving head robot ışık",
+    "Moving head robot ışık satın alma",
     "Hareketli kafa beam ve wash",
+    "Beam robot ışık",
+    "Robot boyama ışık (wash moving head)",
     "Blinder molfez ve strobe",
     "LED bar sahne aydınlatması",
     "Konser ve festival aydınlatma",
+    "DJ ve gece kulübü aydınlatma",
     "DMX512 aydınlatma sistemleri",
+    "Sahne aydınlatma proje teklifi",
   ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: `${site.brand} profesyonel sahne aydınlatma ürün kataloğu`,
+    url: `${site.url}/urunler`,
+  },
   address: {
     "@type": "PostalAddress",
     streetAddress: site.addressLine,
@@ -196,7 +205,11 @@ export function productJsonLd(product: {
   image: string;
   slug: string;
   category?: string;
+  keywords?: string[];
 }) {
+  const about =
+    product.keywords?.map((name) => ({ "@type": "Thing" as const, name })) ?? [];
+
   return {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -208,6 +221,12 @@ export function productJsonLd(product: {
     brand: { "@type": "Brand", name: site.brand },
     manufacturer: { "@type": "Organization", name: site.brand },
     category: product.category,
+    ...(about.length ? { about } : {}),
+    audience: {
+      "@type": "BusinessAudience",
+      audienceType:
+        "Konser, festival, kulüp, TV stüdyosu ve kurumsal etkinlik prodüktörleri",
+    },
     url: `${site.url}/urunler/${product.slug}`,
     offers: {
       "@type": "Offer",
@@ -284,7 +303,13 @@ export function articleJsonLd(article: {
     ...(article.wordCount ? { wordCount: article.wordCount } : {}),
     ...(article.articleSection ? { articleSection: article.articleSection } : {}),
     ...(article.keywords?.length
-      ? { keywords: article.keywords.join(", ") }
+      ? {
+          keywords: article.keywords.join(", "),
+          about: article.keywords.map((name) => ({
+            "@type": "Thing" as const,
+            name,
+          })),
+        }
       : {}),
     author: { "@type": "Organization", name: site.brand },
     publisher: {

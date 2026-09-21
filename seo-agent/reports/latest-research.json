@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-14T09:03:37.631Z",
-  "date": "2026-09-14",
+  "generatedAt": "2026-09-21T09:03:39.250Z",
+  "date": "2026-09-21",
   "ourSite": {
     "url": "https://sesajans.com.tr",
     "brand": "SESAJANS",
     "productCount": 11,
-    "blogCount": 27,
+    "blogCount": 29,
     "hasBlogInSitemap": true,
     "hasCategoryInSitemap": true,
     "pages": {
@@ -107,7 +107,7 @@
         "h1": "",
         "ogTitle": "",
         "canonical": "https://www.meteormuzik.com.tr",
-        "internalLinkCount": 514,
+        "internalLinkCount": 520,
         "blogPathSamples": [],
         "productPathSamples": [],
         "jsonLdCount": 2,
@@ -186,14 +186,14 @@
       "ok": true,
       "error": null,
       "homepage": {
-        "title": "Led Ajans - LED Ekran - RGB Panel - LED Görüntü Sistemleri",
-        "titleLength": 58,
-        "description": "Enerji tasarruflu, kaliteli ve uygun fiyatlı LED Ekranlar, RGB Paneller LedAjans güvencesiyle. İç Mekan LED Ekranlar, Dış Mekan LED Ekranlar P3, P4, P5, P6, P8, P10 Kaliteli Led Ekranlar. Detaylı bilgi için: 0 (212) 220 40 04",
-        "descriptionLength": 225,
-        "h1": "LED Ekran Çözümleri",
-        "ogTitle": "Led Ajans - LED Ekran - RGB Panel - LED Görüntü Sistemleri",
+        "title": "LED Ekran | Satış, Kiralama, Kurulum | LEDAJANS",
+        "titleLength": 47,
+        "description": "LED ekran satış, kiralama ve kurulum. İç-dış mekan, rental. 25 yıl tecrübe, 2 yıl garanti. Ücretsiz keşif — LEDAJANS İstanbul.",
+        "descriptionLength": 126,
+        "h1": "LED Ekran Satış, Kiralama ve Kurulum",
+        "ogTitle": "LED Ekran | Satış, Kiralama, Kurulum | LEDAJANS",
         "canonical": "https://ledajans.com/",
-        "internalLinkCount": 44,
+        "internalLinkCount": 54,
         "blogPathSamples": [
           "/blog/"
         ],
