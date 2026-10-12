@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-21T09:03:39.281Z",
+  "generatedAt": "2026-10-12T09:04:21.724Z",
   "benchmarks": {
-    "avgTitle": 60,
-    "avgDesc": 94,
-    "avgSitemap": 11
+    "avgTitle": 62,
+    "avgDesc": 66,
+    "avgSitemap": 13
   },
   "tasks": [
     {
@@ -13,36 +13,6 @@
       "auto": false,
       "title": "Ürün ve makale schema zenginleştir",
       "reason": "Rakip ortalama JSON-LD yoğunluğu yüksek (max 5)."
-    },
-    {
-      "id": "kw-blog-beam-robot-isik",
-      "priority": "low",
-      "type": "blog_stub",
-      "auto": true,
-      "title": "Long-tail blog: beam robot ışık",
-      "reason": "Anahtar kelime için özel içerik yok.",
-      "topics": [
-        {
-          "keyword": "beam robot ışık",
-          "slug": "beam-robot-isik-sesajans-rehber",
-          "title": "Beam robot ışık — SESAJANS rehberi"
-        }
-      ]
-    },
-    {
-      "id": "kw-blog-robot-boyama-isik",
-      "priority": "low",
-      "type": "blog_stub",
-      "auto": true,
-      "title": "Long-tail blog: robot boyama ışık",
-      "reason": "Anahtar kelime için özel içerik yok.",
-      "topics": [
-        {
-          "keyword": "robot boyama ışık",
-          "slug": "robot-boyama-isik-sesajans-rehber",
-          "title": "Robot boyama ışık — SESAJANS rehberi"
-        }
-      ]
     },
     {
       "id": "kw-blog-led-blinder",

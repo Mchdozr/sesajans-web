@@ -58,5 +58,17 @@
     "taskId": "kw-blog-robot-boyama-isik",
     "type": "blog_stub",
     "slug": "robot-boyama-isik-sesajans-rehber"
+  },
+  {
+    "at": "2026-10-12T09:04:21.749Z",
+    "taskId": "kw-blog-led-blinder",
+    "type": "blog_stub",
+    "slug": "led-blinder-sesajans-rehber"
+  },
+  {
+    "at": "2026-10-12T09:04:21.749Z",
+    "taskId": "kw-blog-strobe-sahne",
+    "type": "blog_stub",
+    "slug": "strobe-sahne-sesajans-rehber"
   }
 ]

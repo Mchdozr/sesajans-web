@@ -1,0 +1,116 @@
+{
+  "generatedAt": "2026-10-12T09:04:21.724Z",
+  "benchmarks": {
+    "avgTitle": 62,
+    "avgDesc": 66,
+    "avgSitemap": 13
+  },
+  "tasks": [
+    {
+      "id": "rich-schema",
+      "priority": "medium",
+      "type": "manual",
+      "auto": false,
+      "title": "Ürün ve makale schema zenginleştir",
+      "reason": "Rakip ortalama JSON-LD yoğunluğu yüksek (max 5)."
+    },
+    {
+      "id": "kw-blog-led-blinder",
+      "priority": "low",
+      "type": "blog_stub",
+      "auto": true,
+      "title": "Long-tail blog: led blinder",
+      "reason": "Anahtar kelime için özel içerik yok.",
+      "topics": [
+        {
+          "keyword": "led blinder",
+          "slug": "led-blinder-sesajans-rehber",
+          "title": "Led blinder — SESAJANS rehberi"
+        }
+      ]
+    },
+    {
+      "id": "kw-blog-strobe-sahne",
+      "priority": "low",
+      "type": "blog_stub",
+      "auto": true,
+      "title": "Long-tail blog: strobe sahne",
+      "reason": "Anahtar kelime için özel içerik yok.",
+      "topics": [
+        {
+          "keyword": "strobe sahne",
+          "slug": "strobe-sahne-sesajans-rehber",
+          "title": "Strobe sahne — SESAJANS rehberi"
+        }
+      ]
+    },
+    {
+      "id": "kw-blog-dj-isik",
+      "priority": "low",
+      "type": "blog_stub",
+      "auto": true,
+      "title": "Long-tail blog: dj ışık",
+      "reason": "Anahtar kelime için özel içerik yok.",
+      "topics": [
+        {
+          "keyword": "dj ışık",
+          "slug": "dj-isik-sesajans-rehber",
+          "title": "Dj ışık — SESAJANS rehberi"
+        }
+      ]
+    },
+    {
+      "id": "kw-blog-dj-aydinlatma",
+      "priority": "low",
+      "type": "blog_stub",
+      "auto": true,
+      "title": "Long-tail blog: dj aydınlatma",
+      "reason": "Anahtar kelime için özel içerik yok.",
+      "topics": [
+        {
+          "keyword": "dj aydınlatma",
+          "slug": "dj-aydinlatma-sesajans-rehber",
+          "title": "Dj aydınlatma — SESAJANS rehberi"
+        }
+      ]
+    },
+    {
+      "id": "kw-blog-kulup-aydinlatma",
+      "priority": "low",
+      "type": "blog_stub",
+      "auto": true,
+      "title": "Long-tail blog: kulüp aydınlatma",
+      "reason": "Anahtar kelime için özel içerik yok.",
+      "topics": [
+        {
+          "keyword": "kulüp aydınlatma",
+          "slug": "kulup-aydinlatma-sesajans-rehber",
+          "title": "Kulüp aydınlatma — SESAJANS rehberi"
+        }
+      ]
+    },
+    {
+      "id": "kw-blog-istanbul-robot-isik",
+      "priority": "low",
+      "type": "blog_stub",
+      "auto": true,
+      "title": "Long-tail blog: istanbul robot ışık",
+      "reason": "Anahtar kelime için özel içerik yok.",
+      "topics": [
+        {
+          "keyword": "istanbul robot ışık",
+          "slug": "istanbul-robot-isik-sesajans-rehber",
+          "title": "Istanbul robot ışık — SESAJANS rehberi"
+        }
+      ]
+    },
+    {
+      "id": "competitor-blog-structure",
+      "priority": "low",
+      "type": "manual",
+      "auto": false,
+      "title": "Rakip blog URL yapısını incele",
+      "reason": "Örnek rakip blog yolları: /blog/haber/sanyilights, /bdet/haber/6/sahne-aydinlatmasi-nedir-canli-deneyimleri-sekillendiren-sistemlere-derinlemesine-bir-bakis, /bdet/haber/5/dj-aydinlatmasina-baslangic-kilavuzu-yeni-performans-sanatcilari-isikla-atmosferi-nasil-sekillendiriyor"
+    }
+  ]
+}

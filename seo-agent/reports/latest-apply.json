@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-09-21T09:03:50.472Z",
+  "generatedAt": "2026-10-12T09:04:31.888Z",
   "createdBlogs": 2,
   "results": [
     {
-      "taskId": "kw-blog-beam-robot-isik",
-      "slug": "beam-robot-isik-sesajans-rehber",
+      "taskId": "kw-blog-led-blinder",
+      "slug": "led-blinder-sesajans-rehber",
       "action": "created",
-      "path": "/workspace/content/blog/beam-robot-isik-sesajans-rehber.mdx"
+      "path": "/workspace/content/blog/led-blinder-sesajans-rehber.mdx"
     },
     {
-      "taskId": "kw-blog-robot-boyama-isik",
-      "slug": "robot-boyama-isik-sesajans-rehber",
+      "taskId": "kw-blog-strobe-sahne",
+      "slug": "strobe-sahne-sesajans-rehber",
       "action": "created",
-      "path": "/workspace/content/blog/robot-boyama-isik-sesajans-rehber.mdx"
+      "path": "/workspace/content/blog/strobe-sahne-sesajans-rehber.mdx"
     }
   ]
 }

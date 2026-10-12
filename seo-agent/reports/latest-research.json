@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-21T09:03:39.250Z",
-  "date": "2026-09-21",
+  "generatedAt": "2026-10-12T09:04:21.696Z",
+  "date": "2026-10-12",
   "ourSite": {
     "url": "https://sesajans.com.tr",
     "brand": "SESAJANS",
     "productCount": 11,
-    "blogCount": 29,
+    "blogCount": 31,
     "hasBlogInSitemap": true,
     "hasCategoryInSitemap": true,
     "pages": {
@@ -70,7 +70,7 @@
         "h1": "",
         "ogTitle": "Ses Pazarı Ses Ve Işıklandırma Sistemleri | Ses Pazarı Ses Ve Işıklandırma Sistemleri En uygun fiyatlarla en uygun ürünler.",
         "canonical": "https://www.sespazari.com/",
-        "internalLinkCount": 131,
+        "internalLinkCount": 128,
         "blogPathSamples": [
           "/rehber-anfisi-2",
           "/blog/",
@@ -102,56 +102,30 @@
       "homepage": {
         "title": "METEOR MÜZİK SES IŞIK TEKNOLOJİLERİ",
         "titleLength": 35,
-        "description": "İzmir Türkiye&#039;de Profesyonel Ses ve Işık Sistemleri Mağazası",
-        "descriptionLength": 65,
-        "h1": "",
+        "description": "Profesyonel Ses ve Işık Sistemleri Ürünleri Online Satışı ve Kurulumu | İzmir + Türkiye Geneli | Meteor Müzik",
+        "descriptionLength": 109,
+        "h1": "Mekânınızın sesini ve ışığını anahtar teslim kuruyoruz.",
         "ogTitle": "",
         "canonical": "https://www.meteormuzik.com.tr",
-        "internalLinkCount": 520,
+        "internalLinkCount": 502,
         "blogPathSamples": [],
         "productPathSamples": [],
-        "jsonLdCount": 2,
+        "jsonLdCount": 3,
         "hasFaqSchema": false
       },
       "sitemap": {
         "found": true,
         "path": "/sitemap.xml",
-        "urlCount": 25
+        "urlCount": 27
       }
     },
     {
       "name": "Pulsarpro Teknoloji",
       "url": "https://www.pulsarpromusic.com",
-      "ok": true,
-      "error": null,
-      "homepage": {
-        "title": "Ana Sayfa | Pulsarpro Ses ve Işık Teknolojileri",
-        "titleLength": 47,
-        "description": "Profesyonel Ses ve Işık Sistemleri, Görüntü, Led Teknolojileri ve Dj Ekipmanları Konusunda 25 Yıldır Müşterilerimize Güç Katıyoruz. Uluslararası Pazarda Global Markalarımızla Sizlere ve Piyasaya Yön Veriyoruz. Pulsarpro Ses ve Işık Teknolojileri A.Ş",
-        "descriptionLength": 249,
-        "h1": "",
-        "ogTitle": "Ana Sayfa | Pulsarpro Ses ve Işık Teknolojileri",
-        "canonical": "https://www.pulsarpromusic.com",
-        "internalLinkCount": 86,
-        "blogPathSamples": [],
-        "productPathSamples": [
-          "/product-page/gt-prolight-1940b-19x40w-big-bee-eye-moving-head",
-          "/product-page/elokance-tower-218",
-          "/product-page/elokance-tower-18",
-          "/product-page/elokance-opus-210aaktif-line-array-2x10",
-          "/product-page/elokance-opus-218-sa-aktif-line-array-subbass-2x18",
-          "/product-page/detroit-1000x-dsp",
-          "/product-page/helvia-floor10-abk-10-ince-yer-duvar-tipi-aktif-subbas",
-          "/product-page/helvia-floor8-abk-8-ince-yer-duvar-tipi-aktif-subbas"
-        ],
-        "jsonLdCount": 3,
-        "hasFaqSchema": true
-      },
-      "sitemap": {
-        "found": true,
-        "path": "/sitemap.xml",
-        "urlCount": 5
-      }
+      "ok": false,
+      "error": "fetch failed",
+      "homepage": null,
+      "sitemap": null
     },
     {
       "name": "Mars Music Shop",
@@ -188,12 +162,12 @@
       "homepage": {
         "title": "LED Ekran | Satış, Kiralama, Kurulum | LEDAJANS",
         "titleLength": 47,
-        "description": "LED ekran satış, kiralama ve kurulum. İç-dış mekan, rental. 25 yıl tecrübe, 2 yıl garanti. Ücretsiz keşif — LEDAJANS İstanbul.",
-        "descriptionLength": 126,
+        "description": "LED ekran satış, kiralama ve kurulum. Ücretsiz keşif ve B2B fiyat teklifi — LEDAJANS İstanbul.",
+        "descriptionLength": 94,
         "h1": "LED Ekran Satış, Kiralama ve Kurulum",
         "ogTitle": "LED Ekran | Satış, Kiralama, Kurulum | LEDAJANS",
         "canonical": "https://ledajans.com/",
-        "internalLinkCount": 54,
+        "internalLinkCount": 48,
         "blogPathSamples": [
           "/blog/"
         ],

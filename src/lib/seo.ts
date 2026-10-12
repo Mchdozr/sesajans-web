@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { products } from "./products";
 import { site } from "./site";
 
 type SeoInput = {
@@ -85,27 +86,47 @@ export const organizationJsonLd = {
   logo: brandLogoImageObject,
   image: brandLogoSquareUrl,
   description: site.description,
+  slogan: site.slogan,
   telephone: site.phone,
   email: site.email,
   foundingDate: String(site.foundedYear),
   sameAs: [site.social.instagram, site.social.linkedin, site.social.youtube],
+  areaServed: {
+    "@type": "Country",
+    name: "Türkiye",
+  },
   knowsAbout: [
     "Profesyonel sahne aydınlatma",
     "Moving head robot ışık satın alma",
     "Hareketli kafa beam ve wash",
     "Beam robot ışık",
     "Robot boyama ışık (wash moving head)",
+    "LED blinder ve molfez satın alma",
+    "Strobe sahne aydınlatması",
     "Blinder molfez ve strobe",
     "LED bar sahne aydınlatması",
     "Konser ve festival aydınlatma",
     "DJ ve gece kulübü aydınlatma",
     "DMX512 aydınlatma sistemleri",
     "Sahne aydınlatma proje teklifi",
+    "Profesyonel sahne ışığı üretici tedarik",
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: `${site.brand} profesyonel sahne aydınlatma ürün kataloğu`,
     url: `${site.url}/urunler`,
+    itemListElement: products.map((product, index) => ({
+      "@type": "Offer",
+      position: index + 1,
+      url: `${site.url}/urunler/${product.slug}`,
+      itemOffered: {
+        "@type": "Product",
+        name: product.name,
+        url: `${site.url}/urunler/${product.slug}`,
+      },
+      availability: "https://schema.org/InStock",
+      seller: { "@type": "Organization", name: site.brand },
+    })),
   },
   address: {
     "@type": "PostalAddress",
@@ -230,7 +251,7 @@ export function productJsonLd(product: {
     url: `${site.url}/urunler/${product.slug}`,
     offers: {
       "@type": "Offer",
-      url: `${site.url}/iletisim`,
+      url: `${site.url}/urunler/${product.slug}`,
       priceCurrency: "TRY",
       availability: "https://schema.org/InStock",
       itemCondition: "https://schema.org/NewCondition",
@@ -241,6 +262,18 @@ export function productJsonLd(product: {
         valueAddedTaxIncluded: true,
         description:
           "Proje ve adet bazlı satın alma teklifi. Güncel fiyat için iletişim formu veya WhatsApp.",
+      },
+      potentialAction: {
+        "@type": "BuyAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: `${site.url}/iletisim`,
+          actionPlatform: [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/MobileWebPlatform",
+          ],
+        },
+        name: "Satın alma ve proje teklifi talebi",
       },
     },
   };
