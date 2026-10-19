@@ -390,6 +390,8 @@ export const keywordHubs: KeywordHub[] = [
       "wash-3715",
     ],
     relatedBlogSlugs: [
+      "dj-isik-sesajans-rehber",
+      "dj-aydinlatma-sesajans-rehber",
       "dj-kulup-isik-sistemi",
       "wash-moving-head-rehberi",
       "robot-isik-nasil-secilir",

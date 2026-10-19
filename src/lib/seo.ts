@@ -107,6 +107,7 @@ export const organizationJsonLd = {
     "LED bar sahne aydınlatması",
     "Konser ve festival aydınlatma",
     "DJ ve gece kulübü aydınlatma",
+    "DJ ışık ve kulüp aydınlatma satın alma",
     "DMX512 aydınlatma sistemleri",
     "Sahne aydınlatma proje teklifi",
     "Profesyonel sahne ışığı üretici tedarik",
@@ -352,6 +353,23 @@ export function articleJsonLd(article: {
     },
     image: article.image ? `${site.url}${article.image}` : brandLogoSquareUrl,
     mainEntityOfPage: `${site.url}/blog/${article.slug}`,
+    isPartOf: {
+      "@type": "WebSite",
+      name: site.brand,
+      url: site.url,
+    },
+    potentialAction: {
+      "@type": "BuyAction",
+      name: "Satın alma ve proje teklifi talebi",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${site.url}/iletisim`,
+        actionPlatform: [
+          "http://schema.org/DesktopWebPlatform",
+          "http://schema.org/MobileWebPlatform",
+        ],
+      },
+    },
   };
 }
 

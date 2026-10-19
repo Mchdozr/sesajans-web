@@ -1,0 +1,243 @@
+{
+  "generatedAt": "2026-10-19T09:03:47.338Z",
+  "date": "2026-10-19",
+  "ourSite": {
+    "url": "https://sesajans.com.tr",
+    "brand": "SESAJANS",
+    "productCount": 11,
+    "blogCount": 33,
+    "hasBlogInSitemap": true,
+    "hasCategoryInSitemap": true,
+    "pages": {
+      "blog": true,
+      "categories": true,
+      "faqSchema": true
+    }
+  },
+  "competitors": [
+    {
+      "name": "Sanyi Lights",
+      "url": "https://www.sanyilights.com.tr",
+      "ok": true,
+      "error": null,
+      "homepage": {
+        "title": "Sanyi Lights Profesyonel Işık Sistemleri",
+        "titleLength": 40,
+        "description": "Sanyi Lights Profesyonel Işık Sistemleri",
+        "descriptionLength": 40,
+        "h1": "Stage Lighting Designed for Creators",
+        "ogTitle": "Sanyi Lights Profesyonel Işık Sistemleri",
+        "canonical": "https://www.sanyilights.com.tr/",
+        "internalLinkCount": 26,
+        "blogPathSamples": [
+          "/blog/haber/sanyilights",
+          "/bdet/haber/6/sahne-aydinlatmasi-nedir-canli-deneyimleri-sekillendiren-sistemlere-derinlemesine-bir-bakis",
+          "/bdet/haber/5/dj-aydinlatmasina-baslangic-kilavuzu-yeni-performans-sanatcilari-isikla-atmosferi-nasil-sekillendiriyor",
+          "/bdet/haber/4/her-dj039in-spotty-led-150039ye-neden-ihtiyaci-var-kapsamli-kilavuz-ve-inceleme",
+          "/bdet/haber/3/her-turlu-etkinlik-icin-mukemmel-dj-isiklandirma-kurulumunu-nasil-olusturabilirsiniz",
+          "/bdet/haber/2/sahne-ve-etkinlik-aydinlatmasinda-kullanilan-farkli-isik-turleri",
+          "/bdet/haber/1/dinamik-sahne-efektleri-icin-en-iyi-isik-turlerini-secme-rehberi"
+        ],
+        "productPathSamples": [
+          "/urun/2/10/spot",
+          "/urun/2/12/beam",
+          "/urun/2/9/lazerler",
+          "/urun/2/13/wash",
+          "/urun/2/14/effect-lights",
+          "/urun/2/19/blinder-mollfaze",
+          "/urun/2/11/bar",
+          "/urun/2/18/sahne-ve-alan-aydinlatmalari"
+        ],
+        "jsonLdCount": 0,
+        "hasFaqSchema": false
+      },
+      "sitemap": {
+        "found": false,
+        "path": null,
+        "urlCount": 0
+      }
+    },
+    {
+      "name": "Ses Pazarı",
+      "url": "https://www.sespazari.com",
+      "ok": true,
+      "error": null,
+      "homepage": {
+        "title": "Ses Pazarı Ses Ve Işıklandırma Sistemleri | Ses Pazarı Ses Ve Işıklandırma Sistemleri En uygun fiyatlarla en uygun ürünler.",
+        "titleLength": 123,
+        "description": "Ses Pazarı Ses Ve Işıklandırma Sistemleri En uygun fiyatlarla en uygun ürünler.",
+        "descriptionLength": 79,
+        "h1": "",
+        "ogTitle": "Ses Pazarı Ses Ve Işıklandırma Sistemleri | Ses Pazarı Ses Ve Işıklandırma Sistemleri En uygun fiyatlarla en uygun ürünler.",
+        "canonical": "https://www.sespazari.com/",
+        "internalLinkCount": 128,
+        "blogPathSamples": [
+          "/rehber-anfisi-2",
+          "/blog/",
+          "/blog/icerik/kargo-kampanyasi-nasil-duyurulur",
+          "/blog/urun-haberleri",
+          "/blog/icerik/blog-icerigi-ile-organik-trafik",
+          "/blog/seo-ve-pazarlama",
+          "/blog/icerik/urun-sayfasi-seo-kontrol-listesi",
+          "/blog/icerik/e-ticaret-sitesinde-ilk-10-adim"
+        ],
+        "productPathSamples": [
+          "/blog/urun-haberleri",
+          "/blog/icerik/urun-sayfasi-seo-kontrol-listesi"
+        ],
+        "jsonLdCount": 2,
+        "hasFaqSchema": false
+      },
+      "sitemap": {
+        "found": true,
+        "path": "/sitemap.xml",
+        "urlCount": 8
+      }
+    },
+    {
+      "name": "Meteor Müzik",
+      "url": "https://www.meteormuzik.com.tr",
+      "ok": true,
+      "error": null,
+      "homepage": {
+        "title": "METEOR MÜZİK SES IŞIK TEKNOLOJİLERİ",
+        "titleLength": 35,
+        "description": "Profesyonel Ses ve Işık Sistemleri Ürünleri Online Satışı ve Kurulumu | İzmir + Türkiye Geneli | Meteor Müzik",
+        "descriptionLength": 109,
+        "h1": "Mekânınızın sesini ve ışığını anahtar teslim kuruyoruz.",
+        "ogTitle": "",
+        "canonical": "https://www.meteormuzik.com.tr",
+        "internalLinkCount": 506,
+        "blogPathSamples": [],
+        "productPathSamples": [],
+        "jsonLdCount": 3,
+        "hasFaqSchema": false
+      },
+      "sitemap": {
+        "found": true,
+        "path": "/sitemap.xml",
+        "urlCount": 28
+      }
+    },
+    {
+      "name": "Pulsarpro Teknoloji",
+      "url": "https://www.pulsarpromusic.com",
+      "ok": true,
+      "error": null,
+      "homepage": {
+        "title": "Ses ve Işık Sistemleri | Proje ve Kurulum | Pulsarpro",
+        "titleLength": 53,
+        "description": "Otel, bar, kafe ve restoranlar için profesyonel ses, ışık, LED ekran ve otomasyon sistemleri. İstanbul merkezli Pulsarpro: projelendirme, tedarik ve kurulum.",
+        "descriptionLength": 157,
+        "h1": "Sahneyi tasarlıyor, teknolojiyi yönetiyoruz.",
+        "ogTitle": "Ses ve Işık Sistemleri | Pulsarpro",
+        "canonical": "https://pulsarpro.com.tr",
+        "internalLinkCount": 26,
+        "blogPathSamples": [
+          "/haberler",
+          "/haberler/day-one-kylios",
+          "/haberler/b%c3%bcy%c3%bck-kolej-ankara-acil-anons-ve-ses-sistemi-yenilenmesi",
+          "/haberler/helvia-t%c3%bcrkiye-distrib%c3%bct%c3%b6r%c3%bc-pulsarpro"
+        ],
+        "productPathSamples": [
+          "/urunler",
+          "/urunler/alphatheta-xdj-an-dj-2-kanal-dj-setup",
+          "/urunler/centolight-spire-x23",
+          "/urunler/detroit-1000x-dsp",
+          "/urunler/hh-electronics-tensor-tre-1501-15-aktif-hoparl%c3%b6r",
+          "/urunler/hh-electronics-tensor-trs-1800-18-aktif-subbas-hoparl%c3%b6r"
+        ],
+        "jsonLdCount": 2,
+        "hasFaqSchema": false
+      },
+      "sitemap": {
+        "found": true,
+        "path": "/sitemap.xml",
+        "urlCount": 1407
+      }
+    },
+    {
+      "name": "Mars Music Shop",
+      "url": "https://www.marsmusicshops.com",
+      "ok": true,
+      "error": null,
+      "homepage": {
+        "title": "Mars Music Shop: Profesyonel Ses Işık Görüntü ve Akustik Sistemleri",
+        "titleLength": 67,
+        "description": "Türkiye",
+        "descriptionLength": 7,
+        "h1": "",
+        "ogTitle": "",
+        "canonical": "",
+        "internalLinkCount": 15,
+        "blogPathSamples": [
+          "/blog"
+        ],
+        "productPathSamples": [],
+        "jsonLdCount": 5,
+        "hasFaqSchema": false
+      },
+      "sitemap": {
+        "found": false,
+        "path": null,
+        "urlCount": 0
+      }
+    },
+    {
+      "name": "LEDAJANS",
+      "url": "https://ledajans.com",
+      "ok": true,
+      "error": null,
+      "homepage": {
+        "title": "LED Ekran | Satış, Kiralama, Kurulum | LEDAJANS",
+        "titleLength": 47,
+        "description": "LED ekran satış, kiralama ve kurulum. Ücretsiz keşif ve B2B fiyat teklifi — LEDAJANS İstanbul.",
+        "descriptionLength": 94,
+        "h1": "LED Ekran Satış, Kiralama ve Kurulum",
+        "ogTitle": "LED Ekran | Satış, Kiralama, Kurulum | LEDAJANS",
+        "canonical": "https://ledajans.com/",
+        "internalLinkCount": 48,
+        "blogPathSamples": [
+          "/blog/"
+        ],
+        "productPathSamples": [],
+        "jsonLdCount": 3,
+        "hasFaqSchema": false
+      },
+      "sitemap": {
+        "found": true,
+        "path": "/sitemap.xml",
+        "urlCount": 5
+      }
+    }
+  ],
+  "seedKeywords": [
+    "sahne aydınlatma",
+    "sahne ışığı",
+    "profesyonel sahne ışığı",
+    "moving head",
+    "robot ışık",
+    "hareketli kafa",
+    "robot ışık fiyat",
+    "moving head fiyat",
+    "moving head beam",
+    "beam robot ışık",
+    "ip66 beam",
+    "wash moving head",
+    "robot boyama ışık",
+    "led blinder",
+    "molfez",
+    "strobe sahne",
+    "led bar",
+    "led bar sahne",
+    "dj ışık",
+    "dj aydınlatma",
+    "kulüp aydınlatma",
+    "aydınlatma kiralama",
+    "istanbul sahne aydınlatma",
+    "istanbul robot ışık",
+    "konser aydınlatma",
+    "festival aydınlatma",
+    "dmx aydınlatma"
+  ]
+}

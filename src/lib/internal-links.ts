@@ -14,6 +14,14 @@ const blogTitles: Record<string, string> = {
   "blinder-strobe-rehberi": "Blinder ve Strobe Rehberi",
   "blinder-vs-strobe-farki": "Blinder vs Strobe Farkı",
   "dj-kulup-isik-sistemi": "DJ / Kulüp Işık Sistemi",
+  "dj-isik-sesajans-rehber": "DJ Işık Satın Alma Rehberi",
+  "dj-aydinlatma-sesajans-rehber": "DJ Aydınlatma Rehberi",
+  "led-blinder-sesajans-rehber": "LED Blinder Rehberi",
+  "strobe-sahne-sesajans-rehber": "Strobe Sahne Rehberi",
+  "beam-robot-isik-sesajans-rehber": "Beam Robot Işık Rehberi",
+  "hareketli-kafa-sesajans-rehber": "Hareketli Kafa Rehberi",
+  "robot-boyama-isik-sesajans-rehber": "Robot Boyama Işık Rehberi",
+  "robot-isik-fiyat-sesajans-rehber": "Robot Işık Fiyat Rehberi",
   "dmx-aydinlatma-kurulumu": "DMX Aydınlatma Kurulumu",
   "dmx-universe-planlama-rehberi": "DMX Universe Planlama Rehberi",
   "festival-aydinlatma-butce-planlama": "Festival Aydınlatma Bütçe Planlama",
@@ -287,8 +295,33 @@ const blogRelations: Record<string, Refs> = {
   "dj-kulup-isik-sistemi": {
     products: ["led-beam-wash-150", "beam-king-380", "diamond-line-1240-eco"],
     useCases: ["gece-kulubu"],
-    blogs: ["wash-moving-head-rehberi", "robot-isik-nasil-secilir"],
+    blogs: [
+      "dj-isik-sesajans-rehber",
+      "dj-aydinlatma-sesajans-rehber",
+      "wash-moving-head-rehberi",
+      "robot-isik-nasil-secilir",
+    ],
     paths: [{ label: "DJ aydınlatma", href: "/dj-aydinlatma" }],
+  },
+  "dj-isik-sesajans-rehber": {
+    products: ["led-beam-wash-150", "beam-king-380", "diamond-line-1240-eco"],
+    useCases: ["gece-kulubu", "dugun-etkinlik"],
+    blogs: ["dj-aydinlatma-sesajans-rehber", "dj-kulup-isik-sistemi", "wash-moving-head-rehberi"],
+    comparisons: ["wash-3715-vs-led-beam-wash-150"],
+    projects: ["ankara-kulup-kurulum-2023"],
+    paths: [
+      { label: "DJ aydınlatma hub", href: "/dj-aydinlatma" },
+      { label: "Robot ışık fiyat", href: "/robot-isik-fiyat" },
+    ],
+  },
+  "dj-aydinlatma-sesajans-rehber": {
+    products: ["led-beam-wash-150", "beam-king-380", "wash-3715", "diamond-line-1240-eco"],
+    useCases: ["gece-kulubu"],
+    blogs: ["dj-isik-sesajans-rehber", "dj-kulup-isik-sistemi", "aydinlatma-kiralama-vs-satinalma"],
+    comparisons: ["beam-king-380-vs-ip"],
+    projects: ["ankara-kulup-kurulum-2023"],
+    cities: ["istanbul-sahne-aydinlatma", "ankara-sahne-aydinlatma"],
+    paths: [{ label: "DJ aydınlatma hub", href: "/dj-aydinlatma" }],
   },
   "aydinlatma-kiralama-vs-satinalma": {
     useCases: ["aydinlatma-kiralama"],
@@ -335,7 +368,7 @@ const productRelations: Record<string, Refs> = {
   "led-beam-wash-150": {
     useCases: ["gece-kulubu", "dugun-etkinlik"],
     comparisons: ["wash-3715-vs-led-beam-wash-150"],
-    blogs: ["wash-moving-head-rehberi"],
+    blogs: ["wash-moving-head-rehberi", "dj-isik-sesajans-rehber", "dj-aydinlatma-sesajans-rehber"],
     projects: ["ankara-kulup-kurulum-2023", "izmir-dugun-salonu-2024"],
   },
   "strike-pro-ip": {
@@ -409,6 +442,8 @@ const useCaseExtras: Record<string, Refs> = {
     comparisons: ["wash-3715-vs-led-beam-wash-150"],
     projects: ["ankara-kulup-kurulum-2023"],
     glossary: ["moving-head-nedir"],
+    blogs: ["dj-isik-sesajans-rehber", "dj-aydinlatma-sesajans-rehber", "dj-kulup-isik-sistemi"],
+    paths: [{ label: "DJ aydınlatma", href: "/dj-aydinlatma" }],
   },
   "dugun-etkinlik": {
     projects: ["izmir-dugun-salonu-2024"],
@@ -559,6 +594,8 @@ export const aboutPageLinks: RelatedLinkGroup[] = [
     title: "Rehberler",
     links: [
       { label: "Sahne aydınlatma rehberi", href: "/blog/sahne-aydinlatma-rehberi" },
+      { label: "DJ ışık rehberi", href: "/blog/dj-isik-sesajans-rehber" },
+      { label: "DJ aydınlatma rehberi", href: "/blog/dj-aydinlatma-sesajans-rehber" },
       { label: "DMX kurulum rehberi", href: "/blog/dmx-aydinlatma-kurulumu" },
       { label: "Aydınlatma sözlüğü", href: "/sozluk" },
     ],

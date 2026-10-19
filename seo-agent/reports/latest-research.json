@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-12T09:04:21.696Z",
-  "date": "2026-10-12",
+  "generatedAt": "2026-10-19T09:03:47.338Z",
+  "date": "2026-10-19",
   "ourSite": {
     "url": "https://sesajans.com.tr",
     "brand": "SESAJANS",
     "productCount": 11,
-    "blogCount": 31,
+    "blogCount": 33,
     "hasBlogInSitemap": true,
     "hasCategoryInSitemap": true,
     "pages": {
@@ -107,7 +107,7 @@
         "h1": "Mekânınızın sesini ve ışığını anahtar teslim kuruyoruz.",
         "ogTitle": "",
         "canonical": "https://www.meteormuzik.com.tr",
-        "internalLinkCount": 502,
+        "internalLinkCount": 506,
         "blogPathSamples": [],
         "productPathSamples": [],
         "jsonLdCount": 3,
@@ -116,16 +116,45 @@
       "sitemap": {
         "found": true,
         "path": "/sitemap.xml",
-        "urlCount": 27
+        "urlCount": 28
       }
     },
     {
       "name": "Pulsarpro Teknoloji",
       "url": "https://www.pulsarpromusic.com",
-      "ok": false,
-      "error": "fetch failed",
-      "homepage": null,
-      "sitemap": null
+      "ok": true,
+      "error": null,
+      "homepage": {
+        "title": "Ses ve Işık Sistemleri | Proje ve Kurulum | Pulsarpro",
+        "titleLength": 53,
+        "description": "Otel, bar, kafe ve restoranlar için profesyonel ses, ışık, LED ekran ve otomasyon sistemleri. İstanbul merkezli Pulsarpro: projelendirme, tedarik ve kurulum.",
+        "descriptionLength": 157,
+        "h1": "Sahneyi tasarlıyor, teknolojiyi yönetiyoruz.",
+        "ogTitle": "Ses ve Işık Sistemleri | Pulsarpro",
+        "canonical": "https://pulsarpro.com.tr",
+        "internalLinkCount": 26,
+        "blogPathSamples": [
+          "/haberler",
+          "/haberler/day-one-kylios",
+          "/haberler/b%c3%bcy%c3%bck-kolej-ankara-acil-anons-ve-ses-sistemi-yenilenmesi",
+          "/haberler/helvia-t%c3%bcrkiye-distrib%c3%bct%c3%b6r%c3%bc-pulsarpro"
+        ],
+        "productPathSamples": [
+          "/urunler",
+          "/urunler/alphatheta-xdj-an-dj-2-kanal-dj-setup",
+          "/urunler/centolight-spire-x23",
+          "/urunler/detroit-1000x-dsp",
+          "/urunler/hh-electronics-tensor-tre-1501-15-aktif-hoparl%c3%b6r",
+          "/urunler/hh-electronics-tensor-trs-1800-18-aktif-subbas-hoparl%c3%b6r"
+        ],
+        "jsonLdCount": 2,
+        "hasFaqSchema": false
+      },
+      "sitemap": {
+        "found": true,
+        "path": "/sitemap.xml",
+        "urlCount": 1407
+      }
     },
     {
       "name": "Mars Music Shop",

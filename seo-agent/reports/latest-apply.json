@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-10-12T09:04:31.888Z",
+  "generatedAt": "2026-10-19T09:04:00.267Z",
   "createdBlogs": 2,
   "results": [
     {
-      "taskId": "kw-blog-led-blinder",
-      "slug": "led-blinder-sesajans-rehber",
+      "taskId": "kw-blog-dj-isik",
+      "slug": "dj-isik-sesajans-rehber",
       "action": "created",
-      "path": "/workspace/content/blog/led-blinder-sesajans-rehber.mdx"
+      "path": "/workspace/content/blog/dj-isik-sesajans-rehber.mdx"
     },
     {
-      "taskId": "kw-blog-strobe-sahne",
-      "slug": "strobe-sahne-sesajans-rehber",
+      "taskId": "kw-blog-dj-aydinlatma",
+      "slug": "dj-aydinlatma-sesajans-rehber",
       "action": "created",
-      "path": "/workspace/content/blog/strobe-sahne-sesajans-rehber.mdx"
+      "path": "/workspace/content/blog/dj-aydinlatma-sesajans-rehber.mdx"
     }
   ]
 }

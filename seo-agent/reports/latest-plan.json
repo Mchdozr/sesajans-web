@@ -1,11 +1,19 @@
 {
-  "generatedAt": "2026-10-12T09:04:21.724Z",
+  "generatedAt": "2026-10-19T09:03:47.373Z",
   "benchmarks": {
-    "avgTitle": 62,
-    "avgDesc": 66,
-    "avgSitemap": 13
+    "avgTitle": 61,
+    "avgDesc": 81,
+    "avgSitemap": 362
   },
   "tasks": [
+    {
+      "id": "indexable-pages",
+      "priority": "high",
+      "type": "manual",
+      "auto": false,
+      "title": "İndekslenebilir sayfa sayısını artır",
+      "reason": "Rakip sitemap ortalaması ~362 URL; iç link ve landing sayfaları ekle."
+    },
     {
       "id": "rich-schema",
       "priority": "medium",
@@ -13,36 +21,6 @@
       "auto": false,
       "title": "Ürün ve makale schema zenginleştir",
       "reason": "Rakip ortalama JSON-LD yoğunluğu yüksek (max 5)."
-    },
-    {
-      "id": "kw-blog-led-blinder",
-      "priority": "low",
-      "type": "blog_stub",
-      "auto": true,
-      "title": "Long-tail blog: led blinder",
-      "reason": "Anahtar kelime için özel içerik yok.",
-      "topics": [
-        {
-          "keyword": "led blinder",
-          "slug": "led-blinder-sesajans-rehber",
-          "title": "Led blinder — SESAJANS rehberi"
-        }
-      ]
-    },
-    {
-      "id": "kw-blog-strobe-sahne",
-      "priority": "low",
-      "type": "blog_stub",
-      "auto": true,
-      "title": "Long-tail blog: strobe sahne",
-      "reason": "Anahtar kelime için özel içerik yok.",
-      "topics": [
-        {
-          "keyword": "strobe sahne",
-          "slug": "strobe-sahne-sesajans-rehber",
-          "title": "Strobe sahne — SESAJANS rehberi"
-        }
-      ]
     },
     {
       "id": "kw-blog-dj-isik",

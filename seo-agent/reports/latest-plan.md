@@ -1,28 +1,20 @@
-# SESAJANS SEO Planı — 2026-10-12
+# SESAJANS SEO Planı — 2026-10-19
 
 ## Özet
 - Site: https://sesajans.com.tr
-- Ürün: 11 | Blog: 31
-- Rakip benchmark meta uzunluğu: ~66 karakter
-- Rakip benchmark sitemap: ~13 URL
+- Ürün: 11 | Blog: 33
+- Rakip benchmark meta uzunluğu: ~81 karakter
+- Rakip benchmark sitemap: ~362 URL
 
 ## Görevler
+
+### [HIGH] İndekslenebilir sayfa sayısını artır
+- **Tür:** manual | **Otomatik:** hayır
+- **Neden:** Rakip sitemap ortalaması ~362 URL; iç link ve landing sayfaları ekle.
 
 ### [MEDIUM] Ürün ve makale schema zenginleştir
 - **Tür:** manual | **Otomatik:** hayır
 - **Neden:** Rakip ortalama JSON-LD yoğunluğu yüksek (max 5).
-
-### [LOW] Long-tail blog: led blinder
-- **Tür:** blog_stub | **Otomatik:** evet
-- **Neden:** Anahtar kelime için özel içerik yok.
-- **Konular:**
-  - `led-blinder-sesajans-rehber` — Led blinder — SESAJANS rehberi
-
-### [LOW] Long-tail blog: strobe sahne
-- **Tür:** blog_stub | **Otomatik:** evet
-- **Neden:** Anahtar kelime için özel içerik yok.
-- **Konular:**
-  - `strobe-sahne-sesajans-rehber` — Strobe sahne — SESAJANS rehberi
 
 ### [LOW] Long-tail blog: dj ışık
 - **Tür:** blog_stub | **Otomatik:** evet
